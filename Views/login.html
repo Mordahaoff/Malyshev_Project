@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Вход</title>
+    <link rel="stylesheet" href="/wwwroot/css/login.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">PROteinZone</h1>
+            <img src="/wwwroot/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+        </div>
+        <div class="header-line"></div>
+    </header>
+    
+    
+    <div class="container">
+        <div class="left">
+            <h2>ЭНЕРГИЯ <br> <span>СИЛА</span> <br> РЕЗУЛЬТАТ</h2>
+            <img src="/wwwroot/img/open-sport.png" alt="Спортсмен" class="athlete-img">
+        </div>
+        <div class="right">
+            <h2>Войти в аккаунт</h2>
+            <p>Авторизуйтесь, чтобы быстрее оформлять заказы и отслеживать их в личном кабинете.</p>
+            <form action="home.html" method="GET">
+                <input type="text" class="input-field" placeholder="Name" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <button type="submit" class="btn login-btn">Войти</button>
+            </form>
+            <p class="register">Нет аккаунта? Создайте его за минуту!</p>
+            <button onclick="window.location.href='register.html'" class="btn register-btn">Зарегистрироваться</button>
+        </div>
+    </div>
+</body>
+</html>
