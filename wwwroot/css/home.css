@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+}
+
+a {
+    text-decoration: none;
+    color: black; 
+}
+
+header {
+    position: relative; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px;
+    background: white; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.header-line {
+    height: 2px;
+    background-color: #6A6060;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav {
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cabinet-btn a {
+    display: flex;
+    align-items: center;
+    background-color: #F9B300; /* Цвет кнопки */
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #ffff;
+    transition: transform 0.2s ease-in-out; /* Плавное увеличение */
+}
+.cabinet-btn img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+.cabinet-btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.preview{
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    overflow:unset; /* Обрезаем лишнее */
+ }
+ .preview-info {
+    width: 900px;
+    padding: 120px 70px;
+    line-height: 55px;
+ }
+
+ .preview-info h1 {
+    font-size: 55px;
+    font-weight: 1000;
+ }
+ .preview-info p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 30px 0px;
+    padding-bottom: 10px;
+ }
+
+  /*Кнопки*/
+  .preview-info .btn{
+    background: #F9B300;
+    color: #fff;
+    border-radius: 25px;
+    padding: 15px 30px;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    font-weight: 800;
+    font-size: 22px;
+ }
+ .preview-info .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+ }
+
+
+/* Основное изображение */
+.preview-images img {
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+ 
+/* Разные размеры и позиции */
+.img-whey {
+    top: 0px;
+    right: 480px;
+    z-index: 3;
+    width: 550px;
+}
+
+.img-creatine {
+    right: 300px;
+    top: 160px;
+    z-index: 4;
+    width: 450px;
+}
+
+.img-bar {
+    right: 580px;
+    top: 400px;
+    z-index: 4;
+    width: 320px;
+}
+.img-blur {
+    right: 300px;
+    top: 20px;
+    z-index: 1;
+}
+/* Настройки для вектора в preview */
+.vector-preview {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    width: 50%; /* Увеличенный размер */
+    height: 150%;
+    z-index: -10;
+}
+
+.why-choose-us {
+    padding: 60px 10%;
+}
+
+.why-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.why-image img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.why-info {
+    max-width: 600px;
+}
+
+.why-info h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.why-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-info ul li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.why-info ul li .icon-circle {
+    width: 65px;
+    height: 65px;
+    background: #F9B300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.why-info ul li .icon-circle img {
+    width: 35px;
+    height: 35px;
+}
+
+.why-info ul li .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-info ul li .title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.why-info ul li p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+/* Настройки для вектора в why-choose-us */
+.vector-choose {
+    position: absolute;
+    top: 855px;
+    bottom: 0;
+    left: 0;
+    width: 40%; /* Фиксированная ширина */
+    height: 120%;
+    z-index: -1;
+}
+/* Стили для блока с брендами */
+.brands-section {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
+    margin: 50px 180px;
+}
+
+.brands-description {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brands-description h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.brands-description p {
+    font-size: 22px;
+}
+
+.brands-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.brand-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 450px;
+    height: 200px;
+}
+
+.brand-logo {
+    max-height: 150px;
+    max-width: 370px;
+    object-fit: contain;
+    filter: grayscale(30%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brand-card:hover .brand-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+/* Настройки для вектора в brands-section*/
+.vector-brand{
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 120%;
+    z-index: -10;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* На весь экран */
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет весь контейнер */
+    object-position: center;
+}
+
+.hero-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 80px 120px;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 28px;
+    
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.text-white {
+    color: white;
+}
+
+.text-yellow {
+    color: #F9B300;
+}
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+/* Стили для футера */
+.footer {
+    color: #000;
+    padding: 30px 0 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: flex-start; 
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-logo {
+    font-family: 'Potta One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #F9B300;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-circle img {
+    width: 45px;
+    height: 45px;
+}
+
+.social-circle:hover {
+    transform: scale(1.1);
+}
+
+.footer-contacts {
+    flex: 1;
+    min-width: 400px;
+}
+
+.footer-contacts h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #F9B300;
+}
+
+.footer-contacts p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F9B300;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #737373;
+    font-size: 16px;
+    color: #1b1a1a;
+}
