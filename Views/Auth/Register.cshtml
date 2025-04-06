@@ -1,0 +1,50 @@
+@model UserAuthModel
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Регистрация</title>
+    <link rel="stylesheet" href="~/css/register.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">PROteinZone</h1>
+            <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="graphics">
+                <img src="~/img/vector/vector_v.png" alt="Вектор верх" class="vector-top">
+                <div class="yellow-box"></div>
+                <img src="~/img/image_register1.png" alt="Фото 1" class="photo1">
+                <img src="~/img/image_register2.png" alt="Фото 2" class="photo2">
+                <img src="~/img/vector/vector_parallel.png" alt="Вектор середина" class="vector_ser">
+                <img src="~/img/vector/vector_n.png" alt="Вектор низ" class="vector-bottom">
+            </div>
+        </div>
+        <div class="right">
+            <h2>Регистрация</h2>
+            <p>С аккаунтом вы сможете быстрее оформлять заказы, отслеживать их статус и получать персональные
+                предложения.</p>
+            <form asp-controller="Auth" asp-action="Register" method="POST">
+                <input type="text" class="input-field" placeholder="Login" asp-for="Login" required>
+                <input type="email" class="input-field" placeholder="Email" asp-for="Email" required>
+                <input type="password" class="input-field" placeholder="Password" minlength="6" asp-for="Password" required>
+                <button type="submit" class="btn register-btn">Зарегистрироваться</button>
+            </form>
+            <p class="login">Уже есть аккаунт?</p>
+            <button onclick="window.location.href='/Auth/Login/'" class="btn login-btn">Войти в аккаунт</button>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -191,10 +191,11 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebasset
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Malyshev_Project.props
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Malyshev_Project.props
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\Malyshev.EAB2C695.Up2Date
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\refint\Malyshev_Project.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.pdb
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.genruntimeconfig.cache
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\ref\Malyshev_Project.dll
+c:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\5ibg4lhu48-c5n1nahjyr.gz
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

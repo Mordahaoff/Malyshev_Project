@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Malyshev_Project;
+namespace Malyshev_Project.Models;
 
 public partial class Store
 {

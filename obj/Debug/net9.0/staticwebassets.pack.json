@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Malyshev_Project.jv1afjbf94.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
@@ -61,12 +65,52 @@
       "PackagePath": "staticwebassets\\img\\blur.png"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\brands\\bombbar.png",
+      "PackagePath": "staticwebassets\\img\\brands\\bombbar.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\brands\\maxler.png",
+      "PackagePath": "staticwebassets\\img\\brands\\maxler.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\brands\\myprotein.png",
+      "PackagePath": "staticwebassets\\img\\brands\\myprotein.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\brands\\optimeal.png",
+      "PackagePath": "staticwebassets\\img\\brands\\optimeal.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\brands\\optimum.png",
+      "PackagePath": "staticwebassets\\img\\brands\\optimum.png"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\creatine.png",
       "PackagePath": "staticwebassets\\img\\creatine.png"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\1.png",
+      "PackagePath": "staticwebassets\\img\\icon\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\2.png",
+      "PackagePath": "staticwebassets\\img\\icon\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\3.png",
+      "PackagePath": "staticwebassets\\img\\icon\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\4.png",
+      "PackagePath": "staticwebassets\\img\\icon\\4.png"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\PROteinZone.png",
       "PackagePath": "staticwebassets\\img\\icon\\PROteinZone.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\email.png",
+      "PackagePath": "staticwebassets\\img\\icon\\email.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\icon_cabinet.png",
@@ -77,12 +121,32 @@
       "PackagePath": "staticwebassets\\img\\icon\\icon_logo.png"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\telegram.png",
+      "PackagePath": "staticwebassets\\img\\icon\\telegram.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\vk.png",
+      "PackagePath": "staticwebassets\\img\\icon\\vk.png"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\image_register1.png",
       "PackagePath": "staticwebassets\\img\\image_register1.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\open-sport.png",
       "PackagePath": "staticwebassets\\img\\open-sport.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\strong-body.png",
+      "PackagePath": "staticwebassets\\img\\strong-body.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_brand.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_choose.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_choose.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_n.png",
@@ -103,6 +167,10 @@
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\whey.png",
       "PackagePath": "staticwebassets\\img\\whey.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\why-choose.png",
+      "PackagePath": "staticwebassets\\img\\why-choose.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\js\\site.js",

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Malyshev_Project.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Malyshev_Project;
