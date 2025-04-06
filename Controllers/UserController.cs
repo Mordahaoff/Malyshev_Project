@@ -17,7 +17,7 @@ namespace Malyshev_Project.Controllers
         {
 			var user = HttpContext.Session.Get<User>("user");
 
-			if (user == null) RedirectToAction("Login", "Auth");
+			if (user == null) return RedirectToAction("Login", "Auth");
 
             return View(user);
         }
@@ -26,7 +26,7 @@ namespace Malyshev_Project.Controllers
 		{
 			var user = HttpContext.Session.Get<User>("user");
 
-			if (user == null) NotFound();
+			if (user == null) return NotFound();
 
 			return View(user);
 		}
