@@ -61,7 +61,7 @@ public class AuthController : Controller
             return RedirectToAction("Register", "Auth");
         }
 
-        User user = new User
+        var user = new User
         {
             Login = model.Login,
             Email = model.Email,

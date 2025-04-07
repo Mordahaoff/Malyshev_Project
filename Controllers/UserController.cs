@@ -30,5 +30,15 @@ namespace Malyshev_Project.Controllers
 
 			return View(user);
 		}
-    }
+
+		[HttpPost]
+		public IActionResult Edit(User editedUser)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+
+			if (user == null) return NotFound();
+
+			return View(user);
+		}
+	}
 }
