@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&display=swap");
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    overflow-x: hidden; /* Запрещаем горизонтальный скролл */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* Шапка */
+header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px;
+    background: white;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.header-line {
+    height: 2px;
+    background-color: #6A6060;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav {
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li.active a {
+    color: #F9B300;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: #F9B300;
+}
+
+.cabinet-btn a {
+    display: flex;
+    align-items: center;
+    background-color: #F9B300;
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #ffff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cabinet-btn img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.cabinet-btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Переход */
+.breadcrumbs-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.breadcrumbs {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs a {
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs .arrow {
+    font-weight: 900;
+    color: #000;
+}
+
+.breadcrumbs .current {
+    font-weight: 900;
+    color: #F9B300;
+}
+
+/* Основные стили для контента */
+/*Блок 1 - О протеине */
+.food-guide1 {
+    position: relative;
+    margin-top: 100px; 
+    padding: 50px 0;
+    z-index: 5;
+}
+
+.guide1 {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 35%;
+    height: auto;
+    z-index: -10;
+}
+
+.food-guide1 {
+    position: absolute;
+    top: -100px;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    width: 35%;
+    height: auto;
+}
+
+.food-guide {
+    padding: 10px 0 50px;
+    position: relative;
+    z-index: 5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 150px;
+    padding: 0 20px;
+}
+
+.protein-guide h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.protein-guide p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    position: absolute;
+    text-align: center;
+    margin-left: 550px;
+    margin-top: 40px;
+}
+
+.slogan p {
+    font-size: 96px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 0.8;
+}
+
+.text-black {
+    color: #000;
+    display: inline-block;
+    transform: translateX(-120px);
+}
+
+.text-yellow {
+    color: #F9B300;
+    display: inline-block;
+}
+
+
+/* Блок 2 - О креатине */
+.food-guide2 {
+    position: relative;
+    margin-top: 180px; 
+    padding: 50px 0;
+    z-index: 5;
+}
+
+.guide2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: auto;
+    z-index: -10;
+}
+
+.creatine-container {
+    margin-left: 630px;
+}
+
+.creatine-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.creatine-guide h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 25px 0 15px;
+}
+
+.creatine-guide p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.benefits-list {
+    list-style-type: none;
+    margin: 20px 0 30px;
+    padding-left: 20px;
+}
+
+.benefits-list li {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.benefits-list li:before {
+    content: "✔";
+    color: #F9B300;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.creatine-slogan {
+    position: absolute;
+    text-align: center;
+    margin-left: -180px;
+    margin-top: 40px;
+}
+
+.creatine-slogan p {
+    font-size: 96px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 0.8;
+}
+.text-yellow.offset {
+    display: inline-block;
+    transform: translateX(150px);
+}
+
+/*Блок 3 - О гейнере*/
+
+.food-guide3 {
+    position: relative;
+    margin-top: 200px;
+    padding: 50px 0;
+    z-index: 5;
+}
+
+.guide3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: auto;
+    z-index: -10;
+}
+
+.gainer-container {
+    margin-right: 630px;
+}
+
+.gainer-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gainer-guide h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0 10px;
+}
+
+.gainer-guide p {
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.gainer-slogan {
+    position: absolute;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 40px;
+}
+
+.gainer-slogan p {
+    font-size: 96px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 0.8;
+}
+
+.text-yellow.offset {
+    display: inline-block;
+    transform: translateX(80px);
+}
+
+/* Блок 4 - Аминокислоты */
+.food-guide4 {
+    position: relative;
+    margin-top: 200px;
+    padding: 50px 0;
+    z-index: 5;
+}
+
+.guide4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: auto;
+    z-index: -10;
+}
+
+.amino-container {
+    margin-left: 630px;
+    margin-right: 50px;
+    max-width: 1000px;
+}
+
+.amino-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.amino-guide h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 25px 0 15px;
+}
+
+.amino-guide p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.amino-slogan {
+    position: absolute;
+    text-align: center;
+    margin-left: -180px;
+    margin-top: 40px;
+}
+
+.amino-slogan p {
+    font-size: 96px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 0.8;
+}
+
+.benefits-list {
+    list-style-type: none;
+    margin: 20px 0 30px;
+    padding-left: 20px;
+}
+
+.benefits-list li {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.benefits-list li:before {
+    content: "✔";
+    color: #F9B300;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.text-yellow.offset {
+    display: inline-block;
+    transform: translateX(150px);
+}
+
+/* Футер */
+.footer {
+    color: #000;
+    padding: 30px 0 10px;
+    background-color: #fff;
+    width: 100%;
+    clear: both;
+    margin-top: 200px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-logo {
+    font-family: 'Potta One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #F9B300;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-circle img {
+    width: 45px;
+    height: 45px;
+}
+
+.social-circle:hover {
+    transform: scale(1.1);
+}
+
+.footer-contacts {
+    flex: 1;
+    min-width: 400px;
+}
+
+.footer-contacts h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #F9B300;
+}
+
+.footer-contacts p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F9B300;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #737373;
+    font-size: 16px;
+    color: #1b1a1a;
+}
