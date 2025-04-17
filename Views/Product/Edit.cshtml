@@ -43,15 +43,8 @@
                     <label asp-for="Category" class="control-label"></label>
                     <select asp-for="Category" class="form-control">
                         @foreach (var category in Model.Categories)
-                        {   
-                            if (category.IdCategory == Model.Category!.IdCategory)
-                            {
-                                <option value="@category.IdCategory" selected>@category.Name</option>
-                            }
-                            else
-                            {
-                                <option value="@category.IdCategory">@category.Name</option>
-                            }
+                        {
+                            <option value="@category.IdCategory" selected="@(category.IdCategory == @Model.Category!.IdCategory)">@category.Name</option>
                         }
                 </select>
             </div>
@@ -60,14 +53,7 @@
                 <select asp-for="Brand" class="form-control">
                         @foreach (var brand in Model.Brands)
                         {
-                            if (brand.IdBrand == Model.Brand!.IdBrand)
-                            {
-                                <option value="@brand.IdBrand" selected>@brand.Name</option>
-                            }
-                            else
-                            {
-                                <option value="@brand.IdBrand">@brand.Name</option>
-                            }
+                            <option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.Brand!.IdBrand)">@brand.Name</option>
                         }
                 </select>
             </div>
