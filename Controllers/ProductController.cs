@@ -71,24 +71,8 @@ namespace Malyshev_Project.Controllers
 
 			var model = (EditProductModel)product;
 
-			model.Brands = _db.Brands
-				.Select(b => new SelectListItem
-				{
-					Value = b.IdBrand.ToString(),
-					Text = b.Name,
-					Selected = b.IdBrand == product.BrandId
-				})
-				.ToList();
-
-
-			model.Categories = _db.CategoriesOfProducts
-				.Select(c => new SelectListItem
-				{
-					Value = c.IdCategory.ToString(),
-					Text = c.Name,
-					Selected = c.IdCategory == product.CategoryId
-				})
-				.ToList();
+			model.Brands = _db.Brands.ToList();
+			model.Categories = _db.CategoriesOfProducts.ToList();
 
 			//model.Brands.Find(b => b.Value == product.BrandId.ToString())!.Selected = true;
 			//model.Categories.Find(c => c.Value == product.CategoryId.ToString())!.Selected = true;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Malyshev_Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb8dac7a5fd566919f90c221e5376181d7b01ac3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcda0d254473e4c0c286d9c8ab665bff626d08db")]
 [assembly: System.Reflection.AssemblyProductAttribute("Malyshev_Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Malyshev_Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

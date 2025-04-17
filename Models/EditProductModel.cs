@@ -14,8 +14,8 @@ namespace Malyshev_Project.Models
 		public Brand? Brand { get; set; }
 		public CategoriesOfProduct? Category { get; set; }
 
-		public List<SelectListItem> Brands { get; set; } = [];
-		public List<SelectListItem> Categories { get; set; } = [];
+		public List<Brand> Brands { get; set; } = [];
+		public List<CategoriesOfProduct> Categories { get; set; } = [];
 
 		public static explicit operator EditProductModel(Product product)
 		{
