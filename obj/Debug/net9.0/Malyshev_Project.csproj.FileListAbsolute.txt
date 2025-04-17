@@ -197,7 +197,6 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\refint\Malyshe
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.pdb
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.genruntimeconfig.cache
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\ref\Malyshev_Project.dll
-c:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\5ibg4lhu48-c5n1nahjyr.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\Microsoft.Build.dll
@@ -318,3 +317,7 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\ru\Microsoft.C
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-fox5cs4x6x.gz
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-vkv0nobawa.gz
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\yjz81oy4oe-6zshqfktw2.gz
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\5ibg4lhu48-t5be1111nq.gz

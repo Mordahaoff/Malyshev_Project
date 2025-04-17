@@ -18,6 +18,8 @@ public class CatalogController : Controller
     {
         List<Product> products = _db.Products.ToList();
         _logger.LogInformation($"Кол-во продуктов: {products.Count}");
-        return View(products);
+
+        var model = new CatalogModel(products);
+        return View(model);
     }
 }

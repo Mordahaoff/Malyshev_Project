@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dMxHwPevycgTSHTWr7qNetPMhaXjSSAe1Mo+QzPgqi4=",
+  "Hash": "0IpUhD7hs5G0m1PwfjzGpvWztQsxx2Sr7hTs7do/XJg=",
   "Source": "Malyshev_Project",
   "BasePath": "_content/Malyshev_Project",
   "Mode": "Default",
@@ -122,6 +122,27 @@
       "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\38j7by0bd5-vkv0nobawa.gz",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/catalog#[.{fingerprint=vkv0nobawa}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\catalog.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "uq7unbt1yi",
+      "Integrity": "thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\catalog.css"
+    },
+    {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\3sibivs43e-63fj8s7r0e.gz",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
@@ -141,6 +162,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-fox5cs4x6x.gz",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/about#[.{fingerprint=fox5cs4x6x}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\about.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "yge8ymqrk2",
+      "Integrity": "vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\about.css"
     },
     {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4tjl8gxv5e-khv3u5hwcm.gz",
@@ -269,12 +311,12 @@
       "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-c5n1nahjyr.gz",
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-t5be1111nq.gz",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Malyshev_Project",
-      "RelativePath": "css/home#[.{fingerprint=c5n1nahjyr}]?.css.gz",
+      "RelativePath": "css/home#[.{fingerprint=t5be1111nq}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -283,8 +325,8 @@
       "RelatedAsset": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3sw60z4m4z",
-      "Integrity": "jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU=",
+      "Fingerprint": "urtg2ahhr7",
+      "Integrity": "RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css"
@@ -1361,6 +1403,27 @@
       "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\yjz81oy4oe-6zshqfktw2.gz",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/food_guide#[.{fingerprint=6zshqfktw2}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\food_guide.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "e0jz86flor",
+      "Integrity": "/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\food_guide.css"
+    },
+    {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\ytm26682en-87fc7y1x7t.gz",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
@@ -1445,6 +1508,69 @@
       "OriginalItemSpec": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Malyshev_Project.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\about.css",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/about#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fox5cs4x6x",
+      "Integrity": "vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\about.css"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\catalog.css",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/catalog#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vkv0nobawa",
+      "Integrity": "IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\catalog.css"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\food_guide.css",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/food_guide#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6zshqfktw2",
+      "Integrity": "8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\food_guide.css"
+    },
+    {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
@@ -1459,8 +1585,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c5n1nahjyr",
-      "Integrity": "kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE=",
+      "Fingerprint": "t5be1111nq",
+      "Integrity": "/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
@@ -1564,8 +1690,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h42lmz8riv",
-      "Integrity": "AYAuwabprvJA45fHcnsh9sYyvus79tjq1a5/QooAVmI=",
+      "Fingerprint": "x5v6q6mz30",
+      "Integrity": "RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\sql-scripts\\insert-script.sql"
@@ -1695,6 +1821,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\uml\\UseCase.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\about1.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/about1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60mhxmy1ut",
+      "Integrity": "Wj2LrR4RJ6Wag1ajyl3fCsodcUyHscSk2tr+I6qvD8g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\about1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\about2.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/about2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sly5tgdzhe",
+      "Integrity": "cEt1hXK4Tl1J3Nf357cK+lValWumbDlCDgTty9OKljo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\about2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\banner.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/banner#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7sslbhb0zw",
+      "Integrity": "CfyICja+J5XBLxaAinD6bFJ3o7PbrzAxIrVmOXxiQdw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner.png"
     },
     {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\bar.png",
@@ -1863,6 +2052,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\creatine.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide1.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/food_guide1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wrgdn7dq6f",
+      "Integrity": "1Cb22MIDKavnxdnBke3f2V1gW4GZLvBPHF8XvjS1yqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\food_guide1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide2.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/food_guide2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vwr7kn6nlw",
+      "Integrity": "8QbOn6LBq3SEV8r3ZuDymHkWif017wbKgdcZJ1yS+d4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\food_guide2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide3.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/food_guide3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oehs9hl4ah",
+      "Integrity": "4NvciArEBpmgUbbhNQbS6UO9NJ6dSv5rZ98uFHRoqQc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\food_guide3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide4.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/food_guide4#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zy2z5n0nsn",
+      "Integrity": "y5otvIJqtDJTaR3FGptDm8Iz69xljkKFJ2sMu3qQEXk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\food_guide4.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\girl.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/girl#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "01mc4d1bea",
+      "Integrity": "hKKrDF7XJXQVPeVfHLuyHVgkoWp6eTkzdjkxbkxX8jI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\girl.png"
     },
     {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\1.png",
@@ -2159,6 +2453,48 @@
       "OriginalItemSpec": "wwwroot\\img\\strong-body.png"
     },
     {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\team_card1.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/team_card1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ssmuf4tzwt",
+      "Integrity": "FKJzpA29E67dFUE2txraco5l9cWUVic9ajErvxRwbfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\team_card1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/vector/vector_about#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "klxmkr00xs",
+      "Integrity": "aMxOcmfHmBuVBMoMkUxukHIZsU+yNCDMrhqgH2S7vzY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vector\\vector_about.png"
+    },
+    {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
@@ -2199,6 +2535,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\vector\\vector_choose.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_mission.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/vector/vector_mission#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fb4lm8d0tg",
+      "Integrity": "G89I/0dfc20YyrmDtg9h/4s8DCfrKvu822Z1sDlkWjo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vector\\vector_mission.png"
     },
     {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_n.png",
@@ -2264,6 +2621,27 @@
       "OriginalItemSpec": "wwwroot\\img\\vector\\vector_preview.png"
     },
     {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_team.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/vector/vector_team#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bznuj1tfqo",
+      "Integrity": "5/v7HhRIFAMAEJMLnYqRzH7Mts47LXZA0l3u9DWHTJQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vector\\vector_team.png"
+    },
+    {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_v.png",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
@@ -2304,6 +2682,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\whey.png"
+    },
+    {
+      "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\whey_protein.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/whey_protein#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c4d7jiex1l",
+      "Integrity": "LNmptgYGWoozfrRE5x/xlRAMKZC9uHHo3dzK2jgOFto=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\whey_protein.png"
     },
     {
       "Identity": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\why-choose.png",
@@ -3610,13 +4009,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/home.c5n1nahjyr.css",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-c5n1nahjyr.gz",
+      "Route": "css/about.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-fox5cs4x6x.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000420875421"
+          "Quality": "0.000420168067"
         }
       ],
       "ResponseHeaders": [
@@ -3626,15 +4025,152 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2375"
+          "Value": "2379"
         },
         {
           "Name": "ETag",
-          "Value": "\"jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU=\""
+          "Value": "\"vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 15:17:14 GMT"
+          "Value": "Thu, 17 Apr 2025 07:16:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\about.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9714"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 07:16:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-fox5cs4x6x.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2379"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 07:16:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.fox5cs4x6x.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-fox5cs4x6x.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000420168067"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2379"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 07:16:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3654,26 +4190,775 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE=\""
+          "Value": "W/\"vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c5n1nahjyr"
+          "Value": "fox5cs4x6x"
         },
         {
           "Name": "label",
-          "Value": "css/home.css"
+          "Value": "css/about.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE="
+          "Value": "sha256-vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk="
         }
       ]
     },
     {
-      "Route": "css/home.c5n1nahjyr.css",
+      "Route": "css/about.fox5cs4x6x.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\about.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9714"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 07:16:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fox5cs4x6x"
+        },
+        {
+          "Name": "label",
+          "Value": "css/about.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vzVeHlCtJVZswmTvGT3rdip2ojITuanG9VCXxkjd6sk="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.fox5cs4x6x.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-fox5cs4x6x.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2379"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 07:16:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fox5cs4x6x"
+        },
+        {
+          "Name": "label",
+          "Value": "css/about.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vioE2iF+y7+mUExRJ03ot0WWsn2BIsf7twq2LNfrTlk="
+        }
+      ]
+    },
+    {
+      "Route": "css/catalog.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\38j7by0bd5-vkv0nobawa.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000517330574"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1932"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo="
+        }
+      ]
+    },
+    {
+      "Route": "css/catalog.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\catalog.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7177"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo="
+        }
+      ]
+    },
+    {
+      "Route": "css/catalog.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\38j7by0bd5-vkv0nobawa.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM="
+        }
+      ]
+    },
+    {
+      "Route": "css/catalog.vkv0nobawa.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\38j7by0bd5-vkv0nobawa.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000517330574"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1932"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vkv0nobawa"
+        },
+        {
+          "Name": "label",
+          "Value": "css/catalog.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo="
+        }
+      ]
+    },
+    {
+      "Route": "css/catalog.vkv0nobawa.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\catalog.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7177"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vkv0nobawa"
+        },
+        {
+          "Name": "label",
+          "Value": "css/catalog.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IVlGrlLAbU/5gH5dWDz0YyzP+TLhcoW+pQDfVa7/CAo="
+        }
+      ]
+    },
+    {
+      "Route": "css/catalog.vkv0nobawa.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\38j7by0bd5-vkv0nobawa.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vkv0nobawa"
+        },
+        {
+          "Name": "label",
+          "Value": "css/catalog.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-thU11S8bN3saUQavLXTEhK2rB6E0c+jqw5+zGzhZmMM="
+        }
+      ]
+    },
+    {
+      "Route": "css/food_guide.6zshqfktw2.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\yjz81oy4oe-6zshqfktw2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000493096647"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2027"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6zshqfktw2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/food_guide.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE="
+        }
+      ]
+    },
+    {
+      "Route": "css/food_guide.6zshqfktw2.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\food_guide.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9816"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6zshqfktw2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/food_guide.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE="
+        }
+      ]
+    },
+    {
+      "Route": "css/food_guide.6zshqfktw2.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\yjz81oy4oe-6zshqfktw2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6zshqfktw2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/food_guide.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4="
+        }
+      ]
+    },
+    {
+      "Route": "css/food_guide.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\yjz81oy4oe-6zshqfktw2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000493096647"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2027"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE="
+        }
+      ]
+    },
+    {
+      "Route": "css/food_guide.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\food_guide.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9816"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE="
+        }
+      ]
+    },
+    {
+      "Route": "css/food_guide.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\yjz81oy4oe-6zshqfktw2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/lr3CofNR39vHo32qQd+qHpZG9Ck+FrwIqcEs9JiQK4="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-t5be1111nq.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000436681223"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2289"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3683,7 +4968,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9211"
+          "Value": "9113"
         },
         {
           "Name": "Content-Type",
@@ -3691,11 +4976,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE=\""
+          "Value": "\"/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 15:17:14 GMT"
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-t5be1111nq.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2289"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.t5be1111nq.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-t5be1111nq.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000436681223"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2289"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t5be1111nq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/home.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.t5be1111nq.css",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3705,7 +5135,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c5n1nahjyr"
+          "Value": "t5be1111nq"
         },
         {
           "Name": "label",
@@ -3713,13 +5143,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE="
+          "Value": "sha256-/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU="
         }
       ]
     },
     {
-      "Route": "css/home.c5n1nahjyr.css.gz",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-c5n1nahjyr.gz",
+      "Route": "css/home.t5be1111nq.css.gz",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-t5be1111nq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3728,7 +5158,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2375"
+          "Value": "2289"
         },
         {
           "Name": "Content-Type",
@@ -3736,11 +5166,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU=\""
+          "Value": "\"RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 15:17:14 GMT"
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3758,7 +5188,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c5n1nahjyr"
+          "Value": "t5be1111nq"
         },
         {
           "Name": "label",
@@ -3766,144 +5196,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.css",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-c5n1nahjyr.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000420875421"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2375"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 15:17:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.css",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9211"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 15:17:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-kCUKiDWA6tf9kCe5iyHbrIF4omqTiv77UD0sWkMLxgE="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.css.gz",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\5ibg4lhu48-c5n1nahjyr.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2375"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 15:17:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jehgGZNFzy/w/RrpgOCe++wh5FrknE9Gy0LKlzbIhDU="
+          "Value": "sha256-RgvdQNQXyGSTDm9eVgJ88ZLWXoUUlk2G5iPiEuBfxeI="
         }
       ]
     },
@@ -4884,51 +6177,6 @@
       ]
     },
     {
-      "Route": "files/sql-scripts/insert-script.h42lmz8riv.sql",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22355"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AYAuwabprvJA45fHcnsh9sYyvus79tjq1a5/QooAVmI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 13:48:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h42lmz8riv"
-        },
-        {
-          "Name": "label",
-          "Value": "files/sql-scripts/insert-script.sql"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AYAuwabprvJA45fHcnsh9sYyvus79tjq1a5/QooAVmI="
-        }
-      ]
-    },
-    {
       "Route": "files/sql-scripts/insert-script.sql",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
       "Selectors": [],
@@ -4939,7 +6187,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22355"
+          "Value": "22351"
         },
         {
           "Name": "Content-Type",
@@ -4947,11 +6195,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AYAuwabprvJA45fHcnsh9sYyvus79tjq1a5/QooAVmI=\""
+          "Value": "\"RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 13:48:09 GMT"
+          "Value": "Thu, 17 Apr 2025 06:25:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4961,7 +6209,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AYAuwabprvJA45fHcnsh9sYyvus79tjq1a5/QooAVmI="
+          "Value": "sha256-RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA="
+        }
+      ]
+    },
+    {
+      "Route": "files/sql-scripts/insert-script.x5v6q6mz30.sql",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22351"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x5v6q6mz30"
+        },
+        {
+          "Name": "label",
+          "Value": "files/sql-scripts/insert-script.sql"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA="
         }
       ]
     },
@@ -5454,6 +6747,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-PD8npsa7DJRLTqqMBGzglYtkANMGD85jPSzCA47VbVI="
+        }
+      ]
+    },
+    {
+      "Route": "img/about1.60mhxmy1ut.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\about1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "160479"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wj2LrR4RJ6Wag1ajyl3fCsodcUyHscSk2tr+I6qvD8g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60mhxmy1ut"
+        },
+        {
+          "Name": "label",
+          "Value": "img/about1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wj2LrR4RJ6Wag1ajyl3fCsodcUyHscSk2tr+I6qvD8g="
+        }
+      ]
+    },
+    {
+      "Route": "img/about1.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\about1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "160479"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wj2LrR4RJ6Wag1ajyl3fCsodcUyHscSk2tr+I6qvD8g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wj2LrR4RJ6Wag1ajyl3fCsodcUyHscSk2tr+I6qvD8g="
+        }
+      ]
+    },
+    {
+      "Route": "img/about2.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\about2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "130556"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cEt1hXK4Tl1J3Nf357cK+lValWumbDlCDgTty9OKljo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cEt1hXK4Tl1J3Nf357cK+lValWumbDlCDgTty9OKljo="
+        }
+      ]
+    },
+    {
+      "Route": "img/about2.sly5tgdzhe.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\about2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "130556"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cEt1hXK4Tl1J3Nf357cK+lValWumbDlCDgTty9OKljo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sly5tgdzhe"
+        },
+        {
+          "Name": "label",
+          "Value": "img/about2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cEt1hXK4Tl1J3Nf357cK+lValWumbDlCDgTty9OKljo="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner.7sslbhb0zw.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1545205"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CfyICja+J5XBLxaAinD6bFJ3o7PbrzAxIrVmOXxiQdw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7sslbhb0zw"
+        },
+        {
+          "Name": "label",
+          "Value": "img/banner.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CfyICja+J5XBLxaAinD6bFJ3o7PbrzAxIrVmOXxiQdw="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1545205"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CfyICja+J5XBLxaAinD6bFJ3o7PbrzAxIrVmOXxiQdw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CfyICja+J5XBLxaAinD6bFJ3o7PbrzAxIrVmOXxiQdw="
         }
       ]
     },
@@ -6110,6 +7649,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-Fh3+EGWvElV582YUrhX5cIDIkNlzjc5b4d7RZ6IQEQ8="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide1.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Cb22MIDKavnxdnBke3f2V1gW4GZLvBPHF8XvjS1yqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Cb22MIDKavnxdnBke3f2V1gW4GZLvBPHF8XvjS1yqk="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide1.wrgdn7dq6f.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Cb22MIDKavnxdnBke3f2V1gW4GZLvBPHF8XvjS1yqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wrgdn7dq6f"
+        },
+        {
+          "Name": "label",
+          "Value": "img/food_guide1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Cb22MIDKavnxdnBke3f2V1gW4GZLvBPHF8XvjS1yqk="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide2.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "458231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8QbOn6LBq3SEV8r3ZuDymHkWif017wbKgdcZJ1yS+d4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8QbOn6LBq3SEV8r3ZuDymHkWif017wbKgdcZJ1yS+d4="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide2.vwr7kn6nlw.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "458231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8QbOn6LBq3SEV8r3ZuDymHkWif017wbKgdcZJ1yS+d4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vwr7kn6nlw"
+        },
+        {
+          "Name": "label",
+          "Value": "img/food_guide2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8QbOn6LBq3SEV8r3ZuDymHkWif017wbKgdcZJ1yS+d4="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide3.oehs9hl4ah.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "308051"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4NvciArEBpmgUbbhNQbS6UO9NJ6dSv5rZ98uFHRoqQc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oehs9hl4ah"
+        },
+        {
+          "Name": "label",
+          "Value": "img/food_guide3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4NvciArEBpmgUbbhNQbS6UO9NJ6dSv5rZ98uFHRoqQc="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide3.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "308051"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4NvciArEBpmgUbbhNQbS6UO9NJ6dSv5rZ98uFHRoqQc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4NvciArEBpmgUbbhNQbS6UO9NJ6dSv5rZ98uFHRoqQc="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide4.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "359195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y5otvIJqtDJTaR3FGptDm8Iz69xljkKFJ2sMu3qQEXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y5otvIJqtDJTaR3FGptDm8Iz69xljkKFJ2sMu3qQEXk="
+        }
+      ]
+    },
+    {
+      "Route": "img/food_guide4.zy2z5n0nsn.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\food_guide4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "359195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y5otvIJqtDJTaR3FGptDm8Iz69xljkKFJ2sMu3qQEXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zy2z5n0nsn"
+        },
+        {
+          "Name": "label",
+          "Value": "img/food_guide4.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y5otvIJqtDJTaR3FGptDm8Iz69xljkKFJ2sMu3qQEXk="
+        }
+      ]
+    },
+    {
+      "Route": "img/girl.01mc4d1bea.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\girl.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "276905"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hKKrDF7XJXQVPeVfHLuyHVgkoWp6eTkzdjkxbkxX8jI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "01mc4d1bea"
+        },
+        {
+          "Name": "label",
+          "Value": "img/girl.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hKKrDF7XJXQVPeVfHLuyHVgkoWp6eTkzdjkxbkxX8jI="
+        }
+      ]
+    },
+    {
+      "Route": "img/girl.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\girl.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "276905"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hKKrDF7XJXQVPeVfHLuyHVgkoWp6eTkzdjkxbkxX8jI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hKKrDF7XJXQVPeVfHLuyHVgkoWp6eTkzdjkxbkxX8jI="
         }
       ]
     },
@@ -7262,6 +9211,170 @@
       ]
     },
     {
+      "Route": "img/team_card1.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\team_card1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FKJzpA29E67dFUE2txraco5l9cWUVic9ajErvxRwbfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FKJzpA29E67dFUE2txraco5l9cWUVic9ajErvxRwbfw="
+        }
+      ]
+    },
+    {
+      "Route": "img/team_card1.ssmuf4tzwt.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\team_card1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FKJzpA29E67dFUE2txraco5l9cWUVic9ajErvxRwbfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ssmuf4tzwt"
+        },
+        {
+          "Name": "label",
+          "Value": "img/team_card1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FKJzpA29E67dFUE2txraco5l9cWUVic9ajErvxRwbfw="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_about.klxmkr00xs.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aMxOcmfHmBuVBMoMkUxukHIZsU+yNCDMrhqgH2S7vzY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "klxmkr00xs"
+        },
+        {
+          "Name": "label",
+          "Value": "img/vector/vector_about.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aMxOcmfHmBuVBMoMkUxukHIZsU+yNCDMrhqgH2S7vzY="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_about.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aMxOcmfHmBuVBMoMkUxukHIZsU+yNCDMrhqgH2S7vzY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aMxOcmfHmBuVBMoMkUxukHIZsU+yNCDMrhqgH2S7vzY="
+        }
+      ]
+    },
+    {
       "Route": "img/vector/vector_brand.aa78250w3b.png",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",
       "Selectors": [],
@@ -7422,6 +9535,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-aR/WfdfTzb7m52gg6RPGB3bLhqKts+Ifk8wMqeBFvA8="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_mission.fb4lm8d0tg.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_mission.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G89I/0dfc20YyrmDtg9h/4s8DCfrKvu822Z1sDlkWjo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fb4lm8d0tg"
+        },
+        {
+          "Name": "label",
+          "Value": "img/vector/vector_mission.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-G89I/0dfc20YyrmDtg9h/4s8DCfrKvu822Z1sDlkWjo="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_mission.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_mission.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G89I/0dfc20YyrmDtg9h/4s8DCfrKvu822Z1sDlkWjo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-G89I/0dfc20YyrmDtg9h/4s8DCfrKvu822Z1sDlkWjo="
         }
       ]
     },
@@ -7672,6 +9867,88 @@
       ]
     },
     {
+      "Route": "img/vector/vector_team.bznuj1tfqo.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_team.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5/v7HhRIFAMAEJMLnYqRzH7Mts47LXZA0l3u9DWHTJQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bznuj1tfqo"
+        },
+        {
+          "Name": "label",
+          "Value": "img/vector/vector_team.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5/v7HhRIFAMAEJMLnYqRzH7Mts47LXZA0l3u9DWHTJQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_team.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_team.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5/v7HhRIFAMAEJMLnYqRzH7Mts47LXZA0l3u9DWHTJQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5/v7HhRIFAMAEJMLnYqRzH7Mts47LXZA0l3u9DWHTJQ="
+        }
+      ]
+    },
+    {
       "Route": "img/vector/vector_v.d97p0ijp2e.png",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_v.png",
       "Selectors": [],
@@ -7832,6 +10109,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-/MZ2Xe2gdI+lsYdPadAw1OmDo+I5XXifvbS1QOoPKAQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/whey_protein.c4d7jiex1l.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\whey_protein.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LNmptgYGWoozfrRE5x/xlRAMKZC9uHHo3dzK2jgOFto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c4d7jiex1l"
+        },
+        {
+          "Name": "label",
+          "Value": "img/whey_protein.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LNmptgYGWoozfrRE5x/xlRAMKZC9uHHo3dzK2jgOFto="
+        }
+      ]
+    },
+    {
+      "Route": "img/whey_protein.png",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\whey_protein.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LNmptgYGWoozfrRE5x/xlRAMKZC9uHHo3dzK2jgOFto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 06:25:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LNmptgYGWoozfrRE5x/xlRAMKZC9uHHo3dzK2jgOFto="
         }
       ]
     },
