@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
 
 namespace Malyshev_Project.Models
 {
-	public class ProductModel()
+	public class CreateProductModel()
 	{
-		public int? IdProduct { get; set; }
 		public string Name { get; set; } = null!;
 		public string Photo { get; set; } = null!;
 		public string Description { get; set; } = null!;
@@ -13,10 +13,13 @@ namespace Malyshev_Project.Models
 		public int CategoryId { get; set; }
 		public int BrandId { get; set; }
 
+		public Brand? Brand { get; set; }
+		public CategoriesOfProduct? Category { get; set; }
+
 		public List<SelectListItem> Brands { get; set; } = [];
 		public List<SelectListItem> Categories { get; set; } = [];
 
-		public static explicit operator Product(ProductModel model)
+		public static explicit operator Product(CreateProductModel model)
 		{
 			var product = new Product
 			{
@@ -30,8 +33,8 @@ namespace Malyshev_Project.Models
 			};
 			return product;
 		}
-		public static explicit operator ProductModel(Product product) {
-			var model = new ProductModel
+		public static explicit operator CreateProductModel(Product product) {
+			var model = new CreateProductModel
 			{
 				Name = product.Name,
 				Photo = product.Photo,

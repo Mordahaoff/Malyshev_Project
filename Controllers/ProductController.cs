@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Malyshev_Project.Controllers
 {
@@ -28,7 +27,7 @@ namespace Malyshev_Project.Controllers
 
 		public IActionResult Create()
 		{
-			var model = new ProductModel
+			var model = new CreateProductModel
 			{
 				Brands = _db.Brands
 					.Select(b => new SelectListItem()
@@ -51,7 +50,7 @@ namespace Malyshev_Project.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Create(ProductModel model)
+		public IActionResult Create(CreateProductModel model)
 		{
 			var product = (Product)model;
 
@@ -70,36 +69,46 @@ namespace Malyshev_Project.Controllers
 				.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound();
 
-			var model = (ProductModel)product;
+			var model = (EditProductModel)product;
 
 			model.Brands = _db.Brands
 				.Select(b => new SelectListItem
 				{
 					Value = b.IdBrand.ToString(),
-					Text = b.Name
+					Text = b.Name,
+					Selected = b.IdBrand == product.BrandId
 				})
 				.ToList();
+
 
 			model.Categories = _db.CategoriesOfProducts
 				.Select(c => new SelectListItem
 				{
 					Value = c.IdCategory.ToString(),
-					Text = c.Name
+					Text = c.Name,
+					Selected = c.IdCategory == product.CategoryId
 				})
 				.ToList();
+
+			//model.Brands.Find(b => b.Value == product.BrandId.ToString())!.Selected = true;
+			//model.Categories.Find(c => c.Value == product.CategoryId.ToString())!.Selected = true;
 
 			return View(model);
 		}
 
 		[HttpPost]
-		public IActionResult Edit(ProductModel model)
+		public IActionResult Edit(EditProductModel model)
 		{
-			var editedProduct = (Product)model;
-
-			var oldProduct = _db.Products.FirstOrDefault(p => p.IdProduct == editedProduct.IdProduct);
+			var oldProduct = _db.Products.FirstOrDefault(p => p.IdProduct == model.IdProduct);
 			if (oldProduct == null) return NotFound();
 
-			oldProduct.UpdateFrom(model);
+			oldProduct.Name = model.Name;
+			oldProduct.Photo = model.Photo;
+			oldProduct.Description = model.Description;
+			oldProduct.Price = model.Price;
+			oldProduct.Volume = model.Volume;
+			oldProduct.CategoryId = model.Category!.IdCategory;
+			oldProduct.BrandId = model.Brand!.IdBrand;
 
 			_db.SaveChanges();
 			return RedirectToAction("Edit", "Product", new { id = model.IdProduct });
