@@ -1,6 +1,5 @@
 using Malyshev_Project.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Malyshev_Project.Controllers;
 
@@ -33,7 +32,15 @@ public class AuthController : Controller
 			return RedirectToAction("Login", "Auth");
         }
 
-        if (user.Password != model.Password)
+		if (user.Email != model.Email)
+		{
+			string message = "Почта не совпадает!";
+			_logger.LogWarning(message);
+			ViewData["Message"] = message;
+			return RedirectToAction("Login", "Auth");
+		}
+
+		if (user.Password != model.Password)
         {
 			string message = "Пароль не совпадает!";
 			_logger.LogWarning(message);
@@ -43,7 +50,7 @@ public class AuthController : Controller
 
         HttpContext.Session.Set<User>("user", user);
 
-        return RedirectToAction("User", "Profile");
+        return RedirectToAction("MyProfile", "User");
     }
 
     public IActionResult Register()
@@ -63,9 +70,9 @@ public class AuthController : Controller
 
         var user = new User
         {
-            Login = model.Login,
+            Login = model.Login!,
             Email = model.Email,
-            Password = model.Password,
+            Password = model.Password!,
         };
 
         _db.Users.Add(user);
@@ -73,6 +80,12 @@ public class AuthController : Controller
 
         _logger.LogInformation($"Пользователь [{model.Login}] [{model.Email}] [{model.Password}] зарегистрирован!");
 
+        return RedirectToAction("Login", "Auth");
+    }
+
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
         return RedirectToAction("Login", "Auth");
     }
 }

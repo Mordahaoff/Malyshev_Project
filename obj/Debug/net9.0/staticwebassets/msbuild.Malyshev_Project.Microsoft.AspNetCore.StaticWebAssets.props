@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x5v6q6mz30</Fingerprint>
-      <Integrity>RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=</Integrity>
+      <Fingerprint>91c9bujc2a</Fingerprint>
+      <Integrity>LfgSrvB439BrFtvxMM8NGmH7SmvAhjZq1+SSOLljFf0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\sql-scripts\insert-script.sql'))</OriginalItemSpec>

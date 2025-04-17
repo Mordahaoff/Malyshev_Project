@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0IpUhD7hs5G0m1PwfjzGpvWztQsxx2Sr7hTs7do/XJg=",
+  "Hash": "Kwc7Eg/f8PPQj/O617Ffl75ueuyA1AbYtUulFgvyWQw=",
   "Source": "Malyshev_Project",
   "BasePath": "_content/Malyshev_Project",
   "Mode": "Default",
@@ -1690,8 +1690,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x5v6q6mz30",
-      "Integrity": "RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=",
+      "Fingerprint": "91c9bujc2a",
+      "Integrity": "LfgSrvB439BrFtvxMM8NGmH7SmvAhjZq1+SSOLljFf0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\sql-scripts\\insert-script.sql"
@@ -6177,6 +6177,51 @@
       ]
     },
     {
+      "Route": "files/sql-scripts/insert-script.91c9bujc2a.sql",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfgSrvB439BrFtvxMM8NGmH7SmvAhjZq1+SSOLljFf0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:08:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91c9bujc2a"
+        },
+        {
+          "Name": "label",
+          "Value": "files/sql-scripts/insert-script.sql"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LfgSrvB439BrFtvxMM8NGmH7SmvAhjZq1+SSOLljFf0="
+        }
+      ]
+    },
+    {
       "Route": "files/sql-scripts/insert-script.sql",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
       "Selectors": [],
@@ -6187,7 +6232,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22351"
+          "Value": "22397"
         },
         {
           "Name": "Content-Type",
@@ -6195,11 +6240,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=\""
+          "Value": "\"LfgSrvB439BrFtvxMM8NGmH7SmvAhjZq1+SSOLljFf0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 06:25:15 GMT"
+          "Value": "Thu, 17 Apr 2025 08:08:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6209,52 +6254,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA="
-        }
-      ]
-    },
-    {
-      "Route": "files/sql-scripts/insert-script.x5v6q6mz30.sql",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22351"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 06:25:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "x5v6q6mz30"
-        },
-        {
-          "Name": "label",
-          "Value": "files/sql-scripts/insert-script.sql"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RTWwkdrOfR8YBRQP7/MJp+O/2QhCrgKYIGMrJOUcQlA="
+          "Value": "sha256-LfgSrvB439BrFtvxMM8NGmH7SmvAhjZq1+SSOLljFf0="
         }
       ]
     },

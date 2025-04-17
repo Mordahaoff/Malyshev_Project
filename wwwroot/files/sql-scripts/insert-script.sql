@@ -2,9 +2,9 @@ insert into roles(name_) values
 ('Клиент'),
 ('Администратор');
 
-insert into users(login, password_, role_id) values
-('client', 'client', 1),
-('admin', 'admin', 2);
+insert into users(login, password_, email, role_id) values
+('client', 'client', 'client@gmail.com', 1),
+('admin', 'admin', 'admin@gmail.com', 2);
 
 --insert into categories_of_products(name_, description) values
 --('Test Category', 'Description of Test Category');

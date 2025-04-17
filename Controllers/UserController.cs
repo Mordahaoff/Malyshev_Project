@@ -13,7 +13,7 @@ namespace Malyshev_Project.Controllers
 			_logger = logger;
 			_db = db;
 		}
-		public IActionResult Profile()
+		public IActionResult MyProfile()
         {
 			var user = HttpContext.Session.Get<User>("user");
 
@@ -34,11 +34,24 @@ namespace Malyshev_Project.Controllers
 		[HttpPost]
 		public IActionResult Edit(User editedUser)
 		{
-			var user = HttpContext.Session.Get<User>("user");
+			var sessionUser = HttpContext.Session.Get<User>("user");
+			if (sessionUser == null) return NotFound();
 
-			if (user == null) return NotFound();
+			var dbUser = _db.Users.First(u => u.IdUser == sessionUser!.IdUser);
+			dbUser.Login = editedUser.Login;
+			dbUser.Password = editedUser.Password;
+			//dbUser.RoleId = editedUser.RoleId;
+			dbUser.Surname = editedUser.Surname;
+			dbUser.Name = editedUser.Name;
+			dbUser.Patronymic = editedUser.Patronymic;
+			dbUser.Gender = editedUser.Gender;
+			dbUser.Telephone = editedUser.Telephone;
+			dbUser.Photo = editedUser.Photo;
+			_db.SaveChanges();
 
-			return View(user);
+			HttpContext.Session.Set("user", dbUser);
+
+			return RedirectToAction("Edit", "User");
 		}
 	}
 }
