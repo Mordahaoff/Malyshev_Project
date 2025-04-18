@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\editdiscountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\editdiscountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\catalogmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\catalogmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\createproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\createproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\creatediscountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\creatediscountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\productcatalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\productcatalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 238,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditDiscountModel.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\EditDiscountModel.cs",
-              "RelativeDocumentMoniker": "Models\\EditDiscountModel.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\EditDiscountModel.cs",
-              "RelativeToolTip": "Models\\EditDiscountModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T09:06:39.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DiscountController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\DiscountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DiscountController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\DiscountController.cs",
-              "RelativeToolTip": "Controllers\\DiscountController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAuwEsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:52:33.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAcwDoAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswFsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T09:03:22.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\CreateProductModel.cs",
-              "RelativeDocumentMoniker": "Models\\CreateProductModel.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\CreateProductModel.cs",
-              "RelativeToolTip": "Models\\CreateProductModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwB4AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T09:03:18.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateDiscountModel.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\CreateDiscountModel.cs",
-              "RelativeDocumentMoniker": "Models\\CreateDiscountModel.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\CreateDiscountModel.cs",
-              "RelativeToolTip": "Models\\CreateDiscountModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:57:12.268Z",
+              "WhenOpened": "2025-04-18T10:04:52.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Discount.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\Discount.cs",
-              "RelativeDocumentMoniker": "Models\\Discount.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\Discount.cs",
-              "RelativeToolTip": "Models\\Discount.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "ProductCatalog.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\ProductCatalog.cs",
+              "RelativeDocumentMoniker": "Models\\ProductCatalog.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\ProductCatalog.cs",
+              "RelativeToolTip": "Models\\ProductCatalog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:56:13.625Z",
+              "WhenOpened": "2025-04-18T10:04:26.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CatalogModel.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\CatalogModel.cs",
+              "RelativeDocumentMoniker": "Models\\CatalogModel.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\CatalogModel.cs",
+              "RelativeToolTip": "Models\\CatalogModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T10:04:24.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CatalogController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\CatalogController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CatalogController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\CatalogController.cs",
+              "RelativeToolTip": "Controllers\\CatalogController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T10:04:22.174Z",
               "EditorCaption": ""
             }
           ]

@@ -21,14 +21,6 @@ namespace Malyshev_Project.Controllers
             _db = db;
         }
 
-        /* Методы и представления для скидок:
-        1. Просмотр действующих скидок
-        2. Создание скидки
-        3. Просмотр скидки
-        4. Изменение скидки
-        5. Удаление скидки
-        */
-
         public IActionResult List()
         {
             List<Discount> discounts = _db.Discounts
@@ -86,6 +78,34 @@ namespace Malyshev_Project.Controllers
 
 			_db.SaveChanges();
 			return RedirectToAction("Edit", "Discount", new { id = model.IdDiscount });
+		}
+
+		public IActionResult Details(int id)
+		{
+			var discount = _db.Discounts
+				.Include(d => d.Product)
+				.FirstOrDefault(d => d.IdDiscount == id);
+			if (discount == null) return NotFound();
+
+			return View(discount);
+		}
+
+		public IActionResult Detele(int id)
+		{
+			var discount = _db.Discounts.FirstOrDefault(d => d.IdDiscount == id);
+			if (discount == null) return NotFound();
+			return View(discount);
+		}
+
+		[HttpPost]
+		public IActionResult Delete(int id)
+		{
+			var discount = _db.Discounts.FirstOrDefault(d => d.IdDiscount == id);
+			if (discount == null) return NotFound();
+
+			_db.Discounts.Remove(discount);
+			_db.SaveChanges();
+			return RedirectToAction("List", "Discount");
 		}
 	}
 }

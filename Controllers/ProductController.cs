@@ -86,6 +86,10 @@ namespace Malyshev_Project.Controllers
 			var product = _db.Products
 				.Include(p => p.Category)
 				.Include(p => p.Brand)
+				.Include(p => p.StoresProducts)
+					.ThenInclude(sp => sp.Store)
+						.ThenInclude(s => s.Address)
+				.Include(p => p.Reviews)
 				.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound();
 
@@ -96,7 +100,7 @@ namespace Malyshev_Project.Controllers
 		{
 			var product = _db.Products.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound();
-			return View();
+			return View(product);
 		}
 
 		[HttpPost]
@@ -107,7 +111,7 @@ namespace Malyshev_Project.Controllers
 
 			_db.Products.Remove(product);
 			_db.SaveChanges();
-			return RedirectToAction("Products", "Product");
+			return RedirectToAction("List", "Product");
 		}
     }
 }
