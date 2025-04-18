@@ -318,6 +318,6 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\tr\Microsoft.C
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-fox5cs4x6x.gz
-C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-vkv0nobawa.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\yjz81oy4oe-6zshqfktw2.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\5ibg4lhu48-t5be1111nq.gz
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-o3vwb38y36.gz

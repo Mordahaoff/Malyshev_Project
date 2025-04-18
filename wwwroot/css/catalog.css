@@ -185,10 +185,10 @@ nav ul li a:hover {
 /* Стиль для изображений внутри карточек */
 .product-image {
     width: 100%;
-    border-radius: 15px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
+    height: 300px; 
+    object-fit: cover;
 }
+
 .filter-section {
     margin-bottom: 15px;
 }
