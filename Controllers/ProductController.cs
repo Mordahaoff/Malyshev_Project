@@ -29,21 +29,8 @@ namespace Malyshev_Project.Controllers
 		{
 			var model = new CreateProductModel
 			{
-				Brands = _db.Brands
-					.Select(b => new SelectListItem()
-					{
-						Value = b.IdBrand.ToString(),
-						Text = b.Name
-					})
-					.ToList(),
-
-				Categories = _db.CategoriesOfProducts
-					.Select(c => new SelectListItem()
-					{
-						Value = c.IdCategory.ToString(),
-						Text = c.Name
-					})
-					.ToList()
+				Brands = _db.Brands.ToList(),
+				Categories = _db.CategoriesOfProducts.ToList()
 			};
 
 			return View(model);
@@ -57,8 +44,8 @@ namespace Malyshev_Project.Controllers
 			_db.Products.Add(product);
 			_db.SaveChanges();
 
-			int addedProductId = _db.Products.Last().IdProduct;
-			return RedirectToAction("Edit", "Product", new { id = addedProductId });
+			int createdProductId = _db.Products.Last().IdProduct;
+			return RedirectToAction("Edit", "Product", new { id = createdProductId });
 		}
 
 		public IActionResult Edit(int id)
@@ -70,12 +57,8 @@ namespace Malyshev_Project.Controllers
 			if (product == null) return NotFound();
 
 			var model = (EditProductModel)product;
-
 			model.Brands = _db.Brands.ToList();
 			model.Categories = _db.CategoriesOfProducts.ToList();
-
-			//model.Brands.Find(b => b.Value == product.BrandId.ToString())!.Selected = true;
-			//model.Categories.Find(c => c.Value == product.CategoryId.ToString())!.Selected = true;
 
 			return View(model);
 		}
@@ -91,8 +74,8 @@ namespace Malyshev_Project.Controllers
 			oldProduct.Description = model.Description;
 			oldProduct.Price = model.Price;
 			oldProduct.Volume = model.Volume;
-			oldProduct.CategoryId = model.Category!.IdCategory;
-			oldProduct.BrandId = model.Brand!.IdBrand;
+			oldProduct.CategoryId = model.CategoryId;
+			oldProduct.BrandId = model.BrandId;
 
 			_db.SaveChanges();
 			return RedirectToAction("Edit", "Product", new { id = model.IdProduct });

@@ -1,75 +1,77 @@
 ﻿@model EditProductModel
 
 @{
-    Layout = null;
+	Layout = null;
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
+	<meta name="viewport" content="width=device-width" />
+	<title>Edit</title>
 </head>
 <body>
 
-    <h4>Product</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-controller="Product" asp-action="Edit" method="post">
-                <input type="hidden" asp-for="IdProduct" value="@Model.IdProduct"/>
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Photo" class="control-label"></label>
-                    <input asp-for="Photo" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Description" class="control-label"></label>
-                    <input asp-for="Description" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Price" class="control-label"></label>
-                    <input asp-for="Price" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Volume" class="control-label"></label>
-                    <input asp-for="Volume" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Category" class="control-label"></label>
-                    <select asp-for="Category" class="form-control">
-                        @foreach (var category in Model.Categories)
-                        {
-                            <option value="@category.IdCategory" selected="@(category.IdCategory == @Model.Category!.IdCategory)">@category.Name</option>
-                        }
-                </select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Brand" class="control-label"></label>
-                <select asp-for="Brand" class="form-control">
-                        @foreach (var brand in Model.Brands)
-                        {
-                            <option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.Brand!.IdBrand)">@brand.Name</option>
-                        }
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+	<h4>Product</h4>
+	<hr />
+	<div class="row">
+		<div class="col-md-4">
+			<form asp-controller="Product" asp-action="Edit" method="post">
+				<input type="hidden" asp-for="IdProduct" value="@Model.IdProduct" />
+				<div class="form-group">
+					<label asp-for="Name" class="control-label"></label>
+					<input asp-for="Name" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Photo" class="control-label"></label>
+					<input asp-for="Photo" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Description" class="control-label"></label>
+					<input asp-for="Description" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Price" class="control-label"></label>
+					<input asp-for="Price" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="Volume" class="control-label"></label>
+					<input asp-for="Volume" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label asp-for="CategoryId" class="control-label">Category</label>
+					<select asp-for="CategoryId" class="form-control">
+						@foreach (var category in Model.Categories)
+						{
+							<option value="@category.IdCategory" selected="@(category.IdCategory == @Model.CategoryId)">@category.Name</option>
+						}
+					</select>
+				</div>
+				<div class="form-group">
+					<label asp-for="BrandId" class="control-label">Brand</label>
+					<select asp-for="BrandId" class="form-control">
+						@foreach (var brand in Model.Brands)
+						{
+							<option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.BrandId)">@brand.Name</option>
+						}
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Save" class="btn btn-primary" />
+				</div>
+			</form>
+		</div>
+	</div>
 
-<div>
-    <a asp-action="List">Back to List</a>
-</div>
+	<div>
+		<a asp-action="List">Back to List</a>
+	</div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+	@section Scripts {
+		@{
+			await Html.RenderPartialAsync("_ValidationScriptsPartial");
+		}
+	}
 </body>
 </html>

@@ -16,8 +16,8 @@ namespace Malyshev_Project.Models
 		public Brand? Brand { get; set; }
 		public CategoriesOfProduct? Category { get; set; }
 
-		public List<SelectListItem> Brands { get; set; } = [];
-		public List<SelectListItem> Categories { get; set; } = [];
+		public List<Brand> Brands { get; set; } = [];
+		public List<CategoriesOfProduct> Categories { get; set; } = [];
 
 		public static explicit operator Product(CreateProductModel model)
 		{
@@ -33,18 +33,18 @@ namespace Malyshev_Project.Models
 			};
 			return product;
 		}
-		public static explicit operator CreateProductModel(Product product) {
-			var model = new CreateProductModel
-			{
-				Name = product.Name,
-				Photo = product.Photo,
-				Description = product.Description,
-				Price = product.Price,
-				Volume = product.Volume,
-				BrandId = product.BrandId,
-				CategoryId = product.CategoryId
-			};
-			return model;
-		}
+		//public static explicit operator CreateProductModel(Product product) {
+		//	var model = new CreateProductModel
+		//	{
+		//		Name = product.Name,
+		//		Photo = product.Photo,
+		//		Description = product.Description,
+		//		Price = product.Price,
+		//		Volume = product.Volume,
+		//		BrandId = product.BrandId,
+		//		CategoryId = product.CategoryId
+		//	};
+		//	return model;
+		//}
 	}
 }

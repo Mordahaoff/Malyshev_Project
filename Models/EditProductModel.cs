@@ -11,8 +11,10 @@ namespace Malyshev_Project.Models
 		public decimal Price { get; set; }
 		public decimal Volume { get; set; }
 
-		public Brand? Brand { get; set; }
-		public CategoriesOfProduct? Category { get; set; }
+		public int BrandId { get; set; }
+		public int CategoryId { get; set; }
+		//public Brand? Brand { get; set; }
+		//public CategoriesOfProduct? Category { get; set; }
 
 		public List<Brand> Brands { get; set; } = [];
 		public List<CategoriesOfProduct> Categories { get; set; } = [];
@@ -27,8 +29,8 @@ namespace Malyshev_Project.Models
 				Description = product.Description,
 				Price = product.Price,
 				Volume = product.Volume,
-				Brand = product.Brand,
-				Category = product.Category
+				BrandId = product.BrandId,
+				CategoryId = product.CategoryId
 			};
 			return model;
 		}
