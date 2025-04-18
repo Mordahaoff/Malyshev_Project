@@ -2,6 +2,7 @@
 {
 	public class ProductCatalog(Product product)
 	{
+		public int IdProduct = product.IdProduct;
 		public string Name = product.Name;
 		public string Photo = product.Photo;
 		public decimal Volume = product.Volume;
