@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Malyshev_Project.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Malyshev_Project;
+namespace Malyshev_Project.Models;
 
 public partial class PostgresContext : DbContext
 {
@@ -155,7 +154,7 @@ public partial class PostgresContext : DbContext
 
             entity.Property(e => e.IdOrdersProducts).HasColumnName("id_orders_products");
             entity.Property(e => e.CountOfProduct)
-                .HasDefaultValue((short)0)
+                .HasDefaultValue((short)1)
                 .HasColumnName("count_of_product");
             entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
@@ -214,11 +213,17 @@ public partial class PostgresContext : DbContext
             entity.Property(e => e.Grade).HasColumnName("grade");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
             entity.Property(e => e.Text).HasColumnName("text_");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("reviews_product_id_fkey");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Reviews)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("reviews_user_id_fkey");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -228,9 +233,9 @@ public partial class PostgresContext : DbContext
             entity.ToTable("roles");
 
             entity.Property(e => e.IdRole).HasColumnName("id_role");
-            entity.Property(e => e.RoleName)
+            entity.Property(e => e.Name)
                 .HasMaxLength(50)
-                .HasColumnName("role_name");
+                .HasColumnName("name_");
         });
 
         modelBuilder.Entity<StatesOfOrder>(entity =>

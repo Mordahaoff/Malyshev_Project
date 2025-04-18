@@ -15,7 +15,7 @@ public partial class Product
 
     public decimal Price { get; set; }
 
-    public decimal Volume { get; set; }
+    public int Volume { get; set; }
 
     public int CategoryId { get; set; }
 

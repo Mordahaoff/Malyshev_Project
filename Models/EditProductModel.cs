@@ -9,7 +9,7 @@ namespace Malyshev_Project.Models
 		public string Photo { get; set; } = null!;
 		public string Description { get; set; } = null!;
 		public decimal Price { get; set; }
-		public decimal Volume { get; set; }
+		public int Volume { get; set; }
 
 		public int BrandId { get; set; }
 		public int CategoryId { get; set; }

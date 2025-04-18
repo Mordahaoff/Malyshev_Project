@@ -7,9 +7,9 @@ public partial class OrdersProduct
 {
     public int IdOrdersProducts { get; set; }
 
-    public int ProductId { get; set; }
-
     public int OrderId { get; set; }
+
+    public int ProductId { get; set; }
 
     public short CountOfProduct { get; set; }
 

@@ -19,7 +19,7 @@ public class Program
 		});
 
 		string? connectionString = builder.Configuration.GetConnectionString("DockerConnection");
-		builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
+		builder.Services.AddDbContext<Models.PostgresContext>(options => options.UseNpgsql(connectionString));
 
 		var app = builder.Build();
 
