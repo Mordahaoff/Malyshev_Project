@@ -285,7 +285,11 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-
+.product-image {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+}
 
 /* Футер */
 .footer {
