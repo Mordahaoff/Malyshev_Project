@@ -4,12 +4,13 @@
 	{
 		public int IdOrder { get; set; }
 		public int StateOfOrderId { get; set; }
-		public int StoreId { get; set; }
+		public int? StoreId { get; set; }
 		public Store? Store { get; set; }
 		public User User { get; set; } = null!;
 		public DateTime DateOfStatusChange { get; set; }
-		public List<OrdersProduct> OrdersProducts { get; set; } = [];
-		public List<Product> Products { get; set; } = [];
+		public List<ProductOrder> ProductsInOrder { get; set; } = [];
+		//public List<OrdersProduct> OrdersProducts { get; set; } = [];
+		//public List<Product> Products { get; set; } = [];
 		public List<StatesOfOrder> StatesOfOrder { get; set; } = [];
 		public List<Store> Stores { get; set; } = [];
 
@@ -22,7 +23,7 @@
 				Store = order.Store,
 				User = order.User,
 				DateOfStatusChange = order.DateOfStatusChange,
-				OrdersProducts = order.OrdersProducts.ToList()
+				//OrdersProducts = order.OrdersProducts.ToList()
 			};
 			return model;
 		}
