@@ -57,23 +57,27 @@ namespace Malyshev_Project.Controllers
 				.Include(o => o.OrdersProducts)
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.IdOrder == id);
-
 			if (order == null) return NotFound();
 
-			return View(order);
+            var model = (EditOrderModel)order;
+
+            model.Products = _db.Products.ToList();
+            model.StatesOfOrder = _db.StatesOfOrders.ToList();
+            model.Stores = _db.Stores.Include(s => s.Address).ToList();
+
+			return View(model);
 		}
 
         [HttpPost]
-        public IActionResult Edit(int id, IFormCollection collection)
+        public IActionResult Edit(EditOrderModel model)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var oldOrder = _db.Orders.FirstOrDefault(o => o.IdOrder == model.IdOrder);
+            if (oldOrder == null) return NotFound();
+
+            oldOrder.StateOfOrderId = model.StateOfOrderId;
+            //oldOrder.StoreId = model.StoreId;
+
+            return RedirectToAction("Details", "Order", new { id = model.IdOrder });
         }
     }
 }

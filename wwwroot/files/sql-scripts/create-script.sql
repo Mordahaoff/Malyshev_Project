@@ -83,7 +83,7 @@ Address_ID integer not null references Addresses(ID_Address) on update cascade
 create table Orders(
 ID_Order serial primary key,
 State_of_Order_ID integer not null references States_of_Order(ID_State) on update cascade default 1,
-Store_ID integer not null references Stores(ID_Store) on update cascade,
+Store_ID integer references Stores(ID_Store) on update cascade,
 User_ID integer  not null references Users(ID_User) on update cascade,
 Date_of_Status_Change timestamp not null default current_timestamp
 );

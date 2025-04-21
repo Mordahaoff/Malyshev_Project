@@ -9,7 +9,7 @@ public partial class Order
 
     public int StateOfOrderId { get; set; }
 
-    public int StoreId { get; set; }
+    public int? StoreId { get; set; }
 
     public int UserId { get; set; }
 
@@ -19,7 +19,7 @@ public partial class Order
 
     public virtual StatesOfOrder StateOfOrder { get; set; } = null!;
 
-    public virtual Store Store { get; set; } = null!;
+    public virtual Store? Store { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

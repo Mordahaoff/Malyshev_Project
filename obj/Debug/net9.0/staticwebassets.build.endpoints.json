@@ -43,7 +43,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 10:22:24 GMT"
+          "Value": "Mon, 21 Apr 2025 13:57:04 GMT"
         },
         {
           "Name": "Vary",
@@ -92,7 +92,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 10:22:24 GMT"
+          "Value": "Mon, 21 Apr 2025 13:57:04 GMT"
         }
       ],
       "EndpointProperties": [
@@ -141,7 +141,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 10:22:24 GMT"
+          "Value": "Mon, 21 Apr 2025 13:57:04 GMT"
         },
         {
           "Name": "Vary",
@@ -204,7 +204,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 10:22:24 GMT"
+          "Value": "Mon, 21 Apr 2025 13:57:04 GMT"
         },
         {
           "Name": "Vary",
@@ -245,7 +245,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 10:22:24 GMT"
+          "Value": "Mon, 21 Apr 2025 13:57:04 GMT"
         }
       ],
       "EndpointProperties": [
@@ -286,7 +286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 10:22:24 GMT"
+          "Value": "Mon, 21 Apr 2025 13:57:04 GMT"
         },
         {
           "Name": "Vary",
@@ -2387,7 +2387,7 @@
       ]
     },
     {
-      "Route": "files/sql-scripts/create-script.gqxykxrevo.sql",
+      "Route": "files/sql-scripts/create-script.b1od4y0rg7.sql",
       "AssetFile": "files/sql-scripts/create-script.sql",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2401,7 +2401,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3160"
+          "Value": "3151"
         },
         {
           "Name": "Content-Type",
@@ -2409,21 +2409,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uDiaD7OzLZPWcsJ+sy+OfWQGb77JJ8HOb8cEzOGadGw=\""
+          "Value": "\"ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 13:46:55 GMT"
+          "Value": "Mon, 21 Apr 2025 13:53:08 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gqxykxrevo"
+          "Value": "b1od4y0rg7"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uDiaD7OzLZPWcsJ+sy+OfWQGb77JJ8HOb8cEzOGadGw="
+          "Value": "sha256-ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ="
         },
         {
           "Name": "label",
@@ -2446,7 +2446,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3160"
+          "Value": "3151"
         },
         {
           "Name": "Content-Type",
@@ -2454,17 +2454,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uDiaD7OzLZPWcsJ+sy+OfWQGb77JJ8HOb8cEzOGadGw=\""
+          "Value": "\"ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 13:46:55 GMT"
+          "Value": "Mon, 21 Apr 2025 13:53:08 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uDiaD7OzLZPWcsJ+sy+OfWQGb77JJ8HOb8cEzOGadGw="
+          "Value": "sha256-ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ="
         }
       ]
     },

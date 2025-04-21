@@ -137,7 +137,6 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Store).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.StoreId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("orders_store_id_fkey");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
