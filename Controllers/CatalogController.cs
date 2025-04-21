@@ -15,12 +15,53 @@ public class CatalogController : Controller
 		_db = db;
 	}
 
-	// Разработать функционал для поиска продуктов согласно каким-либо критериям.
-	public IActionResult Products(int? categoryId, int? brandId)
+	public IActionResult Products(int? categoryId, int? brandId, int? sortId)
 	{
 		List<Product> products = _db.Products.ToList();
+		var model = new CatalogModel();
+
+		if (categoryId != null)
+		{
+			products = products.Where(p => p.CategoryId == categoryId).ToList();
+			model.CategoryName = _db.CategoriesOfProducts.FirstOrDefault(c => c.IdCategory == categoryId)?.Name;
+			model.CategoryId = categoryId;
+			if (model.CategoryName == null) return BadRequest();
+		}
+		if (brandId != null)
+		{
+			products = products.Where(p => p.BrandId == brandId).ToList();
+			model.BrandName = _db.Brands.FirstOrDefault(b => b.IdBrand == brandId)?.Name;
+			model.BrandId = brandId;
+			if (model.BrandName == null) return BadRequest();
+		}
+		if (sortId != null)
+		{
+			switch (sortId)
+			{
+				case 1: // По возрастанию цены
+					products = products.OrderBy(p => p.Price).ToList();
+					model.SortName = "По возрастанию цены";
+					break;
+				case 2: // По убыванию цены
+					products = products.OrderByDescending(p => p.Price).ToList();
+					model.SortName = "По убыванию цены";
+					break;
+				case 3: // Товары со скидкой
+					products = _db.Products
+						.Include(p => p.Discounts)
+						.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now)))
+						.ToList();
+					model.SortName = "Товары со скидкой";
+					//products = products.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now))).ToList();
+					break;
+				default:
+					return BadRequest();
+			}
+			model.SortId = sortId;
+		}
+
+		model.Products = products.Select(p => new ProductCatalog(p)).ToList();
 		_logger.LogInformation($"Кол-во продуктов: {products.Count}");
-		var model = new CatalogModel(products);
 		return View(model);
 	}
 
@@ -32,6 +73,8 @@ public class CatalogController : Controller
 		var order = _db.Orders
 			.Include(o => o.OrdersProducts)
 			.FirstOrDefault(o => o.UserId == user.IdUser);
+
+		if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
 
 		if (order == null)
 		{
@@ -50,6 +93,7 @@ public class CatalogController : Controller
 			_db.SaveChanges();
 		}
 
+		_logger.LogInformation($"Товар ID: [{id}] добавлен в корзину ID: [{order.IdOrder}] пользователя ID: [{user.IdUser}]");
 		return RedirectToAction("Products", "Catalog");
 	}
 }

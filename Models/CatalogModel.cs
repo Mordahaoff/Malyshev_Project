@@ -1,8 +1,13 @@
 ﻿namespace Malyshev_Project.Models
 {
-	public class CatalogModel(List<Product> products)
+	public class CatalogModel()
 	{
-		public List<ProductCatalog> Products { get; set; } = 
-			products.Select(p => new ProductCatalog(p)).ToList();
+		public List<ProductCatalog> Products { get; set; } = [];
+		public string? CategoryName { get; set; } = "Не выбрана";
+		public int? CategoryId { get; set; }
+		public string? BrandName { get; set; } = "Не выбран";
+		public int? BrandId { get; set; }
+		public string? SortName { get; set; } = "Не выбрана";
+		public int? SortId { get; set; }
 	}
 }
