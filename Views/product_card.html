@@ -87,7 +87,33 @@
             </div>
         </div>
     </main>
-    <!--Добавить отзыв-->
+   <!-- Форма для добавления нового отзыва 
+    ТОЛЬКО У ЗАРЕГИСТРИРОВАННЫХ ПОЛЬЗОВАТЕЛЕЙ -->
+<div class="reviews-section">
+    <h3>Оставьте отзыв о товаре:</h3>
+
+    <div class="review-card">
+        <div class="review-header">
+            <img src="/wwwroot/img/team_card1.png" alt="User Photo">
+            <div>
+                <div class="review-name">Иванов Иван</div> <!-- Имя пользователя -->
+                <div class="review-date">22.04.2025</div> <!-- Текущая дата -->
+                <div class="review-rating">
+                    <span>Оцените товар от 1 до 5:</span>
+                    <input type="number" min="1" max="5" class="rating-input" placeholder="5">
+                </div>
+            </div>
+        </div>
+
+        <textarea class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea>
+
+        <div class="form-actions">
+            <button type="button" class="cancel-btn">Назад</button>
+            <button type="submit" class="submit-btn">Отправить</button>
+        </div>
+    </div>
+</div>
+
 
 <!--Существующие отзывы-->
     <div class="reviews-section">

@@ -254,8 +254,7 @@ nav ul li a:hover {
 /*Отзывы*/
 .reviews-section {
     max-width: 1450px;
-    margin: 0px auto; 
-    padding: 0 0px;    
+    margin: 0px auto;    
 }
 
 .reviews-section h3 {
@@ -317,13 +316,70 @@ nav ul li a:hover {
     position: relative;
     top: -2px;
 }
-
-
 .review-text {
     font-size: 18px;
     line-height: 1.6;
     color: #333;
     margin: 20px 0px;
+}
+
+/*Добавление отзыва*/
+.rating-input {
+    width: 60px;
+    height: 30px;
+    padding: 4px 8px;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 10px;
+}
+
+.review-textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    min-height: 120px;
+    margin: 20px 0;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #F9B300;
+    color: #333;
+}
+
+.submit-btn:hover {
+    background-color: #e0a000;
+}
+
+.cancel-btn {
+    background-color: #eee;
+    color: #333;
+}
+
+.cancel-btn:hover {
+    background-color: #ddd;
 }
 
 
