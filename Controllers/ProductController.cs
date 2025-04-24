@@ -44,7 +44,7 @@ namespace Malyshev_Project.Controllers
 			_db.Products.Add(product);
 			_db.SaveChanges();
 
-			int createdProductId = _db.Products.Last().IdProduct;
+			int createdProductId = _db.Products.OrderBy(p => p.IdProduct).Last().IdProduct;
 			return RedirectToAction("Edit", "Product", new { id = createdProductId });
 		}
 
@@ -90,10 +90,14 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(sp => sp.Store)
 						.ThenInclude(s => s.Address)
 				.Include(p => p.Reviews)
+					.ThenInclude(r => r.User)
 				.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound();
 
-			return View(product);
+			var user = HttpContext.Session.Get<User>("user");
+			var model = new ProductDetailsModel(product, user);
+
+			return View(model);
 		}
 
 		public IActionResult Detele(int id)

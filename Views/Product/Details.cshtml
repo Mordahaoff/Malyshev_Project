@@ -1,69 +1,240 @@
-﻿@model Malyshev_Project.Models.Product
-
-@{
-    Layout = null;
-}
+﻿@model ProductDetailsModel;
 
 <!DOCTYPE html>
-
-<html>
+<html lang="ru">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROteinZone - Каталог товаров</title>
+	<link rel="stylesheet" href="~/css/product_card.css">
 </head>
 <body>
+	<header>
+		<div class="header-container">
+			<h1 class="logo">PROteinZone</h1>
+			<img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+		</div>
+		<nav>
+			<ul>
+				<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+				<li class="active"><a asp-controller="Home" asp-action="About">О нас</a></li>
+				<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
+				<li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+				<li class="cabinet-btn">
+					<a asp-controller="User" asp-action="MyProfile">
+						Личный кабинет
+						<img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="header-line"></div>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Photo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayNameFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayNameFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayNameFor(model => model.Volume)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayFor(model => model.Volume)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayNameFor(model => model.Brand)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayFor(model => model.Brand.IdBrand)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayNameFor(model => model.Category)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdProduct">Edit</a> |
-    <a asp-action="List">Back to List</a>
-</div>
+	<main class="product-page">
+		<a href="/Views/catalog.html" class="back-link"><img src="~/img/icon/back.png" alt="Назад"> Вернуться в каталог</a>
+		<div class="product-container">
+			<div class="product-left">
+				<img src="@Model.Product.Photo" alt="@Model.Product.Name" class="product-main-image">
+				<button class="add-to-cart"><a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a></button>
+			</div>
+
+			<div class="product-right">
+				<h2>@Model.Product.Name</h2>
+				<p><strong>Стоимость: </strong><span class="price">@Model.Product.Price ₽</span></p>
+				<p><strong>Объем: </strong>@Model.Product.Volume @Model.Units</p>
+				<p><strong>Категория: </strong>@Model.Product.Category.Name</p>
+				<p><strong>Бренд: </strong>@Model.Product.Brand.Name</p>
+
+				<div class="product-description">
+					<h3>Описание:</h3>
+					<p>
+						@Model.Product.Description
+					</p>
+				</div>
+
+				<div class="store-availability">
+					<h3>Наличие в магазинах:</h3>
+					<ul>
+						@foreach (var sp in Model.Product.StoresProducts)
+						{
+							<li>
+								<img src="~/img/icon/location.png" alt="Местоположение">
+								<div class="store-text">
+									<p>Количество товара в наличии: <strong>@sp.CountOfProduct шт.</strong></p>
+									<p>г. @sp.Store.Address.City, ул. @sp.Store.Address.Street, д.@sp.Store.Address.Building</p>
+								</div>
+							</li>
+						}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Форма для добавления нового отзыва
+	ТОЛЬКО У ЗАРЕГИСТРИРОВАННЫХ ПОЛЬЗОВАТЕЛЕЙ -->
+	@* <div class="reviews-section"> *@
+	@* 	<h3>Оставьте отзыв о товаре:</h3> *@
+
+	@* 	<div class="review-card"> *@
+	@* 		<div class="review-header"> *@
+	@* 			<img src="~/img/team_card1.png" alt="User Photo"> *@
+	@* 			<div> *@
+	@* 				<div class="review-name">Иванов Иван</div> <!-- Имя пользователя --> *@
+	@* 				<div class="review-date">22.04.2025</div> <!-- Текущая дата --> *@
+	@* 				<div class="review-rating"> *@
+	@* 					<span>Оцените товар от 1 до 5:</span> *@
+	@* 					<input type="number" min="1" max="5" class="rating-input" placeholder="5"> *@
+	@* 				</div> *@
+	@* 			</div> *@
+	@* 		</div> *@
+
+	@* 		<textarea class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea> *@
+
+	@* 		<div class="form-actions"> *@
+	@* 			<button type="button" class="cancel-btn">Назад</button> *@
+	@* 			<button type="submit" class="submit-btn">Отправить</button> *@
+	@* 		</div> *@
+	@* 	</div> *@
+	@* </div> *@
+
+	@if (Model.User != null)
+	{
+		<div class="reviews-section">
+			<h3>Оставьте отзыв о товаре:</h3>
+
+			<form asp-controller="Review" asp-action="Create">
+			<div class="review-card">
+				<div class="review-header">
+					<img src="@Model.User.Photo" alt="User [ID@(Model.User.IdUser)] Photo">
+					<div>
+						<div class="review-name">@Model.User.Surname @Model.User.Name</div>
+						<div class="review-date">@DateOnly.FromDateTime(DateTime.Now)</div>
+						<div class="review-rating">
+							<span>Оцените товар от 1 до 5:</span>
+							<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input" placeholder="5">
+						</div>
+					</div>
+				</div>
+
+				<textarea asp-for="@Model.Review!.Text" class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea>
+
+				<div class="form-actions">
+					@* <button type="button" class="cancel-btn">Назад</button> *@
+					<button type="submit" class="submit-btn">Отправить</button>
+				</div>
+			</div>
+			<input type="hidden" asp-for="@Model.Review!.UserId" value="@Model.User.IdUser" />
+			<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.Product.IdProduct" />
+			</form>
+		</div>
+	}
+
+	<div class="reviews-section">
+		<h3>Отзывы:</h3>
+
+		@foreach (var review in Model.Product.Reviews)
+		{
+			<div class="review-card">
+				<div class="review-header">
+					<img src="@review.User.Photo" alt="User [ID@(review.User.IdUser)] Photo">
+					<div>
+						<div class="review-name">@review.User.Surname @review.User.Name</div>
+						<div class="review-date">@review.DateOfCreation</div>
+						<div class="review-rating"><img src="~/img/icon/star.png" alt="star">@review.Grade</div>
+					</div>
+				</div>
+				<p class="review-text">@review.Text</p>
+			</div>
+		}
+
+		<!--Существующие отзывы-->
+		@* <div class="review-card"> *@
+		@* 	<div class="review-header"> *@
+		@* 		<img src="~/img/team_card1.png" alt="User Photo"> *@
+		@* 		<div> *@
+		@* 			<div class="review-name">Морев Артем</div> *@
+		@* 			<div class="review-date">10.04.2025</div> *@
+		@* 			<div class="review-rating">  <img src="~/img/icon/star.png" alt="star">5</div> *@
+		@* 		</div> *@
+		@* 	</div> *@
+		@* 	<p class="review-text"> *@
+		@* 		Отличный протеин! Заказывал сывороточный концентрат со вкусом крем-брюле — вкус просто бомба, без химического послевкусия. *@
+		@* 		Размешивается легко, даже в шейкере без комков. Уже через неделю приёма заметил, что восстановление после тренировок стало быстрее. *@
+		@* 		Доставка быстрая, упаковка целая. Буду брать ещё! *@
+		@* 	</p> *@
+		@* </div> *@
+
+		@* <div class="review-card"> *@
+		@* 	<div class="review-header"> *@
+		@* 		<img src="~/img/team_card2.png" alt="User Photo"> *@
+		@* 		<div> *@
+		@* 			<div class="review-name">Смирнов Константин</div> *@
+		@* 			<div class="review-date">28.03.2025</div> *@
+		@* 			<div class="review-rating">  <img src="~/img/icon/star.png" alt="star">5</div> *@
+		@* 		</div> *@
+		@* 	</div> *@
+		@* 	<p class="review-text"> *@
+		@* 		Купил протеин со вкусом «Крем-брюле» — и это один из самых приятных вариантов, которые пробовал! Напоминает настоящий десерт, но без излишней сладости. *@
+		@* 		Отлично растворяется в воде и молоке, пьётся легко, без комков. После тренировки – настоящее удовольствие, будто балуешь себя, а не просто пьешь спортпит. *@
+		@* 		Минус: чуть-чуть приторновато, если мешать с малым количеством жидкости. Но если разбавить побольше – идеально. *@
+		@* 		Эффект от белка отличный: восстановление быстрее, мышцы в тонусе. Упаковка целая, сроки годности в порядке. *@
+		@* 	</p> *@
+		@* </div> *@
+
+		@* <div class="review-card"> *@
+		@* 	<div class="review-header"> *@
+		@* 		<img src="~/img/team_card1.png" alt="User Photo"> *@
+		@* 		<div> *@
+		@* 			<div class="review-name">Тихомиров Леонид</div> *@
+		@* 			<div class="review-date">05.03.2025</div> *@
+		@* 			<div class="review-rating">  <img src="~/img/icon/star.png" alt="star">4</div> *@
+		@* 		</div> *@
+		@* 	</div> *@
+		@* 	<p class="review-text"> *@
+		@* 		Взял этот протеин – вкус действительно классный, как настоящий десерт. С молоком вообще кажется, что пью коктейль, а не спортпит. После тренировок чувствую себя хорошо, мышцы не болят, и живот не пучит – всё ок. *@
+		@* 		Но есть парочка минусов. Во-первых, он слишком сладкий – к концу банки уже надоедает. Во-вторых, цена кусается, можно найти что-то подешевле с таким же эффектом. И ещё – если мешать в шейкере, на дне иногда остаётся немного порошка. *@
+		@* 		В общем, протеин хороший, но не без косяков. Если любите сладкое – попробуйте, но лично я, может, поищу что-то менее приторное. Твёрдая четвёрка! *@
+		@* 	</p> *@
+		@* </div> *@
+	</div>
+
+
+
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<h2 class="footer-logo">PROteinZone</h2>
+					<div class="social-links">
+						<a href="#" class="social-circle"><img src="~/img/icon/telegram.png" alt="Telegram"></a>
+						<a href="#" class="social-circle"><img src="~/img/icon/vk.png" alt="VK"></a>
+						<a href="#" class="social-circle"><img src="~/img/icon/email.png" alt="Email"></a>
+					</div>
+				</div>
+
+				<div class="footer-contacts">
+					<h3>Наши контакты:</h3>
+					<p>+7(996)555-66-77</p>
+					<p>proteinzone@mail.com</p>
+					<p>г. Ярославль, ул. Победы, д.11, офис 16</p>
+					<p>пн-пт: 9:00 - 18:00</p>
+				</div>
+
+				<div class="footer-links">
+					<ul>
+						<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+						<li><a asp-controller="Home" asp-action="About">О нас</a></li>
+						<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+						<li><a asp-controller="Home" asp-action="Guide">Гид по питанию</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<p>© 2025 PROteinZone. Все права защищены.</p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

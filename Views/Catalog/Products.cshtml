@@ -50,12 +50,6 @@
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="4" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Креатин</a></li>
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="5" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Предтрен</a></li>
                     <li> <a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="6" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Шейкеры</a></li>
-                    @* <li>Протеиновые батончики</li> *@
-                    @* <li>Протеин</li> *@
-                    @* <li>Гейнеры</li> *@
-                    @* <li>Креатин</li> *@
-                    @* <li>Предтрен</li> *@
-                    @* <li>Шейкеры</li> *@
                 </ul>
             </div>
 
@@ -67,11 +61,6 @@
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="3" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Myprotein</a></li>
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="4" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Maxler</a></li>
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="5" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">OptiMeal</a></li>
-                    @* <li>Optimum Nutrition</li> *@
-                    @* <li>Bombbar</li> *@
-                    @* <li>Myprotein</li> *@
-                    @* <li>Maxler</li> *@
-                    @* <li>OptiMeal</li> *@
                 </ul>
             </div>
 
@@ -81,9 +70,6 @@
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="1">По возрастанию цены</a></li>
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="2">По убыванию цены</a></li>
                     <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="3">Товары со скидкой</a></li>
-                    @* <li><label><input type="radio" name="sort"> По возрастанию цены</label></li> *@
-                    @* <li><label><input type="radio" name="sort"> По убыванию цены</label></li> *@
-                    @* <li><label><input type="radio" name="sort"> Товары со скидкой</label></li> *@
                 </ul>
             </div>
 
@@ -104,7 +90,7 @@
                         <div class="product-price">@pc.Price ₽</div>
                         <div class="product-weight">@pc.Volume @pc.Units</div>
                         <div class="product-name">@pc.Name</div>
-                        <button class="add-to-cart"><a asp-controller="Catalog" asp-action="AddProductToOrder" asp-route-id="@pc.IdProduct">Добавить в корзину</a></button>
+                        <button class="add-to-cart"><a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@pc.IdProduct">Добавить в корзину</a></button>
                     </div>
                 }
             </section>

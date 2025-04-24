@@ -108,5 +108,50 @@ namespace Malyshev_Project.Controllers
 			_db.SaveChanges();
 			return RedirectToAction("Details", "Order", new { id = model.IdOrder });
 		}
+
+		public IActionResult AddProductToOrder(int id)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return RedirectToAction("Login", "Auth");
+
+			var order = _db.Orders
+				.Include(o => o.OrdersProducts)
+				.FirstOrDefault(o => o.UserId == user.IdUser);
+
+			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
+
+			if (order == null)
+			{
+				_db.Orders.Add(new Order { UserId = user.IdUser });
+				_db.SaveChanges();
+				order = _db.Orders.Last();
+			}
+
+			if (order.OrdersProducts.Any(op => op.ProductId == id))
+			{
+				order.OrdersProducts.First(op => op.ProductId == id).CountOfProduct += 1;
+			}
+			else
+			{
+				_db.OrdersProducts.Add(new OrdersProduct { OrderId = order.IdOrder, ProductId = id, CountOfProduct = 1 });
+				_db.SaveChanges();
+			}
+
+			_logger.LogInformation($"Товар ID: [{id}] добавлен в корзину ID: [{order.IdOrder}] пользователя ID: [{user.IdUser}]");
+			//return RedirectToAction("Products", "Catalog");
+
+			// Получение URL страницы, с которой пришёл запрос
+			var referer = HttpContext.Request.Headers["Referer"].ToString();
+
+			if (!string.IsNullOrEmpty(referer))
+			{
+				return Redirect(referer);
+			}
+			else
+			{
+				// по умолчанию — редирект на страницу каталога или другую страницу
+				return RedirectToAction("Products", "Catalog");
+			}
+		}
 	}
 }

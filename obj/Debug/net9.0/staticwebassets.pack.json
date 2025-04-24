@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\product_card.css",
+      "PackagePath": "staticwebassets\\css\\product_card.css"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\register.css",
       "PackagePath": "staticwebassets\\css\\register.css"
     },
@@ -153,6 +157,10 @@
       "PackagePath": "staticwebassets\\img\\icon\\PROteinZone.png"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\back.png",
+      "PackagePath": "staticwebassets\\img\\icon\\back.png"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\email.png",
       "PackagePath": "staticwebassets\\img\\icon\\email.png"
     },
@@ -163,6 +171,14 @@
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\icon_logo.png",
       "PackagePath": "staticwebassets\\img\\icon\\icon_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\location.png",
+      "PackagePath": "staticwebassets\\img\\icon\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\star.png",
+      "PackagePath": "staticwebassets\\img\\icon\\star.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\telegram.png",
@@ -187,6 +203,10 @@
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\team_card1.png",
       "PackagePath": "staticwebassets\\img\\team_card1.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\team_card2.png",
+      "PackagePath": "staticwebassets\\img\\team_card2.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",

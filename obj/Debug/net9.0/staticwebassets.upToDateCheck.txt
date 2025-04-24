@@ -4,6 +4,7 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\css\catalog.css
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\css\product_card.css
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\css\about.css
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
@@ -70,6 +71,7 @@ wwwroot\css\catalog.css
 wwwroot\css\food_guide.css
 wwwroot\css\home.css
 wwwroot\css\login.css
+wwwroot\css\product_card.css
 wwwroot\css\register.css
 wwwroot\favicon.ico
 wwwroot\files\sql-scripts\create-script.sql
@@ -100,10 +102,13 @@ wwwroot\img\icon\1.png
 wwwroot\img\icon\2.png
 wwwroot\img\icon\3.png
 wwwroot\img\icon\4.png
+wwwroot\img\icon\back.png
 wwwroot\img\icon\email.png
 wwwroot\img\icon\icon_cabinet.png
 wwwroot\img\icon\icon_logo.png
+wwwroot\img\icon\location.png
 wwwroot\img\icon\PROteinZone.png
+wwwroot\img\icon\star.png
 wwwroot\img\icon\telegram.png
 wwwroot\img\icon\vk.png
 wwwroot\img\image_register1.png
@@ -111,6 +116,7 @@ wwwroot\img\Image_register2.png
 wwwroot\img\open-sport.png
 wwwroot\img\strong-body.png
 wwwroot\img\team_card1.png
+wwwroot\img\team_card2.png
 wwwroot\img\vector\vector_about.png
 wwwroot\img\vector\vector_brand.png
 wwwroot\img\vector\vector_choose.png
