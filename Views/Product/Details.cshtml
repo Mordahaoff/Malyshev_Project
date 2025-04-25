@@ -33,7 +33,7 @@
 	<div class="header-line"></div>
 
 	<main class="product-page">
-		<a href="/Views/catalog.html" class="back-link"><img src="~/img/icon/back.png" alt="Назад"> Вернуться в каталог</a>
+		<a asp-controller="Catalog" asp-action="Products" class="back-link"><img src="~/img/icon/back.png" alt="Назад"> Вернуться в каталог</a>
 		<div class="product-container">
 			<div class="product-left">
 				<img src="@Model.Product.Photo" alt="@Model.Product.Name" class="product-main-image">
