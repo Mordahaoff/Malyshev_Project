@@ -30,12 +30,19 @@ namespace Malyshev_Project.Controllers
 			{
 				case 1: // Клиент
 					{
-						reviews = _db.Reviews
-							.Include(r => r.User)
-							.Include(r => r.Product)
-							.Where(r => r.UserId == authUser.IdUser)
-							.ToList();
-						break;
+						if (userId == null)
+						{
+							reviews = _db.Reviews
+								.Include(r => r.User)
+								.Include(r => r.Product)
+								.Where(r => r.UserId == authUser.IdUser)
+								.ToList();
+							break;
+						}
+						else
+						{
+							return BadRequest();
+						}
 					}
 				case 2: // Админ
 					{

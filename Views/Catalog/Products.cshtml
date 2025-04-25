@@ -85,13 +85,15 @@
             <section class="products">
                 @foreach (ProductCatalog pc in Model.Products)
                 {
-                    <a asp-controller="Product" asp-action="Details" asp-route-id="@pc.IdProduct" class="product-card">
+                    <div class="product-card">
+                    <a asp-controller="Product" asp-action="Details" asp-route-id="@pc.IdProduct">
                         <img src="@pc.Photo" alt="@pc.Name" class="product-image">
                         <div class="product-price">@pc.Price ₽</div>
                         <div class="product-weight">@pc.Volume @pc.Units</div>
                         <div class="product-name">@pc.Name</div>
-                        <a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@pc.IdProduct" class="add-to-cart">Добавить в корзину</a>
                     </a>
+                    <a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@pc.IdProduct" class="add-to-cart">Добавить в корзину</a>
+                    </div>
                 }
             </section>
         </div>

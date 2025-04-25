@@ -44,7 +44,7 @@ namespace Malyshev_Project.Controllers
 
 			order.StateOfOrderId = 2;
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Order", new { id = order.IdOrder });
+			return RedirectToAction("Details", "Order", new { id });
 		}
 
 		public IActionResult Edit(int id)
@@ -141,7 +141,7 @@ namespace Malyshev_Project.Controllers
 			//return RedirectToAction("Products", "Catalog");
 
 			// Получение URL страницы, с которой пришёл запрос
-			var referer = HttpContext.Request.Headers["Referer"].ToString();
+			var referer = HttpContext.Request.Headers.Referer.ToString();
 
 			if (!string.IsNullOrEmpty(referer))
 			{
