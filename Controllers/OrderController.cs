@@ -106,7 +106,7 @@ namespace Malyshev_Project.Controllers
 			}
 
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Order", new { id = model.IdOrder });
+			return RedirectToAction("Edit", "Order", new { id = model.IdOrder });
 		}
 
 		public IActionResult AddProductToOrder(int id)

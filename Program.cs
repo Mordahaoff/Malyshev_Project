@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace Malyshev_Project;
@@ -18,6 +19,10 @@ public class Program
 			options.IdleTimeout = TimeSpan.FromSeconds(3600);
 		});
 
+		//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+		//	.AddCookie(options => options.LoginPath = "/Auth/Login");
+		//builder.Services.AddAuthorization();
+
 		string? connectionString = builder.Configuration.GetConnectionString("DockerConnection");
 		builder.Services.AddDbContext<Models.PostgresContext>(options => options.UseNpgsql(connectionString));
 
@@ -37,7 +42,8 @@ public class Program
 		app.UseRouting();
 
 		app.UseSession();
-		app.UseAuthorization();
+		//app.UseAuthentication();
+		//app.UseAuthorization();
 
 		app.MapControllerRoute(
 			name: "default",

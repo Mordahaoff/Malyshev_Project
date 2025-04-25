@@ -1,5 +1,8 @@
 using Malyshev_Project.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Malyshev_Project.Controllers;
 
@@ -27,28 +30,31 @@ public class AuthController : Controller
         if (user == null)
         {
             string message = $"Пользователь с логином [{model.Login}] не найден!";
-			_logger.LogWarning(message);
+            _logger.LogWarning(message);
             ViewData["Message"] = message;
-			return RedirectToAction("Login", "Auth");
+            return RedirectToAction("Login", "Auth");
         }
 
-		if (user.Email != model.Email)
-		{
-			string message = "Почта не совпадает!";
-			_logger.LogWarning(message);
-			ViewData["Message"] = message;
-			return RedirectToAction("Login", "Auth");
-		}
-
-		if (user.Password != model.Password)
+        if (user.Email != model.Email)
         {
-			string message = "Пароль не совпадает!";
-			_logger.LogWarning(message);
-			ViewData["Message"] = message;
-			return RedirectToAction("Login", "Auth");
+            string message = "Почта не совпадает!";
+            _logger.LogWarning(message);
+            ViewData["Message"] = message;
+            return RedirectToAction("Login", "Auth");
+        }
+
+        if (user.Password != model.Password)
+        {
+            string message = "Пароль не совпадает!";
+            _logger.LogWarning(message);
+            ViewData["Message"] = message;
+            return RedirectToAction("Login", "Auth");
         }
 
         HttpContext.Session.Set<User>("user", user);
+        //var claims = new List<Claim> { new Claim(ClaimTypes.Role, _db.Roles.First(r => r.IdRole == user.RoleId).Name) };
+        //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Cookies");
+        //HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
         return RedirectToAction("MyProfile", "User");
     }
@@ -61,7 +67,7 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult Register(UserAuthModel model)
     {
-        if (_db.Users.FirstOrDefault(u => u.Login == model.Login) != null)
+        if (!_db.Users.Any(u => u.Login == model.Login))
         {
             _logger.LogWarning($"Логин {model.Login} занят!");
             ViewData["Message"] = $"Логин {model.Login} занят!";
