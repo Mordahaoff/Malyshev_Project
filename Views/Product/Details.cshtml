@@ -37,7 +37,8 @@
 		<div class="product-container">
 			<div class="product-left">
 				<img src="@Model.Product.Photo" alt="@Model.Product.Name" class="product-main-image">
-				<button class="add-to-cart"><a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a></button>
+				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a>
+				@* <button class="add-to-cart"><a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a></button> *@
 			</div>
 
 			<div class="product-right">
@@ -105,28 +106,35 @@
 			<h3>Оставьте отзыв о товаре:</h3>
 
 			<form asp-controller="Review" asp-action="Create">
-			<div class="review-card">
-				<div class="review-header">
-					<img src="@Model.User.Photo" alt="User [ID@(Model.User.IdUser)] Photo">
-					<div>
-						<div class="review-name">@Model.User.Surname @Model.User.Name</div>
-						<div class="review-date">@DateOnly.FromDateTime(DateTime.Now)</div>
-						<div class="review-rating">
-							<span>Оцените товар от 1 до 5:</span>
-							<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input" placeholder="5">
+				<div class="review-card">
+					<div class="review-header">
+						<img src="@Model.User.Photo" alt="User [ID@(Model.User.IdUser)] Photo">
+						<div>
+							@if ((Model.User.Surname + Model.User.Name) == "")
+							{
+								<div class="review-name">Не указано</div>
+							}
+							else
+							{
+								<div class="review-name">@Model.User.Surname @Model.User.Name</div>
+							}
+							<div class="review-date">@DateOnly.FromDateTime(DateTime.Now)</div>
+							<div class="review-rating">
+								<span>Оцените товар от 1 до 5:</span>
+								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input" placeholder="5">
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<textarea asp-for="@Model.Review!.Text" class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea>
+					<textarea asp-for="@Model.Review!.Text" class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea>
 
-				<div class="form-actions">
-					@* <button type="button" class="cancel-btn">Назад</button> *@
-					<button type="submit" class="submit-btn">Отправить</button>
+					<div class="form-actions">
+						@* <button type="button" class="cancel-btn">Назад</button> *@
+						<button type="submit" class="submit-btn">Отправить</button>
+					</div>
 				</div>
-			</div>
-			<input type="hidden" asp-for="@Model.Review!.UserId" value="@Model.User.IdUser" />
-			<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.Product.IdProduct" />
+				<input type="hidden" asp-for="@Model.Review!.UserId" value="@Model.User.IdUser" />
+				<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.Product.IdProduct" />
 			</form>
 		</div>
 	}
@@ -140,7 +148,15 @@
 				<div class="review-header">
 					<img src="@review.User.Photo" alt="User [ID@(review.User.IdUser)] Photo">
 					<div>
-						<div class="review-name">@review.User.Surname @review.User.Name</div>
+						@if ((review.User.Surname + review.User.Name) == "")
+						{
+							<div class="review-name">Не указано</div>
+						}
+						else
+						{
+							<div class="review-name">@review.User.Surname @review.User.Name</div>
+						}
+						@* <div class="review-name">@review.User.Surname @review.User.Name</div> *@
 						<div class="review-date">@review.DateOfCreation</div>
 						<div class="review-rating"><img src="~/img/icon/star.png" alt="star">@review.Grade</div>
 					</div>

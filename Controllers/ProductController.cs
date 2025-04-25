@@ -94,6 +94,8 @@ namespace Malyshev_Project.Controllers
 				.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound();
 
+			product.Reviews = product.Reviews.OrderByDescending(r => r.IdReview).ToList();
+
 			var user = HttpContext.Session.Get<User>("user");
 			var model = new ProductDetailsModel(product, user);
 

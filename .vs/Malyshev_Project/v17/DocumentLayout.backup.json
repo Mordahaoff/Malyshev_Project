@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\models\\productdetailsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:models\\productdetailsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\views\\catalog\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:views\\catalog\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReviewController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ReviewController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReviewController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ReviewController.cs",
-              "RelativeToolTip": "Controllers\\ReviewController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "Title": "ProductDetailsModel.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\ProductDetailsModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProductDetailsModel.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Models\\ProductDetailsModel.cs",
+              "RelativeToolTip": "Models\\ProductDetailsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T08:56:31.52Z",
+              "WhenOpened": "2025-04-25T09:26:51.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T08:53:19.318Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T09:23:49.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Products.cshtml",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Catalog\\Products.cshtml",
+              "RelativeDocumentMoniker": "Views\\Catalog\\Products.cshtml",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Catalog\\Products.cshtml",
+              "RelativeToolTip": "Views\\Catalog\\Products.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T09:23:39.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwC0AAAAbAAAAAAAAAA==",
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "Controllers\\ReviewController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwE0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T07:55:16.385Z",
+              "WhenOpened": "2025-04-25T09:23:07.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAvwHwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T09:20:53.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwFoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T09:18:35.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T09:18:03.011Z",
               "EditorCaption": ""
             }
           ]

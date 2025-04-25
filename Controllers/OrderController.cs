@@ -124,7 +124,7 @@ namespace Malyshev_Project.Controllers
 			{
 				_db.Orders.Add(new Order { UserId = user.IdUser });
 				_db.SaveChanges();
-				order = _db.Orders.Last();
+				order = _db.Orders.OrderBy(o => o.IdOrder).Last();
 			}
 
 			if (order.OrdersProducts.Any(op => op.ProductId == id))

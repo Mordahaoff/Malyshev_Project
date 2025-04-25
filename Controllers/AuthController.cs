@@ -67,7 +67,7 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult Register(UserAuthModel model)
     {
-        if (!_db.Users.Any(u => u.Login == model.Login))
+        if (_db.Users.Any(u => u.Login == model.Login))
         {
             _logger.LogWarning($"Логин {model.Login} занят!");
             ViewData["Message"] = $"Логин {model.Login} занят!";
