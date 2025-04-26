@@ -39,9 +39,7 @@ namespace Malyshev_Project.Controllers
 		[HttpPost]
 		public IActionResult Create(CreateProductModel model)
 		{
-			var product = (Product)model;
-
-			_db.Products.Add(product);
+			_db.Products.Add(model.Product);
 			_db.SaveChanges();
 
 			int createdProductId = _db.Products.OrderBy(p => p.IdProduct).Last().IdProduct;
@@ -56,9 +54,12 @@ namespace Malyshev_Project.Controllers
 				.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound();
 
-			var model = (EditProductModel)product;
-			model.Brands = _db.Brands.ToList();
-			model.Categories = _db.CategoriesOfProducts.ToList();
+			var model = new EditProductModel()
+			{
+				Product = product,
+				Brands = _db.Brands.ToList(),
+				Categories = _db.CategoriesOfProducts.ToList()
+			};
 
 			return View(model);
 		}
@@ -66,19 +67,9 @@ namespace Malyshev_Project.Controllers
 		[HttpPost]
 		public IActionResult Edit(EditProductModel model)
 		{
-			var oldProduct = _db.Products.FirstOrDefault(p => p.IdProduct == model.IdProduct);
-			if (oldProduct == null) return NotFound();
-
-			oldProduct.Name = model.Name;
-			oldProduct.Photo = model.Photo;
-			oldProduct.Description = model.Description;
-			oldProduct.Price = model.Price;
-			oldProduct.Volume = model.Volume;
-			oldProduct.CategoryId = model.CategoryId;
-			oldProduct.BrandId = model.BrandId;
-
+			_db.Products.Update(model.Product);
 			_db.SaveChanges();
-			return RedirectToAction("Edit", "Product", new { id = model.IdProduct });
+			return RedirectToAction("Edit", "Product", new { id = model.Product.IdProduct });
 		}
 
 		public IActionResult Details(int id)
@@ -96,7 +87,7 @@ namespace Malyshev_Project.Controllers
 
 			product.Reviews = product.Reviews.OrderByDescending(r => r.IdReview).ToList();
 
-			var user = HttpContext.Session.Get<User>("user");
+			var user = HttpContext.Session.Get<User>("user")!;
 			var model = new ProductDetailsModel(product, user);
 
 			return View(model);

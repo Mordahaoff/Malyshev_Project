@@ -36,29 +36,28 @@
 		<a asp-controller="Catalog" asp-action="Products" class="back-link"><img src="~/img/icon/back.png" alt="Назад"> Вернуться в каталог</a>
 		<div class="product-container">
 			<div class="product-left">
-				<img src="@Model.Product.Photo" alt="@Model.Product.Name" class="product-main-image">
-				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a>
-				@* <button class="add-to-cart"><a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a></button> *@
+				<img src="@Model.ProductUnits.Product.Photo" alt="@Model.ProductUnits.Product.Name" class="product-main-image">
+				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@Model.ProductUnits.Product.IdProduct">Добавить в корзину</a>
 			</div>
 
 			<div class="product-right">
-				<h2>@Model.Product.Name</h2>
-				<p><strong>Стоимость: </strong><span class="price">@Model.Product.Price ₽</span></p>
-				<p><strong>Объем: </strong>@Model.Product.Volume @Model.Units</p>
-				<p><strong>Категория: </strong>@Model.Product.Category.Name</p>
-				<p><strong>Бренд: </strong>@Model.Product.Brand.Name</p>
+				<h2>@Model.ProductUnits.Product.Name</h2>
+				<p><strong>Стоимость: </strong><span class="price">@Model.ProductUnits.Product.Price ₽</span></p>
+				<p><strong>Объем: </strong>@Model.ProductUnits.Product.Volume @Model.ProductUnits.Units</p>
+				<p><strong>Категория: </strong>@Model.ProductUnits.Product.Category.Name</p>
+				<p><strong>Бренд: </strong>@Model.ProductUnits.Product.Brand.Name</p>
 
 				<div class="product-description">
 					<h3>Описание:</h3>
 					<p>
-						@Model.Product.Description
+						@Model.ProductUnits.Product.Description
 					</p>
 				</div>
 
 				<div class="store-availability">
 					<h3>Наличие в магазинах:</h3>
 					<ul>
-						@foreach (var sp in Model.Product.StoresProducts)
+						@foreach (var sp in Model.ProductUnits.Product.StoresProducts)
 						{
 							<li>
 								<img src="~/img/icon/location.png" alt="Местоположение">
@@ -73,32 +72,6 @@
 			</div>
 		</div>
 	</main>
-	<!-- Форма для добавления нового отзыва
-	ТОЛЬКО У ЗАРЕГИСТРИРОВАННЫХ ПОЛЬЗОВАТЕЛЕЙ -->
-	@* <div class="reviews-section"> *@
-	@* 	<h3>Оставьте отзыв о товаре:</h3> *@
-
-	@* 	<div class="review-card"> *@
-	@* 		<div class="review-header"> *@
-	@* 			<img src="~/img/team_card1.png" alt="User Photo"> *@
-	@* 			<div> *@
-	@* 				<div class="review-name">Иванов Иван</div> <!-- Имя пользователя --> *@
-	@* 				<div class="review-date">22.04.2025</div> <!-- Текущая дата --> *@
-	@* 				<div class="review-rating"> *@
-	@* 					<span>Оцените товар от 1 до 5:</span> *@
-	@* 					<input type="number" min="1" max="5" class="rating-input" placeholder="5"> *@
-	@* 				</div> *@
-	@* 			</div> *@
-	@* 		</div> *@
-
-	@* 		<textarea class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea> *@
-
-	@* 		<div class="form-actions"> *@
-	@* 			<button type="button" class="cancel-btn">Назад</button> *@
-	@* 			<button type="submit" class="submit-btn">Отправить</button> *@
-	@* 		</div> *@
-	@* 	</div> *@
-	@* </div> *@
 
 	@if (Model.User != null)
 	{
@@ -129,12 +102,11 @@
 					<textarea asp-for="@Model.Review!.Text" class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea>
 
 					<div class="form-actions">
-						@* <button type="button" class="cancel-btn">Назад</button> *@
 						<button type="submit" class="submit-btn">Отправить</button>
 					</div>
 				</div>
 				<input type="hidden" asp-for="@Model.Review!.UserId" value="@Model.User.IdUser" />
-				<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.Product.IdProduct" />
+				<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.ProductUnits.Product.IdProduct" />
 			</form>
 		</div>
 	}
@@ -142,7 +114,7 @@
 	<div class="reviews-section">
 		<h3>Отзывы:</h3>
 
-		@foreach (var review in Model.Product.Reviews)
+		@foreach (var review in Model.ProductUnits.Product.Reviews)
 		{
 			<div class="review-card">
 				<div class="review-header">
@@ -156,7 +128,6 @@
 						{
 							<div class="review-name">@review.User.Surname @review.User.Name</div>
 						}
-						@* <div class="review-name">@review.User.Surname @review.User.Name</div> *@
 						<div class="review-date">@review.DateOfCreation</div>
 						<div class="review-rating"><img src="~/img/icon/star.png" alt="star">@review.Grade</div>
 					</div>
@@ -164,59 +135,7 @@
 				<p class="review-text">@review.Text</p>
 			</div>
 		}
-
-		<!--Существующие отзывы-->
-		@* <div class="review-card"> *@
-		@* 	<div class="review-header"> *@
-		@* 		<img src="~/img/team_card1.png" alt="User Photo"> *@
-		@* 		<div> *@
-		@* 			<div class="review-name">Морев Артем</div> *@
-		@* 			<div class="review-date">10.04.2025</div> *@
-		@* 			<div class="review-rating">  <img src="~/img/icon/star.png" alt="star">5</div> *@
-		@* 		</div> *@
-		@* 	</div> *@
-		@* 	<p class="review-text"> *@
-		@* 		Отличный протеин! Заказывал сывороточный концентрат со вкусом крем-брюле — вкус просто бомба, без химического послевкусия. *@
-		@* 		Размешивается легко, даже в шейкере без комков. Уже через неделю приёма заметил, что восстановление после тренировок стало быстрее. *@
-		@* 		Доставка быстрая, упаковка целая. Буду брать ещё! *@
-		@* 	</p> *@
-		@* </div> *@
-
-		@* <div class="review-card"> *@
-		@* 	<div class="review-header"> *@
-		@* 		<img src="~/img/team_card2.png" alt="User Photo"> *@
-		@* 		<div> *@
-		@* 			<div class="review-name">Смирнов Константин</div> *@
-		@* 			<div class="review-date">28.03.2025</div> *@
-		@* 			<div class="review-rating">  <img src="~/img/icon/star.png" alt="star">5</div> *@
-		@* 		</div> *@
-		@* 	</div> *@
-		@* 	<p class="review-text"> *@
-		@* 		Купил протеин со вкусом «Крем-брюле» — и это один из самых приятных вариантов, которые пробовал! Напоминает настоящий десерт, но без излишней сладости. *@
-		@* 		Отлично растворяется в воде и молоке, пьётся легко, без комков. После тренировки – настоящее удовольствие, будто балуешь себя, а не просто пьешь спортпит. *@
-		@* 		Минус: чуть-чуть приторновато, если мешать с малым количеством жидкости. Но если разбавить побольше – идеально. *@
-		@* 		Эффект от белка отличный: восстановление быстрее, мышцы в тонусе. Упаковка целая, сроки годности в порядке. *@
-		@* 	</p> *@
-		@* </div> *@
-
-		@* <div class="review-card"> *@
-		@* 	<div class="review-header"> *@
-		@* 		<img src="~/img/team_card1.png" alt="User Photo"> *@
-		@* 		<div> *@
-		@* 			<div class="review-name">Тихомиров Леонид</div> *@
-		@* 			<div class="review-date">05.03.2025</div> *@
-		@* 			<div class="review-rating">  <img src="~/img/icon/star.png" alt="star">4</div> *@
-		@* 		</div> *@
-		@* 	</div> *@
-		@* 	<p class="review-text"> *@
-		@* 		Взял этот протеин – вкус действительно классный, как настоящий десерт. С молоком вообще кажется, что пью коктейль, а не спортпит. После тренировок чувствую себя хорошо, мышцы не болят, и живот не пучит – всё ок. *@
-		@* 		Но есть парочка минусов. Во-первых, он слишком сладкий – к концу банки уже надоедает. Во-вторых, цена кусается, можно найти что-то подешевле с таким же эффектом. И ещё – если мешать в шейкере, на дне иногда остаётся немного порошка. *@
-		@* 		В общем, протеин хороший, но не без косяков. Если любите сладкое – попробуйте, но лично я, может, поищу что-то менее приторное. Твёрдая четвёрка! *@
-		@* 	</p> *@
-		@* </div> *@
 	</div>
-
-
 
 	<footer class="footer">
 		<div class="footer-container">

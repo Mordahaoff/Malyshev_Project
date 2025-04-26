@@ -65,7 +65,7 @@ public class CatalogController : Controller
 			model.SortId = sortId;
 		}
 
-		model.Products = products.Select(p => new ProductCatalog(p)).ToList();
+		model.Products = products.Select(p => new ProductUnits(p)).ToList();
 		_logger.LogInformation($"Кол-во продуктов: {products.Count}");
 		return View(model);
 	}

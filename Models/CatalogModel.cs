@@ -2,7 +2,7 @@
 {
 	public class CatalogModel()
 	{
-		public List<ProductCatalog> Products { get; set; } = [];
+		public List<ProductUnits> Products { get; set; } = [];
 		public string? CategoryName { get; set; } = "Не выбрана";
 		public int? CategoryId { get; set; }
 		public string? BrandName { get; set; } = "Не выбран";

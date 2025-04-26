@@ -3,134 +3,134 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROteinZone - Каталог товаров</title>
-    <link rel="stylesheet" href="~/css/catalog.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROteinZone - Каталог товаров</title>
+	<link rel="stylesheet" href="~/css/catalog.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1 class="logo">PROteinZone</h1>
-            <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
-        </div>
-        <nav>
-            <ul>
-                <li><a asp-controller="Home" asp-action="Index">Главная</a></li>
-                <li><a asp-controller="Home" asp-action="About">О нас</a></li>
-                <li class="active"><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
-                <li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
-                <li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
-                <li class="cabinet-btn">
-                    <a asp-controller="User" asp-action="MyProfile">
-                        Личный кабинет
-                        <img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="header-line"></div>
+	<header>
+		<div class="header-container">
+			<h1 class="logo">PROteinZone</h1>
+			<img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+		</div>
+		<nav>
+			<ul>
+				<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+				<li><a asp-controller="Home" asp-action="About">О нас</a></li>
+				<li class="active"><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
+				<li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+				<li class="cabinet-btn">
+					<a asp-controller="User" asp-action="MyProfile">
+						Личный кабинет
+						<img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="header-line"></div>
 
-    <div class="breadcrumbs-container">
-        <div class="breadcrumbs">
-            <a asp-controller="Home" asp-action="Index">Главная</a>
-            <span class="arrow"> > </span>
-            <span class="current">Каталог товаров</span>
-        </div>
-    </div>
-    <div class="catalog-container">
-        <section class="filters">
-            <div class="filter-section orange-header">
-                <h3>Категория товара:</h3>
-                <ul>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="1" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеиновые батончики</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="2" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеин</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="3" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Гейнеры</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="4" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Креатин</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="5" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Предтрен</a></li>
-                    <li> <a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="6" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Шейкеры</a></li>
-                </ul>
-            </div>
+	<div class="breadcrumbs-container">
+		<div class="breadcrumbs">
+			<a asp-controller="Home" asp-action="Index">Главная</a>
+			<span class="arrow"> > </span>
+			<span class="current">Каталог товаров</span>
+		</div>
+	</div>
+	<div class="catalog-container">
+		<section class="filters">
+			<div class="filter-section orange-header">
+				<h3>Категория товара:</h3>
+				<ul>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="1" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеиновые батончики</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="2" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеин</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="3" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Гейнеры</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="4" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Креатин</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="5" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Предтрен</a></li>
+					<li> <a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="6" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Шейкеры</a></li>
+				</ul>
+			</div>
 
-            <div class="filter-section orange-header">
-                <h3>Бренд:</h3>
-                <ul>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="1" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Optimum Nutrition</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="2" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Bombbar</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="3" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Myprotein</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="4" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Maxler</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="5" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">OptiMeal</a></li>
-                </ul>
-            </div>
+			<div class="filter-section orange-header">
+				<h3>Бренд:</h3>
+				<ul>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="1" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Optimum Nutrition</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="2" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Bombbar</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="3" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Myprotein</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="4" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Maxler</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="5" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">OptiMeal</a></li>
+				</ul>
+			</div>
 
-            <div class="filter-section orange-header">
-                <h3>Сортировка:</h3>
-                <ul class="radio-sort">
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="1">По возрастанию цены</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="2">По убыванию цены</a></li>
-                    <li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="3">Товары со скидкой</a></li>
-                </ul>
-            </div>
+			<div class="filter-section orange-header">
+				<h3>Сортировка:</h3>
+				<ul class="radio-sort">
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="1">По возрастанию цены</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="2">По убыванию цены</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="3">Товары со скидкой</a></li>
+				</ul>
+			</div>
 
-            <div class="filter-section orange-header">
-                <h3><a asp-controller="Catalog" asp-action="Products">Сбросить</a></h3>
-            </div>
-        </section>
+			<div class="filter-section orange-header">
+				<h3><a asp-controller="Catalog" asp-action="Products">Сбросить</a></h3>
+			</div>
+		</section>
 
-        <div class="products-section">
-            <div class="no-category-message">Категория: "@Model.CategoryName"</div>
-            <div class="no-category-message">Бренд: "@Model.BrandName"</div>
-            <div class="no-category-message">Сортировка: "@Model.SortName"</div>
-            <section class="products">
-                @foreach (ProductCatalog pc in Model.Products)
-                {
-                    <div class="product-card">
-                    <a asp-controller="Product" asp-action="Details" asp-route-id="@pc.Product.IdProduct">
-                        <img src="@pc.Product.Photo" alt="@pc.Product.Name" class="product-image">
-                        <div class="product-price">@pc.Product.Price ₽</div>
-                        <div class="product-weight">@pc.Product.Volume @pc.Units</div>
-                        <div class="product-name">@pc.Product.Name</div>
-                    </a>
-                    <a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@pc.Product.IdProduct" class="add-to-cart">Добавить в корзину</a>
-                    </div>
-                }
-            </section>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h2 class="footer-logo">PROteinZone</h2>
-                    <div class="social-links">
-                        <a href="#" class="social-circle"><img src="~/img/icon/telegram.png" alt="Telegram"></a>
-                        <a href="#" class="social-circle"><img src="~/img/icon/vk.png" alt="VK"></a>
-                        <a href="#" class="social-circle"><img src="~/img/icon/email.png" alt="Email"></a>
-                    </div>
-                </div>
+		<div class="products-section">
+			<div class="no-category-message">Категория: "@Model.CategoryName"</div>
+			<div class="no-category-message">Бренд: "@Model.BrandName"</div>
+			<div class="no-category-message">Сортировка: "@Model.SortName"</div>
+			<section class="products">
+				@foreach (ProductUnits pc in Model.Products)
+				{
+					<div class="product-card">
+						<a asp-controller="Product" asp-action="Details" asp-route-id="@pc.Product.IdProduct">
+							<img src="@pc.Product.Photo" alt="@pc.Product.Name" class="product-image">
+							<div class="product-price">@pc.Product.Price ₽</div>
+							<div class="product-weight">@pc.Product.Volume @pc.Units</div>
+							<div class="product-name">@pc.Product.Name</div>
+						</a>
+						<a asp-controller="Order" asp-action="AddProductToOrder" asp-route-id="@pc.Product.IdProduct" class="add-to-cart">Добавить в корзину</a>
+					</div>
+				}
+			</section>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<h2 class="footer-logo">PROteinZone</h2>
+					<div class="social-links">
+						<a href="#" class="social-circle"><img src="~/img/icon/telegram.png" alt="Telegram"></a>
+						<a href="#" class="social-circle"><img src="~/img/icon/vk.png" alt="VK"></a>
+						<a href="#" class="social-circle"><img src="~/img/icon/email.png" alt="Email"></a>
+					</div>
+				</div>
 
-                <div class="footer-contacts">
-                    <h3>Наши контакты:</h3>
-                    <p>+7(996)555-66-77</p>
-                    <p>proteinzone@mail.com</p>
-                    <p>г. Ярославль, ул. Победы, д.11, офис 16</p>
-                    <p>пн-пт: 9:00 - 18:00</p>
-                </div>
+				<div class="footer-contacts">
+					<h3>Наши контакты:</h3>
+					<p>+7(996)555-66-77</p>
+					<p>proteinzone@mail.com</p>
+					<p>г. Ярославль, ул. Победы, д.11, офис 16</p>
+					<p>пн-пт: 9:00 - 18:00</p>
+				</div>
 
-                <div class="footer-links">
-                    <ul>
-                        <li><a asp-controller="Home" asp-action="Index">Главная</a></li>
-                        <li><a asp-controller="Home" asp-action="About">О нас</a></li>
-                        <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
-                        <li><a asp-controller="Home" asp-action="Guide">Гид по питанию</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>© 2025 PROteinZone. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
+				<div class="footer-links">
+					<ul>
+						<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+						<li><a asp-controller="Home" asp-action="About">О нас</a></li>
+						<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+						<li><a asp-controller="Home" asp-action="Guide">Гид по питанию</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<p>© 2025 PROteinZone. Все права защищены.</p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

@@ -18,42 +18,42 @@
 	<div class="row">
 		<div class="col-md-4">
 			<form asp-controller="Product" asp-action="Edit" method="post">
-				<input type="hidden" asp-for="IdProduct" value="@Model.IdProduct" />
+				<input type="hidden" asp-for="Product.IdProduct" value="@Model.Product.IdProduct" />
 				<div class="form-group">
-					<label asp-for="Name" class="control-label"></label>
-					<input asp-for="Name" class="form-control" />
+					<label asp-for="Product.Name" class="control-label"></label>
+					<input asp-for="Product.Name" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label asp-for="Photo" class="control-label"></label>
-					<input asp-for="Photo" class="form-control" />
+					<label asp-for="Product.Photo" class="control-label"></label>
+					<input asp-for="Product.Photo" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label asp-for="Description" class="control-label"></label>
-					<input asp-for="Description" class="form-control" />
+					<label asp-for="Product.Description" class="control-label"></label>
+					<input asp-for="Product.Description" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label asp-for="Price" class="control-label"></label>
-					<input asp-for="Price" class="form-control" />
+					<label asp-for="Product.Price" class="control-label"></label>
+					<input asp-for="Product.Price" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label asp-for="Volume" class="control-label"></label>
-					<input asp-for="Volume" class="form-control" />
+					<label asp-for="Product.Volume" class="control-label"></label>
+					<input asp-for="Product.Volume" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label asp-for="CategoryId" class="control-label">Category</label>
-					<select asp-for="CategoryId" class="form-control">
+					<label asp-for="Product.CategoryId" class="control-label">Category</label>
+					<select asp-for="Product.CategoryId" class="form-control">
 						@foreach (var category in Model.Categories)
 						{
-							<option value="@category.IdCategory" selected="@(category.IdCategory == @Model.CategoryId)">@category.Name</option>
+							<option value="@category.IdCategory" selected="@(category.IdCategory == @Model.Product.CategoryId)">@category.Name</option>
 						}
 					</select>
 				</div>
 				<div class="form-group">
-					<label asp-for="BrandId" class="control-label">Brand</label>
-					<select asp-for="BrandId" class="form-control">
+					<label asp-for="Product.BrandId" class="control-label">Brand</label>
+					<select asp-for="Product.BrandId" class="form-control">
 						@foreach (var brand in Model.Brands)
 						{
-							<option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.BrandId)">@brand.Name</option>
+							<option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.Product.BrandId)">@brand.Name</option>
 						}
 					</select>
 				</div>
