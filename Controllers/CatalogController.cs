@@ -39,21 +39,26 @@ public class CatalogController : Controller
 			switch (sortId)
 			{
 				case 1: // По возрастанию цены
-					products = products.OrderBy(p => p.Price).ToList();
-					model.SortName = "По возрастанию цены";
-					break;
+					{
+						products = products.OrderBy(p => p.Price).ToList();
+						model.SortName = "По возрастанию цены";
+						break;
+					}
 				case 2: // По убыванию цены
-					products = products.OrderByDescending(p => p.Price).ToList();
-					model.SortName = "По убыванию цены";
-					break;
+					{
+						products = products.OrderByDescending(p => p.Price).ToList();
+						model.SortName = "По убыванию цены";
+						break;
+					}
 				case 3: // Товары со скидкой
-					products = _db.Products
-						.Include(p => p.Discounts)
-						.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now)))
-						.ToList();
-					model.SortName = "Товары со скидкой";
-					//products = products.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now))).ToList();
-					break;
+					{
+						products = _db.Products
+							.Include(p => p.Discounts)
+							.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now)))
+							.ToList();
+						model.SortName = "Товары со скидкой";
+						break;
+					}
 				default:
 					return BadRequest();
 			}

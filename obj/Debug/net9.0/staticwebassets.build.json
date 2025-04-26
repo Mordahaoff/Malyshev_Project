@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GgJUcsDz0BavrBttMfrU3Y1/JXzsYS6hJaN3huFhxnI=",
+  "Hash": "t6MxmZO1+kTLEN1AzdswZilL2tzHGmK66DypWFFHntU=",
   "Source": "Malyshev_Project",
   "BasePath": "_content/Malyshev_Project",
   "Mode": "Default",
@@ -1816,8 +1816,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zya20o8t9u",
-      "Integrity": "9Ts4Tkwji22xMgfMvEDTp7YjlDR+WibzCCcSmIf5oFA=",
+      "Fingerprint": "mt33dqquos",
+      "Integrity": "Gitva7lvwREhA0XoHGo6B6gYLv6DdFGMjQA4YMQ7WPU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\uml\\uml.~ml"
@@ -1837,8 +1837,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u4p7p8nyf2",
-      "Integrity": "AryuulC3ORfaRGdKdEbdiQUQloxMNsexh+BKXcdK6nM=",
+      "Fingerprint": "s2vv8f5vwg",
+      "Integrity": "7JwHjotyJwvjE2HTUnRm3w/Vjuxddq12Vm71/ZgO1xk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\uml\\uml.uml"
@@ -1858,8 +1858,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cwrg27pwl2",
-      "Integrity": "PD8npsa7DJRLTqqMBGzglYtkANMGD85jPSzCA47VbVI=",
+      "Fingerprint": "ii33lae08l",
+      "Integrity": "irFF7LXww6JCtqDVqYwE1xX3m1D3DqUh0XEOcbqPwjk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\uml\\UseCase.jpg"
@@ -6541,7 +6541,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 07:06:13 GMT"
+          "Value": "Sat, 26 Apr 2025 09:34:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6586,7 +6586,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 07:06:13 GMT"
+          "Value": "Sat, 26 Apr 2025 09:34:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6623,7 +6623,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 07:06:13 GMT"
+          "Value": "Sat, 26 Apr 2025 09:34:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6668,7 +6668,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 07:06:13 GMT"
+          "Value": "Sat, 26 Apr 2025 09:34:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6939,7 +6939,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "683984"
+          "Value": "841369"
         },
         {
           "Name": "Content-Type",
@@ -6947,11 +6947,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9Ts4Tkwji22xMgfMvEDTp7YjlDR+WibzCCcSmIf5oFA=\""
+          "Value": "\"Gitva7lvwREhA0XoHGo6B6gYLv6DdFGMjQA4YMQ7WPU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 13:54:35 GMT"
+          "Value": "Sat, 26 Apr 2025 14:44:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6961,13 +6961,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9Ts4Tkwji22xMgfMvEDTp7YjlDR+WibzCCcSmIf5oFA="
+          "Value": "sha256-Gitva7lvwREhA0XoHGo6B6gYLv6DdFGMjQA4YMQ7WPU="
         }
       ]
     },
     {
-      "Route": "files/uml/uml.u4p7p8nyf2.uml",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\uml.uml",
+      "Route": "files/uml/uml.mt33dqquos.~ml",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\uml.~ml",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6976,7 +6976,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "684000"
+          "Value": "841369"
         },
         {
           "Name": "Content-Type",
@@ -6984,11 +6984,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AryuulC3ORfaRGdKdEbdiQUQloxMNsexh+BKXcdK6nM=\""
+          "Value": "\"Gitva7lvwREhA0XoHGo6B6gYLv6DdFGMjQA4YMQ7WPU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 13:54:46 GMT"
+          "Value": "Sat, 26 Apr 2025 14:44:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6998,7 +6998,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u4p7p8nyf2"
+          "Value": "mt33dqquos"
+        },
+        {
+          "Name": "label",
+          "Value": "files/uml/uml.~ml"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gitva7lvwREhA0XoHGo6B6gYLv6DdFGMjQA4YMQ7WPU="
+        }
+      ]
+    },
+    {
+      "Route": "files/uml/uml.s2vv8f5vwg.uml",
+      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\uml.uml",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "841367"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7JwHjotyJwvjE2HTUnRm3w/Vjuxddq12Vm71/ZgO1xk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 14:44:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s2vv8f5vwg"
         },
         {
           "Name": "label",
@@ -7006,7 +7051,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-AryuulC3ORfaRGdKdEbdiQUQloxMNsexh+BKXcdK6nM="
+          "Value": "sha256-7JwHjotyJwvjE2HTUnRm3w/Vjuxddq12Vm71/ZgO1xk="
         }
       ]
     },
@@ -7021,7 +7066,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "684000"
+          "Value": "841367"
         },
         {
           "Name": "Content-Type",
@@ -7029,11 +7074,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AryuulC3ORfaRGdKdEbdiQUQloxMNsexh+BKXcdK6nM=\""
+          "Value": "\"7JwHjotyJwvjE2HTUnRm3w/Vjuxddq12Vm71/ZgO1xk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 13:54:46 GMT"
+          "Value": "Sat, 26 Apr 2025 14:44:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7043,57 +7088,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AryuulC3ORfaRGdKdEbdiQUQloxMNsexh+BKXcdK6nM="
+          "Value": "sha256-7JwHjotyJwvjE2HTUnRm3w/Vjuxddq12Vm71/ZgO1xk="
         }
       ]
     },
     {
-      "Route": "files/uml/uml.zya20o8t9u.~ml",
-      "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\uml.~ml",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "683984"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9Ts4Tkwji22xMgfMvEDTp7YjlDR+WibzCCcSmIf5oFA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 13:54:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zya20o8t9u"
-        },
-        {
-          "Name": "label",
-          "Value": "files/uml/uml.~ml"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-9Ts4Tkwji22xMgfMvEDTp7YjlDR+WibzCCcSmIf5oFA="
-        }
-      ]
-    },
-    {
-      "Route": "files/uml/UseCase.cwrg27pwl2.jpg",
+      "Route": "files/uml/UseCase.ii33lae08l.jpg",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\UseCase.jpg",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7103,7 +7103,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "146976"
+          "Value": "135305"
         },
         {
           "Name": "Content-Type",
@@ -7111,11 +7111,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PD8npsa7DJRLTqqMBGzglYtkANMGD85jPSzCA47VbVI=\""
+          "Value": "\"irFF7LXww6JCtqDVqYwE1xX3m1D3DqUh0XEOcbqPwjk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 13:46:52 GMT"
+          "Value": "Sat, 26 Apr 2025 13:02:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7125,7 +7125,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cwrg27pwl2"
+          "Value": "ii33lae08l"
         },
         {
           "Name": "label",
@@ -7133,7 +7133,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PD8npsa7DJRLTqqMBGzglYtkANMGD85jPSzCA47VbVI="
+          "Value": "sha256-irFF7LXww6JCtqDVqYwE1xX3m1D3DqUh0XEOcbqPwjk="
         }
       ]
     },
@@ -7148,7 +7148,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "146976"
+          "Value": "135305"
         },
         {
           "Name": "Content-Type",
@@ -7156,11 +7156,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PD8npsa7DJRLTqqMBGzglYtkANMGD85jPSzCA47VbVI=\""
+          "Value": "\"irFF7LXww6JCtqDVqYwE1xX3m1D3DqUh0XEOcbqPwjk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 13:46:52 GMT"
+          "Value": "Sat, 26 Apr 2025 13:02:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7170,7 +7170,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PD8npsa7DJRLTqqMBGzglYtkANMGD85jPSzCA47VbVI="
+          "Value": "sha256-irFF7LXww6JCtqDVqYwE1xX3m1D3DqUh0XEOcbqPwjk="
         }
       ]
     },
