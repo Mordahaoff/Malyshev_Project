@@ -93,7 +93,7 @@ nav ul li a:hover {
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff;
+    color: #ffff !important; /*для избежания конфликта стилей*/
     transition: transform 0.2s ease-in-out;
 }
 
@@ -221,9 +221,140 @@ nav ul li a:hover {
     outline: none;
 }
 
+/* Настройки для вектора в cabinet-container*/
+.vector-cabinet{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 30%;
+    height: 70%;
+    z-index: -10;
+}
 
+/* Настройки для вектора*/
+.vector-cabinet2 {
+    position: absolute;
+    top: 250px;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 130%;
+    z-index: -10;
+}
+/*История заказов*/
+.order-history {
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 0 30px;
+    
+}
 
+.order-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
 
+.order-card {
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.order-info {
+    margin-bottom: 20px;
+}
+
+.order-info h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.order-info p {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.order-products {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.order-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background: #f9f9f9;
+}
+
+.price {
+    font-weight: 800;
+    color: #000;
+    font-size: 28px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.product-details p {
+    font-size: 20px;
+}
+
+/* Новые стили для контейнера общей суммы */
+.order-total-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.order-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 22px;
+    font-weight: 900;
+    background: #F9B300;
+    padding: 15px 30px;
+    border-radius: 30px;
+    max-width: 400px;
+}
 
 
 /* Футер */
