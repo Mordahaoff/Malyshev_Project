@@ -16,41 +16,23 @@ namespace Malyshev_Project.Controllers
 		public IActionResult MyProfile()
         {
 			var user = HttpContext.Session.Get<User>("user");
-
 			if (user == null) return RedirectToAction("Login", "Auth");
-
             return View(user);
         }
 
 		public IActionResult Edit()
 		{
 			var user = HttpContext.Session.Get<User>("user");
-
-			if (user == null) return NotFound();
-
+			if (user == null) return RedirectToAction("Login", "Auth");
 			return View(user);
 		}
 
 		[HttpPost]
 		public IActionResult Edit(User editedUser)
 		{
-			var sessionUser = HttpContext.Session.Get<User>("user");
-			if (sessionUser == null) return NotFound();
-
-			var dbUser = _db.Users.First(u => u.IdUser == sessionUser!.IdUser);
-			dbUser.Login = editedUser.Login;
-			dbUser.Password = editedUser.Password;
-			//dbUser.RoleId = editedUser.RoleId;
-			dbUser.Surname = editedUser.Surname;
-			dbUser.Name = editedUser.Name;
-			dbUser.Patronymic = editedUser.Patronymic;
-			dbUser.Gender = editedUser.Gender;
-			dbUser.Telephone = editedUser.Telephone;
-			dbUser.Photo = editedUser.Photo;
+			_db.Users.Update(editedUser);
 			_db.SaveChanges();
-
-			HttpContext.Session.Set("user", dbUser);
-
+			HttpContext.Session.Set("user", editedUser);
 			return RedirectToAction("Edit", "User");
 		}
 	}
