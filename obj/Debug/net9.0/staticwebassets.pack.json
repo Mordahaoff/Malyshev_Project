@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\cabinet.css",
+      "PackagePath": "staticwebassets\\css\\cabinet.css"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\catalog.css",
       "PackagePath": "staticwebassets\\css\\catalog.css"
     },
@@ -215,6 +219,14 @@
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",
       "PackagePath": "staticwebassets\\img\\vector\\vector_brand.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_cabinet.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_cabinet.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_cabinet2.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_cabinet2.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_choose.png",

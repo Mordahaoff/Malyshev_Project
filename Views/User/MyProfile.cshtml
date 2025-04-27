@@ -1,83 +1,172 @@
-﻿@model Malyshev_Project.Models.User
+﻿@model User;
 
 <!DOCTYPE html>
-
-<html>
+<html lang="ru">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Каталог товаров</title>
+    <link rel="stylesheet" href="~/css/cabinet.css">
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">PROteinZone</h1>
+            <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+        </div>
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="About">О нас</a></li>
+                <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+                <li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
+                <li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+                <li class="cabinet-btn">
+                    <a asp-controller="User" asp-action="MyProfile">
+                        Личный кабинет
+                        <img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div>
 
-    <div>
-        <h4>User</h4>
-        <hr />
-        <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Login)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Login)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Password)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Password)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Surname)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Surname)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Name)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Patronymic)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Patronymic)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Gender)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Gender)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Email)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Telephone)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Telephone)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Photo)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Photo)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Role)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Role.IdRole)
-            </dd>
-        </dl>
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs">
+            <a asp-controller="Home" asp-action="Index">Главная</a>
+            <span class="arrow"> > </span>
+            <span class="current">Личный кабинет</span>
+        </div>
     </div>
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model?.IdUser">Edit</a> |
-        <a asp-action="Index">Back to List</a>
-    </div>
+
+
+    <main class="cabinet-container">
+        <img src="~/img/vector/vector_cabinet.png" alt="Фон вектора" class="vector-cabinet">
+        <div class="profile-section">
+            <div class="profile-photo">
+                <h3>Фото профиля:</h3>
+                <img src="@Model.Photo" alt="Фото профиля">
+            </div>
+
+            <div class="profile-info">
+                <h3>Данные профиля:</h3>
+                <div class="input-group">
+                    <label asp-for="Surname">Фамилия:</label>
+                    <input asp-for="Surname" type="text" value="@Model.Surname">
+                </div>
+                <div class="input-group">
+                    <label asp-for="Name">Имя:</label>
+                    <input asp-for="Name" type="text" value="@Model.Name">
+                </div>
+                <div class="input-group">
+                    <label asp-for="Patronymic">Отчество:</label>
+                    <input asp-for="Patronymic" type="text" value="@Model.Patronymic">
+                </div>
+                <div class="input-group">
+                    <label>Роль:</label>
+                    <input type="text" value="@Model.Role.Name" disabled>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Email">Email:</label>
+                    <input asp-for="Email" type="email" value="@Model.Email">
+                </div>
+                <div class="input-group">
+                    <label asp-for="Telephone">Номер телефона:</label>
+                    <input asp-for="Telephone" type="tel" value="@Model.Telephone">
+                </div>
+
+                <h3>Вход в систему:</h3>
+                <div class="input-group">
+                    <label asp-for="Login">Логин:</label>
+                    <input asp-for="Login" type="text" value="@Model.Login" disabled>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Password">Пароль:</label>
+                    <input asp-for="Password" type="password" value="@Model.Password" disabled>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <img src="~/img/vector/vector_cabinet2.png" alt="Фон вектора" class="vector-cabinet2">
+
+    <section class="order-history">
+        <h2 class="order-title">История заказов</h2>
+
+        @if (Model.Orders.Where(o => o.StateOfOrderId != 1).Any())
+        {
+            @foreach (var order in Model.Orders.Where(o => o.StateOfOrderId != 1))
+            {
+                <div class="order-card">
+                    <div class="order-info">
+                        <h3>Информация о заказе:</h3>
+                        <p><strong>Статус заказа:</strong> @order.StateOfOrder.Name</p>
+                        <p><strong>Дата изменения статуса:</strong> @order.DateOfStatusChange</p>
+                        <p><strong>Адрес магазина:</strong> г. @order.Store!.Address.City, ул. @order.Store!.Address.Street, д.@order.Store!.Address.Building</p>
+                    </div>
+                    <h3>Товары:</h3>
+                    <div class="order-products">
+                        @foreach (var op in order.OrdersProducts)
+                        {
+                            <div class="product-item">
+                                <img src="@op.Product.Photo" alt="@op.Product.Name">
+                                <div class="product-details">
+                                    <p class="product-name">@op.Product.Name</p>
+                                    <p>Цена за шт: <span class="price">@op.Product.Price ₽</span></p>
+                                    <p>Количество товара: <strong>@op.CountOfProduct</strong></p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="order-total-container">
+                        <div class="order-total">
+                            <span>Общая сумма заказа:</span>
+                            <strong>@order.OrdersProducts.Sum(op => op.Product.Price * op.CountOfProduct) ₽</strong>
+                        </div>
+                    </div>
+                </div>
+            }
+        } else
+        {
+            <p>История заказов пуста.</p>
+        }
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">PROteinZone</h2>
+                    <div class="social-links">
+                        <a href="#" class="social-circle"><img src="~/img/icon/telegram.png" alt="Telegram"></a>
+                        <a href="#" class="social-circle"><img src="~/img/icon/vk.png" alt="VK"></a>
+                        <a href="#" class="social-circle"><img src="~/img/icon/email.png" alt="Email"></a>
+                    </div>
+                </div>
+
+                <div class="footer-contacts">
+                    <h3>Наши контакты:</h3>
+                    <p>+7(996)555-66-77</p>
+                    <p>proteinzone@mail.com</p>
+                    <p>г. Ярославль, ул. Победы, д.11, офис 16</p>
+                    <p>пн-пт: 9:00 - 18:00</p>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+                        <li><a asp-controller="Home" asp-action="About">О нас</a></li>
+                        <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+                        <li><a asp-controller="Home" asp-action="Guide">Гид по питанию</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 PROteinZone. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

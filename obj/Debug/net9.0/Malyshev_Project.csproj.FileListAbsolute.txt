@@ -321,3 +321,4 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\5ib
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-9w84d8n7af.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-kv8g2mu8g4.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\3p780mvlu2-5zv5av6y8l.gz
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\aljlgbz1pk-13immugow1.gz
