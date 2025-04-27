@@ -1,6 +1,7 @@
 ﻿using Malyshev_Project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 
 namespace Malyshev_Project.Controllers
 {
@@ -30,16 +31,27 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(o => o.OrdersProducts)
 						.ThenInclude(op => op.Product)
 				.FirstOrDefault(u => u.IdUser == user.IdUser);
+
+			if (!string.IsNullOrEmpty(userDb!.Telephone))
+			{
+				userDb.Telephone = 
+					"+7 " + userDb.Telephone.Substring(0, 3) 
+					+ "-" + userDb.Telephone.Substring(3, 3) 
+					+ "-" + userDb.Telephone.Substring(6, 2) 
+					+ "-" + userDb.Telephone.Substring(8, 2);
+			}
+			userDb!.Orders = userDb.Orders.Where(o => o.StateOfOrderId != 1).ToList();
             return View(userDb);
         }
 
 		[HttpPost]
 		public IActionResult MyProfile(User user)
 		{
+			user.Telephone = user.Telephone?.Replace("+7", "").Replace("-", "").Replace(" ", "");
 			_db.Users.Update(user);
 			_db.SaveChanges();
 			HttpContext.Session.Set("user", user);
-			return View(user);
+			return RedirectToAction("MyProfile", "User");
 		}
 
 		public IActionResult Edit()

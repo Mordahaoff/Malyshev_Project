@@ -41,7 +41,13 @@
 	</div>
 
 	<main class="cabinet-container">
-		<form asp-controller="User" asp-action="Edit" method="post">
+		<form asp-controller="User" asp-action="MyProfile" method="post">
+			<input type="hidden" asp-for="IdUser" value="@Model.IdUser" />
+			<input type="hidden" asp-for="Login" value="@Model.Login" />
+			<input type="hidden" asp-for="Password" value="@Model.Password" />
+			<input type="hidden" asp-for="RoleId" value="@Model.RoleId" />
+			<input type="hidden" asp-for="Photo" value="@Model.Photo" />
+			<input type="hidden" asp-for="Gender" value="@Model.Gender" />
 			<img src="~/img/vector/vector_cabinet.png" alt="Фон вектора" class="vector-cabinet">
 			<div class="profile-section">
 				<div class="profile-photo">
@@ -73,24 +79,17 @@
 					</div>
 					<div class="input-group">
 						<label asp-for="Telephone">Номер телефона:</label>
-						@if (Model.Telephone != "")
-						{
-							<input asp-for="Telephone" type="tel" value="+7@(Model.Telephone)" placeholder="+7XXXXXXXXXX">
-						}
-						else
-						{
-							<input asp-for="Telephone" type="tel" value="Model.Telephone" placeholder="+7XXXXXXXXXX">
-						}
+						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX">
 					</div>
 
 					<h3>Вход в систему:</h3>
 					<div class="input-group">
-						<label asp-for="Login">Логин:</label>
-						<input asp-for="Login" type="text" value="@Model.Login" disabled>
+						<label>Логин:</label>
+						<input type="text" value="@Model.Login" disabled>
 					</div>
 					<div class="input-group">
-						<label asp-for="Password">Пароль:</label>
-						<input asp-for="Password" type="text" value="@Model.Password" disabled>
+						<label>Пароль:</label>
+						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
 				<button type="submit">Изменить</button>
@@ -103,9 +102,9 @@
 	<section class="order-history">
 		<h2 class="order-title">История заказов</h2>
 
-		@if (Model.Orders.Where(o => o.StateOfOrderId != 1).Any())
+		@if (Model.Orders.Any())
 		{
-			@foreach (var order in Model.Orders.Where(o => o.StateOfOrderId != 1))
+			@foreach (var order in Model.Orders)
 			{
 				<div class="order-card">
 					<div class="order-info">
