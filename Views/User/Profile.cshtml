@@ -1,5 +1,5 @@
 ﻿@{
-	var currentUserId = Context.Session.Get<User>("user")?.IdUser;
+	var currentUser = Context.Session.Get<User>("user");
 }
 @model User;
 
@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PROteinZone - Профиль ID:@(currentUserId)</title>
+	<title>PROteinZone - Профиль ID:@(currentUser!.IdUser)</title>
 	<link rel="stylesheet" href="~/css/cabinet.css">
 </head>
 <body>
@@ -44,7 +44,7 @@
 	</div>
 
 	<main class="cabinet-container">
-		<form asp-controller="User" asp-action="MyProfile" method="post">
+		<form asp-controller="User" asp-action="Profile" method="post">
 			<input type="hidden" asp-for="IdUser" value="@Model.IdUser" />
 			<input type="hidden" asp-for="Login" value="@Model.Login" />
 			<input type="hidden" asp-for="Password" value="@Model.Password" />
@@ -62,7 +62,7 @@
 					<h3>Данные профиля:</h3>
 					<div class="input-group">
 						@{
-							var isOwner = (Model.IdUser == currentUserId);
+							var isOwner = (Model.IdUser == currentUser.IdUser);
 						}
 						<label asp-for="Surname">Фамилия:</label>
 						<input asp-for="Surname" type="text" value="@Model.Surname" disabled="@( !isOwner )" />
@@ -98,10 +98,10 @@
 						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
-				@if (!isOwner)
+				@if (isOwner)
 				{
 					<button type="submit">Изменить</button>
-				} else if (isOwner && Model.IdUser != currentUserId)
+				} else if (!isOwner && currentUser.RoleId == 2)
 				{
 					<button asp-controller="User" asp-action="Delete" asp-route-id="@Model.IdUser">Удалить пользователя</button>
 				}

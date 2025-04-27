@@ -18,10 +18,10 @@ namespace Malyshev_Project.Controllers
 		public IActionResult Profile(int? id)
 		{
 			var user = HttpContext.Session.Get<User>("user"); // авторизованный пользователь
+			if (user == null) return RedirectToAction("Login", "Auth");
+
 			if (id == null) // если свой профиль, то
 			{
-				if (user == null) return RedirectToAction("Login", "Auth");
-
 				var userDb = _db.Users
 					.Include(u => u.Role)
 					.Include(u => u.Orders)
@@ -45,7 +45,7 @@ namespace Malyshev_Project.Controllers
 				userDb!.Orders = userDb.Orders.Where(o => o.StateOfOrderId != 1).ToList();
 				return View(userDb);
 			}
-			else if (_db.Users.Any(u => u.IdUser == id) && user?.RoleId == 2) // если админ авторизован и пользователь существует
+			else if (_db.Users.Any(u => u.IdUser == id) && user.RoleId == 2) // если админ авторизован и пользователь существует
 			{
 				var userDb = _db.Users
 					.Include(u => u.Role)
