@@ -22,7 +22,7 @@
 				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
 				<li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
 				<li class="cabinet-btn">
-					<a asp-controller="User" asp-action="MyProfile">
+					<a asp-controller="User" asp-action="Profile">
 						Личный кабинет
 						<img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
 					</a>
@@ -73,28 +73,32 @@
 		</div>
 	</main>
 
-	@if (Model.User != null)
+	@{
+		var currentUser = Context.Session.Get<User>("user");
+	}
+
+	@if (currentUser != null)
 	{
 		<div class="reviews-section">
 			<h3>Оставьте отзыв о товаре:</h3>
 
-			<form asp-controller="Review" asp-action="Create">
+			<form asp-controller="Review" asp-action="Create" method="post">
 				<div class="review-card">
 					<div class="review-header">
-						<img src="@Model.User.Photo" alt="User [ID@(Model.User.IdUser)] Photo">
+						<img src="@currentUser.Photo" alt="User [ID@(currentUser.IdUser)] Photo">
 						<div>
-							@if ((Model.User.Surname + Model.User.Name) == "")
+							@if ((currentUser.Surname + currentUser.Name) == "")
 							{
 								<div class="review-name">Не указано</div>
 							}
 							else
 							{
-								<div class="review-name">@Model.User.Surname @Model.User.Name</div>
+								<div class="review-name">@currentUser.Surname @currentUser.Name</div>
 							}
 							<div class="review-date">@DateOnly.FromDateTime(DateTime.Now)</div>
 							<div class="review-rating">
 								<span>Оцените товар от 1 до 5:</span>
-								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input" placeholder="5">
+								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input" value="5">
 							</div>
 						</div>
 					</div>
@@ -105,7 +109,7 @@
 						<button type="submit" class="submit-btn">Отправить</button>
 					</div>
 				</div>
-				<input type="hidden" asp-for="@Model.Review!.UserId" value="@Model.User.IdUser" />
+				<input type="hidden" asp-for="@Model.Review!.UserId" value="@currentUser.IdUser" />
 				<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.ProductUnits.Product.IdProduct" />
 			</form>
 		</div>

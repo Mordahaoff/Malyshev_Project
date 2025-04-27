@@ -56,7 +56,7 @@ public class AuthController : Controller
         //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Cookies");
         //HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-        return RedirectToAction("MyProfile", "User");
+        return RedirectToAction("Profile", "User");
     }
 
     public IActionResult Register()

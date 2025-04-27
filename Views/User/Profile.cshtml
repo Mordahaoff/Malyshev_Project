@@ -1,11 +1,14 @@
-﻿@model User;
+﻿@{
+	var currentUserId = Context.Session.Get<User>("user")?.IdUser;
+}
+@model User;
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PROteinZone - Каталог товаров</title>
+	<title>PROteinZone - Профиль ID:@(currentUserId)</title>
 	<link rel="stylesheet" href="~/css/cabinet.css">
 </head>
 <body>
@@ -22,7 +25,7 @@
 				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
 				<li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
 				<li class="cabinet-btn">
-					<a asp-controller="User" asp-action="MyProfile">
+					<a asp-controller="User" asp-action="Profile">
 						Личный кабинет
 						<img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
 					</a>
@@ -58,16 +61,19 @@
 				<div class="profile-info">
 					<h3>Данные профиля:</h3>
 					<div class="input-group">
+						@{
+							var isOwner = (Model.IdUser == currentUserId);
+						}
 						<label asp-for="Surname">Фамилия:</label>
-						<input asp-for="Surname" type="text" value="@Model.Surname">
+						<input asp-for="Surname" type="text" value="@Model.Surname" disabled="@( !isOwner )" />
 					</div>
 					<div class="input-group">
 						<label asp-for="Name">Имя:</label>
-						<input asp-for="Name" type="text" value="@Model.Name">
+						<input asp-for="Name" type="text" value="@Model.Name" disabled="@( !isOwner )">
 					</div>
 					<div class="input-group">
 						<label asp-for="Patronymic">Отчество:</label>
-						<input asp-for="Patronymic" type="text" value="@Model.Patronymic">
+						<input asp-for="Patronymic" type="text" value="@Model.Patronymic" disabled="@( !isOwner )">
 					</div>
 					<div class="input-group">
 						<label>Роль:</label>
@@ -75,11 +81,11 @@
 					</div>
 					<div class="input-group">
 						<label asp-for="Email">Email:</label>
-						<input asp-for="Email" type="email" value="@Model.Email">
+						<input asp-for="Email" type="email" value="@Model.Email" disabled="@( !isOwner )">
 					</div>
 					<div class="input-group">
 						<label asp-for="Telephone">Номер телефона:</label>
-						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX">
+						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX" disabled="@( !isOwner )">
 					</div>
 
 					<h3>Вход в систему:</h3>
@@ -92,7 +98,13 @@
 						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
-				<button type="submit">Изменить</button>
+				@if (!isOwner)
+				{
+					<button type="submit">Изменить</button>
+				} else if (isOwner && Model.IdUser != currentUserId)
+				{
+					<button asp-controller="User" asp-action="Delete" asp-route-id="@Model.IdUser">Удалить пользователя</button>
+				}
 			</div>
 		</form>
 	</main>

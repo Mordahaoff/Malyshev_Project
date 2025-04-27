@@ -37,7 +37,7 @@
             <form asp-controller="Auth" asp-action="Register" method="POST">
                 <input type="text" class="input-field" placeholder="Login" asp-for="Login" required>
                 <input type="email" class="input-field" placeholder="Email" asp-for="Email" required>
-                <input type="password" class="input-field" placeholder="Password" minlength="6" asp-for="Password" required>
+                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
                 <button type="submit" class="btn register-btn">Зарегистрироваться</button>
             </form>
             <p class="login">Уже есть аккаунт?</p>

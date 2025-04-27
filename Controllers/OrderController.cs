@@ -37,15 +37,15 @@ namespace Malyshev_Project.Controllers
 			return View(order);
 		}
 
-		public IActionResult Confirm(int id)
-		{
-			var order = _db.Orders.FirstOrDefault(o => o.IdOrder == id);
-			if (order == null) return NotFound();
+		//public IActionResult Confirm(int id)
+		//{
+		//	var order = _db.Orders.FirstOrDefault(o => o.IdOrder == id);
+		//	if (order == null) return NotFound();
 
-			order.StateOfOrderId = 2;
-			_db.SaveChanges();
-			return RedirectToAction("Details", "Order", new { id });
-		}
+		//	order.StateOfOrderId = 2;
+		//	_db.SaveChanges();
+		//	return RedirectToAction("Details", "Order", new { id });
+		//}
 
 		public IActionResult Edit(int id)
 		{
@@ -109,16 +109,38 @@ namespace Malyshev_Project.Controllers
 			return RedirectToAction("Edit", "Order", new { id = model.IdOrder });
 		}
 
-		public IActionResult AddProductToOrder(int id)
+		public IActionResult Cart()
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user == null) return RedirectToAction("Login", "Auth");
 
 			var order = _db.Orders
 				.Include(o => o.OrdersProducts)
-				.FirstOrDefault(o => o.UserId == user.IdUser);
+					.ThenInclude(op => op.Product)
+				.FirstOrDefault(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
 
+			return View(order);
+		}
+
+		[HttpPost]
+		public IActionResult Cart(Order order)
+		{
+			order.StateOfOrderId = 2;
+			_db.Orders.Update(order);
+			_db.SaveChanges();
+			return RedirectToAction("Details", "Order", new { id = order.IdOrder });
+		}
+
+		public IActionResult AddProductToOrder(int id)
+		{
 			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
+
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return RedirectToAction("Login", "Auth");
+
+			var order = _db.Orders
+				.Include(o => o.OrdersProducts)
+				.FirstOrDefault(o => o.UserId == user.IdUser);
 
 			if (order == null)
 			{
@@ -138,7 +160,6 @@ namespace Malyshev_Project.Controllers
 			}
 
 			_logger.LogInformation($"Товар ID: [{id}] добавлен в корзину ID: [{order.IdOrder}] пользователя ID: [{user.IdUser}]");
-			//return RedirectToAction("Products", "Catalog");
 
 			// Получение URL страницы, с которой пришёл запрос
 			var referer = HttpContext.Request.Headers.Referer.ToString();

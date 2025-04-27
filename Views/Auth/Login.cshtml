@@ -31,7 +31,7 @@
             <form asp-controller="Auth" asp-action="Login" method="POST">
                 <input type="text" class="input-field" placeholder="Login" asp-for="Login" required>
                 <input type="email" class="input-field" placeholder="Email" asp-for="Email" required>
-                <input type="password" class="input-field" placeholder="Password" minlength="6" asp-for="Password" required>
+                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
                 <button type="submit" class="btn login-btn">Войти</button>
             </form>
             <p class="register">Нет аккаунта? Создайте его за минуту!</p>
