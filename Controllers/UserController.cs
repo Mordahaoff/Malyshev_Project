@@ -38,6 +38,7 @@ namespace Malyshev_Project.Controllers
 		{
 			_db.Users.Update(user);
 			_db.SaveChanges();
+			HttpContext.Session.Set("user", user);
 			return View(user);
 		}
 
@@ -49,11 +50,11 @@ namespace Malyshev_Project.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Edit(User editedUser)
+		public IActionResult Edit(User user)
 		{
-			_db.Users.Update(editedUser);
+			_db.Users.Update(user);
 			_db.SaveChanges();
-			HttpContext.Session.Set("user", editedUser);
+			HttpContext.Session.Set("user", user);
 			return RedirectToAction("Edit", "User");
 		}
 	}

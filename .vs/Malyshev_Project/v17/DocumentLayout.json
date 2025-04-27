@@ -34,8 +34,7 @@
               "RelativeToolTip": "Views\\Catalog\\Products.cshtml",
               "ViewState": "AgIAAGkAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-27T06:38:53.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T06:38:53.987Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "Views\\User\\MyProfile.cshtml",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\User\\MyProfile.cshtml",
               "RelativeToolTip": "Views\\User\\MyProfile.cshtml",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAQwEcAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAGIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-27T06:38:13.423Z",
               "EditorCaption": ""
@@ -58,7 +57,7 @@
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wBYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwDAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T15:33:32.631Z",
               "EditorCaption": ""
