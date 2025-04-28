@@ -119,27 +119,39 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
 
-			return View(order);
+			var model = new CartModel()
+			{
+				Order = order,
+				Stores = _db.Stores.Include(s => s.Address).ToList()
+			};
+
+			return View(model);
 		}
 
 		[HttpPost]
-		public IActionResult Cart(Order order)
+		public IActionResult Cart(CartModel model)
 		{
-			order.StateOfOrderId = 2;
-			_db.Orders.Update(order);
+			if (model.Order == null || model?.StoreId == null) return BadRequest();
+
+			model.Order.StateOfOrderId = 2;
+			model.Order.StoreId = model.StoreId;
+			_db.Orders.Update(model.Order);
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Order", new { id = order.IdOrder });
+
+			return RedirectToAction("Details", "Order", new { id = model.Order.IdOrder });
 		}
 
-		public IActionResult AddProductToOrder(int id)
+		public IActionResult AddProductToCart(int id)
 		{
 			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
 
 			var user = HttpContext.Session.Get<User>("user");
 			if (user == null) return RedirectToAction("Login", "Auth");
 
+			// order = cart в текущем контексте
 			var order = _db.Orders
 				.Include(o => o.OrdersProducts)
+				.Where(o => o.StateOfOrderId == 1)
 				.FirstOrDefault(o => o.UserId == user.IdUser);
 
 			if (order == null)
@@ -173,6 +185,33 @@ namespace Malyshev_Project.Controllers
 				// по умолчанию — редирект на страницу каталога или другую страницу
 				return RedirectToAction("Products", "Catalog");
 			}
+		}
+
+		public IActionResult EditCountOfProductInCart()
+		{
+			return RedirectToAction("Profile", "User");
+		}
+
+		public IActionResult RemoveProductFromCart(int id)
+		{
+			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
+
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return RedirectToAction("Login", "Auth");
+
+			// order = cart в текущем контексте
+			var order = _db.Orders
+				.Include(o => o.OrdersProducts)
+				.Where(o => o.StateOfOrderId == 1)
+				.First(o => o.UserId == user.IdUser);
+
+			var op = order.OrdersProducts.FirstOrDefault(op => op.ProductId == id);
+			if (op == null) return BadRequest();
+
+			order.OrdersProducts.Remove(op);
+			_db.SaveChanges();
+
+			return RedirectToAction("Cart", "Order");
 		}
 	}
 }

@@ -100,9 +100,14 @@
 				</div>
 				@if (isOwner)
 				{
+					<!-- Кнопка "Выйти из аккаунта" для авторизованного пользователя -->
+					<button asp-controller="Auth" asp-action="Logout">Выйти из аккаунта</button>
+					
+					<!-- Кнопка "Изменить" для изменения данных авторизованного пользователя -->
 					<button type="submit">Изменить</button>
 				} else if (!isOwner && currentUser.RoleId == 2)
 				{
+					<!-- Кнопка удаления пользователя для администратора-->
 					<button asp-controller="User" asp-action="Delete" asp-route-id="@Model.IdUser">Удалить пользователя</button>
 				}
 			</div>
