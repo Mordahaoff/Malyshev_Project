@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zQ1oJKgeXEUE1N32SR+kVKupMB90fPipELY7y+F3chg=",
+  "Hash": "Uk83tyrpQPBxeVIYU8AcB3kpK7KEYlFi7vspi4rxJjM=",
   "Source": "Malyshev_Project",
   "BasePath": "_content/Malyshev_Project",
   "Mode": "Default",
@@ -1774,8 +1774,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "acazungbzb",
-      "Integrity": "5oYUyMBHDTiPNAyUq7xDC8X1KTZSd9r/3bWTdTigjm4=",
+      "Fingerprint": "30poqnrspz",
+      "Integrity": "baWE/wkEvwWjgIqiSWnOpbhMSaU/oSTdWnROi5qQ0hA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\sql-scripts\\insert-script.sql"
@@ -6983,7 +6983,7 @@
       ]
     },
     {
-      "Route": "files/sql-scripts/insert-script.acazungbzb.sql",
+      "Route": "files/sql-scripts/insert-script.30poqnrspz.sql",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\insert-script.sql",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6993,7 +6993,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22399"
+          "Value": "22694"
         },
         {
           "Name": "Content-Type",
@@ -7001,11 +7001,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5oYUyMBHDTiPNAyUq7xDC8X1KTZSd9r/3bWTdTigjm4=\""
+          "Value": "\"baWE/wkEvwWjgIqiSWnOpbhMSaU/oSTdWnROi5qQ0hA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 06:34:00 GMT"
+          "Value": "Mon, 28 Apr 2025 11:29:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7015,7 +7015,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "acazungbzb"
+          "Value": "30poqnrspz"
         },
         {
           "Name": "label",
@@ -7023,7 +7023,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5oYUyMBHDTiPNAyUq7xDC8X1KTZSd9r/3bWTdTigjm4="
+          "Value": "sha256-baWE/wkEvwWjgIqiSWnOpbhMSaU/oSTdWnROi5qQ0hA="
         }
       ]
     },
@@ -7038,7 +7038,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22399"
+          "Value": "22694"
         },
         {
           "Name": "Content-Type",
@@ -7046,11 +7046,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5oYUyMBHDTiPNAyUq7xDC8X1KTZSd9r/3bWTdTigjm4=\""
+          "Value": "\"baWE/wkEvwWjgIqiSWnOpbhMSaU/oSTdWnROi5qQ0hA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 06:34:00 GMT"
+          "Value": "Mon, 28 Apr 2025 11:29:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7060,7 +7060,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5oYUyMBHDTiPNAyUq7xDC8X1KTZSd9r/3bWTdTigjm4="
+          "Value": "sha256-baWE/wkEvwWjgIqiSWnOpbhMSaU/oSTdWnROi5qQ0hA="
         }
       ]
     },

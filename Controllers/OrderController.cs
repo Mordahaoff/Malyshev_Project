@@ -135,6 +135,28 @@ namespace Malyshev_Project.Controllers
 
 			model.Order.StateOfOrderId = 2;
 			model.Order.StoreId = model.StoreId;
+
+			var store = _db.Stores
+				.Include(s => s.StoresProducts)
+				.First(s => s.IdStore == model.StoreId);
+
+			foreach (var productCart in model.Order.OrdersProducts)
+			{
+				var productStore = store.StoresProducts.First(sp => sp.ProductId == productCart.ProductId);
+				var difference = productCart.CountOfProduct - productStore.CountOfProduct;
+				if (difference <= 0) // Если клиент заказал не более, чем есть в магазине
+				{
+					// Снимаем с магазина столько, сколько заказал пользователь
+					productStore.CountOfProduct -= productCart.CountOfProduct;
+				}
+				else // Если клиент заказал больше, чем есть в магазине
+				{
+					// Производим доставку 10 продуктов в магазин и отдаем клиенту столько, сколько он заказал
+					productStore.CountOfProduct += (short)(10 - Math.Abs(difference));
+				}
+				_db.StoresProducts.Update(productStore);
+			}
+
 			_db.Orders.Update(model.Order);
 			_db.SaveChanges();
 

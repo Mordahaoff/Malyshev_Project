@@ -43,6 +43,19 @@ namespace Malyshev_Project.Controllers
 			_db.SaveChanges();
 
 			int createdProductId = _db.Products.OrderBy(p => p.IdProduct).Last().IdProduct;
+
+			List<Store> storesDb = _db.Stores.ToList();
+			foreach (var store in storesDb)
+			{
+				_db.StoresProducts.Add(new StoresProduct
+				{
+					ProductId = createdProductId,
+					StoreId = store.IdStore,
+					CountOfProduct = 0
+				});
+			}
+
+			_db.SaveChanges();
 			return RedirectToAction("Edit", "Product", new { id = createdProductId });
 		}
 
