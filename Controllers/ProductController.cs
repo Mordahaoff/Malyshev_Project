@@ -18,6 +18,9 @@ namespace Malyshev_Project.Controllers
 
 		public IActionResult List()
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			List<Product> products = _db.Products
 				.Include(p => p.Category)
 				.Include(p => p.Brand)
@@ -27,6 +30,9 @@ namespace Malyshev_Project.Controllers
 
 		public IActionResult Create()
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			var model = new CreateProductModel
 			{
 				Brands = _db.Brands.ToList(),
@@ -39,6 +45,9 @@ namespace Malyshev_Project.Controllers
 		[HttpPost]
 		public IActionResult Create(CreateProductModel model)
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			_db.Products.Add(model.Product);
 			_db.SaveChanges();
 
@@ -61,11 +70,14 @@ namespace Malyshev_Project.Controllers
 
 		public IActionResult Edit(int id)
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			var product = _db.Products
 				.Include(p => p.Category)
 				.Include(p => p.Brand)
 				.FirstOrDefault(p => p.IdProduct == id);
-			if (product == null) return NotFound();
+			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 
 			var model = new EditProductModel()
 			{
@@ -80,6 +92,9 @@ namespace Malyshev_Project.Controllers
 		[HttpPost]
 		public IActionResult Edit(EditProductModel model)
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			_db.Products.Update(model.Product);
 			_db.SaveChanges();
 			return RedirectToAction("Edit", "Product", new { id = model.Product.IdProduct });
@@ -96,7 +111,7 @@ namespace Malyshev_Project.Controllers
 				.Include(p => p.Reviews)
 					.ThenInclude(r => r.User)
 				.FirstOrDefault(p => p.IdProduct == id);
-			if (product == null) return NotFound();
+			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 
 			product.Reviews = product.Reviews.OrderByDescending(r => r.IdReview).ToList();
 			var model = new ProductDetailsModel(product);
@@ -106,16 +121,22 @@ namespace Malyshev_Project.Controllers
 
 		public IActionResult Detele(int id)
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			var product = _db.Products.FirstOrDefault(p => p.IdProduct == id);
-			if (product == null) return NotFound();
+			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 			return View(product);
 		}
 
 		[HttpPost]
 		public IActionResult Delete(int id)
 		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
 			var product = _db.Products.FirstOrDefault(p => p.IdProduct == id);
-			if (product == null) return NotFound();
+			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 
 			_db.Products.Remove(product);
 			_db.SaveChanges();
