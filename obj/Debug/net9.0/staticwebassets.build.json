@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Uk83tyrpQPBxeVIYU8AcB3kpK7KEYlFi7vspi4rxJjM=",
+  "Hash": "CUTIa6PYzstjzsrrjkMVATB2nzIJSZZtaYuxB3UuN5A=",
   "Source": "Malyshev_Project",
   "BasePath": "_content/Malyshev_Project",
   "Mode": "Default",
@@ -1753,8 +1753,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b1od4y0rg7",
-      "Integrity": "ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ=",
+      "Fingerprint": "5ycoavfkg5",
+      "Integrity": "c5KhDZQntSKenifpjYuwfhG9YeT1eNGbNN7yKEKuHuc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\sql-scripts\\create-script.sql"
@@ -6901,7 +6901,7 @@
       ]
     },
     {
-      "Route": "files/sql-scripts/create-script.b1od4y0rg7.sql",
+      "Route": "files/sql-scripts/create-script.5ycoavfkg5.sql",
       "AssetFile": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\create-script.sql",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6919,11 +6919,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ=\""
+          "Value": "\"c5KhDZQntSKenifpjYuwfhG9YeT1eNGbNN7yKEKuHuc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 06:34:00 GMT"
+          "Value": "Mon, 28 Apr 2025 14:23:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6933,7 +6933,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b1od4y0rg7"
+          "Value": "5ycoavfkg5"
         },
         {
           "Name": "label",
@@ -6941,7 +6941,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ="
+          "Value": "sha256-c5KhDZQntSKenifpjYuwfhG9YeT1eNGbNN7yKEKuHuc="
         }
       ]
     },
@@ -6964,11 +6964,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ=\""
+          "Value": "\"c5KhDZQntSKenifpjYuwfhG9YeT1eNGbNN7yKEKuHuc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Apr 2025 06:34:00 GMT"
+          "Value": "Mon, 28 Apr 2025 14:23:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6978,7 +6978,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ETmJj4uIe+KkqhIIUtf6KwjuRJ7RHl0URovzZ0bk3lQ="
+          "Value": "sha256-c5KhDZQntSKenifpjYuwfhG9YeT1eNGbNN7yKEKuHuc="
         }
       ]
     },

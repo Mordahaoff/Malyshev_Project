@@ -48,7 +48,7 @@ Brand_ID integer not null references Brands(ID_Brand) on update cascade
 
 create table Discounts(
 ID_Discount serial primary key,
-Product_ID integer not null references Products(ID_Product) on update cascade,
+Product_ID integer not null references Products(ID_Product) on delete cascade,
 Amount smallint not null,
 Date_of_Start date not null default current_date,
 Date_of_End date not null
@@ -56,8 +56,8 @@ Date_of_End date not null
 
 create table Reviews(
 ID_Review serial primary key,
-User_ID integer not null references Users(ID_User) on update cascade,
-Product_ID integer not null references Products(ID_Product) on update cascade,
+User_ID integer not null references Users(ID_User) on delete cascade,
+Product_ID integer not null references Products(ID_Product) on delete cascade,
 Text_ text not null,
 Grade smallint not null,
 Date_of_Creation date not null default current_date
@@ -77,27 +77,27 @@ Building varchar(5) not null
 
 create table Stores(
 ID_Store serial primary key,
-Address_ID integer not null references Addresses(ID_Address) on update cascade
+Address_ID integer not null references Addresses(ID_Address) on delete cascade
 );
 
 create table Orders(
 ID_Order serial primary key,
 State_of_Order_ID integer not null references States_of_Order(ID_State) on update cascade default 1,
-Store_ID integer references Stores(ID_Store) on update cascade,
-User_ID integer  not null references Users(ID_User) on update cascade,
+Store_ID integer references Stores(ID_Store) on delete cascade,
+User_ID integer  not null references Users(ID_User) on delete cascade,
 Date_of_Status_Change timestamp not null default current_timestamp
 );
 
 create table Orders_Products(
 ID_Orders_Products serial primary key,
-Order_ID integer not null references Orders(ID_Order) on update cascade,
-Product_ID integer not null references Products(ID_Product) on update cascade,
+Order_ID integer not null references Orders(ID_Order) on delete cascade,
+Product_ID integer not null references Products(ID_Product) on delete cascade,
 Count_of_Product smallint not null default 1
 );
 
 create table Stores_Products(
 ID_Stores_Products serial primary key,
-Store_ID integer not null references Stores(ID_Store) on update cascade,
-Product_ID integer not null references Products(ID_Product) on update cascade,
+Store_ID integer not null references Stores(ID_Store) on delete cascade,
+Product_ID integer not null references Products(ID_Product) on delete cascade,
 Count_of_Product smallint not null default 0
 );
