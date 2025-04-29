@@ -20,23 +20,17 @@ namespace Malyshev_Project.Controllers
 			_logger = logger;
 		}
 
-		// Метод для создания отзыва со страницы "Product/Details/{id?}
-		[HttpPost]
-		public IActionResult Create(Review review)
+		public IActionResult List()
 		{
 			var user = HttpContext.Session.Get<User>("user");
-			if (user == null) return BadRequest("You are not authorized.");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			_db.Reviews.Add(review);
-			_db.SaveChanges();
+			List<Review> reviews = _db.Review
+				.Include(r => r.User)
+				.Include(r => r.Product)
+				.ToList();
 
-			var createdReview = _db.Reviews.OrderBy(r => r.IdReview).Last();
-			_logger.LogInformation($"Created New Review" +
-				$"\nUserID: [{createdReview.UserId}]" +
-				$"\nProductID: [{createdReview.ProductId}]" +
-				$"\nText: [{createdReview.Text}]" +
-				$"\nDate of Creation: [{createdReview.DateOfCreation}]");
-			return RedirectToAction("Details", "Product", new { id = review.ProductId });
+			return View(reviews);
 		}
 
 		public IActionResult Delete(int id)
@@ -44,81 +38,11 @@ namespace Malyshev_Project.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var review = _db.Reviews.FirstOrDefault(r => r.IdReview == id);
-			if (review == null) return NotFound($"Review [ID:{id}] is not found");
-			_db.Reviews.Remove(review);
-			_db.SaveChanges();
+			var review = _db.Stores.FirstOrDefault(s => s.IdStore == id);
+			if (review == null) return BadRequest($"Store [ID:{id}] is not found.");
 
-			return Redirect(HttpContext.Request.Headers.Referer.ToString());
+			_db.Review.Remove(review);
+			return RedirectToAction("List", "Review");
 		}
-
-		//public IActionResult List(int? userId)
-		//{
-		//	List<Review> reviews = _db.Reviews.Include(r => r.User).Include(r => r.Product).ToList();
-		//	User? authUser = HttpContext.Session.Get<User>("user");
-		//	if (authUser == null) return RedirectToAction("Login", "Auth");
-
-		//	switch (authUser.RoleId)
-		//	{
-		//		case 1: // Клиент
-		//			{
-		//				if (userId == null)
-		//				{
-		//					reviews = _db.Reviews
-		//						.Include(r => r.User)
-		//						.Include(r => r.Product)
-		//						.Where(r => r.UserId == authUser.IdUser)
-		//						.ToList();
-		//					break;
-		//				}
-		//				else
-		//				{
-		//					return BadRequest();
-		//				}
-		//			}
-		//		case 2: // Админ
-		//			{
-		//				if (userId == null)
-		//				{
-		//					reviews = _db.Reviews
-		//						.Include(r => r.User)
-		//						.Include(r => r.Product)
-		//						.ToList();
-		//				}
-		//				else
-		//				{
-		//					if (_db.Users.Any(u => u.IdUser == userId))
-		//					{
-		//						reviews = _db.Reviews
-		//						.Include(r => r.User)
-		//						.Include(r => r.Product)
-		//						.Where(r => r.UserId == userId)
-		//						.ToList();
-		//					}
-		//					else
-		//					{
-		//						return BadRequest();
-		//					}
-		//				}
-		//				break;
-		//			}
-		//	}
-
-		//	return View(reviews);
-		//}
-
-		//public IActionResult Details(int id)
-		//{
-		//	var review = _db.Reviews.FirstOrDefault(r => r.IdReview == id);
-		//	if (review == null) return NotFound();
-		//	return View(review);
-		//}
-
-		//public IActionResult Edit(int id)
-		//{
-		//	var review = _db.Reviews.FirstOrDefault(r => r.IdReview == id);
-		//	if (review == null) return NotFound();
-		//	return View(review);
-		//}
 	}
 }

@@ -115,10 +115,7 @@ namespace Malyshev_Project.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var store = _db.Stores
-				.Include(s => s.Address)
-				.Include(s => s.StoresProducts)
-				.FirstOrDefault(s => s.IdStore == id);
+			var store = _db.Stores.FirstOrDefault(s => s.IdStore == id);
 			if (store == null) return BadRequest($"Store [ID:{id}] is not found.");
 
 			_db.Stores.Remove(store);
