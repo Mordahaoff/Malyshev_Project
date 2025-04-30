@@ -1,5 +1,38 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Главная страница</title>
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">PROteinZone</h1>
+            <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a asp-controller="Menu" asp-action="Index">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="About">О нас</a></li>
+                <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+                <li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
+                <li><a asp-controller="Home" asp-action="Contacts">Корзина</a></li>
+                <li class="cabinet-btn">
+                    <a asp-controller="User" asp-action="Profile">
+                        Личный кабинет
+                        <img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div>
+
+    
+</body>
+
+</html>
