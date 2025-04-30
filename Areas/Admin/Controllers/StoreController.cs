@@ -21,7 +21,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			List<Store> stores = _db.Stores
+			var stores = _db.Stores
 				.Include(s => s.Address)
 				.ToList();
 
@@ -38,7 +38,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.Include(s => s.StoresProducts)
 					.ThenInclude(sp => sp.Product)
 				.FirstOrDefault(s => s.IdStore == id);
-			if (store == null) return BadRequest($"Store [ID:{id}] is not found.");
+			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
 			return View(store);
 		}
@@ -89,7 +89,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.Include(s => s.StoresProducts)
 					.ThenInclude(sp => sp.Product)
 				.FirstOrDefault(s => s.IdStore == id);
-			if (store == null) return BadRequest($"Store [ID:{id}] is not found.");
+			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
 			return View(store);
 		}
@@ -117,7 +117,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
 			var store = _db.Stores.FirstOrDefault(s => s.IdStore == id);
-			if (store == null) return BadRequest($"Store [ID:{id}] is not found.");
+			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
 			_db.Stores.Remove(store);
 			return RedirectToAction("List", "Store");

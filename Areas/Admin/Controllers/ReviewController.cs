@@ -26,7 +26,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			List<Review> reviews = _db.Reviews
+			var reviews = _db.Reviews
 				.Include(r => r.User)
 				.Include(r => r.Product)
 				.ToList();
@@ -40,7 +40,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
 			var review = _db.Reviews.FirstOrDefault(r => r.IdReview == id);
-			if (review == null) return BadRequest($"Review [ID:{id}] is not found.");
+			if (review == null) return NotFound($"Review [ID:{id}] is not found.");
 
 			_db.Reviews.Remove(review);
 			return RedirectToAction("Delete", "Review", new { area = "Admin" });

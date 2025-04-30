@@ -22,7 +22,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			List<Product> products = _db.Products
+			var products = _db.Products
 				.Include(p => p.Category)
 				.Include(p => p.Brand)
 				.ToList();
@@ -55,7 +55,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 
 			int createdProductId = _db.Products.OrderBy(p => p.IdProduct).Last().IdProduct;
 
-			List<Store> storesDb = _db.Stores.ToList();
+			var storesDb = _db.Stores.ToList();
 			foreach (var store in storesDb)
 			{
 				_db.StoresProducts.Add(new StoresProduct
