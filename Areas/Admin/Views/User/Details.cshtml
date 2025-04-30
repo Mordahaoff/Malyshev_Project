@@ -1,11 +1,11 @@
-﻿@model User;
+﻿@model Malyshev_Project.Models.User;
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PROteinZone - Мой профиль</title>
+	<title>PROteinZone - Профиль ID:@(Model.IdUser)</title>
 	<link rel="stylesheet" href="~/css/cabinet.css">
 </head>
 <body>
@@ -59,15 +59,15 @@
 					<h3>Данные профиля:</h3>
 					<div class="input-group">
 						<label asp-for="Surname">Фамилия:</label>
-						<input asp-for="Surname" type="text" value="@Model.Surname" />
+						<input asp-for="Surname" type="text" value="@Model.Surname" disabled />
 					</div>
 					<div class="input-group">
 						<label asp-for="Name">Имя:</label>
-						<input asp-for="Name" type="text" value="@Model.Name">
+						<input asp-for="Name" type="text" value="@Model.Name" disabled>
 					</div>
 					<div class="input-group">
 						<label asp-for="Patronymic">Отчество:</label>
-						<input asp-for="Patronymic" type="text" value="@Model.Patronymic">
+						<input asp-for="Patronymic" type="text" value="@Model.Patronymic" disabled>
 					</div>
 					<div class="input-group">
 						<label>Роль:</label>
@@ -75,11 +75,11 @@
 					</div>
 					<div class="input-group">
 						<label asp-for="Email">Email:</label>
-						<input asp-for="Email" type="email" value="@Model.Email">
+						<input asp-for="Email" type="email" value="@Model.Email" disabled>
 					</div>
 					<div class="input-group">
 						<label asp-for="Telephone">Номер телефона:</label>
-						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX">
+						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX" disabled>
 					</div>
 
 					<h3>Вход в систему:</h3>
@@ -92,10 +92,8 @@
 						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
-				<!-- Кнопка "Выйти из аккаунта" для авторизованного пользователя -->
-				<button asp-controller="Auth" asp-action="Logout">Выйти из аккаунта</button>
-				<!-- Кнопка "Изменить" для изменения данных авторизованного пользователя -->
-				<button type="submit">Изменить</button>
+				<!-- Кнопка удаления пользователя для администратора-->
+				<button asp-area="Admin" asp-controller="User" asp-action="Delete" asp-route-id="@Model.IdUser">Удалить пользователя</button>
 			</div>
 		</form>
 	</main>

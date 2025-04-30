@@ -45,6 +45,12 @@ public class Program
 		//app.UseAuthentication();
 		//app.UseAuthorization();
 
+		app.MapAreaControllerRoute(
+			name: "admin_area",
+			areaName: "Admin",
+			pattern: "Admin/{controller=Menu}/{action=Index}"
+			);
+
 		app.MapControllerRoute(
 			name: "default",
 			pattern: "{controller=Home}/{action=Index}");

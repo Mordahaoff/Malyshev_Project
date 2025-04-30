@@ -138,6 +138,12 @@
 				</div>
 				<p class="review-text">@review.Text</p>
 			</div>
+
+			<!-- Кнопка "Удалить отзыв" для администратора -->
+			@if (Context.Session.Get<User>("user")?.RoleId == 2)
+			{
+				<button asp-controller="Review" asp-action="Delete" asp-route-id="@review.IdReview">Удалить отзыв</button>
+			}
 		}
 	</div>
 
