@@ -38,6 +38,7 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\js\b
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\jquery-validation\dist\additional-methods.js
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\css\basket.css
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
@@ -68,6 +69,7 @@ C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\css\food_guide.css
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 wwwroot\css\about.css
+wwwroot\css\basket.css
 wwwroot\css\cabinet.css
 wwwroot\css\catalog.css
 wwwroot\css\food_guide.css
@@ -120,6 +122,8 @@ wwwroot\img\strong-body.png
 wwwroot\img\team_card1.png
 wwwroot\img\team_card2.png
 wwwroot\img\vector\vector_about.png
+wwwroot\img\vector\vector_basket1.png
+wwwroot\img\vector\vector_basket2.png
 wwwroot\img\vector\vector_brand.png
 wwwroot\img\vector\vector_cabinet.png
 wwwroot\img\vector\vector_cabinet2.png

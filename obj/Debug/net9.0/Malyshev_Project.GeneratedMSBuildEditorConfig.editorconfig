@@ -17,161 +17,161 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Malyshev_Project
 build_property.RootNamespace = Malyshev_Project
-build_property.ProjectDir = C:\Users\Asus\Desktop\Malyshev_Project\
+build_property.ProjectDir = C:\Users\Artem\Desktop\Programs\Malyshev_Project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Asus\Desktop\Malyshev_Project
+build_property.MSBuildProjectDirectory = C:\Users\Artem\Desktop\Programs\Malyshev_Project
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Menu/Index.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Order/Cart.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Order/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Order/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Product/Create.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Product/Delete.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Product/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Product/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Product/Edit.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Product/List.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Product/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Review/List.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Review/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmV2aWV3XExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Store/Create.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Store/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RvcmVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Store/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Store/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RvcmVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Store/Edit.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Store/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RvcmVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/Store/List.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/Store/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RvcmVcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/User/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/User/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Areas/Admin/Views/User/List.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Areas/Admin/Views/User/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Auth/Login.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Auth/Register.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Catalog/Products.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Catalog/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ1xQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Discount/Create.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Discount/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzY291bnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Discount/Delete.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Discount/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzY291bnRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Discount/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Discount/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzY291bnRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Discount/Edit.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Discount/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzY291bnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Discount/Index.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Discount/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzY291bnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Home/About.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Home/Contacts.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Home/Contacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Home/Index.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Home/NutritionGuide.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Home/NutritionGuide.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOdXRyaXRpb25HdWlkZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Home/Portfolio.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Home/Portfolio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3J0Zm9saW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Order/Cart.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Order/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Order/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Product/Details.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Shared/Error.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/User/Profile.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/User/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/_ViewImports.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/_ViewStart.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Asus/Desktop/Malyshev_Project/Views/Shared/_Layout.cshtml]
+[C:/Users/Artem/Desktop/Programs/Malyshev_Project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dmnw97m4uq
