@@ -559,7 +559,6 @@ C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.sourcel
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\scopedcss\bundle\Malyshev_Project.styles.css
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\scopedcss\projectbundle\Malyshev_Project.bundle.scp.css
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-9w84d8n7af.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\aljlgbz1pk-13immugow1.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-kv8g2mu8g4.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\yjz81oy4oe-6zshqfktw2.gz
@@ -645,3 +644,5 @@ C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\refint\Malyshev_Project.
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.pdb
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\ref\Malyshev_Project.dll
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-qeehzyji6w.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-x1ukydm77y.gz

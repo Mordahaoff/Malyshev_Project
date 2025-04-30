@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\basket.css",
+      "PackagePath": "staticwebassets\\css\\basket.css"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\cabinet.css",
       "PackagePath": "staticwebassets\\css\\cabinet.css"
     },
@@ -215,6 +219,14 @@
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",
       "PackagePath": "staticwebassets\\img\\vector\\vector_about.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket1.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_basket1.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket2.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_basket2.png"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",

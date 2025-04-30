@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F29S6s6Zt5oGdzCpEycLhxH6qUrjrRPqfHMDCoQdF88=",
+  "Hash": "ZnA8hMFdAR1HvXXHJ8KCOg3Y0UFkzNm6ioZgeHhOGuU=",
   "Source": "Malyshev_Project",
   "BasePath": "_content/Malyshev_Project",
   "Mode": "Default",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-9w84d8n7af.gz",
+      "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-qeehzyji6w.gz",
       "SourceId": "Malyshev_Project",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Malyshev_Project",
-      "RelativePath": "css/about#[.{fingerprint=9w84d8n7af}]?.css.gz",
+      "RelativePath": "css/about#[.{fingerprint=qeehzyji6w}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -199,8 +199,8 @@
       "RelatedAsset": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\about.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "r2ihrgekks",
-      "Integrity": "w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M=",
+      "Fingerprint": "q4ff3fdwxo",
+      "Integrity": "Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\about.css"
@@ -876,6 +876,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\ir3317wh65-x1ukydm77y.gz",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/basket#[.{fingerprint=x1ukydm77y}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\basket.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "r4jbpcrzts",
+      "Integrity": "mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\basket.css"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\j14eyx3w4n-hrwsygsryq.gz",
@@ -1564,11 +1585,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9w84d8n7af",
-      "Integrity": "CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ=",
+      "Fingerprint": "qeehzyji6w",
+      "Integrity": "ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\about.css"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\basket.css",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "css/basket#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x1ukydm77y",
+      "Integrity": "Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\basket.css"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\cabinet.css",
@@ -2661,6 +2703,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\vector\\vector_about.png"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket1.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/vector/vector_basket1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vs0p1bk77y",
+      "Integrity": "sYIfouAYcO33HAVadtUbxhnjzlvVWobGZ33agEP9jnw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vector\\vector_basket1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket2.png",
+      "SourceId": "Malyshev_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\",
+      "BasePath": "_content/Malyshev_Project",
+      "RelativePath": "img/vector/vector_basket2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8mt98ali1g",
+      "Integrity": "MD68Pkb2AR9BZ8UvoYT3DbhtqXvBAbILv195DYQrSs8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vector\\vector_basket2.png"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",
@@ -4219,13 +4303,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/about.9w84d8n7af.css",
-      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-9w84d8n7af.gz",
+      "Route": "css/about.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-qeehzyji6w.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000419463087"
+          "Quality": "0.000420875421"
         }
       ],
       "ResponseHeaders": [
@@ -4235,19 +4319,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2383"
+          "Value": "2375"
         },
         {
           "Name": "ETag",
-          "Value": "\"w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M=\""
+          "Value": "\"Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 12:06:42 GMT"
+          "Value": "Tue, 29 Apr 2025 14:48:15 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -4263,26 +4347,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ=\""
+          "Value": "W/\"ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "9w84d8n7af"
-        },
-        {
-          "Name": "label",
-          "Value": "css/about.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ="
+          "Value": "sha256-ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg="
         }
       ]
     },
     {
-      "Route": "css/about.9w84d8n7af.css",
+      "Route": "css/about.css",
       "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\about.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4292,7 +4368,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9721"
+          "Value": "9715"
         },
         {
           "Name": "Content-Type",
@@ -4300,11 +4376,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ=\""
+          "Value": "\"ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 12:06:42 GMT"
+          "Value": "Tue, 29 Apr 2025 14:48:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.css.gz",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-qeehzyji6w.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 14:48:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.qeehzyji6w.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-qeehzyji6w.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000420875421"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2375"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 14:48:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qeehzyji6w"
+        },
+        {
+          "Name": "label",
+          "Value": "css/about.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg="
+        }
+      ]
+    },
+    {
+      "Route": "css/about.qeehzyji6w.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\about.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9715"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 14:48:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4314,7 +4535,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9w84d8n7af"
+          "Value": "qeehzyji6w"
         },
         {
           "Name": "label",
@@ -4322,13 +4543,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ="
+          "Value": "sha256-ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg="
         }
       ]
     },
     {
-      "Route": "css/about.9w84d8n7af.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-9w84d8n7af.gz",
+      "Route": "css/about.qeehzyji6w.css.gz",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-qeehzyji6w.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4337,7 +4558,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2383"
+          "Value": "2375"
         },
         {
           "Name": "Content-Type",
@@ -4345,11 +4566,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M=\""
+          "Value": "\"Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 12:06:42 GMT"
+          "Value": "Tue, 29 Apr 2025 14:48:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4367,7 +4588,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9w84d8n7af"
+          "Value": "qeehzyji6w"
         },
         {
           "Name": "label",
@@ -4375,18 +4596,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M="
+          "Value": "sha256-Wkl0JWY+igUJZF7Qgn5pGck/DsMO7p+wizghe37JrnQ="
         }
       ]
     },
     {
-      "Route": "css/about.css",
-      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-9w84d8n7af.gz",
+      "Route": "css/basket.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\ir3317wh65-x1ukydm77y.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000419463087"
+          "Quality": "0.000469263257"
         }
       ],
       "ResponseHeaders": [
@@ -4396,15 +4617,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2383"
+          "Value": "2130"
         },
         {
           "Name": "ETag",
-          "Value": "\"w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M=\""
+          "Value": "\"mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 12:06:42 GMT"
+          "Value": "Wed, 30 Apr 2025 09:36:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4424,19 +4645,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ=\""
+          "Value": "W/\"Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ="
+          "Value": "sha256-Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro="
         }
       ]
     },
     {
-      "Route": "css/about.css",
-      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\about.css",
+      "Route": "css/basket.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\basket.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4445,7 +4666,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9721"
+          "Value": "8335"
         },
         {
           "Name": "Content-Type",
@@ -4453,11 +4674,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ=\""
+          "Value": "\"Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 12:06:42 GMT"
+          "Value": "Wed, 30 Apr 2025 09:36:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4467,13 +4688,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CYN53VbF6rtc4GC2yD3sD44IrJbEs5f+qMdpuCed9xQ="
+          "Value": "sha256-Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro="
         }
       ]
     },
     {
-      "Route": "css/about.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\4i6m4b88fc-9w84d8n7af.gz",
+      "Route": "css/basket.css.gz",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\ir3317wh65-x1ukydm77y.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4482,7 +4703,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2383"
+          "Value": "2130"
         },
         {
           "Name": "Content-Type",
@@ -4490,11 +4711,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M=\""
+          "Value": "\"mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 12:06:42 GMT"
+          "Value": "Wed, 30 Apr 2025 09:36:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4512,7 +4733,168 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-w5BuJ1ov1BVjfxKC2YeLLDVvS3liPEBuCjKS1JEW45M="
+          "Value": "sha256-mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM="
+        }
+      ]
+    },
+    {
+      "Route": "css/basket.x1ukydm77y.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\ir3317wh65-x1ukydm77y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000469263257"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2130"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:36:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1ukydm77y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/basket.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro="
+        }
+      ]
+    },
+    {
+      "Route": "css/basket.x1ukydm77y.css",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css\\basket.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8335"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:36:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1ukydm77y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/basket.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jau+AuoT5GQt5G/70+DypdNMIXOm4eGLfcyvIcoMhro="
+        }
+      ]
+    },
+    {
+      "Route": "css/basket.x1ukydm77y.css.gz",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\Debug\\net9.0\\compressed\\ir3317wh65-x1ukydm77y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2130"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:36:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1ukydm77y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/basket.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mw6/sZHo3TlBYDnEF+I5hTDaiKFuKGzJDqLbxYHGceM="
         }
       ]
     },
@@ -10505,6 +10887,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-aMxOcmfHmBuVBMoMkUxukHIZsU+yNCDMrhqgH2S7vzY="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_basket1.png",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sYIfouAYcO33HAVadtUbxhnjzlvVWobGZ33agEP9jnw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:18:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sYIfouAYcO33HAVadtUbxhnjzlvVWobGZ33agEP9jnw="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_basket1.vs0p1bk77y.png",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sYIfouAYcO33HAVadtUbxhnjzlvVWobGZ33agEP9jnw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:18:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vs0p1bk77y"
+        },
+        {
+          "Name": "label",
+          "Value": "img/vector/vector_basket1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sYIfouAYcO33HAVadtUbxhnjzlvVWobGZ33agEP9jnw="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_basket2.8mt98ali1g.png",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MD68Pkb2AR9BZ8UvoYT3DbhtqXvBAbILv195DYQrSs8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:24:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8mt98ali1g"
+        },
+        {
+          "Name": "label",
+          "Value": "img/vector/vector_basket2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MD68Pkb2AR9BZ8UvoYT3DbhtqXvBAbILv195DYQrSs8="
+        }
+      ]
+    },
+    {
+      "Route": "img/vector/vector_basket2.png",
+      "AssetFile": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MD68Pkb2AR9BZ8UvoYT3DbhtqXvBAbILv195DYQrSs8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 09:24:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MD68Pkb2AR9BZ8UvoYT3DbhtqXvBAbILv195DYQrSs8="
         }
       ]
     },
