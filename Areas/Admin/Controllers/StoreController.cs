@@ -2,8 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Malyshev_Project.Controllers
+namespace Malyshev_Project.Areas.Admin.Controllers
 {
+	[Area("Admin")]
 	public class StoreController : Controller
 	{
 		private readonly ILogger<StoreController> _logger;

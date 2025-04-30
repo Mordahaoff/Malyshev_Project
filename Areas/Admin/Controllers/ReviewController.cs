@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Malyshev_Project.Models;
 
-namespace Malyshev_Project.Controllers
+namespace Malyshev_Project.Areas.Admin.Controllers
 {
+	[Area("Admin")]
 	public class ReviewController : Controller
 	{
 		private readonly PostgresContext _db;
@@ -25,7 +26,7 @@ namespace Malyshev_Project.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			List<Review> reviews = _db.Review
+			List<Review> reviews = _db.Reviews
 				.Include(r => r.User)
 				.Include(r => r.Product)
 				.ToList();
@@ -38,11 +39,11 @@ namespace Malyshev_Project.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var review = _db.Stores.FirstOrDefault(s => s.IdStore == id);
-			if (review == null) return BadRequest($"Store [ID:{id}] is not found.");
+			var review = _db.Reviews.FirstOrDefault(r => r.IdReview == id);
+			if (review == null) return BadRequest($"Review [ID:{id}] is not found.");
 
-			_db.Review.Remove(review);
-			return RedirectToAction("List", "Review");
+			_db.Reviews.Remove(review);
+			return RedirectToAction("Delete", "Review", new { area = "Admin" });
 		}
 	}
 }
