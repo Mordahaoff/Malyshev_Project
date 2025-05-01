@@ -17,7 +17,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult List()
+		public IActionResult List(int? storeId)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
@@ -27,7 +27,15 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					.ThenInclude(s => s.Address)
 				.Include(o => o.OrdersProducts)
 					.ThenInclude(op => op.Product)
+				.Where(o => o.StateOfOrderId != 1)
+				.OrderBy(o => o.StateOfOrderId)
 				.ToList();
+
+			if (storeId != null)
+			{
+				orders = orders.Where(o => o.StoreId == storeId).ToList();
+			}
+
 			return View(orders);
 		}
 
@@ -53,7 +61,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
-			
+
 			var order = _db.Orders
 				.Include(o => o.User)
 				.Include(o => o.Store)

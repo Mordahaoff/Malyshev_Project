@@ -21,7 +21,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult List()
+		public IActionResult List(int? userId)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
@@ -30,6 +30,11 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.Include(r => r.User)
 				.Include(r => r.Product)
 				.ToList();
+
+			if (userId != null)
+			{
+				reviews = reviews.Where(r => r.UserId == userId).ToList();
+			}
 
 			return View(reviews);
 		}

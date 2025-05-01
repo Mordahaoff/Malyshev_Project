@@ -16,7 +16,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult List()
+		public IActionResult List(string? storeAddress)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
@@ -24,6 +24,14 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var stores = _db.Stores
 				.Include(s => s.Address)
 				.ToList();
+
+			// Пример пользовательского ввода: "Ярославль", "Гагарина"
+			if (storeAddress != null)
+			{
+				stores = stores.Where(s =>
+					s.Address.City.Contains(storeAddress.ToLower()) ||
+					s.Address.Street.Contains(storeAddress.ToLower())).ToList();
+			}
 
 			return View(stores);
 		}

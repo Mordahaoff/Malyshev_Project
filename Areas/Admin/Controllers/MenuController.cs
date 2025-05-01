@@ -17,6 +17,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 
 		[Route("{area}")]
 		[Route("{area}/{controller}")]
+		[Route("{area}/{controller}/{action}")]
 		public IActionResult Index()
 		{
 			var user = HttpContext.Session.Get<User>("user");

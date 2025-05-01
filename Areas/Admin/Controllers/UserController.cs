@@ -15,12 +15,17 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult List()
+		public IActionResult List(string? userLogin)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
 			var users = _db.Users.ToList();
+			if (userLogin != null)
+			{
+				return RedirectToAction("Details", "User", new { area = "Admin", id = _db.Users.FirstOrDefault(u => u.Login == userLogin)?.IdUser });
+			}
+
 			return View(users);
 		}
 
@@ -40,7 +45,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					+ "-" + userById.Telephone.Substring(6, 2)
 					+ "-" + userById.Telephone.Substring(8, 2);
 			}
-			
+
 			//userById!.Orders = userById.Orders.Where(o => o.StateOfOrderId != 1).ToList();
 			return View(userById);
 		}
