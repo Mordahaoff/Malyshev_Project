@@ -644,6 +644,8 @@ C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.pdb
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\Malyshev_Project.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\ref\Malyshev_Project.dll
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-qeehzyji6w.gz
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-x1ukydm77y.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-qeehzyji6w.gz
 C:\Users\Artem\Desktop\Programs\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-kvfjfjn9my.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-kvfjfjn9my.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\j84t21q08c-ozrgg5gijq.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\gjw7zvwg1v-rxexxt0xyf.gz

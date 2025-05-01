@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+    overflow-y: hidden;
+}
+/*Шапка*/
+a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+header {
+    position: relative; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px;
+    background: #F9B300; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.header-line {
+    height: 2px;
+    background-color: #6A6060;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav {
+    padding-left: 100px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    padding: 5px 0; /* Добавляем фиксированный padding */
+    /* Фиксируем ширину равной максимальной ширине текста */
+    min-width: max-content;
+}
+
+nav ul li::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+nav ul li.active a {
+    color: #FFFF;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    font-weight: 800;
+}
+
+.back-btn {
+    margin-left: auto; /* Отделяем кнопку от основного меню */
+}
+
+.back-btn a {
+    display: flex;
+    align-items: center;
+    background-color: #FFF; 
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #F9B300;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.back-btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Настройки для вектора в cabinet-container*/
+.vector-basket1{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 30%;
+    height: 70%;
+    z-index: -10;
+}
+
+/* Настройки для вектора*/
+.vector-basket2 {
+    position: absolute;
+    top: 250px;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 130%;
+    z-index: -10;
+}
+
+/* Основное содержимое */
+.admin-main {
+    text-align: center;
+    margin-top: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.brand-title {
+    font-family: 'Potta One', cursive;
+    font-size: 96px;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo-icon {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.instruction {
+    font-size: 40px;
+    font-weight: 800;
+}
