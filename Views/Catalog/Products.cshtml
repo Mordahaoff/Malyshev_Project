@@ -2,12 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PROteinZone - Каталог товаров</title>
 	<link rel="stylesheet" href="~/css/catalog.css">
 </head>
+
 <body>
 	<header>
 		<div class="header-container">
@@ -44,32 +46,48 @@
 			<div class="filter-section orange-header">
 				<h3>Категория товара:</h3>
 				<ul>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="1" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеиновые батончики</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="2" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеин</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="3" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Гейнеры</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="4" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Креатин</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="5" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Предтрен</a></li>
-					<li> <a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="6" asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Шейкеры</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="1"
+							asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеиновые
+							батончики</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="2"
+							asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Протеин</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="3"
+							asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Гейнеры</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="4"
+							asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Креатин</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="5"
+							asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Предтрен</a></li>
+					<li> <a asp-controller="Catalog" asp-action="Products" asp-route-categoryId="6"
+							asp-route-brandId="@Model.BrandId" asp-route-sortId="@Model.SortId">Шейкеры</a></li>
 				</ul>
 			</div>
 
 			<div class="filter-section orange-header">
 				<h3>Бренд:</h3>
 				<ul>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="1" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Optimum Nutrition</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="2" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Bombbar</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="3" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Myprotein</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="4" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Maxler</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="5" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">OptiMeal</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="1"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Optimum
+							Nutrition</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="2"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Bombbar</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="3"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Myprotein</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="4"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">Maxler</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="5"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="@Model.SortId">OptiMeal</a></li>
 				</ul>
 			</div>
 
 			<div class="filter-section orange-header">
 				<h3>Сортировка:</h3>
 				<ul class="radio-sort">
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="1">По возрастанию цены</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="2">По убыванию цены</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId" asp-route-categoryId="@Model.CategoryId" asp-route-sortId="3">Товары со скидкой</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="1">По возрастанию цены</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="2">По убыванию цены</a></li>
+					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId"
+							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="3">Товары со скидкой</a></li>
 				</ul>
 			</div>
 
@@ -92,7 +110,8 @@
 							<div class="product-weight">@pc.Product.Volume @pc.Units</div>
 							<div class="product-name">@pc.Product.Name</div>
 						</a>
-						<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@pc.Product.IdProduct" class="add-to-cart">Добавить в корзину</a>
+						<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@pc.Product.IdProduct"
+							class="add-to-cart">Добавить в корзину</a>
 					</div>
 				}
 			</section>
@@ -133,4 +152,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

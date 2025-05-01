@@ -38,25 +38,25 @@ public class CatalogController : Controller
 		{
 			switch (sortId)
 			{
-				case 1: // По возрастанию цены
+				case 1: // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 					{
 						products = products.OrderBy(p => p.Price).ToList();
-						model.SortName = "По возрастанию цены";
+						model.SortName = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ";
 						break;
 					}
-				case 2: // По убыванию цены
+				case 2: // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 					{
 						products = products.OrderByDescending(p => p.Price).ToList();
-						model.SortName = "По убыванию цены";
+						model.SortName = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ";
 						break;
 					}
-				case 3: // Товары со скидкой
+				case 3: // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					{
 						products = _db.Products
 							.Include(p => p.Discounts)
 							.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now)))
 							.ToList();
-						model.SortName = "Товары со скидкой";
+						model.SortName = "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 						break;
 					}
 				default:
@@ -66,7 +66,7 @@ public class CatalogController : Controller
 		}
 
 		model.Products = products.Select(p => new ProductUnits(p)).ToList();
-		_logger.LogInformation($"Кол-во продуктов: {products.Count}");
+		_logger.LogInformation($"пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {products.Count}");
 		return View(model);
 	}
 }
