@@ -16,10 +16,10 @@ namespace Malyshev_Project.Controllers
 			_db = db;
 		}
 
-		public IActionResult Index()
-		{
-			return View();
-		}
+		// public IActionResult Index()
+		// {
+		// 	return View();
+		// }
 
 		public IActionResult Details(int id)
 		{
@@ -32,7 +32,7 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.IdOrder == id);
 
-			if (order == null) return NotFound();
+			if (order == null) return NotFound($"Order ID:[{id}] is not found.");
 
 			return View(order);
 		}
@@ -47,68 +47,69 @@ namespace Malyshev_Project.Controllers
 		//	return RedirectToAction("Details", "Order", new { id });
 		//}
 
-		public IActionResult Edit(int id)
-		{
-			var order = _db.Orders
-				.Include(o => o.User)
-				.Include(o => o.Store)
-					.ThenInclude(s => s.Address)
-				.Include(o => o.StateOfOrder)
-				.Include(o => o.OrdersProducts)
-					.ThenInclude(op => op.Product)
-				.FirstOrDefault(o => o.IdOrder == id);
-			if (order == null) return NotFound();
+		// public IActionResult Edit(int id)
+		// {
+		// 	var order = _db.Orders
+		// 		.Include(o => o.User)
+		// 		.Include(o => o.Store)
+		// 			.ThenInclude(s => s.Address)
+		// 		.Include(o => o.StateOfOrder)
+		// 		.Include(o => o.OrdersProducts)
+		// 			.ThenInclude(op => op.Product)
+		// 		.FirstOrDefault(o => o.IdOrder == id);
+		// 	if (order == null) return NotFound();
 
-			var model = (EditOrderModel)order;
+		// 	var model = (EditOrderModel)order;
 
-			model.StatesOfOrder = _db.StatesOfOrders.ToList();
-			model.Stores = _db.Stores.Include(s => s.Address).ToList();
+		// 	model.StatesOfOrder = _db.StatesOfOrders.ToList();
+		// 	model.Stores = _db.Stores.Include(s => s.Address).ToList();
 
-			var allProducts = _db.Products
-				.ToList();
+		// 	var allProducts = _db.Products
+		// 		.ToList();
 
-			foreach (var product in allProducts)
-			{
-				model.ProductsInOrder.Add(new ProductOrder { Product = product, CountOfProduct = _db.OrdersProducts.Where(op => op.ProductId == product.IdProduct).FirstOrDefault(op => op.OrderId == id)?.CountOfProduct ?? 0 });
-			}
+		// 	foreach (var product in allProducts)
+		// 	{
+		// 		model.ProductsInOrder.Add(new ProductOrder { Product = product, CountOfProduct = _db.OrdersProducts.Where(op => op.ProductId == product.IdProduct).FirstOrDefault(op => op.OrderId == id)?.CountOfProduct ?? 0 });
+		// 	}
 
-			return View(model);
-		}
+		// 	return View(model);
+		// }
 
-		[HttpPost]
-		public IActionResult Edit(EditOrderModel model)
-		{
-			var oldOrder = _db.Orders.FirstOrDefault(o => o.IdOrder == model.IdOrder);
-			if (oldOrder == null) return NotFound();
+		// [HttpPost]
+		// public IActionResult Edit(EditOrderModel model)
+		// {
+		// 	var oldOrder = _db.Orders.FirstOrDefault(o => o.IdOrder == model.IdOrder);
+		// 	if (oldOrder == null) return NotFound();
 
-			oldOrder.StateOfOrderId = model.StateOfOrderId;
-			oldOrder.StoreId = model.StoreId;
-			oldOrder.DateOfStatusChange = model.DateOfStatusChange;
+		// 	oldOrder.StateOfOrderId = model.StateOfOrderId;
+		// 	oldOrder.StoreId = model.StoreId;
+		// 	oldOrder.DateOfStatusChange = model.DateOfStatusChange;
 
-			foreach (var productOrder in model.ProductsInOrder)
-			{
-				var oldOp = _db.OrdersProducts.Where(op => op.ProductId == productOrder.Product.IdProduct).FirstOrDefault(op => op.OrderId == model.IdOrder);
-				if (productOrder.CountOfProduct <= 0 && oldOp != null)
-				{
-					_db.OrdersProducts.Remove(oldOp);
-				}
-				else if (productOrder.CountOfProduct > 0)
-				{
-					if (oldOp == null)
-					{
-						_db.OrdersProducts.Add(new OrdersProduct { OrderId = model.IdOrder, ProductId = productOrder.Product.IdProduct, CountOfProduct = productOrder.CountOfProduct });
-					}
-					else
-					{
-						oldOp.CountOfProduct = productOrder.CountOfProduct;
-					}
-				}
-			}
+		// 	foreach (var productOrder in model.ProductsInOrder)
+		// 	{
+		// 		var oldOp = _db.OrdersProducts.Where(op => op.ProductId == productOrder.Product.IdProduct).FirstOrDefault(op => op.OrderId == model.IdOrder);
+		// 		if (productOrder.CountOfProduct <= 0 && oldOp != null)
+		// 		{
+		// 			_db.OrdersProducts.Remove(oldOp);
+		// 		}
+		// 		else if (productOrder.CountOfProduct > 0)
+		// 		{
+		// 			if (oldOp == null)
+		// 			{
+		// 				_db.OrdersProducts.Add(new OrdersProduct { OrderId = model.IdOrder, ProductId = productOrder.Product.IdProduct, CountOfProduct = productOrder.CountOfProduct });
+		// 			}
+		// 			else
+		// 			{
+		// 				oldOp.CountOfProduct = productOrder.CountOfProduct;
+		// 			}
+		// 		}
+		// 	}
 
-			_db.SaveChanges();
-			return RedirectToAction("Edit", "Order", new { id = model.IdOrder });
-		}
+		// 	_db.SaveChanges();
+		// 	return RedirectToAction("Edit", "Order", new { id = model.IdOrder });
+		// }
 
+		// Просмотр корзины авторизованного пользователя
 		public IActionResult Cart()
 		{
 			var user = HttpContext.Session.Get<User>("user");
@@ -128,10 +129,11 @@ namespace Malyshev_Project.Controllers
 			return View(model);
 		}
 
+		// Оформление заказа c возможностью удаления товара из корзины
 		[HttpPost]
 		public IActionResult Cart(CartModel model)
 		{
-			if (model.Order == null || model?.StoreId == null) return BadRequest();
+			if (model.Order == null || model?.StoreId == null) return BadRequest("Order is null or Chosen Store is null.");
 
 			model.Order.StateOfOrderId = 2;
 			model.Order.StoreId = model.StoreId;
@@ -158,11 +160,13 @@ namespace Malyshev_Project.Controllers
 			}
 
 			_db.Orders.Update(model.Order);
+			_db.OrdersProduct.Update(model.Order.OrdersProduct);
 			_db.SaveChanges();
 
 			return RedirectToAction("Details", "Order", new { id = model.Order.IdOrder });
 		}
 
+		// Добавление товара из каталога товаров или карточки товара
 		public IActionResult AddProductToCart(int id)
 		{
 			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
@@ -209,14 +213,10 @@ namespace Malyshev_Project.Controllers
 			}
 		}
 
-		public IActionResult EditCountOfProductInCart()
-		{
-			return RedirectToAction("Profile", "User");
-		}
-
+		// Удаление товара из корзины
 		public IActionResult RemoveProductFromCart(int id)
 		{
-			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return BadRequest();
+			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return NotFound($"Prodict ID:[{id}] is not found. Your cart has not changed.");
 
 			var user = HttpContext.Session.Get<User>("user");
 			if (user == null) return RedirectToAction("Login", "Auth");
@@ -225,10 +225,11 @@ namespace Malyshev_Project.Controllers
 			var order = _db.Orders
 				.Include(o => o.OrdersProducts)
 				.Where(o => o.StateOfOrderId == 1)
-				.First(o => o.UserId == user.IdUser);
+				.FirstOrDefault(o => o.UserId == user.IdUser);
+			if (order == null) return NotFound("Your cart is not found.")
 
 			var op = order.OrdersProducts.FirstOrDefault(op => op.ProductId == id);
-			if (op == null) return BadRequest();
+			if (op == null) return NotFound("Your product is not in your cart.");
 
 			order.OrdersProducts.Remove(op);
 			_db.SaveChanges();
