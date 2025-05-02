@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css_admin\\product.css"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css_admin\\product_edit.css",
+      "PackagePath": "staticwebassets\\css_admin\\product_edit.css"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

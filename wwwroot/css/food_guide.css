@@ -93,7 +93,7 @@ nav ul li a:hover {
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff;
+    color: #ffff !important;
     transition: transform 0.2s ease-in-out;
 }
 

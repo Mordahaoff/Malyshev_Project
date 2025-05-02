@@ -10,7 +10,7 @@
 
 body {
     background-color: #ffff;
-    overflow-y: hidden;
+
 }
 /*Шапка*/
 a {
@@ -93,7 +93,7 @@ nav ul li a:hover {
 }
 
 .back-btn {
-    margin-left: auto;
+    margin-left: auto; 
 }
 
 .back-btn a {
@@ -113,7 +113,8 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Настройки для вектора в cabinet-container*/
+
+/* Настройки для вектора*/
 .vector-basket1{
     position: absolute;
     top: 0px;
@@ -126,44 +127,113 @@ nav ul li a:hover {
 /* Настройки для вектора*/
 .vector-basket2 {
     position: absolute;
-    top: 250px;
+    top: 300px;
     bottom: 0;
     left: 0;
-    width: 20%;
-    height: 130%;
+    width: 25%;
+    height: 120%;
     z-index: -10;
 }
 
-/* Основное содержимое */
-.admin-main {
-    text-align: center;
-    margin-top: 200px;
-    position: relative;
-    z-index: 1;
+/* Хлебные крошки */
+.breadcrumbs-container {
+    padding: 0 170px;
+    margin: 30px 0 15px;
 }
 
-.brand-container {
+.breadcrumbs {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.breadcrumbs a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs .arrow {
+    color: #000;
+}
+
+.breadcrumbs .value {
+    color: #F9B300;
+    font-weight: 900;
+}
+
+/*Форма*/
+.form-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    padding: 40px 20px 80px;
+    width: 100%;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+.form-group {
     margin-bottom: 20px;
+    width: 100%;
 }
-
-.brand-title {
-    font-family: 'Potta One', cursive;
-    font-size: 96px;
-    margin: 0;
-    line-height: 1;
+.form-group label {
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
 }
-
-.logo-icon {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
+.form-control {
+    width: 100%;
+    padding: 16px 16px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #f9b300;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
 }
-
-.instruction {
-    font-size: 40px;
-    font-weight: 800;
+.form-control:focus {
+    border-color: #d49b00;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(249, 179, 0, 0.3);
+}
+/* Кнопки */
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+    width: 100%;
+}
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.btn-save {
+    background-color: #5BCC5B;
+    color: white;
+}
+.btn-save:hover {
+    background-color: #4CAF50;
+}
+.btn-back {
+    background-color: #f9b300;
+    color: white;
+}
+.btn-back:hover {
+    background-color: #d49b00;
 }

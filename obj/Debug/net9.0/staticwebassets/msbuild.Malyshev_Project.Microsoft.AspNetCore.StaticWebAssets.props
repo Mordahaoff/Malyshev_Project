@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qeehzyji6w</Fingerprint>
-      <Integrity>ziHkNE3cJ/LJwCmNrQ4hqi9tPbmdFdrDf56mkLBpWtg=</Integrity>
+      <Fingerprint>5sqewu6qaz</Fingerprint>
+      <Integrity>Fbcg0fBw78t9O8tPhNB/DQypkVobEoMlWXK83vkhKDo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\about.css'))</OriginalItemSpec>
@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kvfjfjn9my</Fingerprint>
-      <Integrity>ICIxOxrAkvFXoVhUyf6mfhl1XSwlOyvD2U5gmmywX44=</Integrity>
+      <Fingerprint>30as7hujlr</Fingerprint>
+      <Integrity>XfNP235+SJnViXEIZ0S/inImtD2oinlZjrJmPU6c8QE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\basket.css'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kv8g2mu8g4</Fingerprint>
-      <Integrity>EDXBKFobc0rbl2VgQ5Ief4D0Tj3rG+6DGkWsa+/h6os=</Integrity>
+      <Fingerprint>a3dvieiflh</Fingerprint>
+      <Integrity>Bn72127VOcdxt1H9n6L9ymFf35gbUXaSzmw1pT6PUik=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\catalog.css'))</OriginalItemSpec>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6zshqfktw2</Fingerprint>
-      <Integrity>8iIZyrdv4bBf9zzRgskxAOkTOwj+XVIOO3H9twWB6YE=</Integrity>
+      <Fingerprint>oo9y5jb1ki</Fingerprint>
+      <Integrity>iKYSnPrlU9xQSXtG1Xg/oBhDvPl1Cxpjiz///QYPnOA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\food_guide.css'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>t5be1111nq</Fingerprint>
-      <Integrity>/zqlG7U/W+TRQatETG0w1ipWj8E1J+8LbeJJG5psYuU=</Integrity>
+      <Fingerprint>4hsp98wf0g</Fingerprint>
+      <Integrity>aOUlD0O3uPps//Onjm35eh85+Z6LNnP76kAtzNwWGyo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\home.css'))</OriginalItemSpec>
@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5zv5av6y8l</Fingerprint>
-      <Integrity>ITe5DI6z4FobSjZOkJaqQtUdF4Jr+6uniaZGrkk6nro=</Integrity>
+      <Fingerprint>zvebrpj8ed</Fingerprint>
+      <Integrity>4bCnCbYoRaisWGX+8QGAXbBeeEQ0T3R/Xuh0oLirjGg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\product_card.css'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ozrgg5gijq</Fingerprint>
-      <Integrity>TErIlQgp8S72rYkBSi/WHqnpRngDNuWJvIzH2/rmSZo=</Integrity>
+      <Fingerprint>5ja2jezivs</Fingerprint>
+      <Integrity>0Tz8h1jBHZwpRQ8or560gnLFeRcrE3JJn2KDgpDXG6I=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\index.css'))</OriginalItemSpec>
@@ -192,11 +192,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>063p3gmpef</Fingerprint>
-      <Integrity>SJ8CUZlk3okQpziaLsXA7axwxULUpbqTQdVwrP0G7Tg=</Integrity>
+      <Fingerprint>wozyn5klwy</Fingerprint>
+      <Integrity>0Otz+Z3SDZvfpAw0Gmvyx2JkqhB+iahaDty0Jxll0jE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\product.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\product_edit.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Malyshev_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Malyshev_Project</BasePath>
+      <RelativePath>css_admin/product_edit.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vi36gxdlcl</Fingerprint>
+      <Integrity>qWRThhAByED6CNbh7tDR1dtqRltfPvYtKjG/qajz/CY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\product_edit.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))">
       <SourceType>Package</SourceType>

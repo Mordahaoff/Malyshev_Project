@@ -103,7 +103,7 @@ nav ul li a:hover {
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #F9B300;
+    color: #F9B300 !important;
     transition: transform 0.2s ease-in-out; 
 }
 
@@ -133,6 +133,7 @@ nav ul li a:hover {
     height: 130%;
     z-index: -10;
 }
+
 
 /*Переход*/
 .breadcrumbs-search-container {
