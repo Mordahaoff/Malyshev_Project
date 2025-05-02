@@ -112,18 +112,20 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Настройки для векторов */
+.vector-container {
+    position: relative;
+}
 
-/* Настройки для вектора*/
-.vector-basket1{
+.vector-basket1 {
     position: absolute;
-    top: 0px;
+    top: -100px;
     right: 0;
     width: 30%;
-    height: 70%;
+    height: 100%; 
     z-index: -10;
 }
 
-/* Настройки для вектора*/
 .vector-basket2 {
     position: absolute;
     top: 250px;
@@ -177,7 +179,7 @@ nav ul li a:hover {
 
 .search-box {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .search-row {
@@ -216,6 +218,7 @@ nav ul li a:hover {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    white-space: nowrap;
 }
 .search-btn {
     background-color: #F9B300;
@@ -235,83 +238,85 @@ nav ul li a:hover {
     font-size: 18px;
     color: #777;
 }
-
-/*Товары*/
-.products {
+/*Магазины*/
+.store-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0px 120px; 
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 40px;
+    padding: 0px 170px;
 }
 
-.product-card {
+.store-card {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     border-radius: 25px;
-    padding: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    padding: 30px;
 }
 
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.store-img img {
+    width: 50px;
+    height: 50px;
 }
 
-.product-image {
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 15px auto;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    background-color: #f9f9f9;
+.store-img {
+    margin-right: 40px;
 }
-.product-card p {
-    margin: 0px 0;
-    text-align: left;
-    font-size: 18px;
+
+.store-info {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 500;
     color: #333;
-}
-
-/* Блок кнопок */
-.card-buttons {
-    margin-top: auto;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 5px;
 }
-.btn {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
+
+.store-actions {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
     text-align: center;
-    box-sizing: border-box;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.edit-btn {
-    background-color: #5BCC5B;
+.btn-edit {
+    background-color: #5bcc5b;
+    color: white;
 }
 
-.delete-btn {
-    background-color: #E57373;
+.btn-edit:hover {
+    background-color: #4CAF50;
 }
 
-.edit-btn:hover {
-    background-color: #499d49;
+.btn-delete {
+    background-color: #ff6060;
+    color: white;
 }
 
-.delete-btn:hover {
-    background-color: #d9534f;
+.btn-delete:hover {
+    background-color: #e84444;
+}
+.btn-details {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+.btn-details:hover {
+    background-color: #0056b3;
 }

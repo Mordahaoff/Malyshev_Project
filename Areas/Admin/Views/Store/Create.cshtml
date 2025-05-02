@@ -1,51 +1,84 @@
 ﻿@model Malyshev_Project.Models.Store
 
 @{
-	Layout = null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
-	<title>Create</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Создать магазин</title>
+    <link rel="stylesheet" href="~/css_admin/store_edit.css" />
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
+                <li class="active"><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                    <a asp-controller="Menu" asp-action="Index" asp-area="Admin">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-	<h4>Store</h4>
-	<hr />
-	<div class="row">
-		<div class="col-md-4">
-			<form asp-action="Create">
-				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-				<div class="form-group">
-					<label asp-for="Address.City" class="control-label">Город</label>
-					<input asp-for="Address.City" class="form-control" />
-				</div>
-				<div class="form-group">
-					<label asp-for="Address.Street" class="control-label">Улица</label>
-					<input asp-for="Address.Street" class="form-control" />
-				</div>
-				<div class="form-group">
-					<label asp-for="Address.Building" class="control-label">Дом</label>
-					<input asp-for="Address.Building" class="form-control" />
-				</div>
-				<div class="form-group">
-					<input type="submit" value="Create" class="btn btn-primary" />
-				</div>
-			</form>
-		</div>
-	</div>
+    <div class="header-line"></div>
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
 
-	<div>
-		<a asp-action="List">Back to List</a>
-	</div>
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs">
+            <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
+            <span class="arrow"> > </span>
+            <a asp-controller="Store" asp-action="List">Магазины</a>
+            <span class="arrow"> > </span>
+            <span class="value">Создание магазина</span>
+        </div>
+    </div>
 
-	@section Scripts {
-		@{
-			await Html.RenderPartialAsync("_ValidationScriptsPartial");
-		}
-	}
+    <div class="form-container">
+        <div class="form-wrapper">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input type="hidden" asp-for="IdStore" />
+                <input type="hidden" asp-for="Address.IdAddress" />
+
+                <div class="form-group">
+                    <label asp-for="Address.City" class="control-label">Город:</label>
+                    <input asp-for="Address.City" class="form-control" />
+                    <span asp-validation-for="Address.City" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address.Street" class="control-label">Улица:</label>
+                    <input asp-for="Address.Street" class="form-control" />
+                    <span asp-validation-for="Address.Street" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address.Building" class="control-label">Дом:</label>
+                    <input asp-for="Address.Building" class="form-control" />
+                    <span asp-validation-for="Address.Building" class="text-danger"></span>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-save">Создать магазин</button>
+                    <a asp-action="List" class="btn btn-back">Вернуться к списку</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+        @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
 </body>
 </html>

@@ -5,39 +5,79 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROteinZone - Магазины</title>
+    <link rel="stylesheet" href="~/css_admin/store.css" />
 </head>
 <body>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address.IdAddress)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdStore">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdStore">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdStore">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
+                <li class="active"><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                    <a asp-controller="Menu" asp-action="Index" asp-area="Admin">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header-line"></div>
+    <div class="vector-container">
+    <img src="~/img/vector/vector_basket1.png" class="vector-basket1" />
+    <img src="~/img/vector/vector_basket2.png" class="vector-basket2" />
+
+    <div class="breadcrumbs-search-container">
+        <div class="breadcrumbs-container">
+            <div class="breadcrumbs">
+                <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
+                <span class="arrow"> > </span>
+                <span class="current">Магазины</span>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <div class="search-row">
+                    <label for="search-input">Введите адрес:</label>
+                    <input type="text" id="search-input" placeholder="Address" class="search-input" />
+                    <button class="search-btn">OK</button>
+                    <span class="search-or">ИЛИ</span>
+                    <a asp-action="Create" class="create-btn">СОЗДАТЬ МАГАЗИН</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="store-list">
+        @foreach (var item in Model)
+        {
+            <div class="store-card">
+                <div class="store-img">
+                    <img src="~/img/icon/location.png" alt="Локация" />
+                </div>
+                <div class="store-info">
+                    <p><strong>ID магазина:</strong> @item.IdStore</p>
+                    <p><strong>Город:</strong> @item.Address.City</p>
+                    <p><strong>Улица:</strong> @item.Address.Street</p>
+                    <p><strong>Дом:</strong> @item.Address.Building</p>
+                </div>
+                <div class="store-actions">
+                    <a asp-action="Details" asp-route-id="@item.IdStore" class="btn-details">Детали</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdStore" class="btn-edit">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdStore" class="btn-delete">Удалить</a>
+                </div>
+
+            </div>
+        }
+    </div>
+    </div>
+    
 </body>
 </html>

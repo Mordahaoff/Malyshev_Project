@@ -16,7 +16,7 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+				<li class="active"><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
 				<li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
 				<li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
 				<li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
@@ -35,7 +35,7 @@
 
 	<div class="breadcrumbs-container">
 		<div class="breadcrumbs">
-			<a asp-controller="Home" asp-action="Index">Админ-панель</a>
+			<a asp-controller="Menu" asp-action="Index">Админ-панель</a>
 			<span class="arrow"> > </span>
 			<a asp-controller="Product" asp-action="List">Товары</a>
 			<span class="arrow"> > </span>

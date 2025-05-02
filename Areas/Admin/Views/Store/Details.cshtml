@@ -1,45 +1,83 @@
 ﻿@model Malyshev_Project.Models.Store
 
 @{
-	Layout = null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
-	<title>Details</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Детали магазина</title>
+    <link rel="stylesheet" href="~/css_admin/store_edit.css" />
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
+                <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                    <a asp-controller="Menu" asp-action="Index" asp-area="Admin">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-	<div>
-		<h4>Store</h4>
-		<hr />
-		<dl class="row">
-			<dt class="col-sm-2">
-				@Html.DisplayNameFor(model => model.Address)
-			</dt>
-			<dd class="col-sm-10">
-				@Html.DisplayFor(model => model.Address.City)
-			</dd>
-			<dd class="col-sm-10">
-				@Html.DisplayFor(model => model.Address.Street)
-			</dd>
-			<dd class="col-sm-10">
-				@Html.DisplayFor(model => model.Address.Building)
-			</dd>
-			@foreach (var sp in Model.StoresProducts)
-			{
-				<dd class="col-sm-2">
-					@sp.Product.Name | @sp.CountOfProduct
-				</dd>
-			}
-		</dl>
-	</div>
-	<div>
-		<a asp-action="Edit" asp-route-id="@Model?.IdStore">Edit</a> |
-		<a asp-action="List">Back to List</a>
-	</div>
+    <div class="header-line"></div>
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs">
+            <a asp-controller="Home" asp-action="Index">Админ-панель</a>
+            <span class="arrow"> > </span>
+            <a asp-controller="Store" asp-action="List">Магазины</a>
+            <span class="arrow"> > </span>
+            <span class="value">Детали магазина</span>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="form-wrapper">
+            <h2>Информация о магазине</h2>
+            <hr />
+
+            <div class="form-group">
+                <label>Город:</label>
+                <div>@Model.Address?.City</div>
+            </div>
+
+            <div class="form-group">
+                <label>Улица:</label>
+                <div>@Model.Address?.Street</div>
+            </div>
+
+            <div class="form-group">
+                <label>Дом:</label>
+                <div>@Model.Address?.Building</div>
+            </div>
+
+            <div class="form-group">
+                <label>Товары в наличии:</label>
+                <ul>
+                    @foreach (var sp in Model.StoresProducts)
+                    {
+                        <li>@sp.Product?.Name — @sp.CountOfProduct шт.</li>
+                    }
+                </ul>
+            </div>
+
+            <div class="form-buttons">
+                <a asp-action="Edit" asp-route-id="@Model.IdStore" class="btn btn-save">Редактировать</a>
+                <a asp-action="List" class="btn btn-back">Вернуться к списку</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
