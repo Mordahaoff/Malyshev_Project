@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+}
+/*Шапка*/
+a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+header {
+    position: relative; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px;
+    background: #F9B300; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.header-line {
+    height: 2px;
+    background-color: #6A6060;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav {
+    padding-left: 100px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    padding: 5px 0; 
+    min-width: max-content;
+}
+
+nav ul li::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+nav ul li.active a {
+    color: #FFFF;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    font-weight: 800;
+}
+
+.back-btn {
+    margin-left: auto; 
+}
+
+.back-btn a {
+    display: flex;
+    align-items: center;
+    background-color: #FFF; 
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #F9B300 !important;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.back-btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Настройки для векторов */
+.vector-container {
+    position: relative;
+}
+
+.vector-basket1 {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    width: 30%;
+    height: 80%; 
+    z-index: -10;
+}
+
+.vector-basket2 {
+    position: absolute;
+    top: 250px;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 110%;
+    z-index: -10;
+}
+
+
+/*Переход*/
+
+.breadcrumbs-container {
+    padding: 0 170px;
+    margin: 30px 0;
+}
+.breadcrumbs {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs a {
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs .arrow {
+    font-weight: 900;
+    color: #000;
+}
+
+.breadcrumbs .value {
+    font-weight: 900;
+    color: #F9B300;
+}
+
+/*Данные пользователя*/
+.cabinet-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+}
+
+.profile-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-photo p {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.profile-photo h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1b1a1a;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.profile-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.profile-info h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1b1a1a;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.input-group label {
+    width: 160px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+/*История заказов*/
+.order-history {
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 0 30px;
+    
+}
+
+.order-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.order-card {
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.order-info {
+    margin-bottom: 20px;
+}
+
+.order-info h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.order-info p {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.order-products {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.order-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background: #f9f9f9;
+}
+
+.price {
+    font-weight: 800;
+    color: #000;
+    font-size: 28px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.product-details p {
+    font-size: 20px;
+}
+
+/* Новые стили для контейнера общей суммы */
+.order-total-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.order-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 22px;
+    font-weight: 900;
+    background: #F9B300;
+    padding: 15px 30px;
+    border-radius: 30px;
+    max-width: 400px;
+}
+
+.btn-delete {
+    background-color: #ff6060;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #ff4040;
+}
+
+
+

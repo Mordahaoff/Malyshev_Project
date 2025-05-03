@@ -282,7 +282,7 @@ nav ul li a:hover {
     gap: 10px;
 }
 
-.btn-edit, .btn-delete {
+.btn-edit, .btn-delete, .btn-details {
     text-align: center;
     padding: 10px 20px;
     font-weight: 700;
@@ -290,8 +290,15 @@ nav ul li a:hover {
     font-size: 18px;
     transition: all 0.3s ease;
     text-decoration: none;
+    white-space: nowrap;
 }
-
+.btn-details {
+    background-color: #f9b300;
+    color: white;
+}
+.btn-details:hover {
+    background-color: #d49b00;
+}
 .btn-edit {
     background-color: #5bcc5b;
     color: white;
@@ -309,14 +316,4 @@ nav ul li a:hover {
 .btn-delete:hover {
     background-color: #e84444;
 }
-.btn-details {
-    background-color: #007bff;
-    color: white;
-    padding: 6px 12px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-.btn-details:hover {
-    background-color: #0056b3;
-}
+

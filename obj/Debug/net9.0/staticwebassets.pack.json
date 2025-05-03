@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\css_admin\\store_edit.css"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css_admin\\user_details.css",
+      "PackagePath": "staticwebassets\\css_admin\\user_details.css"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -199,6 +203,10 @@
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\icon\\icon_logo.png",
       "PackagePath": "staticwebassets\\img\\icon\\icon_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\icon\\icon_logo2.png",
+      "PackagePath": "staticwebassets\\img\\icon\\icon_logo2.png"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\icon\\location.png",
