@@ -20,8 +20,8 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 		[Route("{area}/{controller}/{action}")]
 		public IActionResult Index()
 		{
-			var user = HttpContext.Session.Get<User>("user");
-			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+			// var user = HttpContext.Session.Get<User>("user");
+			// if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
 			return View();
 		}

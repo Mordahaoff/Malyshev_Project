@@ -89,7 +89,7 @@ nav ul li a:hover {
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff;
+    color: #ffff !important;
     transition: transform 0.2s ease-in-out; 
 }
 .cabinet-btn img {
@@ -110,8 +110,8 @@ nav ul li a:hover {
     overflow:unset; /* Обрезаем лишнее */
  }
  .preview-info {
-    width: 900px;
-    padding: 120px 70px;
+    width: 1000px;
+    padding: 120px 90px;
     line-height: 55px;
  }
 
@@ -150,21 +150,21 @@ nav ul li a:hover {
  
 .img-whey {
     top: 0px;
-    right: 480px;
+    right: 430px;
     z-index: 3;
     width: 550px;
 }
 .img-creatine {
-    right: 300px;
-    top: 160px;
+    right: 220px;
+    top: 130px;
     z-index: 4;
-    width: 450px;
+    width: 500px;
 }
 .img-bar {
-    right: 580px;
+    right: 550px;
     top: 400px;
     z-index: 4;
-    width: 320px;
+    width: 400px;
 }
 .img-blur {
     right: 300px;

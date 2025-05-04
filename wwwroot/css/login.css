@@ -98,17 +98,17 @@ header {
 .right {
     width: 50%;
     background: #FFC62F;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирование содержимого */
+    align-items: center;
     text-align: center;
 }
 
 .right h2 {
     font-size: 48px;
     font-weight: 900;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .right p {
@@ -122,7 +122,7 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирование формы */
+    align-items: center; 
 }
 
 /* Поля ввода */
@@ -132,7 +132,7 @@ form {
     max-width: 425px;
     height: 59px;
     padding: 10px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
     border-radius: 15px;
     border: none;
     text-align: left;
@@ -153,15 +153,43 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px; /* Расстояние между кнопками */
+    margin-top: 0px; /* Расстояние между кнопками */
 }
 
-/* Блок "Нет аккаунта?" */
-.register {
+.register-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; /* расстояние между текстом и кнопкой */
     margin-top: 10px;
+}
+
+.register {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    color: #505050;
 }
 
 .register-btn {
     width: 186px;
     height: 42px;
+}
+
+/* Стиль для ссылки "Продолжить, как гость" */
+.guest-link {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #505050;
+}
+
+.guest-link a {
+    color: #505050;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.guest-link a:hover {
+    color: #333;
 }

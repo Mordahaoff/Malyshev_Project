@@ -20,7 +20,7 @@
 				<li><a asp-controller="Home" asp-action="About">О нас</a></li>
 				<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
 				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
-				<li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+				<li><a asp-controller="Home" asp-action="Contacts">Корзина</a></li>
 				<li class="cabinet-btn">
 					<a asp-controller="User" asp-action="Profile">
 						Личный кабинет
@@ -53,10 +53,20 @@
 				<div class="profile-photo">
 					<h3>Фото профиля:</h3>
 					<img src="@Model.Photo" alt="Фото профиля">
+
+					<div class="profile-buttons">
+						<button type="submit" class="btn save-btn">Сохранить изменения</button>
+						<a asp-controller="Auth" asp-action="Logout" class="btn logout-btn">Выйти из аккаунта</a>
+					</div>
 				</div>
+				
 
 				<div class="profile-info">
 					<h3>Данные профиля:</h3>
+					<div class="input-group">
+						<label asp-for="Photo">Фото (Url):</label>
+						<input asp-for="Photo" type="text" value="@Model.Photo" />
+					</div>
 					<div class="input-group">
 						<label asp-for="Surname">Фамилия:</label>
 						<input asp-for="Surname" type="text" value="@Model.Surname" />
@@ -92,10 +102,7 @@
 						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
-				<!-- Кнопка "Выйти из аккаунта" для авторизованного пользователя -->
-				<button asp-controller="Auth" asp-action="Logout">Выйти из аккаунта</button>
-				<!-- Кнопка "Изменить" для изменения данных авторизованного пользователя -->
-				<button type="submit">Изменить</button>
+				
 			</div>
 		</form>
 	</main>
@@ -142,7 +149,9 @@
 		}
 		else
 		{
-			<p>История заказов пуста.</p>
+			 <div class="empty-orders">
+				<p>У вас пока нет заказов</p>
+			</div>
 		}
 	</section>
 

@@ -29,6 +29,10 @@ header {
     font-size: 48px;
     font-weight: 400;
 }
+.logo-icon {
+    width: 75px; 
+    height: 75px;
+}
 
 .header-line {
     height: 2px;
@@ -37,7 +41,6 @@ header {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Центрируем контейнер */
 .container {
     display: flex;
     justify-content: center;
@@ -70,7 +73,6 @@ header {
     top: -20px;
 }
 
-
 /* Фото 1 (верхнее) */
 .photo1 {
     position: absolute;
@@ -99,33 +101,25 @@ header {
     width: 90px;
     height: auto;
 }
-
-/* Верхний вектор */
 .vector-top {
     top: 20px;
     left: -15px;
 }
-
-/* Средний вектор */
 .vector-ser {
     top: 50%;
     left: 10%;
     width: 120px;
 }
-
-/* Нижний вектор */
 .vector-bottom {
     bottom: 20px;
     right: 20px;
 }
 
-
-
 /* Правая часть */
 .right {
     width: 60%;
     background: #FFC62F;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,7 +153,7 @@ form {
     max-width: 425px;
     height: 59px;
     padding: 10px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
     border-radius: 15px;
     border: none;
     text-align: left;
@@ -183,13 +177,36 @@ form {
   
 }
 
-/* Блок "Нет аккаунта?" */
 .register {
     margin-top: 10px;
     padding: 0px;
 }
 
-.login-btn {
-    width: 186px;
-    height: 42px;
+.auth-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.login {
+    font-size: 18px;
+    font-weight: 500;
+}
+/* Стиль для ссылки "Продолжить, как гость" */
+.guest-link {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #505050;
+}
+
+.guest-link a {
+    color: #505050;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.guest-link a:hover {
+    color: #333;
 }
