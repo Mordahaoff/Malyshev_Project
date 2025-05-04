@@ -120,6 +120,13 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
 
+			if (order == null)
+			{
+				_db.Orders.Add(new Order { UserId = user.IdUser });
+				_db.SaveChanges();
+				order = _db.Orders.OrderBy(o => o.IdOrder).Last();
+			}
+
 			var model = new CartModel()
 			{
 				Order = order,
@@ -217,7 +224,7 @@ namespace Malyshev_Project.Controllers
 		// Удаление товара из корзины
 		public IActionResult RemoveProductFromCart(int id)
 		{
-			if (_db.Products.FirstOrDefault(p => p.IdProduct == id) == null) return NotFound($"Prodict ID:[{id}] is not found. Your cart has not changed.");
+			if (!_db.Products.Any(p => p.IdProduct == id)) return NotFound($"Product ID:[{id}] is not found. Your cart has not changed.");
 
 			var user = HttpContext.Session.Get<User>("user");
 			if (user == null) return RedirectToAction("Login", "Auth");
@@ -232,7 +239,7 @@ namespace Malyshev_Project.Controllers
 			var op = order.OrdersProducts.FirstOrDefault(op => op.ProductId == id);
 			if (op == null) return NotFound("Your product is not in your cart.");
 
-			order.OrdersProducts.Remove(op);
+			_db.OrdersProducts.Remove(op);
 			_db.SaveChanges();
 
 			return RedirectToAction("Cart", "Order");
