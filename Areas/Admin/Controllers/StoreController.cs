@@ -23,14 +23,15 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 
 			var stores = _db.Stores
 				.Include(s => s.Address)
+				.OrderBy(s => s.IdStore)
 				.ToList();
 
 			// Пример пользовательского ввода: "Ярославль", "Гагарина"
 			if (storeAddress != null)
 			{
 				stores = stores.Where(s =>
-					s.Address.City.Contains(storeAddress.ToLower()) ||
-					s.Address.Street.Contains(storeAddress.ToLower())).ToList();
+					s.Address.City.ToLower().Contains(storeAddress.ToLower()) ||
+					s.Address.Street.ToLower().Contains(storeAddress.ToLower())).ToList();
 			}
 
 			return View(stores);

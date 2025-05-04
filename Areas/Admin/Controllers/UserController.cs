@@ -1,5 +1,6 @@
 ﻿using Malyshev_Project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Malyshev_Project.Areas.Admin.Controllers
 {
@@ -20,7 +21,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var users = _db.Users.ToList();
+			var users = _db.Users.Include(u => u.Role).OrderBy(u => u.IdUser).ToList();
 			if (userLogin != null)
 			{
 				return RedirectToAction("Details", "User", new { area = "Admin", id = _db.Users.FirstOrDefault(u => u.Login == userLogin)?.IdUser });

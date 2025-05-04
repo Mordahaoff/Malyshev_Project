@@ -23,7 +23,7 @@ public class Program
 		//	.AddCookie(options => options.LoginPath = "/Auth/Login");
 		//builder.Services.AddAuthorization();
 
-		string? connectionString = builder.Configuration.GetConnectionString("JuliaConnection");
+		string? connectionString = builder.Configuration.GetConnectionString("DockerConnection");
 		builder.Services.AddDbContext<Models.PostgresContext>(options => options.UseNpgsql(connectionString));
 
 		var app = builder.Build();

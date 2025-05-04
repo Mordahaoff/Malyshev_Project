@@ -2,12 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PROteinZone - Каталог товаров</title>
 	<link rel="stylesheet" href="~/css/product_card.css">
 </head>
+
 <body>
 	<header>
 		<div class="header-container">
@@ -18,7 +20,7 @@
 			<ul>
 				<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
 				<li><a asp-controller="Home" asp-action="About">О нас</a></li>
-				<li  class="active"><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+				<li class="active"><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
 				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
 				<li><a asp-controller="Home" asp-action="Contacts">Корзина</a></li>
 				<li class="cabinet-btn">
@@ -31,14 +33,17 @@
 		</nav>
 	</header>
 	<div class="header-line"></div>
-	 <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+	<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
 
 	<main class="product-page">
-		<a asp-controller="Catalog" asp-action="Products" class="back-link"><img src="~/img/icon/back.png" alt="Назад"> Вернуться в каталог</a>
+		<a asp-controller="Catalog" asp-action="Products" class="back-link"><img src="~/img/icon/back.png" alt="Назад">
+			Вернуться в каталог</a>
 		<div class="product-container">
 			<div class="product-left">
-				<img src="@Model.ProductUnits.Product.Photo" alt="@Model.ProductUnits.Product.Name" class="product-main-image">
-				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@Model.ProductUnits.Product.IdProduct">Добавить в корзину</a>
+				<img src="@Model.ProductUnits.Product.Photo" alt="@Model.ProductUnits.Product.Name"
+					class="product-main-image">
+				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToCart"
+					asp-route-id="@Model.ProductUnits.Product.IdProduct">Добавить в корзину</a>
 			</div>
 
 			<div class="product-right">
@@ -64,7 +69,8 @@
 								<img src="~/img/icon/location.png" alt="Местоположение">
 								<div class="store-text">
 									<p>Количество товара в наличии: <strong>@sp.CountOfProduct шт.</strong></p>
-									<p>г. @sp.Store.Address.City, ул. @sp.Store.Address.Street, д.@sp.Store.Address.Building</p>
+									<p>г. @sp.Store.Address.City, ул. @sp.Store.Address.Street, д.@sp.Store.Address.Building
+									</p>
 								</div>
 							</li>
 						}
@@ -99,12 +105,14 @@
 							<div class="review-date">@DateOnly.FromDateTime(DateTime.Now)</div>
 							<div class="review-rating">
 								<span>Оцените товар от 1 до 5:</span>
-								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input" value="5">
+								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input"
+									value="5">
 							</div>
 						</div>
 					</div>
 
-					<textarea asp-for="@Model.Review!.Text" class="review-textarea" placeholder="Оставьте ваш отзыв..."></textarea>
+					<textarea asp-for="@Model.Review!.Text" class="review-textarea"
+						placeholder="Оставьте ваш отзыв..."></textarea>
 
 					<div class="form-actions">
 						<button type="submit" class="submit-btn">Отправить</button>
@@ -186,4 +194,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

@@ -2,12 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PROteinZone - Мой профиль</title>
 	<link rel="stylesheet" href="~/css/cabinet.css">
 </head>
+
 <body>
 	<header>
 		<div class="header-container">
@@ -46,7 +48,6 @@
 			<input type="hidden" asp-for="Login" value="@Model.Login" />
 			<input type="hidden" asp-for="Password" value="@Model.Password" />
 			<input type="hidden" asp-for="RoleId" value="@Model.RoleId" />
-			<input type="hidden" asp-for="Photo" value="@Model.Photo" />
 			<input type="hidden" asp-for="Gender" value="@Model.Gender" />
 			<img src="~/img/vector/vector_cabinet.png" alt="Фон вектора" class="vector-cabinet">
 			<div class="profile-section">
@@ -59,12 +60,11 @@
 						<a asp-controller="Auth" asp-action="Logout" class="btn logout-btn">Выйти из аккаунта</a>
 					</div>
 				</div>
-				
 
 				<div class="profile-info">
 					<h3>Данные профиля:</h3>
 					<div class="input-group">
-						<label asp-for="Photo">Фото (Url):</label>
+						<label asp-for="Photo">Фото (URL):</label>
 						<input asp-for="Photo" type="text" value="@Model.Photo" />
 					</div>
 					<div class="input-group">
@@ -102,7 +102,6 @@
 						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
-				
 			</div>
 		</form>
 	</main>
@@ -121,7 +120,8 @@
 						<h3>Информация о заказе:</h3>
 						<p><strong>Статус заказа:</strong> @order.StateOfOrder.Name</p>
 						<p><strong>Дата изменения статуса:</strong> @order.DateOfStatusChange</p>
-						<p><strong>Адрес магазина:</strong> г. @order.Store!.Address.City, ул. @order.Store!.Address.Street, д.@order.Store!.Address.Building</p>
+						<p><strong>Адрес магазина:</strong> г. @order.Store!.Address.City, ул. @order.Store!.Address.Street,
+							д.@order.Store!.Address.Building</p>
 					</div>
 					<h3>Товары:</h3>
 					<div class="order-products">
@@ -149,7 +149,7 @@
 		}
 		else
 		{
-			 <div class="empty-orders">
+			<div class="empty-orders">
 				<p>У вас пока нет заказов</p>
 			</div>
 		}
@@ -190,4 +190,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

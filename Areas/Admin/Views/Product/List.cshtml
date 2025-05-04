@@ -1,27 +1,25 @@
-﻿@model IEnumerable<Malyshev_Project.Models.Product>
-
-@{
-    Layout = null;
-}
+﻿@model IEnumerable<Malyshev_Project.Models.ProductUnits>
 
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROteinZone - Товары</title>
     <link rel="stylesheet" href="~/css_admin/product.css">
 </head>
+
 <body>
- <header>
+    <header>
         <nav>
             <ul>
                 <li class="active"><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
                 <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
                 <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
                 <li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
-                <li><a asp-controller="Store" asp-action="List"asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
                 <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
                 <li class="back-btn">
                     <a asp-controller="Menu" asp-action="Index" asp-area="Admin">Вернуться</a>
@@ -33,8 +31,7 @@
     <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
     <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
 
-
-   <div class="breadcrumbs-search-container">
+    <div class="breadcrumbs-search-container">
         <div class="breadcrumbs-container">
             <div class="breadcrumbs">
                 <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
@@ -43,38 +40,39 @@
             </div>
         </div>
 
-        <div class="search-container">
+        <form method="get" class="search-container">
             <div class="search-box">
                 <div class="search-row">
                     <label for="search-input">Введите название:</label>
-                    <input type="text" id="search-input" placeholder="Name" class="search-input">
-                    <button class="search-btn">OK</button>
+                    <input type="text" id="search-input" name="productName" placeholder="Name" class="search-input">
+                    <button type="submit" class="search-btn">OK</button>
                     <span class="search-or">ИЛИ</span>
                     <a asp-action="Create" class="create-btn">СОЗДАТЬ</a>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-<div class="products">
-    @foreach (var item in Model)
-    {
-        <div class="product-card">
-            <img src="@item.Photo" alt="@item.Name" class="product-image" />
-            <p><strong>ID:</strong> @item.IdProduct</p>
-            <p><strong>Название:</strong> @item.Name</p>
-            <p><strong>Бренд:</strong> @item.Brand?.Name</p>
-            <p><strong>Категория:</strong> @item.Category?.Name</p>
-            <p><strong>Цена:</strong> @item.Price ₽</p>
-            <p><strong>Объем (количество):</strong> @item.Volume г</p>
+    <div class="products">
+        @foreach (var item in Model)
+        {
+            <div class="product-card">
+                <img src="@item.Product.Photo" alt="@item.Product.Name" class="product-image" />
+                <p><strong>ID:</strong> @item.Product.IdProduct</p>
+                <p><strong>Название:</strong> @item.Product.Name</p>
+                <p><strong>Бренд:</strong> @item.Product.Brand?.Name</p>
+                <p><strong>Категория:</strong> @item.Product.Category?.Name</p>
+                <p><strong>Цена:</strong> @item.Product.Price ₽</p>
+                <p><strong>Объем (количество):</strong> @item.Product.Volume @item.Units</p>
 
-            <div class="card-buttons">
-                <a asp-action="Edit" asp-route-id="@item.IdProduct" class="btn edit-btn">Изменить</a>
-                <a asp-action="Delete" asp-route-id="@item.IdProduct" class="btn delete-btn">Удалить</a>
+                <div class="card-buttons">
+                    <a asp-action="Edit" asp-route-id="@item.Product.IdProduct" class="btn edit-btn">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@item.Product.IdProduct" class="btn delete-btn">Удалить</a>
+                </div>
             </div>
-        </div>
-    }
-</div>
+        }
+    </div>
 
 
-    </body>
+</body>
+
 </html>

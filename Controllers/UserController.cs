@@ -48,6 +48,7 @@ namespace Malyshev_Project.Controllers
 		public IActionResult Profile(User user)
 		{
 			user.Telephone = user.Telephone?.Replace("+7", "").Replace("-", "").Replace(" ", "");
+			if (string.IsNullOrEmpty(user.Photo)) user.Photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
 			_db.Users.Update(user);
 			_db.SaveChanges();
 			HttpContext.Session.Set("user", user);

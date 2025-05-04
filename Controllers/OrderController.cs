@@ -133,14 +133,14 @@ namespace Malyshev_Project.Controllers
 		[HttpPost]
 		public IActionResult Cart(CartModel model)
 		{
-			if (model.Order == null || model?.StoreId == null) return BadRequest("Order is null or Chosen Store is null.");
+			if (model.Order?.StoreId == null) return BadRequest("Order is null or Chosen Store is null.");
 
 			model.Order.StateOfOrderId = 2;
-			model.Order.StoreId = model.StoreId;
+			// model.Order.StoreId = model.StoreId; // Перенести в представление
 
 			var store = _db.Stores
 				.Include(s => s.StoresProducts)
-				.First(s => s.IdStore == model.StoreId);
+				.First(s => s.IdStore == model.Order.StoreId);
 
 			foreach (var productCart in model.Order.OrdersProducts)
 			{
@@ -157,10 +157,11 @@ namespace Malyshev_Project.Controllers
 					productStore.CountOfProduct += (short)(10 - Math.Abs(difference));
 				}
 				_db.StoresProducts.Update(productStore);
+				_db.OrdersProducts.Update(productCart);
 			}
 
 			_db.Orders.Update(model.Order);
-			_db.OrdersProduct.Update(model.Order.OrdersProduct);
+			// _db.OrdersProducts.Update(model.Order.OrdersProducts);
 			_db.SaveChanges();
 
 			return RedirectToAction("Details", "Order", new { id = model.Order.IdOrder });
@@ -226,7 +227,7 @@ namespace Malyshev_Project.Controllers
 				.Include(o => o.OrdersProducts)
 				.Where(o => o.StateOfOrderId == 1)
 				.FirstOrDefault(o => o.UserId == user.IdUser);
-			if (order == null) return NotFound("Your cart is not found.")
+			if (order == null) return NotFound("Your cart is not found.");
 
 			var op = order.OrdersProducts.FirstOrDefault(op => op.ProductId == id);
 			if (op == null) return NotFound("Your product is not in your cart.");

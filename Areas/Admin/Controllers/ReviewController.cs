@@ -29,6 +29,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var reviews = _db.Reviews
 				.Include(r => r.User)
 				.Include(r => r.Product)
+				.OrderByDescending(r => r.IdReview)
 				.ToList();
 
 			if (userId != null)

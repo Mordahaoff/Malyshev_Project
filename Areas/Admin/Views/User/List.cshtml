@@ -6,12 +6,14 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROteinZone - Пользователи</title>
     <link rel="stylesheet" href="~/css_admin/store.css" />
 </head>
+
 <body>
     <header>
         <nav>
@@ -43,15 +45,16 @@
                     <span class="current">Пользователи</span>
                 </div>
             </div>
-            <div class="search-container">
+            <form method="get" class="search-container">
                 <div class="search-box">
                     <div class="search-row">
                         <label for="search-input">Введите логин:</label>
-                        <input type="text" id="search-input" placeholder="Login" class="search-input" />
-                        <button class="search-btn">OK</button>
+                        <input type="text" id="search-input" name="userLogin" placeholder="Login"
+                            class="search-input" />
+                        <button type="submit" class="search-btn">OK</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <div class="store-list">
@@ -76,4 +79,5 @@
         </div>
     </div>
 </body>
+
 </html>

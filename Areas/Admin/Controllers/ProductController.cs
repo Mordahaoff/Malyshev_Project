@@ -25,6 +25,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var products = _db.Products
 				.Include(p => p.Category)
 				.Include(p => p.Brand)
+				.OrderBy(p => p.IdProduct)
 				.ToList();
 
 			if (productName != null)
@@ -34,7 +35,9 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					.ToList();
 			}
 
-			return View(products);
+			var productUnits = products.Select(p => new ProductUnits(p)).ToList();
+
+			return View(productUnits);
 		}
 
 		public IActionResult Create()

@@ -84,7 +84,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 
 			_db.Orders.Update(order);
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Order", new { id = model.IdOrder });
+			return RedirectToAction("Details", "Order", new { id = order.IdOrder });
 		}
 	}
 }
