@@ -17,8 +17,8 @@
 		<nav>
 			<ul>
 				<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
-				<li class="active"><a asp-controller="Home" asp-action="About">О нас</a></li>
-				<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+				<li><a asp-controller="Home" asp-action="About">О нас</a></li>
+				<li  class="active"><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
 				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
 				<li><a asp-controller="Home" asp-action="Contacts">Корзина</a></li>
 				<li class="cabinet-btn">
@@ -31,6 +31,7 @@
 		</nav>
 	</header>
 	<div class="header-line"></div>
+	 <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
 
 	<main class="product-page">
 		<a asp-controller="Catalog" asp-action="Products" class="back-link"><img src="~/img/icon/back.png" alt="Назад"> Вернуться в каталог</a>
@@ -118,25 +119,34 @@
 	<div class="reviews-section">
 		<h3>Отзывы:</h3>
 
-		@foreach (var review in Model.ProductUnits.Product.Reviews)
+		@if (Model.ProductUnits.Product.Reviews.Any())
 		{
-			<div class="review-card">
-				<div class="review-header">
-					<img src="@review.User.Photo" alt="User [ID@(review.User.IdUser)] Photo">
-					<div>
-						@if ((review.User.Surname + review.User.Name) == "")
-						{
-							<div class="review-name">Не указано</div>
-						}
-						else
-						{
-							<div class="review-name">@review.User.Surname @review.User.Name</div>
-						}
-						<div class="review-date">@review.DateOfCreation</div>
-						<div class="review-rating"><img src="~/img/icon/star.png" alt="star">@review.Grade</div>
+			@foreach (var review in Model.ProductUnits.Product.Reviews)
+			{
+				<div class="review-card">
+					<div class="review-header">
+						<img src="@review.User.Photo" alt="User [ID@(review.User.IdUser)] Photo">
+						<div>
+							@if ((review.User.Surname + review.User.Name) == "")
+							{
+								<div class="review-name">Не указано</div>
+							}
+							else
+							{
+								<div class="review-name">@review.User.Surname @review.User.Name</div>
+							}
+							<div class="review-date">@review.DateOfCreation</div>
+							<div class="review-rating"><img src="~/img/icon/star.png" alt="star">@review.Grade</div>
+						</div>
 					</div>
+					<p class="review-text">@review.Text</p>
 				</div>
-				<p class="review-text">@review.Text</p>
+			}
+		}
+		else
+		{
+			<div class="empty-reviews">
+				<p>Оставьте отзыв о товаре первым!</p>
 			</div>
 		}
 	</div>

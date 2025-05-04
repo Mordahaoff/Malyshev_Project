@@ -110,8 +110,10 @@
 							<div class="product-weight">@pc.Product.Volume @pc.Units</div>
 							<div class="product-name">@pc.Product.Name</div>
 						</a>
-						<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@pc.Product.IdProduct"
-							class="add-to-cart">Добавить в корзину</a>
+						<div class="card-buttons">
+							<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@pc.Product.IdProduct" 
+							class="btn add-to-cart-btn">Добавить в корзину</a>
+						</div>
 					</div>
 				}
 			</section>

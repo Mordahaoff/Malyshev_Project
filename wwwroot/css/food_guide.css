@@ -226,7 +226,7 @@ nav ul li a:hover {
 .food-guide2 {
     position: relative;
     margin-top: 180px; 
-    padding: 50px 0;
+    padding: 50px 0 50px 70px;
     z-index: 5;
 }
 
@@ -372,7 +372,7 @@ nav ul li a:hover {
 .food-guide4 {
     position: relative;
     margin-top: 200px;
-    padding: 50px 0;
+    padding: 50px 0 50px 70px;
     z-index: 5;
 }
 
