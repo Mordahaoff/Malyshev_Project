@@ -21,10 +21,10 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var users = _db.Users.Include(u => u.Role).OrderBy(u => u.IdUser).ToList();
+			var users = _db.Users.Include(u => u.Role).Where(u => u.IdUser != user.IdUser).OrderBy(u => u.IdUser).ToList();
 			if (userLogin != null)
 			{
-				return RedirectToAction("Details", "User", new { area = "Admin", id = _db.Users.FirstOrDefault(u => u.Login == userLogin)?.IdUser });
+				return RedirectToAction("Details", "User", new { id = _db.Users.FirstOrDefault(u => u.Login == userLogin)?.IdUser });
 			}
 
 			return View(users);
@@ -62,7 +62,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db.Users.Remove(userById);
 			_db.SaveChanges();
 
-			return RedirectToAction("List", "User", new { area = "Admin" });
+			return RedirectToAction("List", "User");
 		}
 	}
 }
