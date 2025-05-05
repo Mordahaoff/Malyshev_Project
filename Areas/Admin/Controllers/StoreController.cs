@@ -16,14 +16,23 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult List()
+		public IActionResult List(string? storeAddress)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
 			var stores = _db.Stores
 				.Include(s => s.Address)
+				.OrderBy(s => s.IdStore)
 				.ToList();
+
+			// Пример пользовательского ввода: "Ярославль", "Гагарина"
+			if (storeAddress != null)
+			{
+				stores = stores.Where(s =>
+					s.Address.City.ToLower().Contains(storeAddress.ToLower()) ||
+					s.Address.Street.ToLower().Contains(storeAddress.ToLower())).ToList();
+			}
 
 			return View(stores);
 		}
@@ -76,7 +85,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			}
 
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Store");
+			return RedirectToAction("Edit", "Store", new { id = store.IdStore });
 		}
 
 		public IActionResult Edit(int id)
@@ -120,6 +129,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
 			_db.Stores.Remove(store);
+			_db.SaveChanges();
 			return RedirectToAction("List", "Store");
 		}
 	}

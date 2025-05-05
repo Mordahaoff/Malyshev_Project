@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Malyshev_Project.Models.Review>
+﻿@model IEnumerable<Malyshev_Project.Models.Order>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROteinZone - Отзывы</title>
+    <title>PROteinZone - Заказы</title>
     <link rel="stylesheet" href="~/css_admin/product.css">
 </head>
 
@@ -16,8 +16,8 @@
         <nav>
             <ul>
                 <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
-                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
-                <li class="active"><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li class="active"><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
                 <li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
                 <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
                 <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
@@ -36,15 +36,15 @@
             <div class="breadcrumbs">
                 <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
                 <span class="arrow"> > </span>
-                <span class="current">Отзывы</span>
+                <span class="current">Заказы</span>
             </div>
         </div>
 
         <form method="get" class="search-container">
             <div class="search-box">
                 <div class="search-row">
-                    <label for="search-input">Введите логин:</label>
-                    <input type="text" id="search-input" name="userLogin" placeholder="Login" class="search-input">
+                    <label for="search-input">Введите ID:</label>
+                    <input type="text" id="search-input" name="storeId" placeholder="Store ID" class="search-input">
                     <button type="submit" class="search-btn">OK</button>
                     <span class="search-or">ИЛИ</span>
                     <a asp-action="Create" class="create-btn">СОЗДАТЬ</a>
@@ -56,16 +56,15 @@
         @foreach (var item in Model)
         {
             <div class="product-card">
-                <img src="@item.Product.Photo" alt="@item.Product.Name" class="product-image" />
-                <p><strong>ID:</strong> @item.IdReview</p>
+                @* <img src="@item.Product.Photo" alt="@item.Product.Name" class="product-image" /> *@
+                <p><strong>ID:</strong> @item.IdOrder</p>
                 <p><strong>Клиент:</strong> @item.User.Login</p>
-                <p><strong>Продукт:</strong> @item.Product.Name</p>
-                <p><strong>Текст:</strong> @item.Text</p>
-                <p><strong>Оценка:</strong> @item.Grade</p>
-                <p><strong>Дата:</strong> @item.DateOfCreation</p>
+                <p><strong>Магазин:</strong> г. @item.Store!.Address.City, ул. @item.Store!.Address.Street,
+                    д.@item.Store!.Address.Building</p>
+                <p><strong>Дата изменения статуса:</strong> @item.DateOfStatusChange</p>
 
                 <div class="card-buttons">
-                    <a asp-action="Delete" asp-route-id="@item.IdReview" class="btn delete-btn">Удалить</a>
+                    <a asp-action="Details" asp-route-id="@item.IdOrder" class="btn-details">О заказе</a>
                 </div>
             </div>
         }

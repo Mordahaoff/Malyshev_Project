@@ -7,7 +7,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 	public class ProductController : Controller
-    {
+	{
 		private readonly ILogger<ProductController> _logger;
 		private readonly PostgresContext _db;
 
@@ -17,7 +17,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult List()
+		public IActionResult List(string? productName)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
@@ -25,9 +25,19 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var products = _db.Products
 				.Include(p => p.Category)
 				.Include(p => p.Brand)
+				.OrderBy(p => p.IdProduct)
 				.ToList();
 
-			return View(products);
+			if (productName != null)
+			{
+				products = products
+					.Where(p => p.Name.ToLower().Contains(productName.ToLower().Trim()))
+					.ToList();
+			}
+
+			var productUnits = products.Select(p => new ProductUnits(p)).ToList();
+
+			return View(productUnits);
 		}
 
 		public IActionResult Create()
@@ -121,17 +131,6 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			return View(model);
 		}
 
-		public IActionResult Detele(int id)
-		{
-			var user = HttpContext.Session.Get<User>("user");
-			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
-
-			var product = _db.Products.FirstOrDefault(p => p.IdProduct == id);
-			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
-			return View(product);
-		}
-
-		[HttpPost]
 		public IActionResult Delete(int id)
 		{
 			var user = HttpContext.Session.Get<User>("user");
@@ -144,5 +143,5 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db.SaveChanges();
 			return RedirectToAction("List", "Product");
 		}
-    }
+	}
 }

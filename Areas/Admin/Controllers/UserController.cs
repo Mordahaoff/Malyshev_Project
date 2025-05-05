@@ -1,5 +1,6 @@
 ﻿using Malyshev_Project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Malyshev_Project.Areas.Admin.Controllers
 {
@@ -15,12 +16,17 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db = db;
 		}
 
-		public IActionResult List()
+		public IActionResult List(string? userLogin)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var users = _db.Users.ToList();
+			var users = _db.Users.Include(u => u.Role).Where(u => u.IdUser != user.IdUser).OrderBy(u => u.IdUser).ToList();
+			if (userLogin != null)
+			{
+				return RedirectToAction("Details", "User", new { id = _db.Users.FirstOrDefault(u => u.Login == userLogin)?.IdUser });
+			}
+
 			return View(users);
 		}
 
@@ -40,7 +46,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					+ "-" + userById.Telephone.Substring(6, 2)
 					+ "-" + userById.Telephone.Substring(8, 2);
 			}
-			
+
 			//userById!.Orders = userById.Orders.Where(o => o.StateOfOrderId != 1).ToList();
 			return View(userById);
 		}
@@ -56,7 +62,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db.Users.Remove(userById);
 			_db.SaveChanges();
 
-			return RedirectToAction("List", "User", new { area = "Admin" });
+			return RedirectToAction("List", "User");
 		}
 	}
 }

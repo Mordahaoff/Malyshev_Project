@@ -21,7 +21,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult List()
+		public IActionResult List(string? userLogin)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
@@ -29,7 +29,13 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var reviews = _db.Reviews
 				.Include(r => r.User)
 				.Include(r => r.Product)
+				.OrderByDescending(r => r.IdReview)
 				.ToList();
+
+			if (userLogin != null)
+			{
+				reviews = reviews.Where(r => r.User.Login == userLogin).ToList();
+			}
 
 			return View(reviews);
 		}
@@ -43,7 +49,8 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (review == null) return NotFound($"Review [ID:{id}] is not found.");
 
 			_db.Reviews.Remove(review);
-			return RedirectToAction("Delete", "Review", new { area = "Admin" });
+			_db.SaveChanges();
+			return RedirectToAction("List", "Review");
 		}
 	}
 }

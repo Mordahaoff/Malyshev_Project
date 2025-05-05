@@ -1,46 +1,44 @@
-﻿@model Malyshev_Project.Models.EditProductModel; 
+﻿@model Malyshev_Project.Models.EditProductModel;
 
-
-@{
-	Layout = null;
-}
 
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROteinZone - Товары</title>
-    <link rel="stylesheet" href="~/css_admin/product_edit.css">
-</head>
-<body>
- <header>
-        <nav>
-            <ul>
-                <li class="active"><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
-                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
-                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
-                <li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
-                <li><a asp-controller="Store" asp-action="List"asp-area="Admin">Магазины</a></li>
-                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
-                <li class="back-btn">
-                    <a asp-controller="Menu" asp-action="Index" asp-area="Admin">Вернуться</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="header-line"></div>
-    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
-    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
 
-    <div class="breadcrumbs-container">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROteinZone - Товары</title>
+	<link rel="stylesheet" href="~/css_admin/product_edit.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="active"><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+				<li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+				<li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+				<li><a asp-controller="Discount" asp-action="List" asp-area="Admin">Скидки</a></li>
+				<li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+				<li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+				<li class="back-btn">
+					<a asp-controller="Menu" asp-action="Index" asp-area="Admin">Вернуться</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="header-line"></div>
+	<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+	<img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+	<div class="breadcrumbs-container">
 		<div class="breadcrumbs">
 			<a asp-controller="Menu" asp-action="Index">Админ-панель</a>
 			<span class="arrow"> > </span>
 			<a asp-controller="Product" asp-action="List">Товары</a>
 			<span class="arrow"> > </span>
-			<span class="value"> ID: #</span>
+			<span class="value"> ID: @Model.Product.IdProduct</span>
 		</div>
 	</div>
 
@@ -48,47 +46,50 @@
 		<div class="form-wrapper">
 			<form asp-controller="Product" asp-action="Edit" method="post">
 				<div class="form-group">
-					<label>ID:</label>
-					<input type="text" class="form-control" value="@Model.Product.IdProduct" readonly />
+					<label asp-for="Product.IdProduct">ID:</label>
+					<input asp-for="Product.IdProduct" type="text" class="form-control" value="@Model.Product.IdProduct"
+						readonly />
 				</div>
 				<div class="form-group">
 					<label asp-for="Product.Name" class="control-label">Название:</label>
-					<input asp-for="Product.Name" class="form-control" />
+					<input asp-for="Product.Name" class="form-control" required />
 				</div>
 				<div class="form-group">
 					<label asp-for="Product.Photo" class="control-label">Фото (URL):</label>
-					<input asp-for="Product.Photo" class="form-control" />
+					<input asp-for="Product.Photo" class="form-control" required />
 				</div>
-					<div class="form-group">
+				<div class="form-group">
 					<label asp-for="Product.Description" class="control-label">Описание:</label>
-					<textarea asp-for="Product.Description" class="form-control" rows="4"></textarea>
+					<textarea asp-for="Product.Description" class="form-control" rows="4" required></textarea>
 					<span asp-validation-for="Product.Description" class="text-danger"></span>
 				</div>
 				<div class="form-group">
 					<label asp-for="Product.BrandId" class="control-label">Бренд:</label>
-					<select asp-for="Product.BrandId" class="form-control">
+					<select asp-for="Product.BrandId" class="form-control" required>
 						@foreach (var brand in Model.Brands)
 						{
-							<option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.Product.BrandId)">@brand.Name</option>
+							<option value="@brand.IdBrand" selected="@(brand.IdBrand == @Model.Product.BrandId)">@brand.Name
+							</option>
 						}
 					</select>
 				</div>
 				<div class="form-group">
 					<label asp-for="Product.CategoryId" class="control-label">Категория:</label>
-					<select asp-for="Product.CategoryId" class="form-control">
+					<select asp-for="Product.CategoryId" class="form-control" required>
 						@foreach (var category in Model.Categories)
 						{
-							<option value="@category.IdCategory" selected="@(category.IdCategory == @Model.Product.CategoryId)">@category.Name</option>
+							<option value="@category.IdCategory"
+								selected="@(category.IdCategory == @Model.Product.CategoryId)">@category.Name</option>
 						}
 					</select>
 				</div>
 				<div class="form-group">
 					<label asp-for="Product.Price" class="control-label">Цена:</label>
-					<input asp-for="Product.Price" class="form-control" />
+					<input asp-for="Product.Price" class="form-control" required />
 				</div>
 				<div class="form-group">
 					<label asp-for="Product.Volume" class="control-label">Объем (кол-во):</label>
-					<input asp-for="Product.Volume" class="form-control" />
+					<input asp-for="Product.Volume" class="form-control" required />
 				</div>
 				<div class="form-buttons">
 					<button type="submit" class="btn btn-save">Сохранить изменения</button>
@@ -97,11 +98,6 @@
 			</form>
 		</div>
 	</div>
-
-	@section Scripts {
-		@{
-			await Html.RenderPartialAsync("_ValidationScriptsPartial");
-		}
-	}
 </body>
+
 </html>

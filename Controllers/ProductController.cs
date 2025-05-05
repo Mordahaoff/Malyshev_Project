@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Malyshev_Project.Controllers
 {
-    public class ProductController : Controller
-    {
+	public class ProductController : Controller
+	{
 		private readonly ILogger<ProductController> _logger;
 		private readonly PostgresContext _db;
 
@@ -34,5 +34,5 @@ namespace Malyshev_Project.Controllers
 
 			return View(model);
 		}
-    }
+	}
 }
