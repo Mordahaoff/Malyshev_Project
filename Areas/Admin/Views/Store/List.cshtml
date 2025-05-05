@@ -32,9 +32,7 @@
     </header>
 
     <div class="header-line"></div>
-    <div class="vector-container">
         <img src="~/img/vector/vector_basket1.png" class="vector-basket1" />
-        <img src="~/img/vector/vector_basket2.png" class="vector-basket2" />
 
         <div class="breadcrumbs-search-container">
             <div class="breadcrumbs-container">
@@ -62,9 +60,6 @@
             @foreach (var item in Model)
             {
                 <div class="store-card">
-                    <div class="store-img">
-                        <img src="~/img/icon/location.png" alt="Локация" />
-                    </div>
                     <div class="store-info">
                         <p><strong>ID магазина:</strong> @item.IdStore</p>
                         <p><strong>Город:</strong> @item.Address.City</p>
@@ -79,7 +74,6 @@
 
                 </div>
             }
-        </div>
     </div>
 
 </body>

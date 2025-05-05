@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -10,25 +9,22 @@
 }
 
 body {
-    background-color: #fff;
-    overflow-x: hidden;
+    background-color: #ffff;
 }
-
+/*Шапка*/
 a {
     text-decoration: none;
-    color: black;
-    transition: color 0.3s ease;
+    color: #fff; 
 }
 
-/* Шапка */
 header {
-    position: relative;
+    position: relative; 
     z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 75px;
-    background: white;
+    background: #F9B300; 
 }
 
 .header-container {
@@ -43,11 +39,6 @@ header {
     font-weight: 400;
 }
 
-.logo-icon {
-    width: 50px;
-    height: 50px;
-}
-
 .header-line {
     height: 2px;
     background-color: #6A6060;
@@ -57,6 +48,7 @@ header {
 }
 
 nav {
+    padding-left: 100px;
     width: auto;
 }
 
@@ -64,55 +56,69 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 65px;
+    gap: 120px;
 }
 
 nav ul li {
     display: inline-block;
+    position: relative;
+}
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    padding: 5px 0;
+    color: #fff;
+    min-width: max-content;
+    transition: all 0.2s ease;
 }
 
-nav ul li a {
-    font-size: 18px;
-    font-weight: 600;
+nav ul li::before {
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
 }
 
 nav ul li.active a {
-    color: #F9B300;
+    color: #FFFF;
     font-weight: 800;
 }
 
 nav ul li a:hover {
-    color: #F9B300;
+    font-weight: 800;
+    color: #ffffff;
 }
 
-.cabinet-btn a {
+.back-btn {
+    margin-left: auto; 
+}
+
+.back-btn a {
     display: flex;
     align-items: center;
-    background-color: #F9B300;
+    background-color: #FFF; 
     padding: 15px 35px;
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff !important;
-    transition: transform 0.2s ease-in-out;
+    color: #F9B300 !important;
+    transition: transform 0.2s ease-in-out; 
 }
 
-.cabinet-btn img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-}
-
-.cabinet-btn a:hover {
+.back-btn a:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
-.vector-basket1 {
+
+/* Настройки для векторов */
+.vector-basket1{
     position: absolute;
-    top: -200px;
+    top: 0px;
     right: 0;
-    width: 40%;
-    height: 90%; 
+    width: 30%;
+    height: 70%;
     z-index: -10;
 }
 
@@ -163,22 +169,6 @@ nav ul li a:hover {
     margin-bottom: 20px;
     border: 3px solid #999;    
     border-radius: 40px; 
-}
-
-.add-to-cart-btn {
-    background-color: #F9B300;
-    font-weight: 800;
-    font-size: 22px;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    padding: 15px 30px;
-    margin-bottom: 40px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.add-to-cart-btn:hover {
-    transform: scale(1.05);
 }
 
 /*Правая сторона*/
@@ -263,7 +253,7 @@ nav ul li a:hover {
 /*Отзывы*/
 .reviews-section {
     max-width: 1450px;
-    margin: 0px auto;    
+    margin: 0px auto 150px;    
 }
 
 .reviews-section h3 {
@@ -331,188 +321,39 @@ nav ul li a:hover {
     color: #333;
     margin: 20px 0px;
 }
-
-/*Добавление отзыва*/
-.rating-input {
-    width: 60px;
-    height: 30px;
-    padding: 4px 8px;
-    font-size: 18px;
-    font-weight: 700;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    outline: none;
-    margin-left: 10px;
-}
-
-.review-textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    outline: none;
-    resize: vertical;
-    min-height: 120px;
-    margin: 20px 0;
-}
-
+/*Удаление отзыва*/
 .form-actions {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
 }
 
-.submit-btn {
+.delete-btn {
     padding: 10px 20px;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     border: none;
     transition: background 0.3s ease;
+    background-color: #e74c3c;
+    color: #fff;
 }
 
-.submit-btn {
-    background-color: #F9B300;
-    color: #333;
+.delete-btn:hover {
+    background-color: #c0392b;
 }
 
-.submit-btn:hover {
-    background-color: #e0a000;
-}
-
-/* Стили для пустых отзывов */
+/* Пустые отзывы */
 .empty-reviews {
     background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    padding: 50px;
+    padding: 40px;
     text-align: center;
-    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .empty-reviews p {
-    font-size: 22px;
-    font-weight: 600;
-    color: #505050;
-}
-
-
-
-/* Футер */
-.footer {
-    color: #000;
-    padding: 30px 0 10px;
-    background-color: #fff;
-    width: 100%;
-    clear: both;
-    margin-top: 100px;
-    position: relative;
-    z-index: 1; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 100px;
-    align-items: flex-start;
-    padding: 0 20px;
-}
-
-.footer-brand {
-    flex: 1;
-    min-width: 300px;
-}
-
-.footer-logo {
-    font-family: 'Potta One', cursive;
-    font-size: 36px;
-    font-weight: 400;
-    color: #000;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    background-color: #F9B300;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.social-circle img {
-    width: 45px;
-    height: 45px;
-}
-
-.social-circle:hover {
-    transform: scale(1.1);
-}
-
-.footer-contacts {
-    flex: 1;
-    min-width: 400px;
-}
-
-.footer-contacts h3 {
-    font-size: 22px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    color: #F9B300;
-}
-
-.footer-contacts p {
-    margin-bottom: 10px;
-    font-size: 20px;
-    line-height: 1.3;
-    font-weight: 600;
-}
-
-.footer-links {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-links ul {
-    list-style: none;
-    margin-top: 50px;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #000;
     font-size: 20px;
     font-weight: 600;
-    line-height: 1.3;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #F9B300;
-}
-
-.footer-copyright {
-    text-align: center;
-    margin-top: 10px;
-    padding-top: 20px;
-    border-top: 1px solid #737373;
-    font-size: 16px;
-    color: #1b1a1a;
+    color: #666;
 }

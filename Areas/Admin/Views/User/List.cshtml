@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROteinZone - Пользователи</title>
-    <link rel="stylesheet" href="~/css_admin/store.css" />
+    <link rel="stylesheet" href="~/css_admin/product.css" />
 </head>
 
 <body>
@@ -33,10 +33,8 @@
 
     <div class="header-line"></div>
 
-    <div class="vector-container">
         <img src="~/img/vector/vector_basket1.png" class="vector-basket1" />
-        <img src="~/img/vector/vector_basket2.png" class="vector-basket2" />
-
+       
         <div class="breadcrumbs-search-container">
             <div class="breadcrumbs-container">
                 <div class="breadcrumbs">
@@ -57,27 +55,29 @@
             </form>
         </div>
 
-        <div class="store-list">
+        <div class="products">
             @foreach (var item in Model)
             {
-                <div class="store-card">
-                    <div class="store-info">
+                <div class="product-card">
+                    <a asp-action="Details" asp-route-id="@item.IdUser" class="product-link">
+                        <img src="@item.Photo" alt="Фото пользователя @item.Login" class="product-image" />
                         <p><strong>ID:</strong> @item.IdUser</p>
                         <p><strong>Логин:</strong> @item.Login</p>
-                        <p><strong>ФИО:</strong> @(item.Surname) @(item.Name) @(item.Patronymic)</p>
+                        <p><strong>ФИО:</strong> @item.Surname @item.Name @item.Patronymic</p>
                         <p><strong>Пол:</strong> @item.Gender</p>
                         <p><strong>Почта:</strong> @item.Email</p>
                         <p><strong>Телефон:</strong> @item.Telephone</p>
                         <p><strong>Роль:</strong> @item.Role?.Name</p>
-                    </div>
-                    <div class="store-actions">
-                        <a asp-action="Details" asp-route-id="@item.IdUser" class="btn-details">Открыть профиль</a>
-                        <a asp-action="Delete" asp-route-id="@item.IdUser" class="btn-delete">Удалить</a>
+                    </a>
+
+                    <div class="card-buttons">
+                        <a asp-action="Details" asp-route-id="@item.IdUser" class="btn edit-btn">Открыть профиль</a>
+                        <a asp-action="Delete" asp-route-id="@item.IdUser" class="btn delete-btn">Удалить</a>
                     </div>
                 </div>
             }
         </div>
-    </div>
+
 </body>
 
 </html>

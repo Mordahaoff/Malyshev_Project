@@ -113,29 +113,14 @@ nav ul li a:hover {
 }
 
 /* Настройки для векторов */
-.vector-container {
-    position: relative;
-}
-
-.vector-basket1 {
+.vector-basket1{
     position: absolute;
-    top: -100px;
+    top: 0px;
     right: 0;
     width: 30%;
-    height: 100%; 
+    height: 70%;
     z-index: -10;
 }
-
-.vector-basket2 {
-    position: absolute;
-    top: 250px;
-    bottom: 0;
-    left: 0;
-    width: 20%;
-    height: 130%;
-    z-index: -10;
-}
-
 
 /*Переход*/
 .breadcrumbs-search-container {
@@ -241,9 +226,9 @@ nav ul li a:hover {
 /*Магазины*/
 .store-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-    gap: 40px;
-    padding: 0px 170px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+    padding: 0px 120px;
 }
 
 .store-card {
@@ -255,16 +240,6 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
     padding: 30px;
 }
-
-.store-img img {
-    width: 50px;
-    height: 50px;
-}
-
-.store-img {
-    margin-right: 40px;
-}
-
 .store-info {
     flex: 1;
     font-size: 20px;
