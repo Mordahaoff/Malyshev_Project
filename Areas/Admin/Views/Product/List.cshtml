@@ -62,7 +62,7 @@
                 <p><strong>Бренд:</strong> @item.Product.Brand?.Name</p>
                 <p><strong>Категория:</strong> @item.Product.Category?.Name</p>
                 <p><strong>Цена:</strong> @item.Product.Price ₽</p>
-                <p><strong>Объем (количество):</strong> @item.Product.Volume @item.Units</p>
+                <p><strong>Объем/кол-во:</strong> @item.Product.Volume @item.Units</p>
 
                 <div class="card-buttons">
                     <a asp-action="Edit" asp-route-id="@item.Product.IdProduct" class="btn edit-btn">Изменить</a>

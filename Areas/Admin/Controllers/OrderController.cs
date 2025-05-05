@@ -23,6 +23,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
 			var orders = _db.Orders
+				.Include(o => o.StateOfOrder)
 				.Include(o => o.Store)
 					.ThenInclude(s => s.Address)
 				.Include(o => o.OrdersProducts)

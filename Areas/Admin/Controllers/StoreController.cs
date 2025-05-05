@@ -85,7 +85,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			}
 
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Store");
+			return RedirectToAction("Edit", "Store", new { id = store.IdStore });
 		}
 
 		public IActionResult Edit(int id)
@@ -129,6 +129,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
 			_db.Stores.Remove(store);
+			_db.SaveChanges();
 			return RedirectToAction("List", "Store");
 		}
 	}

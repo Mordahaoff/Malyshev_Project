@@ -143,29 +143,5 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db.SaveChanges();
 			return RedirectToAction("List", "Product");
 		}
-
-		// public IActionResult Detele(int id)
-		// {
-		// 	var user = HttpContext.Session.Get<User>("user");
-		// 	if (user?.RoleId != 2) return BadRequest("You are not an admin.");
-
-		// 	var product = _db.Products.FirstOrDefault(p => p.IdProduct == id);
-		// 	if (product == null) return NotFound($"Product [ID:{id}] is not found.");
-		// 	return View(product);
-		// }
-
-		// [HttpPost]
-		// public IActionResult Delete(int id)
-		// {
-		// 	var user = HttpContext.Session.Get<User>("user");
-		// 	if (user?.RoleId != 2) return BadRequest("You are not an admin.");
-
-		// 	var product = _db.Products.FirstOrDefault(p => p.IdProduct == id);
-		// 	if (product == null) return NotFound($"Product [ID:{id}] is not found.");
-
-		// 	_db.Products.Remove(product);
-		// 	_db.SaveChanges();
-		// 	return RedirectToAction("List", "Product");
-		// }
 	}
 }
