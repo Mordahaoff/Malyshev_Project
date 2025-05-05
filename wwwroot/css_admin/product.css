@@ -241,7 +241,7 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    padding: 0px 120px; 
+    padding: 0px 120px 100px 120px; 
 }
 
 .product-card {

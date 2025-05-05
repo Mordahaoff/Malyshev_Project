@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4bc7bbxmid</Fingerprint>
-      <Integrity>8D7rclwoNSL8jQqPeBKx054xQCs/8jFTwUNLGLOCGec=</Integrity>
+      <Fingerprint>m1j5ws49uv</Fingerprint>
+      <Integrity>qn9YXC6Rc8ohzrW6AsFhK+bb8JrFLDO/CIGpJ4nELVA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\product_card.css'))</OriginalItemSpec>
