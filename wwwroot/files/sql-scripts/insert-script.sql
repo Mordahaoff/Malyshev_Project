@@ -133,8 +133,8 @@ insert into addresses(city, street, building) values
 insert into stores(address_id) values
 (1), (2);
 
-insert into orders(store_id, user_id) values
-(1, 1);
+insert into orders(user_id) values
+(1);
 
 insert into orders_products (product_id, order_id, count_of_product) values
 (1, 1, 5), (2, 1, 3), (8, 1, 2);

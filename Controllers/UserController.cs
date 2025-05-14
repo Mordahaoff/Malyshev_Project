@@ -40,7 +40,7 @@ namespace Malyshev_Project.Controllers
 					+ "-" + userDb.Telephone.Substring(6, 2)
 					+ "-" + userDb.Telephone.Substring(8, 2);
 			}
-			userDb!.Orders = userDb.Orders.Where(o => o.StateOfOrderId != 1).ToList();
+			userDb!.Orders = userDb.Orders.Where(o => o.StateOfOrderId != 1).OrderBy(o => o.IdOrder).ToList();
 			return View(userDb);
 		}
 
