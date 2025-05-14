@@ -28,6 +28,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					.ThenInclude(s => s.Address)
 				.Include(o => o.OrdersProducts)
 					.ThenInclude(op => op.Product)
+				.Include(o => o.User)
 				.Where(o => o.StateOfOrderId != 1)
 				.OrderBy(o => o.StateOfOrderId)
 				.ToList();
