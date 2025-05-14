@@ -77,6 +77,18 @@
       "PackagePath": "staticwebassets\\files\\report\\ER-Diagram.png"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\report\\Общая схема ИС.png",
+      "PackagePath": "staticwebassets\\files\\report\\Общая схема ИС.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\report\\Отчет - FRONT.docx",
+      "PackagePath": "staticwebassets\\files\\report\\Отчет - FRONT.docx"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\report\\Шаблон_отчета.docx",
+      "PackagePath": "staticwebassets\\files\\report\\Шаблон_отчета.docx"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\create-script.sql",
       "PackagePath": "staticwebassets\\files\\sql-scripts\\create-script.sql"
     },

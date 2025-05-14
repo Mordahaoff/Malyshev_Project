@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8pen4wxu3j</Fingerprint>
-      <Integrity>1MH4ejlpI/qyau8qVNx5viTVE+Str825euXM+xc9lXA=</Integrity>
+      <Fingerprint>y4yn69jcio</Fingerprint>
+      <Integrity>ksZl9gpssvEVyaHqtgt5fYI5GOS5rg3FYWa2gEEuLvU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\catalog.css'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5ja2jezivs</Fingerprint>
-      <Integrity>0Tz8h1jBHZwpRQ8or560gnLFeRcrE3JJn2KDgpDXG6I=</Integrity>
+      <Fingerprint>8qza8guxuh</Fingerprint>
+      <Integrity>oMRkjS4lReu/wI/TGhFWEL70fQGLLlJewl1uJuxhO90=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\index.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xw3v5gntim</Fingerprint>
-      <Integrity>b8VN3j3v8FiY+IMCGxAgxR9wLQvJmBq1ZWB+79mJDl0=</Integrity>
+      <Fingerprint>jwzc5wxyow</Fingerprint>
+      <Integrity>w3WrRavsh6Eqi0bK1ZErHCPA95fgV8fX1oIASIWQSeo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\product.css'))</OriginalItemSpec>
@@ -210,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pt454luakd</Fingerprint>
-      <Integrity>rf9D7XC0st0knpwps5jMGXlKkPCIEyBl0eBsNCizDpU=</Integrity>
+      <Fingerprint>i5i4p4fo6i</Fingerprint>
+      <Integrity>GpJb6z8/mte+Z2fvJq319G3MYvtfZ8mnW6qfe4fEHSM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\product_card.css'))</OriginalItemSpec>
@@ -228,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vi36gxdlcl</Fingerprint>
-      <Integrity>qWRThhAByED6CNbh7tDR1dtqRltfPvYtKjG/qajz/CY=</Integrity>
+      <Fingerprint>9s8dgme5z2</Fingerprint>
+      <Integrity>R0odC9JlR86GH1WclKY16GDI1HQOuh7magyRXpzKFsk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\product_edit.css'))</OriginalItemSpec>
@@ -246,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>grab6john9</Fingerprint>
-      <Integrity>PL2CH+NMd3hIRd01b6EqRWqUlV37FpRikyb89VBAVfc=</Integrity>
+      <Fingerprint>493wosfi25</Fingerprint>
+      <Integrity>eFCAHK4/gtgNPYFTK6CuIgnGB8dTFBNq3fk5EW8mKB8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\store.css'))</OriginalItemSpec>
@@ -264,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>y56lnhiamm</Fingerprint>
-      <Integrity>ivIymTHy3XW0Dl2RHg/nv1HLqSFHikLP7OYSP/0uAMo=</Integrity>
+      <Fingerprint>6iuwvnixky</Fingerprint>
+      <Integrity>bv0HYVU9C+VK2QdWBLPHKOXxPtGpSqfI09APCXCaiwI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\store_edit.css'))</OriginalItemSpec>
@@ -282,8 +282,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6zsmloczlc</Fingerprint>
-      <Integrity>zq55N6LOLjX3sirHpUxDQ0tV2AndHFPLMzmPhn/3vi8=</Integrity>
+      <Fingerprint>e27idcxy48</Fingerprint>
+      <Integrity>RmGjzj5OLVpkpW4Plf/b4QmRbxQoFRy+M9QUo6+Ou/A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\user_details.css'))</OriginalItemSpec>
@@ -323,6 +323,60 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\ER-Diagram.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\Общая схема ИС.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Malyshev_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Malyshev_Project</BasePath>
+      <RelativePath>files/report/Общая схема ИС.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1o6dj5gvqg</Fingerprint>
+      <Integrity>AUpK3XZrlNg7jOUvPwyIIoST/sdsDlwJmlNFMDQkfCA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\Общая схема ИС.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\Отчет - FRONT.docx'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Malyshev_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Malyshev_Project</BasePath>
+      <RelativePath>files/report/Отчет - FRONT.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p0xlhkoacj</Fingerprint>
+      <Integrity>l+S3mcQ63Eef18YUtDcBLfeg8wcxYQzAagFxi5J98Xc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\Отчет - FRONT.docx'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\Шаблон_отчета.docx'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Malyshev_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Malyshev_Project</BasePath>
+      <RelativePath>files/report/Шаблон_отчета.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cwka98u4ow</Fingerprint>
+      <Integrity>tM6n4PXMTdnL7zvsXmz1y1o6A8lDa9AqEe5GpwM6HYg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\report\Шаблон_отчета.docx'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\sql-scripts\create-script.sql'))">
       <SourceType>Package</SourceType>
