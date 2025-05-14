@@ -72,9 +72,9 @@
 							<div class="basket-price-controls">
 								<span class="single-price">@op.Product.Price ₽</span>
 								<div class="counter">
-									<button type="button" class="counter-btn" onclick="decreaseCount('countOfProduct')">-</button>
-									<input type="number" asp-for="Products[i].CountOfProduct" class="count" id="countOfProduct" value="@op.CountOfProduct" />
-									<button type="button" class="counter-btn" onclick="increaseCount('countOfProduct')">+</button>
+									<button type="button" class="counter-btn" onclick="decreaseCount('countOfProduct@(i)')">-</button>
+									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)" value="@op.CountOfProduct" class="count" readonly />
+									<button type="button" class="counter-btn" onclick="increaseCount('countOfProduct@(i)')">+</button>
 								</div>
 								<span class="item-total">@(op.Product.Price * op.CountOfProduct) ₽</span>
 							</div>
@@ -145,24 +145,25 @@
 
 	<script>
 		function decreaseCount(elementId) {
-		  const input = document.getElementById(elementId);
-		  if (!input) return;
-		  let currentValue = parseInt(input.value, 10);
-		  if (isNaN(currentValue)) currentValue = 0;
-		  if (currentValue > 0) {
-			currentValue -= 1;
-			input.value = currentValue;
-		  }
+			const input = document.getElementById(elementId);
+			if (!input) return;
+			let currentValue = parseInt(input.value, 10);
+			if (isNaN(currentValue)) currentValue = 0;
+			if (currentValue > 0) {
+				currentValue -= 1;
+				input.value = currentValue;
+			}
 		}
 
 		function increaseCount(elementId) {
-		  const input = document.getElementById(elementId);
-		  if (!input) return;
-		  let currentValue = parseInt(input.value, 10);
-		  if (isNaN(currentValue)) currentValue = 0;
-		  currentValue += 1;
-		  input.value = currentValue;
+			const input = document.getElementById(elementId);
+			if (!input) return;
+			let currentValue = parseInt(input.value, 10);
+			if (isNaN(currentValue)) currentValue = 0;
+			currentValue += 1;
+			input.value = currentValue;
 		}
 	</script>
 </body>
+
 </html>
