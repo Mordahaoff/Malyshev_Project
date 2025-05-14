@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\report\\ER-Diagram.png",
+      "PackagePath": "staticwebassets\\files\\report\\ER-Diagram.png"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\create-script.sql",
       "PackagePath": "staticwebassets\\files\\sql-scripts\\create-script.sql"
     },
@@ -93,8 +97,28 @@
       "PackagePath": "staticwebassets\\files\\uml\\SequenceDiagram.jpg"
     },
     {
-      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\UseCase.jpg",
-      "PackagePath": "staticwebassets\\files\\uml\\UseCase.jpg"
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\SequenceDiagram2.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\SequenceDiagram2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\ClassDiagram1_.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\ClassDiagram1_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_CreateProduct.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\SequenceDiagram_CreateProduct.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_ProductOrder.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\SequenceDiagram_ProductOrder.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_ShowCatalog.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\SequenceDiagram_ShowCatalog.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\UseCase.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\UseCase.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\files\\uml\\uml.uml",
