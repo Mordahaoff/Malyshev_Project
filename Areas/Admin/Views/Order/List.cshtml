@@ -42,11 +42,9 @@
         <form method="get" class="search-container">
             <div class="search-box">
                 <div class="search-row">
-                    <label for="search-input">Введите ID:</label>
+                    <label for="search-input">Введите ID магазина:</label>
                     <input type="text" id="search-input" name="storeId" placeholder="Store ID" class="search-input">
                     <button type="submit" class="search-btn">OK</button>
-                    <span class="search-or">ИЛИ</span>
-                    <a asp-action="Create" class="create-btn">СОЗДАТЬ</a>
                 </div>
             </div>
         </form>
@@ -63,7 +61,7 @@
                 <p><strong>Дата изменения статуса:</strong> @item.DateOfStatusChange</p>
 
                 <div class="card-buttons">
-                    <a asp-action="Details" asp-route-id="@item.IdOrder" class="btn-details">О заказе</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdOrder" class="btn edit-btn">Изменить статус заказа</a>
                 </div>
             </div>
         }

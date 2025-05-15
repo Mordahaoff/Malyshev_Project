@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\css_admin\\index.css"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css_admin\\order_edit.css",
+      "PackagePath": "staticwebassets\\css_admin\\order_edit.css"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\css_admin\\product.css",
       "PackagePath": "staticwebassets\\css_admin\\product.css"
     },
