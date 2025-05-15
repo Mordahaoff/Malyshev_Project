@@ -30,7 +30,11 @@ namespace Malyshev_Project.Controllers
 			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 
 			product.Reviews = product.Reviews.OrderByDescending(r => r.IdReview).ToList();
-			var model = new ProductDetailsModel(product);
+
+			var model = new ProductDetailsModel()
+			{
+				Product = product
+			};
 
 			return View(model);
 		}

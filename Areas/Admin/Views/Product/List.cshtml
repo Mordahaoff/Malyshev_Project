@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Malyshev_Project.Models.ProductUnits>
+﻿@model IEnumerable<Malyshev_Project.Models.Product>
 
 <!DOCTYPE html>
 <html>
@@ -53,19 +53,19 @@
         @foreach (var item in Model)
         {
             <div class="product-card">
-                <a asp-controller="Product" asp-action="Details" asp-area="Admin" asp-route-id="@item.Product.IdProduct" class="product-link">
-                    <img src="@item.Product.Photo" alt="@item.Product.Name" class="product-image" />
-                    <p><strong>ID:</strong> @item.Product.IdProduct</p>
-                    <p><strong>Название:</strong> @item.Product.Name</p>
-                    <p><strong>Бренд:</strong> @item.Product.Brand?.Name</p>
-                    <p><strong>Категория:</strong> @item.Product.Category?.Name</p>
-                    <p><strong>Цена:</strong> @item.Product.Price ₽</p>
-                    <p><strong>Объем/кол-во:</strong> @item.Product.Volume @item.Units</p>
+                <a asp-controller="Product" asp-action="Details" asp-area="Admin" asp-route-id="@item.IdProduct" class="product-link">
+                    <img src="@item.Photo" alt="@item.Name" class="product-image" />
+                    <p><strong>ID:</strong> @item.IdProduct</p>
+                    <p><strong>Название:</strong> @item.Name</p>
+                    <p><strong>Бренд:</strong> @item.Brand?.Name</p>
+                    <p><strong>Категория:</strong> @item.Category?.Name</p>
+                    <p><strong>Цена:</strong> @item.Price ₽</p>
+                    <p><strong>Объем/кол-во:</strong> @item.Volume @item.GetUnits()</p>
                 </a>
                 
                 <div class="card-buttons">
-                    <a asp-action="Edit" asp-route-id="@item.Product.IdProduct" class="btn edit-btn">Изменить</a>
-                    <a asp-action="Delete" asp-route-id="@item.Product.IdProduct" class="btn delete-btn">Удалить</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdProduct" class="btn edit-btn">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdProduct" class="btn delete-btn">Удалить</a>
                 </div>
             </div>
         }

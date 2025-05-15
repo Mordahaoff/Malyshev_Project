@@ -35,9 +35,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					.ToList();
 			}
 
-			var productUnits = products.Select(p => new ProductUnits(p)).ToList();
-
-			return View(productUnits);
+			return View(products);
 		}
 
 		public IActionResult Create()
@@ -45,22 +43,19 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var model = new CreateProductModel
-			{
-				Brands = _db.Brands.ToList(),
-				Categories = _db.CategoriesOfProducts.ToList()
-			};
+			ViewBag.Brands = new SelectList(_db.Brands, "IdBrand", "Name");
+			ViewBag.Categories = new SelectList(_db.CategoriesOfProducts, "IdCategory", "Name");
 
-			return View(model);
+			return View();
 		}
 
 		[HttpPost]
-		public IActionResult Create(CreateProductModel model)
+		public IActionResult Create(Product product)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			_db.Products.Add(model.Product);
+			_db.Products.Add(product);
 			_db.SaveChanges();
 
 			int createdProductId = _db.Products.OrderBy(p => p.IdProduct).Last().IdProduct;
@@ -91,25 +86,21 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.FirstOrDefault(p => p.IdProduct == id);
 			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 
-			var model = new EditProductModel()
-			{
-				Product = product,
-				Brands = _db.Brands.ToList(),
-				Categories = _db.CategoriesOfProducts.ToList()
-			};
+			ViewBag.Brands = new SelectList(_db.Brands, "IdBrand", "Name", product.BrandId);
+			ViewBag.Categories = new SelectList(_db.CategoriesOfProducts, "IdCategory", "Name", product.CategoryId);
 
-			return View(model);
+			return View(product);
 		}
 
 		[HttpPost]
-		public IActionResult Edit(EditProductModel model)
+		public IActionResult Edit(Product product)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			_db.Products.Update(model.Product);
+			_db.Products.Update(product);
 			_db.SaveChanges();
-			return RedirectToAction("Edit", "Product", new { id = model.Product.IdProduct });
+			return RedirectToAction("Edit", "Product", new { id = product.IdProduct });
 		}
 
 		public IActionResult Details(int id)
@@ -126,9 +117,8 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (product == null) return NotFound($"Product [ID:{id}] is not found.");
 
 			product.Reviews = product.Reviews.OrderByDescending(r => r.IdReview).ToList();
-			var model = new ProductDetailsModel(product);
 
-			return View(model);
+			return View(product);
 		}
 
 		public IActionResult Delete(int id)

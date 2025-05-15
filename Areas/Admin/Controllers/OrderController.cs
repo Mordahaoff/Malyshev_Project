@@ -74,7 +74,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.IdOrder == id);
 			if (order == null) return NotFound($"Order ID:[{id}] is not found.");
-			
+
 			//отображение всех статусов
 			ViewBag.States = new SelectList(_db.StatesOfOrders, "IdState", "Name", order.StateOfOrderId);
 
@@ -88,9 +88,11 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
+			order.DateOfStatusChange = DateTime.Now;
+
 			_db.Orders.Update(order);
 			_db.SaveChanges();
-			return RedirectToAction("Details", "Order", new { id = order.IdOrder });
+			return RedirectToAction("Edit", "Order", new { id = order.IdOrder });
 		}
 	}
 }

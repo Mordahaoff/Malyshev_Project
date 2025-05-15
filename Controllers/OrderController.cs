@@ -16,23 +16,6 @@ namespace Malyshev_Project.Controllers
 			_db = db;
 		}
 
-		public IActionResult Details(int id)
-		{
-			var order = _db.Orders
-				.Include(o => o.User)
-				.Include(o => o.Store)
-					.ThenInclude(s => s.Address)
-				.Include(o => o.StateOfOrder)
-				.Include(o => o.OrdersProducts)
-					.ThenInclude(op => op.Product)
-				.FirstOrDefault(o => o.IdOrder == id);
-
-			if (order == null) return NotFound($"Order ID:[{id}] is not found.");
-
-			return View(order);
-		}
-
-
 		// Просмотр корзины авторизованного пользователя
 		public IActionResult Cart()
 		{
