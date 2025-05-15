@@ -16,11 +16,6 @@ namespace Malyshev_Project.Controllers
 			_db = db;
 		}
 
-		// public IActionResult Index()
-		// {
-		// 	return View();
-		// }
-
 		public IActionResult Details(int id)
 		{
 			var order = _db.Orders
@@ -37,77 +32,6 @@ namespace Malyshev_Project.Controllers
 			return View(order);
 		}
 
-		//public IActionResult Confirm(int id)
-		//{
-		//	var order = _db.Orders.FirstOrDefault(o => o.IdOrder == id);
-		//	if (order == null) return NotFound();
-
-		//	order.StateOfOrderId = 2;
-		//	_db.SaveChanges();
-		//	return RedirectToAction("Details", "Order", new { id });
-		//}
-
-		// public IActionResult Edit(int id)
-		// {
-		// 	var order = _db.Orders
-		// 		.Include(o => o.User)
-		// 		.Include(o => o.Store)
-		// 			.ThenInclude(s => s.Address)
-		// 		.Include(o => o.StateOfOrder)
-		// 		.Include(o => o.OrdersProducts)
-		// 			.ThenInclude(op => op.Product)
-		// 		.FirstOrDefault(o => o.IdOrder == id);
-		// 	if (order == null) return NotFound();
-
-		// 	var model = (EditOrderModel)order;
-
-		// 	model.StatesOfOrder = _db.StatesOfOrders.ToList();
-		// 	model.Stores = _db.Stores.Include(s => s.Address).ToList();
-
-		// 	var allProducts = _db.Products
-		// 		.ToList();
-
-		// 	foreach (var product in allProducts)
-		// 	{
-		// 		model.ProductsInOrder.Add(new ProductOrder { Product = product, CountOfProduct = _db.OrdersProducts.Where(op => op.ProductId == product.IdProduct).FirstOrDefault(op => op.OrderId == id)?.CountOfProduct ?? 0 });
-		// 	}
-
-		// 	return View(model);
-		// }
-
-		// [HttpPost]
-		// public IActionResult Edit(EditOrderModel model)
-		// {
-		// 	var oldOrder = _db.Orders.FirstOrDefault(o => o.IdOrder == model.IdOrder);
-		// 	if (oldOrder == null) return NotFound();
-
-		// 	oldOrder.StateOfOrderId = model.StateOfOrderId;
-		// 	oldOrder.StoreId = model.StoreId;
-		// 	oldOrder.DateOfStatusChange = model.DateOfStatusChange;
-
-		// 	foreach (var productOrder in model.ProductsInOrder)
-		// 	{
-		// 		var oldOp = _db.OrdersProducts.Where(op => op.ProductId == productOrder.Product.IdProduct).FirstOrDefault(op => op.OrderId == model.IdOrder);
-		// 		if (productOrder.CountOfProduct <= 0 && oldOp != null)
-		// 		{
-		// 			_db.OrdersProducts.Remove(oldOp);
-		// 		}
-		// 		else if (productOrder.CountOfProduct > 0)
-		// 		{
-		// 			if (oldOp == null)
-		// 			{
-		// 				_db.OrdersProducts.Add(new OrdersProduct { OrderId = model.IdOrder, ProductId = productOrder.Product.IdProduct, CountOfProduct = productOrder.CountOfProduct });
-		// 			}
-		// 			else
-		// 			{
-		// 				oldOp.CountOfProduct = productOrder.CountOfProduct;
-		// 			}
-		// 		}
-		// 	}
-
-		// 	_db.SaveChanges();
-		// 	return RedirectToAction("Edit", "Order", new { id = model.IdOrder });
-		// }
 
 		// Просмотр корзины авторизованного пользователя
 		public IActionResult Cart()
@@ -120,17 +44,11 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
 
-			if (order == null)
-			{
-				_db.Orders.Add(new Order { UserId = user.IdUser });
-				_db.SaveChanges();
-				order = _db.Orders.OrderBy(o => o.IdOrder).Last();
-			}
-
 			var model = new CartModel()
 			{
 				Order = order,
-				Stores = _db.Stores.Include(s => s.Address).ToList()
+				Stores = _db.Stores.Include(s => s.Address).ToList(),
+				Products = order?.OrdersProducts.ToList()
 			};
 
 			return View(model);
@@ -143,13 +61,13 @@ namespace Malyshev_Project.Controllers
 			if (model.Order?.StoreId == null) return BadRequest("Order is null or Chosen Store is null.");
 
 			model.Order.StateOfOrderId = 2;
-			// model.Order.StoreId = model.StoreId; // Перенести в представление
+			model.Order.DateOfStatusChange = DateTime.Now;
 
 			var store = _db.Stores
 				.Include(s => s.StoresProducts)
 				.First(s => s.IdStore == model.Order.StoreId);
 
-			foreach (var productCart in model.Order.OrdersProducts)
+			foreach (var productCart in model.Products!)
 			{
 				var productStore = store.StoresProducts.First(sp => sp.ProductId == productCart.ProductId);
 				var difference = productCart.CountOfProduct - productStore.CountOfProduct;
@@ -171,7 +89,7 @@ namespace Malyshev_Project.Controllers
 			// _db.OrdersProducts.Update(model.Order.OrdersProducts);
 			_db.SaveChanges();
 
-			return RedirectToAction("Details", "Order", new { id = model.Order.IdOrder });
+			return RedirectToAction("Profile", "User");
 		}
 
 		// Добавление товара из каталога товаров или карточки товара

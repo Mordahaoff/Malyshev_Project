@@ -4,178 +4,166 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROteinZone - Корзина</title>
-    <link rel="stylesheet" href="~/css/basket.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROteinZone - Корзина</title>
+	<link rel="stylesheet" href="~/css/basket.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <h1 class="logo">PROteinZone</h1>
-            <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
-        </div>
-        <nav>
-            <ul>
-                <li><a asp-controller="Home" asp-action="Index">Главная</a></li>
-                <li><a asp-controller="Home" asp-action="About">О нас</a></li>
-                <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
-                <li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
-                <li class="active"><a asp-controller="Order" asp-action="Cart">Корзина</a></li>
-                <li class="cabinet-btn">
-                    <a asp-controller="User" asp-action="Profile">
-                        Личный кабинет
-                        <img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="header-line"></div>
+	<header>
+		<div class="header-container">
+			<h1 class="logo">PROteinZone</h1>
+			<img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+		</div>
+		<nav>
+			<ul>
+				<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+				<li><a asp-controller="Home" asp-action="About">О нас</a></li>
+				<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
+				<li class="active"><a asp-controller="Order" asp-action="Cart">Корзина</a></li>
+				<li class="cabinet-btn">
+					<a asp-controller="User" asp-action="Profile">
+						Личный кабинет
+						<img src="~/img/icon/icon_cabinet.png" alt="Личный кабинет">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="header-line"></div>
 
-    <div class="breadcrumbs-container">
-        <div class="breadcrumbs">
-            <a asp-controller="Home" asp-action="Index">Главная</a>
-            <span class="arrow"> > </span>
-            <span class="current">Корзина</span>
-        </div>
-    </div>
+	<div class="breadcrumbs-container">
+		<div class="breadcrumbs">
+			<a asp-controller="Home" asp-action="Index">Главная</a>
+			<span class="arrow"> > </span>
+			<span class="current">Корзина</span>
+		</div>
+	</div>
 
-    <form method="get" class="basket-container">
-        <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
-        <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
-        <div class="basket-products">
-            @foreach (var op in Model.Order!.OrdersProducts)
-            {
-                string units = new ProductUnits(op.Product).Units;
+	@if (Model.Order == null)
+	{
+		<p>Корзина пуста! Ой-ой-ой</p> <!-- Сообщение о том, что корзина пуста -->
+	}
+	else
+	{
+		<form method="post" class="basket-container">
+			<input type="hidden" asp-for="Order!.IdOrder" value="@Model.Order.IdOrder" />
+			<input type="hidden" asp-for="Order!.UserId" value="@Model.Order.UserId" />
+			<input type="hidden" asp-for="Order!.StateOfOrderId" value="@Model.Order.StateOfOrderId" />
+			<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+			<img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+			<div class="basket-products">
+				@for (int i = 0; i < Model.Products!.Count; i++)
+				{
+					var op = Model.Products[i];
+					string units = new ProductUnits(op.Product).Units;
 
-                <div class="basket-item">
-                    <img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
-                    <div class="basket-info">
-                        <h3>@op.Product.Name</h3>
-                        <p>@op.Product.Volume @units</p>
-                        <div class="basket-price-controls">
-                            <span class="single-price">@op.Product.Price ₽</span>
-                            <div class="counter">
-                                <button class="counter-btn">-</button>
-                                <span class="count">@op.CountOfProduct</span>
-                                <button class="counter-btn">+</button>
-                            </div>
-                            <span class="item-total">@(op.Product.Price* op.CountOfProduct) ₽</span>
-                        </div>
-                        <a class="delete-btn" asp-controller="Order" asp-action="RemoveProductFromCart"
-                            asp-route-id="@op.ProductId">Удалить</a>
-                    </div>
-                </div>
-            }
-            @* <div class="basket-item">
-                <img src="~/img/whey_protein.png" alt="Whey Protein" class="basket-img">
-                <div class="basket-info">
-                    <h3>Whey Protein Pro - Крем-брюле</h3>
-                    <p>900 грамм</p>
-                    <div class="basket-price-controls">
-                        <span class="single-price">1 955 ₽</span>
-                        <div class="counter">
-                            <button class="counter-btn">-</button>
-                            <span class="count">3</span>
-                            <button class="counter-btn">+</button>
-                        </div>
-                        <span class="item-total">5 865 ₽</span>
-                    </div>
-                    <button class="delete-btn">Удалить</button>
-                </div>
-            </div>
-            <div class="basket-item">
-                <img src="~/img/whey_protein.png" alt="Whey Protein" class="basket-img">
-                <div class="basket-info">
-                    <h3>Whey Protein Pro - Крем-брюле</h3>
-                    <p>900 грамм</p>
-                    <div class="basket-price-controls">
-                        <span class="single-price">1 955 ₽</span>
-                        <div class="counter">
-                            <button class="counter-btn">-</button>
-                            <span class="count">3</span>
-                            <button class="counter-btn">+</button>
-                        </div>
-                        <span class="item-total">5 865 ₽</span>
-                    </div>
-                    <button class="delete-btn">Удалить</button>
-                </div>
-            </div>
-            <div class="basket-item">
-                <img src="~/img/whey_protein.png" alt="Whey Protein" class="basket-img">
-                <div class="basket-info">
-                    <h3>Whey Protein Pro - Крем-брюле</h3>
-                    <p>900 грамм</p>
-                    <div class="basket-price-controls">
-                        <span class="single-price">1 955 ₽</span>
-                        <div class="counter">
-                            <button class="counter-btn">-</button>
-                            <span class="count">3</span>
-                            <button class="counter-btn">+</button>
-                        </div>
-                        <span class="item-total">5 865 ₽</span>
-                    </div>
-                    <button class="delete-btn">Удалить</button>
-                </div>
-            </div> *@
-        </div>
+					<input type="hidden" asp-for="Products[i].IdOrdersProducts" value="@op.IdOrdersProducts" />
+					<input type="hidden" asp-for="Products[i].ProductId" value="@op.ProductId" />
+					<input type="hidden" asp-for="Products[i].OrderId" value="@op.OrderId" />
 
-        <div class="basket-summary">
-            <h3>Итого: <span>@(Model.Order.OrdersProducts.Sum(op => op.Product.Price * op.CountOfProduct)) ₽</span></h3>
-            <div class="store-selection">
-                <p>Выбор магазина:</p>
-                @foreach (var store in Model.Stores)
-                {
-                    <label><input asp-for="Order!.StoreId" value="@store.IdStore" type="radio" required> г.
-                        @store.Address.City, ул. @store.Address.Street,
-                        д.@store.Address.Building</label>
-                    if (Model.Stores.Last() != store)
-                    {
-                        <br>
-                    }
-                }
-                @* <label><input type="radio" name="store"> г. Ярославль, ул. Гагарина, д.11</label><br>
-                    <label><input type="radio" name="store"> г. Ярославль, ул. Гагарина, д.11</label><br>
-                    <label><input type="radio" name="store"> г. Ярославль, ул. Гагарина, д.11</label> *@
-            </div>
-            <button type="submit" class="order-btn">Оформить заказ</button>
-        </div>
-    </form>
+					<div class="basket-item">
+						<img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
+						<div class="basket-info">
+							<h3>@op.Product.Name</h3>
+							<p>@op.Product.Volume @units</p>
+							<div class="basket-price-controls">
+								<span class="single-price">@op.Product.Price ₽</span>
+								<div class="counter">
+									<button type="button" class="counter-btn" onclick="decreaseCount('countOfProduct@(i)')">-</button>
+									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)" value="@op.CountOfProduct" class="count" readonly />
+									<button type="button" class="counter-btn" onclick="increaseCount('countOfProduct@(i)')">+</button>
+								</div>
+								<span class="item-total">@(op.Product.Price * op.CountOfProduct) ₽</span>
+							</div>
+							<a class="delete-btn" asp-controller="Order" asp-action="RemoveProductFromCart"
+							   asp-route-id="@op.ProductId">Удалить</a>
+						</div>
+					</div>
+				}
+			</div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h2 class="footer-logo">PROteinZone</h2>
-                    <div class="social-links">
-                        <a href="#" class="social-circle"><img src="~/img/icon/telegram.png" alt="Instagram"></a>
-                        <a href="#" class="social-circle"><img src="~/img/icon/vk.png" alt="VK"></a>
-                        <a href="#" class="social-circle"><img src="~/img/icon/email.png" alt="Telegram"></a>
-                    </div>
-                </div>
+			<div class="basket-summary">
+				<h3>Итого: <span>@(Model.Order.OrdersProducts.Sum(op => op.Product.Price * op.CountOfProduct)) ₽</span></h3>
+				<div class="store-selection">
+					<p>Выбор магазина:</p>
+					@foreach (var store in Model.Stores)
+					{
+						<label>
+							<input asp-for="Order!.StoreId" value="@store.IdStore" type="radio" required> г.
+							@store.Address.City, ул. @store.Address.Street,
+							д.@store.Address.Building
+						</label>
+						if (Model.Stores.Last() != store)
+						{
+							<br>
+						}
+					}
+				</div>
+				<button type="submit" class="order-btn">Оформить заказ</button>
+			</div>
+		</form>
 
-                <div class="footer-contacts">
-                    <h3>Наши контакты:</h3>
-                    <p>+7(996)555-66-77</p>
-                    <p>proteinzone@mail.com</p>
-                    <p>г. Ярославль, ул. Победы, д.11, офис 16</p>
-                    <p>пн-пт: 9:00 - 18:00</p>
-                </div>
+	}
 
-                <div class="footer-links">
-                    <ul>
-                        <li><a asp-controller="Home" asp-action="Index">Главная</a></li>
-                        <li><a asp-controller="Home" asp-action="About">О нас</a></li>
-                        <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
-                        <li><a asp-controller="Home" asp-action="Guide">Гид по питанию</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2025 PROteinZone. Все права защищены.</p>
-        </div>
-    </footer>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<h2 class="footer-logo">PROteinZone</h2>
+					<div class="social-links">
+						<a href="#" class="social-circle"><img src="~/img/icon/telegram.png" alt="Instagram"></a>
+						<a href="#" class="social-circle"><img src="~/img/icon/vk.png" alt="VK"></a>
+						<a href="#" class="social-circle"><img src="~/img/icon/email.png" alt="Telegram"></a>
+					</div>
+				</div>
+
+				<div class="footer-contacts">
+					<h3>Наши контакты:</h3>
+					<p>+7(996)555-66-77</p>
+					<p>proteinzone@mail.com</p>
+					<p>г. Ярославль, ул. Победы, д.11, офис 16</p>
+					<p>пн-пт: 9:00 - 18:00</p>
+				</div>
+
+				<div class="footer-links">
+					<ul>
+						<li><a asp-controller="Home" asp-action="Index">Главная</a></li>
+						<li><a asp-controller="Home" asp-action="About">О нас</a></li>
+						<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
+						<li><a asp-controller="Home" asp-action="Guide">Гид по питанию</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<p>© 2025 PROteinZone. Все права защищены.</p>
+		</div>
+	</footer>
+
+	<script>
+		function decreaseCount(elementId) {
+			const input = document.getElementById(elementId);
+			if (!input) return;
+			let currentValue = parseInt(input.value, 10);
+			if (isNaN(currentValue)) currentValue = 0;
+			if (currentValue > 0) {
+				currentValue -= 1;
+				input.value = currentValue;
+			}
+		}
+
+		function increaseCount(elementId) {
+			const input = document.getElementById(elementId);
+			if (!input) return;
+			let currentValue = parseInt(input.value, 10);
+			if (isNaN(currentValue)) currentValue = 0;
+			currentValue += 1;
+			input.value = currentValue;
+		}
+	</script>
 </body>
+
+</html>
