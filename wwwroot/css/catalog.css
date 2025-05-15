@@ -108,7 +108,8 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Хлебные крошки */
+
+/* Переход */
 .breadcrumbs-container {
     display: flex;
     justify-content: center;
