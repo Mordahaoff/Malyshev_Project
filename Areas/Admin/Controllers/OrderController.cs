@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Malyshev_Project.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Malyshev_Project.Areas.Admin.Controllers
 {
@@ -73,6 +74,9 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					.ThenInclude(op => op.Product)
 				.FirstOrDefault(o => o.IdOrder == id);
 			if (order == null) return NotFound($"Order ID:[{id}] is not found.");
+			
+			//отображение всех статусов
+			ViewBag.States = new SelectList(_db.StatesOfOrders, "IdState", "Name", order.StateOfOrderId);
 
 			return View(order);
 		}
