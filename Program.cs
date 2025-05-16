@@ -1,3 +1,4 @@
+using Malyshev_Project.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +25,7 @@ public class Program
 		//builder.Services.AddAuthorization();
 
 		string? connectionString = builder.Configuration.GetConnectionString("ArtyomConnection");
-		builder.Services.AddDbContext<Models.PostgresContext>(options => options.UseNpgsql(connectionString));
+		builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
 
 		var app = builder.Build();
 

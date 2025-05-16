@@ -180,6 +180,13 @@ nav ul li a:hover {
 .add-to-cart-btn:hover {
     transform: scale(1.05);
 }
+/*Товар добавлен в корзину*/
+.add-to-cart-btn.added,
+.added {
+    background-color: #4CAF50;
+    color: black;
+    cursor: default;
+}
 
 /*Правая сторона*/
 .product-right {

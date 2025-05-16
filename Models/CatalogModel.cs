@@ -9,5 +9,6 @@
 		public int? BrandId { get; set; }
 		public string? SortName { get; set; } = "Не выбрана";
 		public int? SortId { get; set; }
+		
 	}
 }

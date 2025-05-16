@@ -141,6 +141,15 @@ nav ul li a:hover {
     font-weight: 900;
     color: #F9B300;
 }
+/* Настройки для векторов */
+.vector-basket1{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 30%;
+    height: 70%;
+    z-index: -10;
+}
 
 /* Основной контент каталога */
 
@@ -206,6 +215,8 @@ nav ul li a:hover {
     text-align: left;
     margin-bottom: 10px;
 }
+
+
 /*Товары*/
 .products-section {
     flex: 1;
@@ -266,8 +277,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     margin-bottom: 10px;
 }
-
-/* Стили для кнопок*/
+/* Стили для кнопок */
 .card-buttons {
     margin-top: auto;
     display: flex;
@@ -292,11 +302,20 @@ nav ul li a:hover {
 
 .add-to-cart-btn {
     background-color: #F9B300;
+    color: black;
 }
 
 .add-to-cart-btn:hover {
     background-color: #e6a500;
 }
+
+/* Когда товар добавлен в корзину */
+.add-to-cart-btn.added {
+    background-color: #4CAF50;
+    color: black;
+    cursor: default;
+}
+
 /* Футер */
 .footer {
     color: #000;
