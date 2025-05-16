@@ -50,22 +50,13 @@ public class CatalogController : Controller
 						model.SortName = "По убыванию цены";
 						break;
 					}
-				case 3: // Товары со скидкой
-					{
-						products = _db.Products
-							.Include(p => p.Discounts)
-							.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now)))
-							.ToList();
-						model.SortName = "Товары со скидкой";
-						break;
-					}
 				default:
 					return BadRequest();
 			}
 			model.SortId = sortId;
 		}
 
-		model.Products = products.Select(p => new ProductUnits(p)).ToList();
+		model.Products = products;
 		_logger.LogInformation($"Count of product in Catalog: {products.Count}");
 		return View(model);
 	}

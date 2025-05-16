@@ -56,10 +56,10 @@ public class AuthController : Controller
         //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Cookies");
         //HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-      // Перенаправление в зависимости от роли
-        return user.RoleId == 2 
+        // Перенаправление в зависимости от роли
+        return user.RoleId == 2
             ? RedirectToAction("Menu", "Admin")
-            : RedirectToAction("Profile", "User"); 
+            : RedirectToAction("Profile", "User");
     }
 
     public IActionResult Register()
@@ -72,8 +72,9 @@ public class AuthController : Controller
     {
         if (_db.Users.Any(u => u.Login == model.Login))
         {
-            _logger.LogWarning($"Логин {model.Login} занят!");
-            ViewData["Message"] = $"Логин {model.Login} занят!";
+            string message = $"Логин {model.Login} занят!";
+            _logger.LogWarning(message);
+            ViewData["Message"] = message;
             return RedirectToAction("Register", "Auth");
         }
 

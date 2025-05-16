@@ -40,30 +40,30 @@
 			Вернуться в каталог</a>
 		<div class="product-container">
 			<div class="product-left">
-				<img src="@Model.ProductUnits.Product.Photo" alt="@Model.ProductUnits.Product.Name"
+				<img src="@Model.Product.Photo" alt="@Model.Product.Name"
 					class="product-main-image">
 				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToCart"
-					asp-route-id="@Model.ProductUnits.Product.IdProduct">Добавить в корзину</a>
+					asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a>
 			</div>
 
 			<div class="product-right">
-				<h2>@Model.ProductUnits.Product.Name</h2>
-				<p><strong>Стоимость: </strong><span class="price">@Model.ProductUnits.Product.Price ₽</span></p>
-				<p><strong>Объем: </strong>@Model.ProductUnits.Product.Volume @Model.ProductUnits.Units</p>
-				<p><strong>Категория: </strong>@Model.ProductUnits.Product.Category.Name</p>
-				<p><strong>Бренд: </strong>@Model.ProductUnits.Product.Brand.Name</p>
+				<h2>@Model.Product.Name</h2>
+				<p><strong>Стоимость: </strong><span class="price">@Model.Product.Price ₽</span></p>
+				<p><strong>Объем: </strong>@Model.Product.Volume @Model.Product.GetUnits()</p>
+				<p><strong>Категория: </strong>@Model.Product.Category.Name</p>
+				<p><strong>Бренд: </strong>@Model.Product.Brand.Name</p>
 
 				<div class="product-description">
 					<h3>Описание:</h3>
 					<p>
-						@Model.ProductUnits.Product.Description
+						@Model.Product.Description
 					</p>
 				</div>
 
 				<div class="store-availability">
 					<h3>Наличие в магазинах:</h3>
 					<ul>
-						@foreach (var sp in Model.ProductUnits.Product.StoresProducts)
+						@foreach (var sp in Model.Product.StoresProducts)
 						{
 							<li>
 								<img src="~/img/icon/location.png" alt="Местоположение">
@@ -119,7 +119,7 @@
 					</div>
 				</div>
 				<input type="hidden" asp-for="@Model.Review!.UserId" value="@currentUser.IdUser" />
-				<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.ProductUnits.Product.IdProduct" />
+				<input type="hidden" asp-for="@Model.Review!.ProductId" value="@Model.Product.IdProduct" />
 			</form>
 		</div>
 	}
@@ -127,9 +127,9 @@
 	<div class="reviews-section">
 		<h3>Отзывы:</h3>
 
-		@if (Model.ProductUnits.Product.Reviews.Any())
+		@if (Model.Product.Reviews.Any())
 		{
-			@foreach (var review in Model.ProductUnits.Product.Reviews)
+			@foreach (var review in Model.Product.Reviews)
 			{
 				<div class="review-card">
 					<div class="review-header">

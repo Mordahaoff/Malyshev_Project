@@ -43,7 +43,7 @@
 		</div>
 	</div>
 
-	@if (Model.Order == null)
+	@if (Model.Order == null || !Model.Order.OrdersProducts.Any())
 	{
 		<div class="empty-cart">
 			<p>Ваша корзина пуста</p>

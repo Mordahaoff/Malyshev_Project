@@ -132,7 +132,9 @@
 						@foreach (var op in order.OrdersProducts)
 						{
 							<div class="product-item">
-								<img src="@op.Product.Photo" alt="@op.Product.Name">
+								<a asp-controller="Product" asp-action="Details" asp-route-id="@op.ProductId">
+									<img src="@op.Product.Photo" alt="@op.Product.Name">
+								</a>
 								<div class="product-details">
 									<p class="product-name">@op.Product.Name</p>
 									<p>Цена за шт: <span class="price">@op.Product.Price ₽</span></p>

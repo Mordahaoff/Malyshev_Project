@@ -1,4 +1,4 @@
-﻿@model Malyshev_Project.Models.CreateProductModel;
+﻿@model Malyshev_Project.Models.Product;
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@
 				<li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
 				<li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
 				<li class="back-btn">
-					  <a asp-controller="Home" asp-action="Index" asp-area="User">Вернуться</a>
+					  <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
 				</li>
 			</ul>
 		</nav>
@@ -46,53 +46,43 @@
 				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 				<div class="form-group">
-					<label asp-for="Product.Name" class="control-label">Название:</label>
-					<input asp-for="Product.Name" class="form-control" required />
-					<span asp-validation-for="Product.Name" class="text-danger"></span>
+					<label asp-for="Name" class="control-label">Название:</label>
+					<input asp-for="Name" class="form-control" required />
+					<span asp-validation-for="Name" class="text-danger"></span>
 				</div>
 
 				<div class="form-group">
-					<label asp-for="Product.Photo" class="control-label">Фото (URL):</label>
-					<input asp-for="Product.Photo" class="form-control" required />
-					<span asp-validation-for="Product.Photo" class="text-danger"></span>
+					<label asp-for="Photo" class="control-label">Фото (URL):</label>
+					<input asp-for="Photo" class="form-control" required />
+					<span asp-validation-for="Photo" class="text-danger"></span>
 				</div>
 
 				<div class="form-group">
-					<label asp-for="Product.Description" class="control-label">Описание:</label>
-					<textarea asp-for="Product.Description" class="form-control" rows="4" required></textarea>
-					<span asp-validation-for="Product.Description" class="text-danger"></span>
+					<label asp-for="Description" class="control-label">Описание:</label>
+					<textarea asp-for="Description" class="form-control" rows="4" required></textarea>
+					<span asp-validation-for="Description" class="text-danger"></span>
 				</div>
 
 				<div class="form-group">
-					<label asp-for="Product.Price" class="control-label">Цена:</label>
-					<input asp-for="Product.Price" class="form-control" required />
-					<span asp-validation-for="Product.Price" class="text-danger"></span>
+					<label asp-for="Price" class="control-label">Цена:</label>
+					<input asp-for="Price" type="number" class="form-control" required />
+					<span asp-validation-for="Price" class="text-danger"></span>
 				</div>
 
 				<div class="form-group">
-					<label asp-for="Product.Volume" class="control-label">Объем (кол-во):</label>
-					<input asp-for="Product.Volume" class="form-control" required />
-					<span asp-validation-for="Product.Volume" class="text-danger"></span>
+					<label asp-for="Volume" class="control-label">Объем (кол-во):</label>
+					<input asp-for="Volume" type="number" class="form-control" required />
+					<span asp-validation-for="Volume" class="text-danger"></span>
 				</div>
 
 				<div class="form-group">
-					<label asp-for="Product.CategoryId" class="control-label">Категория:</label>
-					<select asp-for="Product.CategoryId" class="form-control" required>
-						@foreach (var category in Model.Categories)
-						{
-							<option value="@category.IdCategory">@category.Name</option>
-						}
-					</select>
+					<label asp-for="CategoryId" class="control-label">Категория:</label>
+					<select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control" required></select>
 				</div>
 
 				<div class="form-group">
-					<label asp-for="Product.BrandId" class="control-label">Бренд:</label>
-					<select asp-for="Product.BrandId" class="form-control" required>
-						@foreach (var brand in Model.Brands)
-						{
-							<option value="@brand.IdBrand">@brand.Name</option>
-						}
-					</select>
+					<label asp-for="BrandId" class="control-label">Бренд:</label>
+					<select asp-for="BrandId" asp-items="ViewBag.Brands" class="form-control" required></select>
 				</div>
 
 				<div class="form-buttons">

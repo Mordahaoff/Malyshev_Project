@@ -42,7 +42,9 @@
     </div>
    <div class="order-edit">
         <form asp-action="Edit" method="post">
-            <input type="hidden" asp-for="IdOrder" />
+            <input type="hidden" asp-for="IdOrder" value="@Model.IdOrder" />
+            <input type="hidden" asp-for="UserId" value="@Model.UserId" />
+            <input type="hidden" asp-for="StoreId" value="@Model.StoreId" />
 
             <div class="order-card">
                 <div class="order-info">
@@ -50,8 +52,8 @@
                     <p><strong>Адрес магазина:</strong> г. @Model.Store!.Address.City, ул. @Model.Store!.Address.Street, д.@Model.Store!.Address.Building</p>
                     <p><strong>Пользователь:</strong> @Model.User!.Login</p>
 
-                    <label for="StateOfOrder.IdState"><strong>Статус заказа:</strong></label>
-                    <select asp-for="StateOfOrder.IdState" asp-items="ViewBag.States" class="form-control status-select"></select>
+                    <label for="StateOfOrderId"><strong>Статус заказа:</strong></label>
+                    <select asp-for="StateOfOrderId" asp-items="ViewBag.States" class="form-control status-select"></select>
                 </div>
 
                 <h3>Товары:</h3>

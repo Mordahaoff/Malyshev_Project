@@ -86,8 +86,6 @@
 							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="1">По возрастанию цены</a></li>
 					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId"
 							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="2">По убыванию цены</a></li>
-					<li><a asp-controller="Catalog" asp-action="Products" asp-route-brandId="@Model.BrandId"
-							asp-route-categoryId="@Model.CategoryId" asp-route-sortId="3">Товары со скидкой</a></li>
 				</ul>
 			</div>
 
@@ -101,17 +99,17 @@
 			<div class="no-category-message">Бренд: "@Model.BrandName"</div>
 			<div class="no-category-message">Сортировка: "@Model.SortName"</div>
 			<section class="products">
-				@foreach (ProductUnits pc in Model.Products)
+				@foreach (var product in Model.Products)
 				{
 					<div class="product-card">
-						<a asp-controller="Product" asp-action="Details" asp-route-id="@pc.Product.IdProduct">
-							<img src="@pc.Product.Photo" alt="@pc.Product.Name" class="product-image">
-							<div class="product-price">@pc.Product.Price ₽</div>
-							<div class="product-weight">@pc.Product.Volume @pc.Units</div>
-							<div class="product-name">@pc.Product.Name</div>
+						<a asp-controller="Product" asp-action="Details" asp-route-id="@product.IdProduct">
+							<img src="@product.Photo" alt="@product.Name" class="product-image">
+							<div class="product-price">@product.Price ₽</div>
+							<div class="product-weight">@product.Volume @product.GetUnits()</div>
+							<div class="product-name">@product.Name</div>
 						</a>
 						<div class="card-buttons">
-							<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@pc.Product.IdProduct"
+							<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@product.IdProduct"
 								class="btn add-to-cart-btn">Добавить в корзину</a>
 						</div>
 					</div>
