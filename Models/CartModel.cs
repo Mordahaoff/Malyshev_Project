@@ -2,8 +2,8 @@
 {
 	public class CartModel
 	{
-		public Order? Order { get; set; } = null!;
-		public int StoreId { get; set; } // Выбранный пользователем магазин для доставки
+		public Order? Order { get; set; }
 		public IEnumerable<Store> Stores { get; set; } = null!;
+		public List<OrdersProduct>? Products { get; set; }
 	}
 }

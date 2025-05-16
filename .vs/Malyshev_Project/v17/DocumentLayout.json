@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\areas\\admin\\views\\order\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:areas\\admin\\views\\order\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\views\\store\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:views\\store\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\views\\store\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:views\\store\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|c:\\users\\artem\\desktop\\programs\\malyshev_project\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E521101-38F9-D627-F11F-242BECDD1E9D}|Malyshev_Project.csproj|solutionrelative:areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Store\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Store\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Store\\Details.cshtml",
-              "RelativeToolTip": "Views\\Store\\Details.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAEAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAIBJwCwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T14:35:25.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Product\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Product\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Product\\Create.cshtml",
-              "RelativeToolTip": "Views\\Product\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T14:32:21.66Z",
+              "WhenOpened": "2025-05-14T15:43:29.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StoreController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\StoreController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StoreController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Controllers\\StoreController.cs",
-              "RelativeToolTip": "Controllers\\StoreController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAowEwAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T14:31:30.313Z",
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Areas\\Admin\\Views\\Order\\List.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Order\\List.cshtml",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Areas\\Admin\\Views\\Order\\List.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Order\\List.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAADwv0MAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T15:37:18.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Store\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Store\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Views\\Store\\Create.cshtml",
-              "RelativeToolTip": "Views\\Store\\Create.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACgAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T14:31:19.195Z",
+              "DocumentIndex": 1,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:33:30.596Z",
               "EditorCaption": ""
             }
           ]

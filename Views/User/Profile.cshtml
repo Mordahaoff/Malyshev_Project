@@ -1,16 +1,15 @@
-﻿@{
-	var currentUser = Context.Session.Get<User>("user");
-}
-@model User;
+﻿@model User;
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PROteinZone - Профиль ID:@(currentUser!.IdUser)</title>
+	<title>PROteinZone - Мой профиль</title>
 	<link rel="stylesheet" href="~/css/cabinet.css">
 </head>
+
 <body>
 	<header>
 		<div class="header-container">
@@ -23,7 +22,7 @@
 				<li><a asp-controller="Home" asp-action="About">О нас</a></li>
 				<li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
 				<li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
-				<li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+				<li><a asp-controller="Order" asp-action="Cart">Корзина</a></li>
 				<li class="cabinet-btn">
 					<a asp-controller="User" asp-action="Profile">
 						Личный кабинет
@@ -49,31 +48,40 @@
 			<input type="hidden" asp-for="Login" value="@Model.Login" />
 			<input type="hidden" asp-for="Password" value="@Model.Password" />
 			<input type="hidden" asp-for="RoleId" value="@Model.RoleId" />
-			<input type="hidden" asp-for="Photo" value="@Model.Photo" />
 			<input type="hidden" asp-for="Gender" value="@Model.Gender" />
 			<img src="~/img/vector/vector_cabinet.png" alt="Фон вектора" class="vector-cabinet">
 			<div class="profile-section">
 				<div class="profile-photo">
 					<h3>Фото профиля:</h3>
 					<img src="@Model.Photo" alt="Фото профиля">
+
+					<div class="profile-buttons">
+						<button type="submit" class="btn save-btn">Сохранить изменения</button>
+						<a asp-controller="Auth" asp-action="Logout" class="btn logout-btn">Выйти из аккаунта</a>
+						@if (Model.RoleId == 2) // Проверяем, является ли пользователь администратором (ID роли = 2)
+						{
+							<a asp-controller="Menu" asp-action="Index" asp-area="Admin" class="btn admin-btn">Перейти на админ-панель</a>
+						}
+					</div>
 				</div>
 
 				<div class="profile-info">
 					<h3>Данные профиля:</h3>
 					<div class="input-group">
-						@{
-							var isOwner = (Model.IdUser == currentUser.IdUser);
-						}
+						<label asp-for="Photo">Фото (URL):</label>
+						<input asp-for="Photo" type="text" value="@Model.Photo" />
+					</div>
+					<div class="input-group">
 						<label asp-for="Surname">Фамилия:</label>
-						<input asp-for="Surname" type="text" value="@Model.Surname" disabled="@( !isOwner )" />
+						<input asp-for="Surname" type="text" value="@Model.Surname" />
 					</div>
 					<div class="input-group">
 						<label asp-for="Name">Имя:</label>
-						<input asp-for="Name" type="text" value="@Model.Name" disabled="@( !isOwner )">
+						<input asp-for="Name" type="text" value="@Model.Name">
 					</div>
 					<div class="input-group">
 						<label asp-for="Patronymic">Отчество:</label>
-						<input asp-for="Patronymic" type="text" value="@Model.Patronymic" disabled="@( !isOwner )">
+						<input asp-for="Patronymic" type="text" value="@Model.Patronymic">
 					</div>
 					<div class="input-group">
 						<label>Роль:</label>
@@ -81,11 +89,11 @@
 					</div>
 					<div class="input-group">
 						<label asp-for="Email">Email:</label>
-						<input asp-for="Email" type="email" value="@Model.Email" disabled="@( !isOwner )">
+						<input asp-for="Email" type="email" value="@Model.Email">
 					</div>
 					<div class="input-group">
 						<label asp-for="Telephone">Номер телефона:</label>
-						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX" disabled="@( !isOwner )">
+						<input asp-for="Telephone" type="tel" value="@Model.Telephone" placeholder="+7 XXX-XXX-XX-XX">
 					</div>
 
 					<h3>Вход в систему:</h3>
@@ -98,18 +106,6 @@
 						<input type="text" value="@Model.Password" disabled>
 					</div>
 				</div>
-				@if (isOwner)
-				{
-					<!-- Кнопка "Выйти из аккаунта" для авторизованного пользователя -->
-					<button asp-controller="Auth" asp-action="Logout">Выйти из аккаунта</button>
-					
-					<!-- Кнопка "Изменить" для изменения данных авторизованного пользователя -->
-					<button type="submit">Изменить</button>
-				} else if (!isOwner && currentUser.RoleId == 2)
-				{
-					<!-- Кнопка удаления пользователя для администратора-->
-					<button asp-controller="User" asp-action="Delete" asp-route-id="@Model.IdUser">Удалить пользователя</button>
-				}
 			</div>
 		</form>
 	</main>
@@ -128,14 +124,17 @@
 						<h3>Информация о заказе:</h3>
 						<p><strong>Статус заказа:</strong> @order.StateOfOrder.Name</p>
 						<p><strong>Дата изменения статуса:</strong> @order.DateOfStatusChange</p>
-						<p><strong>Адрес магазина:</strong> г. @order.Store!.Address.City, ул. @order.Store!.Address.Street, д.@order.Store!.Address.Building</p>
+						<p><strong>Адрес магазина:</strong> г. @order.Store!.Address.City, ул. @order.Store!.Address.Street,
+							д.@order.Store!.Address.Building</p>
 					</div>
 					<h3>Товары:</h3>
 					<div class="order-products">
 						@foreach (var op in order.OrdersProducts)
 						{
 							<div class="product-item">
-								<img src="@op.Product.Photo" alt="@op.Product.Name">
+								<a asp-controller="Product" asp-action="Details" asp-route-id="@op.ProductId">
+									<img src="@op.Product.Photo" alt="@op.Product.Name">
+								</a>
 								<div class="product-details">
 									<p class="product-name">@op.Product.Name</p>
 									<p>Цена за шт: <span class="price">@op.Product.Price ₽</span></p>
@@ -156,7 +155,9 @@
 		}
 		else
 		{
-			<p>История заказов пуста.</p>
+			<div class="empty-orders">
+				<p>У вас пока нет заказов</p>
+			</div>
 		}
 	</section>
 
@@ -195,4 +196,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

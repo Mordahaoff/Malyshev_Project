@@ -1,0 +1,110 @@
+﻿@model Product;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Товары</title>
+    <link rel="stylesheet" href="~/css_admin/product_card.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                      <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div>
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    
+    <main class="product-page">
+        <a asp-controller="Product" asp-action="List" class="back-link">
+            <img src="~/img/icon/back.png" alt="Назад">
+            Вернуться к списку товаров
+        </a>
+        
+        <div class="product-container">
+            <div class="product-left">
+                <img src="@Model.Photo" alt="@Model.Name" class="product-main-image">
+            </div>
+
+            <div class="product-right">
+                <h2>@Model.Name</h2>
+                <p><strong>Стоимость: </strong><span class="price">@Model.Price ₽</span></p>
+                <p><strong>Объем: </strong>@Model.Volume @Model.GetUnits()</p>
+                <p><strong>Категория: </strong>@Model.Category?.Name</p>
+                <p><strong>Бренд: </strong>@Model.Brand?.Name</p>
+
+                <div class="product-description">
+                    <h3>Описание:</h3>
+                    <p>@Model.Description</p>
+                </div>
+
+                <div class="store-availability">
+                    <h3>Наличие в магазинах:</h3>
+                    <ul>
+                        @foreach (var sp in Model.StoresProducts)
+                        {
+                            <li>
+                                <img src="~/img/icon/location.png" alt="Местоположение">
+                                <div class="store-text">
+                                    <p>Количество товара в наличии: <strong>@sp.CountOfProduct шт.</strong></p>
+                                    <p>г. @sp.Store.Address.City, ул. @sp.Store.Address.Street, д.@sp.Store.Address.Building</p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="reviews-section">
+        <h3>Отзывы:</h3>
+
+        @if (Model.Reviews.Any())
+        {
+            @foreach (var review in Model.Reviews)
+            {
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="@review.User.Photo" alt="User [ID@(review.User.IdUser)] Photo">
+                        <div>
+                            @if (string.IsNullOrEmpty(review.User.Surname + review.User.Name))
+                            {
+                                <div class="review-name">Не указано</div>
+                            }
+                            else
+                            {
+                                <div class="review-name">@review.User.Surname @review.User.Name</div>
+                            }
+                            <div class="review-date">@review.DateOfCreation</div>
+                            <div class="review-rating"><img src="~/img/icon/star.png" alt="star">@review.Grade</div>
+                        </div>
+                    </div>
+                    <p class="review-text">@review.Text</p>
+
+                    <div class="form-actions">
+						 <button type="submit" class="delete-btn">Удалить отзыв</button>
+					</div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="empty-reviews">
+                <p>У данного товара пока нет отзывов</p>
+            </div>
+        }
+    </div>
+</body>
+</html>

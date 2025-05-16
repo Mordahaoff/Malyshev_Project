@@ -38,25 +38,16 @@ public class CatalogController : Controller
 		{
 			switch (sortId)
 			{
-				case 1: // По возрастанию цены
+				case 1: // РџРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ С†РµРЅС‹
 					{
 						products = products.OrderBy(p => p.Price).ToList();
-						model.SortName = "По возрастанию цены";
+						model.SortName = "РџРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ С†РµРЅС‹";
 						break;
 					}
-				case 2: // По убыванию цены
+				case 2: // РџРѕ СѓР±С‹РІР°РЅРёСЋ С†РµРЅС‹
 					{
 						products = products.OrderByDescending(p => p.Price).ToList();
-						model.SortName = "По убыванию цены";
-						break;
-					}
-				case 3: // Товары со скидкой
-					{
-						products = _db.Products
-							.Include(p => p.Discounts)
-							.Where(p => p.Discounts.Any(d => d.DateOfEnd < DateOnly.FromDateTime(DateTime.Now)))
-							.ToList();
-						model.SortName = "Товары со скидкой";
+						model.SortName = "РџРѕ СѓР±С‹РІР°РЅРёСЋ С†РµРЅС‹";
 						break;
 					}
 				default:
@@ -65,8 +56,8 @@ public class CatalogController : Controller
 			model.SortId = sortId;
 		}
 
-		model.Products = products.Select(p => new ProductUnits(p)).ToList();
-		_logger.LogInformation($"Кол-во продуктов: {products.Count}");
+		model.Products = products;
+		_logger.LogInformation($"Count of product in Catalog: {products.Count}");
 		return View(model);
 	}
 }

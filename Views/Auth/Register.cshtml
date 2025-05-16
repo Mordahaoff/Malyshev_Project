@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="header-container">
             <h1 class="logo">PROteinZone</h1>
@@ -18,9 +19,6 @@
         </div>
         <div class="header-line"></div>
     </header>
-
-    <!-- Переход на главную страницу -->
-    <a asp-controller="Home" asp-action="Index">На главную страницу</a>
 
     <div class="container">
         <div class="left">
@@ -43,9 +41,11 @@
                 <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
                 <button type="submit" class="btn register-btn">Зарегистрироваться</button>
             </form>
-            <p class="login">Уже есть аккаунт?</p>
-            <button onclick="window.location.href='/Auth/Login/'" class="btn login-btn">Войти в аккаунт</button>
-
+            <div class="auth-actions">
+                <p class="login">Уже есть аккаунт?</p>
+                <button onclick="window.location.href='/Auth/Login/'" class="btn login-btn">Войти в аккаунт</button>
+            </div>
+            <p class="guest-link"><a asp-controller="Home" asp-action="Index">Продолжить, как гость</a></p>
         </div>
     </div>
 </body>

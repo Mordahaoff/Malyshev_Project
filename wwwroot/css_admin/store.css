@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+}
+/*Шапка*/
+a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+header {
+    position: relative; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px;
+    background: #F9B300; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.header-line {
+    height: 2px;
+    background-color: #6A6060;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav {
+    padding-left: 100px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 170px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    padding: 5px 0; 
+    min-width: max-content;
+}
+
+nav ul li::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+nav ul li.active a {
+    color: #FFFF;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    font-weight: 800;
+}
+
+.back-btn {
+    margin-left: auto; 
+}
+
+.back-btn a {
+    display: flex;
+    align-items: center;
+    background-color: #FFF; 
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #F9B300 !important;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.back-btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Настройки для векторов */
+.vector-basket1{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 30%;
+    height: 70%;
+    z-index: -10;
+}
+
+/*Переход*/
+.breadcrumbs-search-container {
+    padding: 0 170px;
+    margin: 30px 0;
+}
+
+.breadcrumbs-container {
+    margin-bottom: 15px;
+}
+.breadcrumbs {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs a {
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs .arrow {
+    font-weight: 900;
+    color: #000;
+}
+
+.breadcrumbs .current {
+    font-weight: 900;
+    color: #F9B300;
+}
+/*Поиск*/
+.search-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.search-box {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.search-row label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 2px solid #F9B300; 
+    border-radius: 8px;
+    font-size: 16px;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(249, 179, 0, 0.3);
+}
+
+.search-btn, .search-row a.create-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+.search-btn {
+    background-color: #F9B300;
+    color: white;
+}
+.search-btn:hover {
+    background-color: #e6a800;
+}
+.search-row a.create-btn {
+    background-color: #5BCC5B;
+    color: white; 
+}
+.search-row a.create-btn:hover {
+    background-color: #499d49; 
+}
+.search-or {
+    font-size: 18px;
+    color: #777;
+}
+/*Магазины*/
+.store-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+    padding: 0px 120px;
+}
+
+.store-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 30px;
+}
+.store-info {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.store-actions {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete, .btn-details {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn-details {
+    background-color: #f9b300;
+    color: white;
+}
+.btn-details:hover {
+    background-color: #d49b00;
+}
+.btn-edit {
+    background-color: #5bcc5b;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #4CAF50;
+}
+
+.btn-delete {
+    background-color: #ff6060;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #e84444;
+}
+

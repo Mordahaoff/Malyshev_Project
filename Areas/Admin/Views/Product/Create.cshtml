@@ -1,0 +1,97 @@
+﻿@model Malyshev_Project.Models.Product;
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROteinZone - Создать товар</title>
+	<link rel="stylesheet" href="~/css_admin/product_edit.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="active"><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+				<li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+				<li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+				<li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+				<li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+				<li class="back-btn">
+					  <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="header-line"></div>
+	<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+	<img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+	<div class="breadcrumbs-container">
+		<div class="breadcrumbs">
+			<a asp-controller="Menu" asp-action="Index">Админ-панель</a>
+			<span class="arrow"> > </span>
+			<a asp-controller="Product" asp-action="List">Товары</a>
+			<span class="arrow"> > </span>
+			<span class="value"> Создание товара</span>
+		</div>
+	</div>
+
+	<div class="form-container">
+		<div class="form-wrapper">
+			<form asp-action="Create" method="post">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				<div class="form-group">
+					<label asp-for="Name" class="control-label">Название:</label>
+					<input asp-for="Name" class="form-control" required />
+					<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Photo" class="control-label">Фото (URL):</label>
+					<input asp-for="Photo" class="form-control" required />
+					<span asp-validation-for="Photo" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Description" class="control-label">Описание:</label>
+					<textarea asp-for="Description" class="form-control" rows="4" required></textarea>
+					<span asp-validation-for="Description" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Price" class="control-label">Цена:</label>
+					<input asp-for="Price" type="number" class="form-control" required />
+					<span asp-validation-for="Price" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Volume" class="control-label">Объем (кол-во):</label>
+					<input asp-for="Volume" type="number" class="form-control" required />
+					<span asp-validation-for="Volume" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="CategoryId" class="control-label">Категория:</label>
+					<select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control" required></select>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="BrandId" class="control-label">Бренд:</label>
+					<select asp-for="BrandId" asp-items="ViewBag.Brands" class="form-control" required></select>
+				</div>
+
+				<div class="form-buttons">
+					<button type="submit" class="btn btn-save">Создать товар</button>
+					<a asp-action="List" class="btn btn-back">Вернуться к товарам</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

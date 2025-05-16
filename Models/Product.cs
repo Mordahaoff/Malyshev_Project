@@ -32,4 +32,15 @@ public partial class Product
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
     public virtual ICollection<StoresProduct> StoresProducts { get; set; } = new List<StoresProduct>();
+
+    public string GetUnits()
+    {
+		return CategoryId switch
+		{
+			1 => "шт.",
+			<= 5 => "г.",
+			6 => "мл.",
+			_ => throw new Exception("GetUnits Exception: Get out of range a switch.")
+		};
+	}
 }

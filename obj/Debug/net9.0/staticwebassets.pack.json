@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\basket.css",
+      "PackagePath": "staticwebassets\\css\\basket.css"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css\\cabinet.css",
       "PackagePath": "staticwebassets\\css\\cabinet.css"
     },
@@ -37,8 +41,56 @@
       "PackagePath": "staticwebassets\\css\\register.css"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\index.css",
+      "PackagePath": "staticwebassets\\css_admin\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\order_edit.css",
+      "PackagePath": "staticwebassets\\css_admin\\order_edit.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\product.css",
+      "PackagePath": "staticwebassets\\css_admin\\product.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\product_card.css",
+      "PackagePath": "staticwebassets\\css_admin\\product_card.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\product_edit.css",
+      "PackagePath": "staticwebassets\\css_admin\\product_edit.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\store.css",
+      "PackagePath": "staticwebassets\\css_admin\\store.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\store_edit.css",
+      "PackagePath": "staticwebassets\\css_admin\\store_edit.css"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\user_details.css",
+      "PackagePath": "staticwebassets\\css_admin\\user_details.css"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\ER-Diagram.png",
+      "PackagePath": "staticwebassets\\files\\report\\ER-Diagram.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\Общая схема ИС.png",
+      "PackagePath": "staticwebassets\\files\\report\\Общая схема ИС.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\Отчет - FRONT.docx",
+      "PackagePath": "staticwebassets\\files\\report\\Отчет - FRONT.docx"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\Шаблон_отчета.docx",
+      "PackagePath": "staticwebassets\\files\\report\\Шаблон_отчета.docx"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\sql-scripts\\create-script.sql",
@@ -61,8 +113,32 @@
       "PackagePath": "staticwebassets\\files\\uml\\SequenceDiagram.jpg"
     },
     {
-      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\UseCase.jpg",
-      "PackagePath": "staticwebassets\\files\\uml\\UseCase.jpg"
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\SequenceDiagram2.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\SequenceDiagram2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\ClassDiagram1_.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\ClassDiagram1_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\ComponentDiagram.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\ComponentDiagram.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_CreateProduct.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\SequenceDiagram_CreateProduct.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_ProductOrder.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\SequenceDiagram_ProductOrder.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_ShowCatalog.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\SequenceDiagram_ShowCatalog.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\UseCase.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\UseCase.jpg"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\uml.uml",
@@ -177,6 +253,10 @@
       "PackagePath": "staticwebassets\\img\\icon\\icon_logo.png"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\icon_logo2.png",
+      "PackagePath": "staticwebassets\\img\\icon\\icon_logo2.png"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\location.png",
       "PackagePath": "staticwebassets\\img\\icon\\location.png"
     },
@@ -223,6 +303,14 @@
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",
       "PackagePath": "staticwebassets\\img\\vector\\vector_about.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket1.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_basket1.png"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_basket2.png",
+      "PackagePath": "staticwebassets\\img\\vector\\vector_basket2.png"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\vector\\vector_brand.png",

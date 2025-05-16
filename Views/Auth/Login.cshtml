@@ -17,10 +17,7 @@
             <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
         </div>
         <div class="header-line"></div>
-    </header>
-
-    <!-- Переход на главную страницу -->
-    <a asp-controller="Home" asp-action="Index">На главную страницу</a>
+    </header>   
 
     <div class="container">
         <div class="left">
@@ -36,8 +33,11 @@
                 <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
                 <button type="submit" class="btn login-btn">Войти</button>
             </form>
-            <p class="register">Нет аккаунта? Создайте его за минуту!</p>
-            <button onclick="window.location.href='/Auth/Register/'" class="btn register-btn">Зарегистрироваться</button>
+            <div class="register-actions">
+                <p class="register">Нет аккаунта? Создайте его за минуту!</p>
+                <button onclick="window.location.href='/Auth/Register/'" class="btn register-btn">Зарегистрироваться</button>
+            </div>
+            <p class="guest-link"><a asp-controller="Home" asp-action="Index">Продолжить, как гость</a></p>
         </div>
     </div>
 </body>

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Malyshev_Project.Models.Review>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Отзывы</title>
+    <link rel="stylesheet" href="~/css_admin/product.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li class="active"><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div>
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+    <div class="breadcrumbs-search-container">
+        <div class="breadcrumbs-container">
+            <div class="breadcrumbs">
+                <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
+                <span class="arrow"> > </span>
+                <span class="current">Отзывы</span>
+            </div>
+        </div>
+
+        <form method="get" class="search-container">
+            <div class="search-box">
+                <div class="search-row">
+                    <label for="search-input">Введите логин:</label>
+                    <input type="text" id="search-input" name="userLogin" placeholder="Login"
+                        value="@ViewData["Request"]" class="search-input">
+                    <button type="submit" class="search-btn">OK</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="products">
+        @foreach (var item in Model)
+        {
+            <div class="product-card">
+                <p><strong>ID:</strong> @item.IdReview</p>
+                <p><strong>Клиент:</strong> @item.User.Login</p>
+                <p><strong>Продукт:</strong> @item.Product.Name</p>
+                <p><strong>Текст:</strong> @item.Text</p>
+                <p><strong>Оценка:</strong> @item.Grade</p>
+                <p><strong>Дата:</strong> @item.DateOfCreation</p>
+
+                <div class="card-buttons">
+                    <a asp-action="Delete" asp-route-id="@item.IdReview" class="btn delete-btn">Удалить</a>
+                </div>
+            </div>
+        }
+    </div>
+
+
+</body>
+
+</html>

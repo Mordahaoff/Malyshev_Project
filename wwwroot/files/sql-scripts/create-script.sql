@@ -1,6 +1,6 @@
 drop schema public cascade;
 create schema public;
-grant all on schema public to admin;
+grant all on schema public to postgres;
 grant all on schema public to public;
 
 create table Roles(
@@ -90,7 +90,7 @@ Date_of_Status_Change timestamp not null default current_timestamp
 
 create table Orders_Products(
 ID_Orders_Products serial primary key,
-Order_ID integer not null references Orders(ID_Order) on delete cascade,
+Order_ID integer not null references Orders(ID_Order) on delete cascade on update cascade,
 Product_ID integer not null references Products(ID_Product) on delete cascade,
 Count_of_Product smallint not null default 1
 );

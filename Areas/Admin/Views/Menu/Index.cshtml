@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Админ-панель</title>
+    <link rel="stylesheet" href="~/css_admin/index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div>
+
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+    <main class="admin-main">
+        <div class="brand-container">
+            <div class="brand-title">PROteinZone</div>
+            <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
+        </div>
+        <div class="instruction">Выберите соответствующий раздел</div>
+    </main>
+</body>
+
+</html>

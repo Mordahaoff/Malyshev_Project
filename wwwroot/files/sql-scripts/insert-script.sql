@@ -133,14 +133,20 @@ insert into addresses(city, street, building) values
 insert into stores(address_id) values
 (1), (2);
 
-insert into orders(store_id, user_id) values
-(1, 1);
+insert into orders(user_id) values
+(1);
 
 insert into orders_products (product_id, order_id, count_of_product) values
 (1, 1, 5), (2, 1, 3), (8, 1, 2);
+
+insert into orders(user_id, store_id, state_of_order_id) values
+(1, 1, 5);
+
+insert into orders_products(product_id, order_id, count_of_product) values
+(7, 2, 2), (10, 2, 1), (15, 2, 1);
 
 insert into stores_products(store_id, product_id, count_of_product) values
 (1, 1, 10), (1, 2, 10), (1, 3, 10), (1, 4, 10), (1, 5, 10), (1, 6, 10), (1, 7, 10), (1, 8, 10), (1, 9, 10), (1, 10, 10), (1, 11, 10), (1, 12, 10),
 (1, 13, 0), (1, 14, 0), (1, 15, 0), (1, 16, 0), (1, 17, 0), (1, 18, 0), (1, 19, 0), (1, 20, 0), (1, 21, 0), (1, 22, 0), (1, 23, 0), (1, 24, 0), (1, 25, 10),
 (2, 13, 10), (2, 14, 10), (2, 15, 10), (2, 16, 10), (2, 17, 10), (2, 18, 10), (2, 19, 10), (2, 20, 10), (2, 21, 10), (2, 22, 10), (2, 23, 10), (2, 24, 10), (2, 25, 10),
-(1, 1, 0), (1, 2, 0), (1, 3, 0), (1, 4, 0), (1, 5, 0), (1, 6, 0), (1, 7, 0), (1, 8, 0), (1, 9, 10), (1, 10, 0), (1, 11, 0), (1, 12, 0);
+(2, 1, 0), (2, 2, 0), (2, 3, 0), (2, 4, 0), (2, 5, 0), (2, 6, 0), (2, 7, 0), (2, 8, 0), (2, 9, 10), (2, 10, 0), (2, 11, 0), (2, 12, 0);

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+
+}
+/*Шапка*/
+a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+header {
+    position: relative; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 75px;
+    background: #F9B300; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.header-line {
+    height: 2px;
+    background-color: #6A6060;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav {
+    padding-left: 100px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 170px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    padding: 5px 0; 
+    min-width: max-content;
+}
+
+nav ul li::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+nav ul li.active a {
+    color: #FFFF;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    font-weight: 800;
+}
+
+.back-btn {
+    margin-left: auto; 
+}
+
+.back-btn a {
+    display: flex;
+    align-items: center;
+    background-color: #FFF; 
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 22px;
+    color: #F9B300 !important;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.back-btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+/* Настройки для вектора*/
+.vector-basket1{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 30%;
+    height: 70%;
+    z-index: -10;
+}
+
+/* Настройки для вектора*/
+.vector-basket2 {
+    position: absolute;
+    top: 300px;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 120%;
+    z-index: -10;
+}
+
+/* Хлебные крошки */
+.breadcrumbs-container {
+    padding: 0 170px;
+    margin: 30px 0 15px;
+}
+
+.breadcrumbs {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.breadcrumbs a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs .arrow {
+    color: #000;
+}
+
+.breadcrumbs .value {
+    color: #F9B300;
+    font-weight: 900;
+}
+
+/*Форма*/
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 80px;
+    width: 100%;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.form-group label {
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+.form-control {
+    width: 100%;
+    padding: 16px 16px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #f9b300;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    border-color: #d49b00;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(249, 179, 0, 0.3);
+}
+/* Кнопки */
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+    width: 100%;
+}
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.btn-save {
+    background-color: #5BCC5B;
+    color: white;
+}
+.btn-save:hover {
+    background-color: #4CAF50;
+}
+.btn-back {
+    background-color: #f9b300;
+    color: white;
+}
+.btn-back:hover {
+    background-color: #d49b00;
+}

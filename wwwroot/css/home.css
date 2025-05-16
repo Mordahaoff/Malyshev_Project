@@ -81,25 +81,35 @@ nav ul li a:hover {
 }
 
 
-.cabinet-btn a {
-    display: flex;
+/* Кнопки с увеличением */
+.cabinet-btn a,
+.catalog-btn {
+    display: inline-flex; 
     align-items: center;
-    background-color: #F9B300; 
-    padding: 15px 35px;
+    justify-content: center;
+    background-color: #F9B300;
+    padding: 15px 20px;
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff;
-    transition: transform 0.2s ease-in-out; 
+    color: #fff !important;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
+
+.cabinet-btn a:hover,
+.catalog-btn:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Иконки у кабинета */
 .cabinet-btn img {
     width: 24px;
     height: 24px;
     margin-left: 10px;
-}
-.cabinet-btn a:hover {
-    cursor: pointer;
-    transform: scale(1.1);
 }
 
 /*Превью*/
@@ -110,8 +120,8 @@ nav ul li a:hover {
     overflow:unset; /* Обрезаем лишнее */
  }
  .preview-info {
-    width: 900px;
-    padding: 120px 70px;
+    width: 1000px;
+    padding: 120px 90px;
     line-height: 55px;
  }
 
@@ -127,44 +137,27 @@ nav ul li a:hover {
     padding-bottom: 10px;
  }
 
-  .preview-info .btn{
-    background: #F9B300;
-    color: #fff;
-    border-radius: 25px;
-    padding: 15px 30px;
-    border: none;
-    transition: transform 0.2s ease-in-out;
-    font-weight: 800;
-    font-size: 22px;
- }
- .preview-info .btn:hover{
-    cursor: pointer;
-    transform: scale(1.1);
- }
-
-
 .preview-images img {
     position: absolute;
-    transition: transform 0.3s ease-in-out;
 }
  
 .img-whey {
     top: 0px;
-    right: 480px;
+    right: 430px;
     z-index: 3;
     width: 550px;
 }
 .img-creatine {
-    right: 300px;
-    top: 160px;
+    right: 220px;
+    top: 130px;
     z-index: 4;
-    width: 450px;
+    width: 500px;
 }
 .img-bar {
-    right: 580px;
+    right: 550px;
     top: 400px;
     z-index: 4;
-    width: 320px;
+    width: 400px;
 }
 .img-blur {
     right: 300px;
@@ -216,14 +209,13 @@ nav ul li a:hover {
 .why-info ul li {
     display: flex;
     align-items: flex-start;
-    font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     gap: 15px;
 }
 
 .why-info ul li .icon-circle {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     background: #F9B300;
     display: flex;
     align-items: center;
@@ -233,8 +225,8 @@ nav ul li a:hover {
 }
 
 .why-info ul li .icon-circle img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 }
 
 .why-info ul li .text-container {
@@ -244,13 +236,12 @@ nav ul li a:hover {
 
 .why-info ul li .title {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 5px;
 }
 
 .why-info ul li p {
-    margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.4;
 }
 /* Настройки для вектора в why-choose-us */

@@ -1,0 +1,84 @@
+﻿@model Malyshev_Project.Models.Store
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Редактировать магазин</title>
+    <link rel="stylesheet" href="~/css_admin/store_edit.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li class="active"><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                     <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div>
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs">
+            <a asp-controller="Home" asp-action="Index">Админ-панель</a>
+            <span class="arrow"> > </span>
+            <a asp-controller="Store" asp-action="List">Магазины</a>
+            <span class="arrow"> > </span>
+            <span class="value">ID: @Model.IdStore</span>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="form-wrapper">
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="IdStore" />
+                <input type="hidden" asp-for="Address.IdAddress" />
+
+                <div class="form-group">
+                    <label>ID магазина:</label>
+                    <input type="text" class="form-control" value="@Model.IdStore" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address.City" class="control-label">Город:</label>
+                    <input asp-for="Address.City" class="form-control" />
+                    <span asp-validation-for="Address.City" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address.Street" class="control-label">Улица:</label>
+                    <input asp-for="Address.Street" class="form-control" />
+                    <span asp-validation-for="Address.Street" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address.Building" class="control-label">Дом:</label>
+                    <input asp-for="Address.Building" class="form-control" />
+                    <span asp-validation-for="Address.Building" class="text-danger"></span>
+                </div>
+                <div class="form-buttons">
+					<button type="submit" class="btn btn-save">Сохранить изменения</button>
+					<a asp-action="List" class="btn btn-back">Вернуться к магазинам</a>
+				</div>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+        @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
+</body>
+</html>

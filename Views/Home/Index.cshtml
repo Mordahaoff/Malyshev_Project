@@ -20,7 +20,7 @@
                 <li><a asp-controller="Home" asp-action="About">О нас</a></li>
                 <li><a asp-controller="Catalog" asp-action="Products">Каталог товаров</a></li>
                 <li><a asp-controller="Home" asp-action="NutritionGuide">Гид по питанию</a></li>
-                <li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+                <li><a asp-controller="Order" asp-action="Cart">Корзина</a></li>
                 <li class="cabinet-btn">
                     <a asp-controller="User" asp-action="Profile">
                         Личный кабинет
@@ -40,8 +40,9 @@
                 необходимыми питательными веществами для достижения максимальных результатов.
             </p>
             <p>Выбирайте качественное питание с нами!</p>
-            <button class="btn">Посмотреть каталог</button>
+            <a asp-controller="Catalog" asp-action="Products" class="btn catalog-btn">Посмотреть каталог</a>
         </div>
+  
 
         <div class="preview-images">
             <img src="~/img/whey.png" alt="Протеин" class="img-whey">
@@ -49,8 +50,8 @@
             <img src="~/img/bar.png" alt="Батончик" class="img-bar">
             <img src="~/img/blur.png" alt="Блюр" class="img-blur">
         </div>
-    </div>
-
+  </div>
+  
     <section class="why-choose-us">
         <img src="~/img/vector/vector_choose.png" alt="Фон вектора" class="vector-choose">
         <div class="why-container">
@@ -65,14 +66,6 @@
                         <div class="text-container">
                             <span class="title">Оригинальная продукция</span>
                             <p>Работаем только с проверенными брендами, 100% подлинность и качество</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-circle"><img src="~/img/icon/2.png" alt="Быстрая доставка"></div>
-                        <div class="text-container">
-                            <span class="title">Быстрая доставка</span>
-                            <p>Мы отправляем заказы в тот же день, а курьерская служба привезет вам заказ в кратчайшие
-                                сроки</p>
                         </div>
                     </li>
                     <li>
