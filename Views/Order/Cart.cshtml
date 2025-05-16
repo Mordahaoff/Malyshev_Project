@@ -42,9 +42,11 @@
 		</div>
 	</div>
 
-	@if (Model.Order == null)
+	@if (Model.Order == null || !Model.Order.OrdersProducts.Any())
 	{
-		<p>Корзина пуста! Ой-ой-ой</p> <!-- Сообщение о том, что корзина пуста -->
+		<div class="empty-cart">
+			<p>Корзина пуста! Ой-ой-ой</p> <!-- Сообщение о том, что корзина пуста -->
+		</div>
 	}
 	else
 	{
@@ -58,28 +60,33 @@
 				@for (int i = 0; i < Model.Products!.Count; i++)
 				{
 					var op = Model.Products[i];
-					string units = new ProductUnits(op.Product).Units;
 
 					<input type="hidden" asp-for="Products[i].IdOrdersProducts" value="@op.IdOrdersProducts" />
 					<input type="hidden" asp-for="Products[i].ProductId" value="@op.ProductId" />
 					<input type="hidden" asp-for="Products[i].OrderId" value="@op.OrderId" />
 
 					<div class="basket-item">
-						<img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
+						<a asp-controller="Product" asp-action="Details" asp-route-id="@op.ProductId">
+							<img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
+						</a>
+
 						<div class="basket-info">
 							<h3>@op.Product.Name</h3>
-							<p>@op.Product.Volume @units</p>
+							<p>@op.Product.Volume @op.Product.GetUnits()</p>
 							<div class="basket-price-controls">
 								<span class="single-price">@op.Product.Price ₽</span>
 								<div class="counter">
-									<button type="button" class="counter-btn" onclick="decreaseCount('countOfProduct@(i)')">-</button>
-									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)" value="@op.CountOfProduct" class="count" readonly />
-									<button type="button" class="counter-btn" onclick="increaseCount('countOfProduct@(i)')">+</button>
+									<button type="button" class="counter-btn"
+										onclick="decreaseCount('countOfProduct@(i)')">-</button>
+									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)"
+										value="@op.CountOfProduct" class="count" readonly />
+									<button type="button" class="counter-btn"
+										onclick="increaseCount('countOfProduct@(i)')">+</button>
 								</div>
-								<span class="item-total">@(op.Product.Price * op.CountOfProduct) ₽</span>
+								<span class="item-total">@(op.Product.Price* op.CountOfProduct) ₽</span>
 							</div>
 							<a class="delete-btn" asp-controller="Order" asp-action="RemoveProductFromCart"
-							   asp-route-id="@op.ProductId">Удалить</a>
+								asp-route-id="@op.ProductId">Удалить</a>
 						</div>
 					</div>
 				}
