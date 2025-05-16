@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\css_admin\\index.css"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\order_edit.css",
+      "PackagePath": "staticwebassets\\css_admin\\order_edit.css"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\css_admin\\product.css",
       "PackagePath": "staticwebassets\\css_admin\\product.css"
     },
@@ -77,12 +81,12 @@
       "PackagePath": "staticwebassets\\files\\report\\ER-Diagram.png"
     },
     {
-      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\~$блон_отчета.docx",
-      "PackagePath": "staticwebassets\\files\\report\\~$блон_отчета.docx"
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\Общая схема ИС.png",
+      "PackagePath": "staticwebassets\\files\\report\\Общая схема ИС.png"
     },
     {
-      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\~WRL0003.tmp",
-      "PackagePath": "staticwebassets\\files\\report\\~WRL0003.tmp"
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\Отчет - FRONT.docx",
+      "PackagePath": "staticwebassets\\files\\report\\Отчет - FRONT.docx"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\report\\Шаблон_отчета.docx",
@@ -115,6 +119,10 @@
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\ClassDiagram1_.jpg",
       "PackagePath": "staticwebassets\\files\\uml\\approved\\ClassDiagram1_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\ComponentDiagram.jpg",
+      "PackagePath": "staticwebassets\\files\\uml\\approved\\ComponentDiagram.jpg"
     },
     {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\files\\uml\\approved\\SequenceDiagram_CreateProduct.jpg",
