@@ -149,6 +149,17 @@ nav ul li a:hover {
     z-index: -10;
 }
 
+/* Настройки для вектора*/
+.vector-basket2 {
+    position: absolute;
+    top: 250px;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 130%;
+    z-index: -10;
+    overflow: hidden;
+}
 
 /* Стили для пустой корзины */
 .empty-cart {
