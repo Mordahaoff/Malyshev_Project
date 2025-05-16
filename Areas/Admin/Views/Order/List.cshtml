@@ -21,7 +21,7 @@
                 <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
                 <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
                 <li class="back-btn">
-                     <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
                 </li>
             </ul>
         </nav>
@@ -43,7 +43,8 @@
             <div class="search-box">
                 <div class="search-row">
                     <label for="search-input">Введите ID магазина:</label>
-                    <input type="text" id="search-input" name="storeId" placeholder="Store ID" class="search-input">
+                    <input type="text" id="search-input" name="storeId" placeholder="Store ID"
+                        value="@ViewData["Request"]" class="search-input">
                     <button type="submit" class="search-btn">OK</button>
                 </div>
             </div>

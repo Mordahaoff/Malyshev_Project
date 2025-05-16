@@ -26,7 +26,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var orders = _db.Orders
 				.Include(o => o.StateOfOrder)
 				.Include(o => o.Store)
-					.ThenInclude(s => s.Address)
+					.ThenInclude(s => s!.Address)
 				.Include(o => o.OrdersProducts)
 					.ThenInclude(op => op.Product)
 				.Include(o => o.User)
@@ -37,6 +37,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (storeId != null)
 			{
 				orders = orders.Where(o => o.StoreId == storeId).ToList();
+				ViewData["Request"] = storeId;
 			}
 
 			return View(orders);
@@ -50,7 +51,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var order = _db.Orders
 				.Include(o => o.User)
 				.Include(o => o.Store)
-					.ThenInclude(s => s.Address)
+					.ThenInclude(s => s!.Address)
 				.Include(o => o.StateOfOrder)
 				.Include(o => o.OrdersProducts)
 					.ThenInclude(op => op.Product)
@@ -68,7 +69,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var order = _db.Orders
 				.Include(o => o.User)
 				.Include(o => o.Store)
-					.ThenInclude(s => s.Address)
+					.ThenInclude(s => s!.Address)
 				.Include(o => o.StateOfOrder)
 				.Include(o => o.OrdersProducts)
 					.ThenInclude(op => op.Product)

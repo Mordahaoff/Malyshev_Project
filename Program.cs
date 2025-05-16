@@ -24,8 +24,16 @@ public class Program
 		//	.AddCookie(options => options.LoginPath = "/Auth/Login");
 		//builder.Services.AddAuthorization();
 
-		string? connectionString = builder.Configuration.GetConnectionString("ArtyomConnection");
-		builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
+		try
+		{
+			string? connectionString = builder.Configuration.GetConnectionString("ArtyomConnection");
+			builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
+		}
+		catch (Exception)
+		{
+			string? connectionString = builder.Configuration.GetConnectionString("JuliaConnection");
+			builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
+		}
 
 		var app = builder.Build();
 

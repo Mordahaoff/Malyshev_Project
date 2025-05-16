@@ -31,7 +31,9 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			{
 				stores = stores.Where(s =>
 					s.Address.City.ToLower().Contains(storeAddress.ToLower()) ||
-					s.Address.Street.ToLower().Contains(storeAddress.ToLower())).ToList();
+					s.Address.Street.ToLower().Contains(storeAddress.ToLower()) ||
+					s.Address.Building.Contains(storeAddress)).ToList();
+				ViewData["Request"] = storeAddress;
 			}
 
 			return View(stores);

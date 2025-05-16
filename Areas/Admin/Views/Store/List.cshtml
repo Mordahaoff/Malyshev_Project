@@ -24,55 +24,55 @@
                 <li class="active"><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
                 <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
                 <li class="back-btn">
-                     <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <div class="header-line"></div>
-        <img src="~/img/vector/vector_basket1.png" class="vector-basket1" />
+    <img src="~/img/vector/vector_basket1.png" class="vector-basket1" />
 
-        <div class="breadcrumbs-search-container">
-            <div class="breadcrumbs-container">
-                <div class="breadcrumbs">
-                    <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
-                    <span class="arrow"> > </span>
-                    <span class="current">Магазины</span>
+    <div class="breadcrumbs-search-container">
+        <div class="breadcrumbs-container">
+            <div class="breadcrumbs">
+                <a asp-controller="Menu" asp-action="Index">Админ-панель</a>
+                <span class="arrow"> > </span>
+                <span class="current">Магазины</span>
+            </div>
+        </div>
+        <form method="get" class="search-container">
+            <div class="search-box">
+                <div class="search-row">
+                    <label for="search-input">Введите адрес:</label>
+                    <input type="text" id="search-input" name="storeAddress" placeholder="Address"
+                        value="@ViewData["Request"]" class="search-input" />
+                    <button type="submit" class="search-btn">OK</button>
+                    <span class="search-or">ИЛИ</span>
+                    <a asp-action="Create" class="create-btn">СОЗДАТЬ МАГАЗИН</a>
                 </div>
             </div>
-            <form method="get" class="search-container">
-                <div class="search-box">
-                    <div class="search-row">
-                        <label for="search-input">Введите адрес:</label>
-                        <input type="text" id="search-input" name="storeAddress" placeholder="Address"
-                            class="search-input" />
-                        <button type="submit" class="search-btn">OK</button>
-                        <span class="search-or">ИЛИ</span>
-                        <a asp-action="Create" class="create-btn">СОЗДАТЬ МАГАЗИН</a>
-                    </div>
-                </div>
-            </form>
-        </div>
+        </form>
+    </div>
 
-        <div class="store-list">
-            @foreach (var item in Model)
-            {
-                <div class="store-card">
-                    <div class="store-info">
-                        <p><strong>ID магазина:</strong> @item.IdStore</p>
-                        <p><strong>Город:</strong> @item.Address.City</p>
-                        <p><strong>Улица:</strong> @item.Address.Street</p>
-                        <p><strong>Дом:</strong> @item.Address.Building</p>
-                    </div>
-                    <div class="store-actions">
-                        <a asp-action="Details" asp-route-id="@item.IdStore" class="btn-details">О магазине</a>
-                        <a asp-action="Edit" asp-route-id="@item.IdStore" class="btn-edit">Изменить</a>
-                        <a asp-action="Delete" asp-route-id="@item.IdStore" class="btn-delete">Удалить</a>
-                    </div>
-
+    <div class="store-list">
+        @foreach (var item in Model)
+        {
+            <div class="store-card">
+                <div class="store-info">
+                    <p><strong>ID магазина:</strong> @item.IdStore</p>
+                    <p><strong>Город:</strong> @item.Address.City</p>
+                    <p><strong>Улица:</strong> @item.Address.Street</p>
+                    <p><strong>Дом:</strong> @item.Address.Building</p>
                 </div>
-            }
+                <div class="store-actions">
+                    <a asp-action="Details" asp-route-id="@item.IdStore" class="btn-details">О магазине</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdStore" class="btn-edit">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdStore" class="btn-delete">Удалить</a>
+                </div>
+
+            </div>
+        }
     </div>
 
 </body>

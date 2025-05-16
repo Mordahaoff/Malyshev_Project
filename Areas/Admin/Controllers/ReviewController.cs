@@ -35,6 +35,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			if (userLogin != null)
 			{
 				reviews = reviews.Where(r => r.User.Login == userLogin).ToList();
+				ViewData["Request"] = userLogin;
 			}
 
 			return View(reviews);
