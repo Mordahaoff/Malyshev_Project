@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>30as7hujlr</Fingerprint>
-      <Integrity>XfNP235+SJnViXEIZ0S/inImtD2oinlZjrJmPU6c8QE=</Integrity>
+      <Fingerprint>8f8uszd4h2</Fingerprint>
+      <Integrity>3KFyXI9iu1ynkIC8h1LS9oQRL6vK9EtUVsD8lz+yGys=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\basket.css'))</OriginalItemSpec>
@@ -192,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7r81sqtg17</Fingerprint>
-      <Integrity>bQl3aNgObJGRTnnxWxtGze6hKzvVJDfbSCj6NpTvsYE=</Integrity>
+      <Fingerprint>c7l6bwzhzt</Fingerprint>
+      <Integrity>KHTUV5mv5zm42uumBhadm0eohvxLFIVrcJyWejx+crY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css_admin\order_edit.css'))</OriginalItemSpec>

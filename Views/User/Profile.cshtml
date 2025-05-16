@@ -58,6 +58,10 @@
 					<div class="profile-buttons">
 						<button type="submit" class="btn save-btn">Сохранить изменения</button>
 						<a asp-controller="Auth" asp-action="Logout" class="btn logout-btn">Выйти из аккаунта</a>
+						@if (Model.RoleId == 2) // Проверяем, является ли пользователь администратором (ID роли = 2)
+						{
+							<a asp-controller="Menu" asp-action="Index" asp-area="Admin" class="btn admin-btn">Перейти на админ-панель</a>
+						}
 					</div>
 				</div>
 

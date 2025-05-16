@@ -230,6 +230,15 @@ nav ul li a:hover {
 .logout-btn:hover {
     background-color: #d32f2f;
 }
+.admin-btn {
+    background-color: #f9b300;
+    color: white;
+}
+.admin-btn:hover {
+    background-color: #d49b00;
+}
+
+
 .profile-info {
     flex: 2;
     min-width: 300px;
