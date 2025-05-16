@@ -81,25 +81,35 @@ nav ul li a:hover {
 }
 
 
-.cabinet-btn a {
-    display: flex;
+/* Кнопки с увеличением */
+.cabinet-btn a,
+.catalog-btn {
+    display: inline-flex; 
     align-items: center;
-    background-color: #F9B300; 
-    padding: 15px 35px;
+    justify-content: center;
+    background-color: #F9B300;
+    padding: 15px 20px;
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff !important;
-    transition: transform 0.2s ease-in-out; 
+    color: #fff !important;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
+
+.cabinet-btn a:hover,
+.catalog-btn:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Иконки у кабинета */
 .cabinet-btn img {
     width: 24px;
     height: 24px;
     margin-left: 10px;
-}
-.cabinet-btn a:hover {
-    cursor: pointer;
-    transform: scale(1.1);
 }
 
 /*Превью*/
@@ -127,24 +137,8 @@ nav ul li a:hover {
     padding-bottom: 10px;
  }
 
-  .preview-info .btn{
-    background: #F9B300;
-    color: #fff;
-    border-radius: 25px;
-    padding: 15px 30px;
-    border: none;
-    transition: transform 0.2s ease-in-out;
-    font-weight: 800;
-    font-size: 22px;
- }
- .preview-info .btn:hover{
-    cursor: pointer;
-    transform: scale(1.1);
- }
-
 .preview-images img {
     position: absolute;
-    transition: transform 0.3s ease-in-out;
 }
  
 .img-whey {

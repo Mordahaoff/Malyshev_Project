@@ -55,8 +55,6 @@
 			<input type="hidden" asp-for="Order!.IdOrder" value="@Model.Order.IdOrder" />
 			<input type="hidden" asp-for="Order!.UserId" value="@Model.Order.UserId" />
 			<input type="hidden" asp-for="Order!.StateOfOrderId" value="@Model.Order.StateOfOrderId" />
-			<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
-			<img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
 			<div class="basket-products">
 				@for (int i = 0; i < Model.Products!.Count; i++)
 				{

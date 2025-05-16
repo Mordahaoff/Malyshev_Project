@@ -289,6 +289,14 @@
       "PackagePath": "staticwebassets\\img\\team_card2.png"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\team_card3.png",
+      "PackagePath": "staticwebassets\\img\\team_card3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\team_card4.png",
+      "PackagePath": "staticwebassets\\img\\team_card4.png"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\wwwroot\\img\\vector\\vector_about.png",
       "PackagePath": "staticwebassets\\img\\vector\\vector_about.png"
     },
