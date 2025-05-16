@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f2xiidlzoz</Fingerprint>
-      <Integrity>GdJnZ/rm7vmNSVakbCpbuIr2npjPkj7/iZuTWQa4E9c=</Integrity>
+      <Fingerprint>j0qng2pcbg</Fingerprint>
+      <Integrity>jTRxrfelqpbNxiuAKzBdGqwV2VxE1aQDJTVTZ248lW0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\basket.css'))</OriginalItemSpec>

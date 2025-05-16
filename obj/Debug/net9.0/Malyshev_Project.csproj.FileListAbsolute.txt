@@ -651,7 +651,7 @@ C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\t60tbor14d-6i
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\2yj0crnn5y-e27idcxy48.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\x6hffdcayf-c7l6bwzhzt.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\5ibg4lhu48-mipoq7hvnw.gz
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-f2xiidlzoz.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\aljlgbz1pk-rnk3wtsyq2.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-91v9w9xawz.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\3p780mvlu2-wzno3addem.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-j0qng2pcbg.gz

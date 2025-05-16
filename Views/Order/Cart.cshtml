@@ -1,4 +1,5 @@
-﻿@model CartModel;
+﻿@using Malyshev_Project.Models 
+@model CartModel
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -33,7 +34,7 @@
 		</nav>
 	</header>
 	<div class="header-line"></div>
-	<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+	  <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
 
 	<div class="breadcrumbs-container">
 		<div class="breadcrumbs">
@@ -59,6 +60,7 @@
 				@for (int i = 0; i < Model.Products!.Count; i++)
 				{
 					var op = Model.Products[i];
+					string units = op.Product.GetUnits(); // Используем существующий метод
 
 					<input type="hidden" asp-for="Products[i].IdOrdersProducts" value="@op.IdOrdersProducts" />
 					<input type="hidden" asp-for="Products[i].ProductId" value="@op.ProductId" />
@@ -68,21 +70,18 @@
 						<img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
 						<div class="basket-info">
 							<h3>@op.Product.Name</h3>
-							<p>@op.Product.Volume @op.Product.GetUnits()</p>
+							<p>@op.Product.Volume @units</p>
 							<div class="basket-price-controls">
 								<span class="single-price">@op.Product.Price ₽</span>
 								<div class="counter">
-									<button type="button" class="counter-btn"
-										onclick="decreaseCount('countOfProduct@(i)')">-</button>
-									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)"
-										value="@op.CountOfProduct" class="count" readonly />
-									<button type="button" class="counter-btn"
-										onclick="increaseCount('countOfProduct@(i)')">+</button>
+									<button type="button" class="counter-btn" onclick="decreaseCount('countOfProduct@(i)')">-</button>
+									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)" value="@op.CountOfProduct" class="count" readonly />
+									<button type="button" class="counter-btn" onclick="increaseCount('countOfProduct@(i)')">+</button>
 								</div>
-								<span class="item-total">@(op.Product.Price* op.CountOfProduct) ₽</span>
+								<span class="item-total">@(op.Product.Price * op.CountOfProduct) ₽</span>
 							</div>
 							<a class="delete-btn" asp-controller="Order" asp-action="RemoveProductFromCart"
-								asp-route-id="@op.ProductId">Удалить</a>
+							asp-route-id="@op.ProductId">Удалить</a>
 						</div>
 					</div>
 				}
@@ -111,7 +110,7 @@
 
 	}
 
-
+	
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="footer-content">
