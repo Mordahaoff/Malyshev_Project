@@ -42,8 +42,13 @@
 			<div class="product-left">
 				<img src="@Model.Product.Photo" alt="@Model.Product.Name"
 					class="product-main-image">
-				<a class="add-to-cart-btn" asp-controller="Order" asp-action="AddProductToCart"
-					asp-route-id="@Model.Product.IdProduct">Добавить в корзину</a>
+				<a asp-controller="Order" asp-action="AddProductToCart" 
+					asp-route-id="@Model.Product.IdProduct"
+					class="btn add-to-cart-btn"
+					data-product-id="@Model.Product.IdProduct">
+					Добавить в корзину
+				</a>
+
 			</div>
 
 			<div class="product-right">
@@ -193,6 +198,67 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const button = document.querySelector('.add-to-cart-btn');
+
+		const updateButtonState = (button, isAdded) => {
+			button.textContent = isAdded ? 'Товар добавлен в корзину' : 'Добавить в корзину';
+			button.classList.toggle('added', isAdded);
+		};
+
+		const checkCartStatus = async (productId) => {
+			try {
+				const response = await fetch(`/Order/IsProductInCart?productId=${productId}`);
+				if (!response.ok) throw new Error('Ошибка сети');
+				return await response.json();
+			} catch (error) {
+				console.error('Ошибка при проверке корзины:', error);
+				return false;
+			}
+		};
+
+		const initializeButton = async () => {
+			if (!button) return;
+			const productId = button.dataset.productId;
+			const isInCart = await checkCartStatus(productId);
+			updateButtonState(button, isInCart);
+		};
+
+		if (!button) return;
+
+		button.addEventListener('click', async (e) => {
+			e.preventDefault();
+			const productId = button.dataset.productId;
+			const isCurrentlyInCart = button.textContent.includes('добавлен');
+
+			try {
+				const response = await fetch(
+					isCurrentlyInCart
+						? `/Order/RemoveProductFromCartAjax?productId=${productId}`
+						: `/Order/AddProductToCartAjax?productId=${productId}`,
+					{
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' }
+					}
+				);
+
+				if (response.ok) {
+					updateButtonState(button, !isCurrentlyInCart);
+				} else {
+					console.error('Ошибка при обновлении корзины');
+				}
+			} catch (error) {
+				console.error('Ошибка:', error);
+			}
+		});
+
+		initializeButton();
+	});
+	</script>
+
+
 </body>
 
 </html>

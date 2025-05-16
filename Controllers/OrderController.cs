@@ -145,5 +145,85 @@ namespace Malyshev_Project.Controllers
 
 			return RedirectToAction("Cart", "Order");
 		}
+
+		// Для изменения статуса "добавить в корзину" и "товар добавлен в корзину"
+		// Проверка наличия товара в корзине (для состояния кнопки)
+		[HttpGet]
+		public async Task<IActionResult> IsProductInCart(int productId)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return Json(false);
+
+			var order = await _db.Orders
+				.Include(o => o.OrdersProducts)
+				.FirstOrDefaultAsync(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
+
+			return Json(order?.OrdersProducts.Any(op => op.ProductId == productId) ?? false);
+		}
+
+		// AJAX версия добавления в корзину
+		[HttpPost]
+		public async Task<IActionResult> AddProductToCartAjax(int productId)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return Unauthorized("Пользователь не авторизован");
+
+			var product = await _db.Products.FindAsync(productId);
+			if (product == null) return NotFound("Товар не найден");
+
+			var order = await _db.Orders
+				.Include(o => o.OrdersProducts)
+				.FirstOrDefaultAsync(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
+
+			if (order == null)
+			{
+				order = new Order { UserId = user.IdUser, StateOfOrderId = 1 };
+				_db.Orders.Add(order);
+				await _db.SaveChangesAsync();
+			}
+
+			var existingItem = order.OrdersProducts.FirstOrDefault(op => op.ProductId == productId);
+			if (existingItem != null)
+			{
+				existingItem.CountOfProduct += 1;
+				_db.OrdersProducts.Update(existingItem);
+			}
+			else
+			{
+				_db.OrdersProducts.Add(new OrdersProduct 
+				{ 
+					OrderId = order.IdOrder, 
+					ProductId = productId, 
+					CountOfProduct = 1 
+				});
+			}
+
+			await _db.SaveChangesAsync();
+			return Ok();
+		}
+
+		// AJAX версия удаления из корзины
+		[HttpPost]
+		public async Task<IActionResult> RemoveProductFromCartAjax(int productId)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return Unauthorized("Пользователь не авторизован");
+
+			var order = await _db.Orders
+				.Include(o => o.OrdersProducts)
+				.FirstOrDefaultAsync(o => o.UserId == user.IdUser && o.StateOfOrderId == 1);
+
+			if (order == null) return NotFound("Корзина не найдена");
+
+			var item = order.OrdersProducts.FirstOrDefault(op => op.ProductId == productId);
+			if (item == null) return NotFound("Товар не найден в корзине");
+
+			_db.OrdersProducts.Remove(item);
+			await _db.SaveChangesAsync();
+			return Ok();
+		}
+
+
+
 	}
 }

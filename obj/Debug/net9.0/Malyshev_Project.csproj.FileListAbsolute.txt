@@ -642,7 +642,6 @@ C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\4i6m4b88fc-5s
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\e4q2tn89zr-gcidatxqgr.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\wtse7mv8yk-5wydk2djl9.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\yjz81oy4oe-ar2zyofjjz.gz
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\3p780mvlu2-v184k57ure.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\j84t21q08c-8qza8guxuh.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\gjw7zvwg1v-jwzc5wxyow.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\zgglblzsn7-i5i4p4fo6i.gz
@@ -650,8 +649,9 @@ C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\0swbyv06mq-9s
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\t5s2wnz3dq-493wosfi25.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\t60tbor14d-6iuwvnixky.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\2yj0crnn5y-e27idcxy48.gz
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-y4yn69jcio.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\x6hffdcayf-c7l6bwzhzt.gz
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-d73cmczxks.gz
-C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\aljlgbz1pk-aqfto3iro0.gz
 C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\5ibg4lhu48-mipoq7hvnw.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\ir3317wh65-f2xiidlzoz.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\aljlgbz1pk-rnk3wtsyq2.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\38j7by0bd5-91v9w9xawz.gz
+C:\Users\Asus\Desktop\Malyshev_Project\obj\Debug\net9.0\compressed\3p780mvlu2-wzno3addem.gz

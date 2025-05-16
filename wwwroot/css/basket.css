@@ -11,7 +11,10 @@
 
 body {
     background-color: #fff;
-    overflow-x: hidden; /* Запрещаем горизонтальный скролл */
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -403,7 +406,7 @@ nav ul li a:hover {
 /* Футер */
 .footer {
     color: #000;
-    padding: 30px 0 10px;
+    padding: 30px 0 0px;
     background-color: #fff;
     width: 100%;
     clear: both;
