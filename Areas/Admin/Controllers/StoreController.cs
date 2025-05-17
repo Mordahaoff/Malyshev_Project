@@ -51,13 +51,9 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.FirstOrDefault(s => s.IdStore == id);
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
-			var model = new StoreModel()
-			{
-				Store = store,
-				Products = store.StoresProducts.OrderBy(sp => sp.ProductId).ToList(),
-			};
+			store.StoresProducts = store.StoresProducts.OrderBy(sp => sp.ProductId).ToList();
 
-			return View(model);
+			return View(store);
 		}
 
 		public IActionResult Create()

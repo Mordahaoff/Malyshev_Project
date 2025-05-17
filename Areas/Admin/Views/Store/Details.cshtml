@@ -1,4 +1,4 @@
-﻿@model StoreModel;
+﻿@model Store;
 
 <!DOCTYPE html>
 <html>
@@ -37,84 +37,69 @@
 			<span class="arrow"> > </span>
 			<a asp-controller="Store" asp-action="List">Магазины</a>
 			<span class="arrow"> > </span>
-			<span class="value"> Информация о товарах магазина: </span>
+			<span class="value">ID: @Model.IdStore</span>
 		</div>
 	</div>
 
 	<div class="form-container">
 		<div class="form-wrapper">
-			<form asp-action="Edit" method="post">
-				<input type="hidden" asp-for="Store.IdStore" />
-				<input type="hidden" asp-for="Store.Address.IdAddress" />
+			<div class="form-group">
+				<label>ID магазина:</label>
+				<input type="text" class="form-control" value="@Model.IdStore" readonly />
+			</div>
 
-				<div class="form-group">
-					<label>ID магазина:</label>
-					<input type="text" class="form-control" value="@Model.Store.IdStore" readonly />
-				</div>
+			<div class="form-group">
+				<label asp-for="Address.City" class="control-label">Город:</label>
+				<input asp-for="Address.City" class="form-control" readonly />
+				<span asp-validation-for="Address.City" class="text-danger"></span>
+			</div>
 
-				<div class="form-group">
-					<label asp-for="Store.Address.City" class="control-label">Город:</label>
-					<input asp-for="Store.Address.City" class="form-control" />
-					<span asp-validation-for="Store.Address.City" class="text-danger"></span>
-				</div>
+			<div class="form-group">
+				<label asp-for="Address.Street" class="control-label">Улица:</label>
+				<input asp-for="Address.Street" class="form-control" readonly />
+				<span asp-validation-for="Address.Street" class="text-danger"></span>
+			</div>
 
-				<div class="form-group">
-					<label asp-for="Store.Address.Street" class="control-label">Улица:</label>
-					<input asp-for="Store.Address.Street" class="form-control" />
-					<span asp-validation-for="Store.Address.Street" class="text-danger"></span>
-				</div>
+			<div class="form-group">
+				<label asp-for="Address.Building" class="control-label">Дом:</label>
+				<input asp-for="Address.Building" class="form-control" readonly />
+				<span asp-validation-for="Address.Building" class="text-danger"></span>
+			</div>
 
-				<div class="form-group">
-					<label asp-for="Store.Address.Building" class="control-label">Дом:</label>
-					<input asp-for="Store.Address.Building" class="form-control" />
-					<span asp-validation-for="Store.Address.Building" class="text-danger"></span>
-				</div>
-
-				<div class="wide-table-container">
-					<div class="table-wrapper">
-						<h2 class="inventory-title">Список товаров</h2>
-						<div class="table-container">
-							<table class="inventory-table">
-								<thead>
+			<div class="wide-table-container">
+				<div class="table-wrapper">
+					<h2 class="inventory-title">Список товаров</h2>
+					<div class="table-container">
+						<table class="inventory-table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Наименование продукта</th>
+									<th>Количество товара</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var sp in Model.StoresProducts)
+								{
 									<tr>
-										<th>ID</th>
-										<th>Наименование продукта</th>
-										<th>Количество товара</th>
+										<td>@sp.ProductId</td>
+										<td><a asp-controller="Product" asp-action="Details" asp-route-id="@sp.ProductId"
+												style="color: black; text-decoration: none;"
+												target="_blank">@sp.Product.Name</a></td>
+										<td>
+											<input type="number" value="@sp.CountOfProduct" class="product-count-input"
+												readonly />
+										</td>
 									</tr>
-								</thead>
-								<tbody>
-									@for (int i = 0; i < Model.Products.Count; i++)
-									{
-										var sp = Model.Products[i];
-
-										<input type="hidden" asp-for="Products[i].IdStoresProducts"
-											value="@sp.IdStoresProducts" />
-										<input type="hidden" asp-for="Products[i].ProductId" value="@sp.ProductId" />
-										<input type="hidden" asp-for="Products[i].StoreId" value="@sp.StoreId" />
-
-										<tr>
-											<td>@sp.ProductId</td>
-											<td><a asp-controller="Product" asp-action="Details"
-													asp-route-id="@sp.ProductId"
-													style="color: black; text-decoration: none;"
-													target="_blank">@sp.Product.Name</a></td>
-											<td>
-												<input type="number" asp-for="Products[i].CountOfProduct"
-													value="@sp.CountOfProduct" min="0" class="product-count-input"
-													data-product-id="@sp.ProductId" />
-											</td>
-										</tr>
-									}
-								</tbody>
-							</table>
-						</div>
+								}
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<div class="form-buttons">
-					<button type="submit" class="btn btn-save">Сохранить изменения</button>
-					<a asp-action="List" class="btn btn-back">Вернуться к магазинам</a>
-				</div>
-			</form>
+			</div>
+			<div class="form-buttons">
+				<a asp-action="List" class="btn btn-back">Вернуться к магазинам</a>
+			</div>
 		</div>
 	</div>
 </body>
