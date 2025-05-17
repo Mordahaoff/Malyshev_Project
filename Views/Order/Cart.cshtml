@@ -34,6 +34,7 @@
 		</nav>
 	</header>
 	<div class="header-line"></div>
+	<img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
 
 	<div class="breadcrumbs-container">
 		<div class="breadcrumbs">
@@ -44,71 +45,72 @@
 	</div>
 
 	@if (Model.Order == null || !Model.Order.OrdersProducts.Any())
-	{
-		<div class="empty-cart">
-			<p>Ваша корзина пуста</p>
-		</div>
-	}
-	else
-	{
-		<form method="post" class="basket-container">
-			<input type="hidden" asp-for="Order!.IdOrder" value="@Model.Order.IdOrder" />
-			<input type="hidden" asp-for="Order!.UserId" value="@Model.Order.UserId" />
-			<input type="hidden" asp-for="Order!.StateOfOrderId" value="@Model.Order.StateOfOrderId" />
-			<div class="basket-products">
-				@for (int i = 0; i < Model.Products!.Count; i++)
-				{
-					var op = Model.Products[i];
+{
+    <div class="empty-cart">
+        <p>Ваша корзина пуста</p>
+    </div>
+}
+else
+{
+    <form method="post" class="basket-container">
+        <input type="hidden" asp-for="Order!.IdOrder" value="@Model.Order.IdOrder" />
+        <input type="hidden" asp-for="Order!.UserId" value="@Model.Order.UserId" />
+        <input type="hidden" asp-for="Order!.StateOfOrderId" value="@Model.Order.StateOfOrderId" />
+        <div class="basket-products">
+            @for (int i = 0; i < Model.Products!.Count; i++)
+            {
+                var op = Model.Products[i];
 
-					<input type="hidden" asp-for="Products[i].IdOrdersProducts" value="@op.IdOrdersProducts" />
-					<input type="hidden" asp-for="Products[i].ProductId" value="@op.ProductId" />
-					<input type="hidden" asp-for="Products[i].OrderId" value="@op.OrderId" />
+                <input type="hidden" asp-for="Products[i].IdOrdersProducts" value="@op.IdOrdersProducts" />
+                <input type="hidden" asp-for="Products[i].ProductId" value="@op.ProductId" />
+                <input type="hidden" asp-for="Products[i].OrderId" value="@op.OrderId" />
 
-					<div class="basket-item">
-						<img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
-						<div class="basket-info">
-							<h3>@op.Product.Name</h3>
-							<p>@op.Product.Volume @op.Product.GetUnits()</p>
-							<div class="basket-price-controls">
-								<span class="single-price" id="price@(i)">@op.Product.Price ₽</span>
-								<div class="counter">
-									<button type="button" class="counter-btn" onclick="decreaseCount('@(i)')">-</button>
-									<input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)"
-										value="@op.CountOfProduct" class="count" readonly />
-									<button type="button" class="counter-btn" onclick="increaseCount('@(i)')">+</button>
-								</div>
-								<span class="item-total" id="item-total@(i)">@(op.Product.Price* op.CountOfProduct) ₽</span>
-							</div>
-							<a class="delete-btn" asp-controller="Order" asp-action="RemoveProductFromCart"
-								asp-route-id="@op.ProductId">Удалить</a>
-						</div>
-					</div>
-				}
-			</div>
+                <div class="basket-item">
+                    <img src="@op.Product.Photo" alt="@op.Product.Name" class="basket-img">
+                    <div class="basket-info">
+                        <h3>@op.Product.Name</h3>
+                        <p>@op.Product.Volume @op.Product.GetUnits()</p>
+                        <div class="basket-price-controls">
+                            <span class="single-price" id="price@(i)">@op.Product.Price ₽</span>
+                            <div class="counter">
+                                <button type="button" class="counter-btn" onclick="decreaseCount('@(i)')">-</button>
+                                <input type="number" asp-for="Products[i].CountOfProduct" id="countOfProduct@(i)"
+                                    value="@op.CountOfProduct" class="count" readonly />
+                                <button type="button" class="counter-btn" onclick="increaseCount('@(i)')">+</button>
+                            </div>
+                            <span class="item-total" id="item-total@(i)">@(op.Product.Price* op.CountOfProduct) ₽</span>
+                        </div>
+                        <a class="delete-btn" asp-controller="Order" asp-action="RemoveProductFromCart"
+                            asp-route-id="@op.ProductId">Удалить</a>
+                    </div>
+                </div>
+            }
+        </div>
 
-			<div class="basket-summary">
-				<h3>Итого: <span id="cart-total">@(Model.Order.OrdersProducts.Sum(op => op.Product.Price *
-											op.CountOfProduct)) ₽</span></h3>
-			<div class="store-selection">
-				<p>Выбор магазина:</p>
-				@foreach (var store in Model.Stores)
-					{
-						<label>
-							<input asp-for="Order!.StoreId" value="@store.IdStore" type="radio" required> г.
-							@store.Address.City, ул. @store.Address.Street,
-							д.@store.Address.Building
-						</label>
-						if (Model.Stores.Last() != store)
-						{
-							<br>
-						}
-					}
-				</div>
-				<button type="submit" class="order-btn">Оформить заказ</button>
-			</div>
-		</form>
-
-	}
+        <div class="basket-summary-container">
+            <div class="basket-summary">
+                <h3>Итого: <span id="cart-total">@(Model.Order.OrdersProducts.Sum(op => op.Product.Price *
+                                            op.CountOfProduct)) ₽</span></h3>
+                <div class="store-selection">
+                    <p>Выбор магазина:</p>
+                    @foreach (var store in Model.Stores)
+                    {
+                        <label>
+                            <input asp-for="Order!.StoreId" value="@store.IdStore" type="radio" required> г.
+                            @store.Address.City, ул. @store.Address.Street,
+                            д.@store.Address.Building
+                        </label>
+                        if (Model.Stores.Last() != store)
+                        {
+                            <br>
+                        }
+                    }
+                </div>
+                <button type="submit" class="order-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </form>
+}
 
 
 	<footer class="footer">

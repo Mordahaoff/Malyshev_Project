@@ -30,25 +30,20 @@
     <div class="header-line"></div>
     <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
     <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
-
+    <img src="~/img/vector/vector_brand.png" alt="Фон вектора" class="vector-brand">
     <div class="breadcrumbs-container">
         <div class="breadcrumbs">
             <a asp-controller="Home" asp-action="Index">Админ-панель</a>
             <span class="arrow"> > </span>
             <a asp-controller="Store" asp-action="List">Магазины</a>
             <span class="arrow"> > </span>
-            <span class="value">ID: @Model[0].StoreId</span>
+            <span class="value"> Товары в магазине ID: @Model[0].StoreId</span>
         </div>
     </div>
 
     <div class="form-container">
-        <div class="form-wrapper">
+        <div class="form-wrap">
             <form asp-action="EditInventory" method="post">
-
-                <div class="form-group">
-                    <label>ID магазина:</label>
-                    <input type="text" class="form-control" value="@Model[0].StoreId" readonly />
-                </div>
 
                 <div class="wide-table-container">
                     <div class="table-wrapper">
