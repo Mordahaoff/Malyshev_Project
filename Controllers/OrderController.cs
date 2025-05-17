@@ -31,8 +31,9 @@ namespace Malyshev_Project.Controllers
 			{
 				Order = order,
 				Stores = _db.Stores.Include(s => s.Address).ToList(),
-				Products = order?.OrdersProducts.ToList()
 			};
+
+			if (order != null) model.Products = order.OrdersProducts.ToList();
 
 			return View(model);
 		}
@@ -190,11 +191,11 @@ namespace Malyshev_Project.Controllers
 			}
 			else
 			{
-				_db.OrdersProducts.Add(new OrdersProduct 
-				{ 
-					OrderId = order.IdOrder, 
-					ProductId = productId, 
-					CountOfProduct = 1 
+				_db.OrdersProducts.Add(new OrdersProduct
+				{
+					OrderId = order.IdOrder,
+					ProductId = productId,
+					CountOfProduct = 1
 				});
 			}
 

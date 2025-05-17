@@ -108,8 +108,8 @@
 							<div class="review-date">@DateOnly.FromDateTime(DateTime.Now)</div>
 							<div class="review-rating">
 								<span>Оцените товар от 1 до 5:</span>
-								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" class="rating-input"
-									value="5">
+								<input type="number" asp-for="@Model.Review!.Grade" min="1" max="5" maxlength="1"
+									class="rating-input" value="5" required>
 							</div>
 						</div>
 					</div>
