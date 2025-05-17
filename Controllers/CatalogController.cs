@@ -17,7 +17,7 @@ public class CatalogController : Controller
 
 	public IActionResult Products(int? categoryId, int? brandId, int? sortId)
 	{
-		List<Product> products = _db.Products.ToList();
+		List<Product> products = _db.Products.OrderBy(p => p.IdProduct).ToList();
 		var model = new CatalogModel();
 
 		if (categoryId != null)

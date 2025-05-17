@@ -89,7 +89,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			}
 
 			_db.SaveChanges();
-			return RedirectToAction("Edit", "Store", new { id = store.IdStore });
+			return RedirectToAction("EditInventory", "Store", new { id = store.IdStore });
 		}
 
 		public IActionResult Edit(int id)
