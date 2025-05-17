@@ -51,7 +51,19 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 
 			_db.Reviews.Remove(review);
 			_db.SaveChanges();
-			return RedirectToAction("List", "Review");
+
+			// Получение URL страницы, с которой пришёл запрос
+			var referer = HttpContext.Request.Headers.Referer.ToString();
+
+			if (!string.IsNullOrEmpty(referer))
+			{
+				return Redirect(referer);
+			}
+			else
+			{
+				// по умолчанию — редирект на страницу каталога или другую страницу
+				return RedirectToAction("Review", "List");
+			}
 		}
 	}
 }

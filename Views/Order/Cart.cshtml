@@ -167,16 +167,12 @@
 
 				// Предположим, что priceElement.value — строка вида "100 USD" или что-то подобное
 				const priceParts = priceElement.innerText.split(' ');
-				console.log(priceParts[0] + ' ' + priceParts[1]);
 				const pricePerItem = parseInt(priceParts[0], 10);
 
 				// Обновляем значения total
 				// Предположим, что itemTotal.value и cartTotal.value — строки вида "300 USD" или подобное
 				const itemTotalParts = itemTotal.innerText.split(' ');
-				console.log(itemTotalParts[0] + ' ' + itemTotalParts[1]);
-
 				const cartTotalParts = cartTotal.innerText.split(' ');
-				console.log(cartTotalParts[0] + ' ' + cartTotalParts[1]);
 
 				let itemTotalAmount = parseInt(itemTotalParts[0], 10);
 				let cartTotalAmount = parseInt(cartTotalParts[0], 10);
@@ -188,8 +184,6 @@
 				// Обновляем значения
 				itemTotal.innerText = itemTotalAmount + ' ' + itemTotalParts[1];
 				cartTotal.innerText = cartTotalAmount + ' ' + cartTotalParts[1];
-
-				console.log('pricePerItem = ' + pricePerItem + ' ' + priceParts[1]);
 			}
 		}
 
@@ -200,41 +194,37 @@
 			let currentValue = parseInt(input.value, 10);
 			if (isNaN(currentValue)) currentValue = 0;
 
-			currentValue += 1;
-			input.value = currentValue;
+			if (currentValue < 10) {
+				currentValue += 1;
+				input.value = currentValue;
 
-			// Получаем элементы для отображения суммы
-			const itemTotal = document.getElementById('item-total' + elementId);
-			const cartTotal = document.getElementById('cart-total');
-			const priceElement = document.getElementById('price' + elementId);
+				// Получаем элементы для отображения суммы
+				const itemTotal = document.getElementById('item-total' + elementId);
+				const cartTotal = document.getElementById('cart-total');
+				const priceElement = document.getElementById('price' + elementId);
 
-			if (!itemTotal || !cartTotal || !priceElement) return;
+				if (!itemTotal || !cartTotal || !priceElement) return;
 
-			// Предположим, что priceElement.value — строка вида "100 USD" или что-то подобное
-			const priceParts = priceElement.innerText.split(' ');
-			console.log(priceParts[0] + ' ' + priceParts[1]);
-			const pricePerItem = parseInt(priceParts[0], 10);
+				// Предположим, что priceElement.value — строка вида "100 USD" или что-то подобное
+				const priceParts = priceElement.innerText.split(' ');
+				const pricePerItem = parseInt(priceParts[0], 10);
 
-			// Обновляем значения total
-			// Предположим, что itemTotal.value и cartTotal.value — строки вида "300 USD" или подобное
-			const itemTotalParts = itemTotal.innerText.split(' ');
-			console.log(itemTotalParts[0] + ' ' + itemTotalParts[1]);
+				// Обновляем значения total
+				// Предположим, что itemTotal.value и cartTotal.value — строки вида "300 USD" или подобное
+				const itemTotalParts = itemTotal.innerText.split(' ');
+				const cartTotalParts = cartTotal.innerText.split(' ');
 
-			const cartTotalParts = cartTotal.innerText.split(' ');
-			console.log(cartTotalParts[0] + ' ' + cartTotalParts[1]);
+				let itemTotalAmount = parseInt(itemTotalParts[0], 10);
+				let cartTotalAmount = parseInt(cartTotalParts[0], 10);
 
-			let itemTotalAmount = parseInt(itemTotalParts[0], 10);
-			let cartTotalAmount = parseInt(cartTotalParts[0], 10);
+				// Прибавляем цену за один товар
+				itemTotalAmount += pricePerItem;
+				cartTotalAmount += pricePerItem;
 
-			// Прибавляем цену за один товар
-			itemTotalAmount += pricePerItem;
-			cartTotalAmount += pricePerItem;
-
-			// Обновляем значения
-			itemTotal.innerText = itemTotalAmount + ' ' + itemTotalParts[1];
-			cartTotal.innerText = cartTotalAmount + ' ' + cartTotalParts[1];
-
-			console.log('pricePerItem = ' + pricePerItem + ' ' + priceParts[1]);
+				// Обновляем значения
+				itemTotal.innerText = itemTotalAmount + ' ' + itemTotalParts[1];
+				cartTotal.innerText = cartTotalAmount + ' ' + cartTotalParts[1];
+			}
 		}
 	</script>
 </body>

@@ -62,15 +62,14 @@ namespace Malyshev_Project.Controllers
 				}
 				else // Если клиент заказал больше, чем есть в магазине
 				{
-					// Производим доставку 10 продуктов в магазин и отдаем клиенту столько, сколько он заказал
-					productStore.CountOfProduct += (short)(10 - Math.Abs(difference));
+					// Производим доставку продуктов в магазин и отдаем клиенту столько, сколько он заказал
+					productStore.CountOfProduct += (short)(Math.Ceiling((double)difference / 10) * 10 - difference);
 				}
 				_db.StoresProducts.Update(productStore);
 				_db.OrdersProducts.Update(productCart);
 			}
 
 			_db.Orders.Update(model.Order);
-			// _db.OrdersProducts.Update(model.Order.OrdersProducts);
 			_db.SaveChanges();
 
 			return RedirectToAction("Profile", "User");
@@ -224,7 +223,20 @@ namespace Malyshev_Project.Controllers
 			return Ok();
 		}
 
+		public IActionResult Delete(int id)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user == null) return BadRequest("You are authorized.");
 
+			var order = _db.Orders.FirstOrDefault(o => o.IdOrder == id);
+			if (order == null) return BadRequest($"Order ID:[{id}] is not found.");
 
+			if (order.UserId != user.IdUser) return BadRequest($"Order ID:[{id}] is not yours.");
+
+			_db.Orders.Remove(order);
+			_db.SaveChanges();
+
+			return Redirect(HttpContext.Request.Headers.Referer.ToString());
+		}
 	}
 }

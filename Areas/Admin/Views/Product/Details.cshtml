@@ -98,7 +98,9 @@
                     <p class="review-text">@review.Text</p>
 
                     <div class="form-actions">
-                        <button type="submit" class="delete-btn">Удалить отзыв</button>
+                        <a asp-controller="Review" asp-action="Delete" asp-route-id="@review.IdReview">
+                            <button type="button" class="delete-btn">Удалить отзыв</button>
+                        </a>
                     </div>
                 </div>
             }

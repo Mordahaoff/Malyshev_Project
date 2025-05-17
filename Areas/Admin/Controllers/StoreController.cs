@@ -51,7 +51,13 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.FirstOrDefault(s => s.IdStore == id);
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
-			return View(store);
+			var model = new StoreModel()
+			{
+				Store = store,
+				Products = store.StoresProducts.OrderBy(sp => sp.ProductId).ToList(),
+			};
+
+			return View(model);
 		}
 
 		public IActionResult Create()
@@ -102,24 +108,32 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.FirstOrDefault(s => s.IdStore == id);
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
-			return View(store);
+			var model = new StoreModel()
+			{
+				Store = store,
+				Products = store.StoresProducts.OrderBy(sp => sp.ProductId).ToList(),
+			};
+
+			return View(model);
 		}
 
 		[HttpPost]
-		public IActionResult Edit(Store store)
+		public IActionResult Edit(StoreModel model)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			_db.Stores.Update(store);
-			_db.Addresses.Update(store.Address);
-			foreach (var sp in store.StoresProducts)
+			_db.Stores.Update(model.Store);
+			_db.Addresses.Update(model.Store.Address);
+			foreach (var productStore in model.Products)
 			{
+				var sp = _db.StoresProducts.First(sp => sp.IdStoresProducts == productStore.IdStoresProducts);
+				sp.CountOfProduct = productStore.CountOfProduct;
 				_db.StoresProducts.Update(sp);
 			}
 			_db.SaveChanges();
 
-			return RedirectToAction("Edit", "Store", new { id = store.IdStore });
+			return RedirectToAction("Details", "Store", new { id = model.Store.IdStore });
 		}
 
 		public IActionResult Delete(int id)
