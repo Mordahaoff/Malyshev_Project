@@ -2,12 +2,15 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROteinZone - Товары</title>
+    <link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="~/css_admin/product_card.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,20 +21,20 @@
                 <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
                 <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
                 <li class="back-btn">
-                      <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
                 </li>
             </ul>
         </nav>
     </header>
     <div class="header-line"></div>
     <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
-    
+
     <main class="product-page">
         <a asp-controller="Product" asp-action="List" class="back-link">
             <img src="~/img/icon/back.png" alt="Назад">
             Вернуться к списку товаров
         </a>
-        
+
         <div class="product-container">
             <div class="product-left">
                 <img src="@Model.Photo" alt="@Model.Name" class="product-main-image">
@@ -58,7 +61,8 @@
                                 <img src="~/img/icon/location.png" alt="Местоположение">
                                 <div class="store-text">
                                     <p>Количество товара в наличии: <strong>@sp.CountOfProduct шт.</strong></p>
-                                    <p>г. @sp.Store.Address.City, ул. @sp.Store.Address.Street, д.@sp.Store.Address.Building</p>
+                                    <p>г. @sp.Store.Address.City, ул. @sp.Store.Address.Street, д.@sp.Store.Address.Building
+                                    </p>
                                 </div>
                             </li>
                         }
@@ -94,8 +98,8 @@
                     <p class="review-text">@review.Text</p>
 
                     <div class="form-actions">
-						 <button type="submit" class="delete-btn">Удалить отзыв</button>
-					</div>
+                        <button type="submit" class="delete-btn">Удалить отзыв</button>
+                    </div>
                 </div>
             }
         }
@@ -107,4 +111,5 @@
         }
     </div>
 </body>
+
 </html>
