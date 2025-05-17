@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROteinZone - Регистрация</title>
+    <link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="~/css/register.css">
 </head>
 
@@ -38,7 +39,8 @@
             <form asp-controller="Auth" asp-action="Register" method="POST">
                 <input type="text" class="input-field" placeholder="Login" asp-for="Login" required>
                 <input type="email" class="input-field" placeholder="Email" asp-for="Email" required>
-                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
+                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password"
+                    required>
                 <button type="submit" class="btn register-btn">Зарегистрироваться</button>
             </form>
             <div class="auth-actions">

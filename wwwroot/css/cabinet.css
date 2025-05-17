@@ -423,7 +423,27 @@ nav ul li a:hover {
     color: #505050;
 }
 
+/*Удаление заказа*/
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
 
+.delete-btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
 
 /* Футер */
 .footer {

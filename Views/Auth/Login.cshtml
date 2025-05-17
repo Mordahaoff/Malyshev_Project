@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROteinZone - Вход</title>
+    <link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="~/css/login.css">
 </head>
 
@@ -17,7 +18,7 @@
             <img src="~/img/icon/icon_logo.png" alt="Иконка" class="logo-icon">
         </div>
         <div class="header-line"></div>
-    </header>   
+    </header>
 
     <div class="container">
         <div class="left">
@@ -30,12 +31,14 @@
             <form asp-controller="Auth" asp-action="Login" method="POST">
                 <input type="text" class="input-field" placeholder="Login" asp-for="Login" required>
                 <input type="email" class="input-field" placeholder="Email" asp-for="Email" required>
-                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
+                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password"
+                    required>
                 <button type="submit" class="btn login-btn">Войти</button>
             </form>
             <div class="register-actions">
                 <p class="register">Нет аккаунта? Создайте его за минуту!</p>
-                <button onclick="window.location.href='/Auth/Register/'" class="btn register-btn">Зарегистрироваться</button>
+                <button onclick="window.location.href='/Auth/Register/'"
+                    class="btn register-btn">Зарегистрироваться</button>
             </div>
             <p class="guest-link"><a asp-controller="Home" asp-action="Index">Продолжить, как гость</a></p>
         </div>

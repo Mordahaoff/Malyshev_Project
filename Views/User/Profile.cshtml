@@ -7,6 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PROteinZone - Мой профиль</title>
+	<link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="~/css/cabinet.css">
 </head>
 
@@ -149,6 +150,14 @@
 						<div class="order-total">
 							<span>Общая сумма заказа:</span>
 							<strong>@order.OrdersProducts.Sum(op => op.Product.Price * op.CountOfProduct) ₽</strong>
+							@if (order.StateOfOrderId == 2)
+							{
+								<div class="form-actions">
+									<a asp-controller="Order" asp-action="Delete" asp-route-id="@order.IdOrder">
+										<button type="submit" class="delete-btn">Отменить заказ</button>
+									</a>
+								</div>
+							}
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-﻿@model StoreModel;
+@model List<StoresProduct>;
 
 <!DOCTYPE html>
 <html>
@@ -37,37 +37,17 @@
             <span class="arrow"> > </span>
             <a asp-controller="Store" asp-action="List">Магазины</a>
             <span class="arrow"> > </span>
-            <span class="value">ID: @Model.Store.IdStore</span>
+            <span class="value">ID: @Model[0].StoreId</span>
         </div>
     </div>
 
     <div class="form-container">
         <div class="form-wrapper">
-            <form asp-action="Edit" method="post">
-                <input type="hidden" asp-for="Store.IdStore" />
-                <input type="hidden" asp-for="Store.Address.IdAddress" />
+            <form asp-action="EditInventory" method="post">
 
                 <div class="form-group">
                     <label>ID магазина:</label>
-                    <input type="text" class="form-control" value="@Model.Store.IdStore" readonly />
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="Store.Address.City" class="control-label">Город:</label>
-                    <input asp-for="Store.Address.City" class="form-control" />
-                    <span asp-validation-for="Store.Address.City" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="Store.Address.Street" class="control-label">Улица:</label>
-                    <input asp-for="Store.Address.Street" class="form-control" />
-                    <span asp-validation-for="Store.Address.Street" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="Store.Address.Building" class="control-label">Дом:</label>
-                    <input asp-for="Store.Address.Building" class="form-control" />
-                    <span asp-validation-for="Store.Address.Building" class="text-danger"></span>
+                    <input type="text" class="form-control" value="@Model[0].StoreId" readonly />
                 </div>
 
                 <div class="wide-table-container">
@@ -83,23 +63,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @for (int i = 0; i < Model.Products.Count; i++)
+                                    @for (int i = 0; i < Model.Count; i++)
                                     {
-                                        var sp = Model.Products[i];
-
-                                        <input type="hidden" asp-for="Products[i].IdStoresProducts"
+                                        var sp = Model[i];
+                                        <input type="hidden" asp-for="@Model[i].IdStoresProducts"
                                             value="@sp.IdStoresProducts" />
-                                        <input type="hidden" asp-for="Products[i].ProductId" value="@sp.ProductId" />
-                                        <input type="hidden" asp-for="Products[i].StoreId" value="@sp.StoreId" />
+                                        <input type="hidden" asp-for="@Model[i].ProductId" value="@sp.ProductId" />
+                                        <input type="hidden" asp-for="@Model[i].StoreId" value="@sp.StoreId" />
 
                                         <tr>
                                             <td>@sp.ProductId</td>
-                                            <td><a asp-controller="Product" asp-action="Details"
+                                            <td>
+                                                <a asp-controller="Product" asp-action="Details"
                                                     asp-route-id="@sp.ProductId"
                                                     style="color: black; text-decoration: none;"
-                                                    target="_blank">@sp.Product.Name</a></td>
+                                                    target="_blank">@sp.Product.Name</a>
+                                            </td>
                                             <td>
-                                                <input type="number" asp-for="Products[i].CountOfProduct"
+                                                <input type="number" asp-for="@Model[i].CountOfProduct"
                                                     value="@sp.CountOfProduct" min="0" class="product-count-input"
                                                     data-product-id="@sp.ProductId" />
                                             </td>
