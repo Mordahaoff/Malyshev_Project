@@ -59,38 +59,40 @@
 						<h3>Данные профиля:</h3>
 						<div class="input-group">
 							<label asp-for="Surname">Фамилия:</label>
-							<input asp-for="Surname" type="text" value="@Model.Surname" disabled />
+							<input asp-for="Surname" type="text" value="@Model.Surname" placeholder="Фамилия"
+								readonly />
 						</div>
 						<div class="input-group">
 							<label asp-for="Name">Имя:</label>
-							<input asp-for="Name" type="text" value="@Model.Name" disabled>
+							<input asp-for="Name" type="text" value="@Model.Name" placeholder="Имя" readonly>
 						</div>
 						<div class="input-group">
 							<label asp-for="Patronymic">Отчество:</label>
-							<input asp-for="Patronymic" type="text" value="@Model.Patronymic" disabled>
+							<input asp-for="Patronymic" type="text" value="@Model.Patronymic" placeholder="Отчество"
+								readonly>
 						</div>
 						<div class="input-group">
 							<label>Роль:</label>
-							<input type="text" value="@Model.Role?.Name" disabled>
+							<input type="text" value="@Model.Role?.Name" readonly>
 						</div>
 						<div class="input-group">
 							<label asp-for="Email">Email:</label>
-							<input asp-for="Email" type="email" value="@Model.Email" disabled>
+							<input asp-for="Email" type="email" value="@Model.Email" readonly>
 						</div>
 						<div class="input-group">
 							<label asp-for="Telephone">Номер телефона:</label>
 							<input asp-for="Telephone" type="tel" value="@Model.Telephone"
-								placeholder="+7 XXX-XXX-XX-XX" disabled>
+								placeholder="+7 XXX-XXX-XX-XX" readonly>
 						</div>
 
 						<h3>Вход в систему:</h3>
 						<div class="input-group">
 							<label>Логин:</label>
-							<input type="text" value="@Model.Login" disabled>
+							<input type="text" value="@Model.Login" readonly>
 						</div>
 						<div class="input-group">
 							<label>Пароль:</label>
-							<input type="text" value="@Model.Password" disabled>
+							<input type="text" value="@Model.Password" readonly>
 						</div>
 					</div>
 				</div>

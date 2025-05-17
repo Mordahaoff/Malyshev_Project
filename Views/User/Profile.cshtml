@@ -60,7 +60,8 @@
 						<a asp-controller="Auth" asp-action="Logout" class="btn logout-btn">Выйти из аккаунта</a>
 						@if (Model.RoleId == 2) // Проверяем, является ли пользователь администратором (ID роли = 2)
 						{
-							<a asp-controller="Menu" asp-action="Index" asp-area="Admin" class="btn admin-btn">Перейти на админ-панель</a>
+							<a asp-controller="Menu" asp-action="Index" asp-area="Admin" class="btn admin-btn">Перейти на
+								админ-панель</a>
 						}
 					</div>
 				</div>
@@ -69,27 +70,27 @@
 					<h3>Данные профиля:</h3>
 					<div class="input-group">
 						<label asp-for="Photo">Фото (URL):</label>
-						<input asp-for="Photo" type="text" value="@Model.Photo" />
+						<input asp-for="Photo" type="text" value="@Model.Photo" placeholder="Фото (URL)" />
 					</div>
 					<div class="input-group">
 						<label asp-for="Surname">Фамилия:</label>
-						<input asp-for="Surname" type="text" value="@Model.Surname" />
+						<input asp-for="Surname" type="text" value="@Model.Surname" placeholder="Фамилия" />
 					</div>
 					<div class="input-group">
 						<label asp-for="Name">Имя:</label>
-						<input asp-for="Name" type="text" value="@Model.Name">
+						<input asp-for="Name" type="text" value="@Model.Name" placeholder="Имя">
 					</div>
 					<div class="input-group">
 						<label asp-for="Patronymic">Отчество:</label>
-						<input asp-for="Patronymic" type="text" value="@Model.Patronymic">
+						<input asp-for="Patronymic" type="text" value="@Model.Patronymic" placeholder="Отчество">
 					</div>
 					<div class="input-group">
 						<label>Роль:</label>
-						<input type="text" value="@Model.Role.Name" disabled>
+						<input type="text" value="@Model.Role.Name" readonly>
 					</div>
 					<div class="input-group">
 						<label asp-for="Email">Email:</label>
-						<input asp-for="Email" type="email" value="@Model.Email">
+						<input asp-for="Email" type="email" value="@Model.Email" placeholder="Email">
 					</div>
 					<div class="input-group">
 						<label asp-for="Telephone">Номер телефона:</label>
@@ -99,11 +100,11 @@
 					<h3>Вход в систему:</h3>
 					<div class="input-group">
 						<label>Логин:</label>
-						<input type="text" value="@Model.Login" disabled>
+						<input type="text" value="@Model.Login" readonly>
 					</div>
 					<div class="input-group">
 						<label>Пароль:</label>
-						<input type="text" value="@Model.Password" disabled>
+						<input type="text" value="@Model.Password" readonly>
 					</div>
 				</div>
 			</div>
