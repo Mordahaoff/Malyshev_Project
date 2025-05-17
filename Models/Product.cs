@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Malyshev_Project.Models;
+namespace Malyshev_Project;
 
 public partial class Product
 {
@@ -13,7 +13,7 @@ public partial class Product
 
     public string Description { get; set; } = null!;
 
-    public decimal Price { get; set; }
+    public int Price { get; set; }
 
     public int Volume { get; set; }
 

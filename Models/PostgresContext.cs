@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Malyshev_Project.Models;
+namespace Malyshev_Project;
 
 public partial class PostgresContext : DbContext
 {
@@ -40,10 +40,6 @@ public partial class PostgresContext : DbContext
     public virtual DbSet<StoresProduct> StoresProducts { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
-
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=admin;Password=admin");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -109,7 +105,6 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Product).WithMany(p => p.Discounts)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("discounts_product_id_fkey");
         });
 
@@ -137,11 +132,11 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Store).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.StoreId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("orders_store_id_fkey");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("orders_user_id_fkey");
         });
 
@@ -160,12 +155,10 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrdersProducts)
                 .HasForeignKey(d => d.OrderId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("orders_products_order_id_fkey");
 
             entity.HasOne(d => d.Product).WithMany(p => p.OrdersProducts)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("orders_products_product_id_fkey");
         });
 
@@ -216,12 +209,10 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("reviews_product_id_fkey");
 
             entity.HasOne(d => d.User).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("reviews_user_id_fkey");
         });
 
@@ -260,7 +251,6 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Address).WithMany(p => p.Stores)
                 .HasForeignKey(d => d.AddressId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("stores_address_id_fkey");
         });
 
@@ -279,12 +269,10 @@ public partial class PostgresContext : DbContext
 
             entity.HasOne(d => d.Product).WithMany(p => p.StoresProducts)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("stores_products_product_id_fkey");
 
             entity.HasOne(d => d.Store).WithMany(p => p.StoresProducts)
                 .HasForeignKey(d => d.StoreId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("stores_products_store_id_fkey");
         });
 

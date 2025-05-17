@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Malyshev_Project.Models;
+namespace Malyshev_Project;
 
 public partial class Brand
 {
