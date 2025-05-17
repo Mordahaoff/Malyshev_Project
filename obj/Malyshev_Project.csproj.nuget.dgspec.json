@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\Malyshev_Project.csproj": {}
+    "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Malyshev_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\Malyshev_Project.csproj": {
+    "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Malyshev_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\Malyshev_Project.csproj",
+        "projectUniqueName": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Malyshev_Project.csproj",
         "projectName": "Malyshev_Project",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\Malyshev_Project.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\Malyshev_Project\\obj\\",
+        "projectPath": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\Malyshev_Project.csproj",
+        "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

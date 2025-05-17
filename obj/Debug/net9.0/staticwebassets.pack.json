@@ -249,6 +249,10 @@
       "PackagePath": "staticwebassets\\img\\icon\\icon_cabinet.png"
     },
     {
+      "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\icon_logo.ico",
+      "PackagePath": "staticwebassets\\img\\icon\\icon_logo.ico"
+    },
+    {
       "Id": "C:\\Users\\Artem\\Desktop\\Programs\\Malyshev_Project\\wwwroot\\img\\icon\\icon_logo.png",
       "PackagePath": "staticwebassets\\img\\icon\\icon_logo.png"
     },
