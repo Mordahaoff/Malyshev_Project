@@ -40,7 +40,7 @@ ID_Product serial primary key,
 Name_ varchar(255) not null,
 Photo varchar(400) not null,
 Description text not null,
-Price numeric not null,
+Price integer not null,
 Volume integer not null,
 Category_ID integer not null references Categories_of_Products(ID_Category) on update cascade,
 Brand_ID integer not null references Brands(ID_Brand) on update cascade
