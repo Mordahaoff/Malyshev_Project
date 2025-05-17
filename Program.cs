@@ -1,3 +1,4 @@
+using Malyshev_Project.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,8 +24,16 @@ public class Program
 		//	.AddCookie(options => options.LoginPath = "/Auth/Login");
 		//builder.Services.AddAuthorization();
 
-		string? connectionString = builder.Configuration.GetConnectionString("JuliaConnection");
-		builder.Services.AddDbContext<Models.PostgresContext>(options => options.UseNpgsql(connectionString));
+		try
+		{
+			string? connectionString = builder.Configuration.GetConnectionString("ArtyomConnection");
+			builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
+		}
+		catch (Exception)
+		{
+			string? connectionString = builder.Configuration.GetConnectionString("JuliaConnection");
+			builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(connectionString));
+		}
 
 		var app = builder.Build();
 

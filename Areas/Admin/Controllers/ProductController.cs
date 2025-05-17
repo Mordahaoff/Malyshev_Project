@@ -33,6 +33,7 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				products = products
 					.Where(p => p.Name.ToLower().Contains(productName.ToLower().Trim()))
 					.ToList();
+				ViewData["Request"] = productName;
 			}
 
 			return View(products);

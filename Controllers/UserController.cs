@@ -26,7 +26,7 @@ namespace Malyshev_Project.Controllers
 					.ThenInclude(o => o.StateOfOrder)
 				.Include(u => u.Orders)
 					.ThenInclude(o => o.Store)
-						.ThenInclude(s => s.Address)
+						.ThenInclude(s => s!.Address)
 				.Include(o => o.Orders)
 					.ThenInclude(o => o.OrdersProducts)
 						.ThenInclude(op => op.Product)

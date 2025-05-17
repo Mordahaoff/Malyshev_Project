@@ -2,12 +2,14 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROteinZone - Товары</title>
     <link rel="stylesheet" href="~/css_admin/product.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,7 +20,7 @@
                 <li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
                 <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
                 <li class="back-btn">
-                     <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
                 </li>
             </ul>
         </nav>
@@ -40,7 +42,8 @@
             <div class="search-box">
                 <div class="search-row">
                     <label for="search-input">Введите название:</label>
-                    <input type="text" id="search-input" name="productName" placeholder="Name" class="search-input">
+                    <input type="text" id="search-input" name="productName" placeholder="Name"
+                        value="@ViewData["Request"]" class="search-input">
                     <button type="submit" class="search-btn">OK</button>
                     <span class="search-or">ИЛИ</span>
                     <a asp-action="Create" class="create-btn">СОЗДАТЬ</a>
@@ -48,12 +51,13 @@
             </div>
         </form>
     </div>
-    
+
     <div class="products">
         @foreach (var item in Model)
         {
             <div class="product-card">
-                <a asp-controller="Product" asp-action="Details" asp-area="Admin" asp-route-id="@item.IdProduct" class="product-link">
+                <a asp-controller="Product" asp-action="Details" asp-area="Admin" asp-route-id="@item.IdProduct"
+                    class="product-link">
                     <img src="@item.Photo" alt="@item.Name" class="product-image" />
                     <p><strong>ID:</strong> @item.IdProduct</p>
                     <p><strong>Название:</strong> @item.Name</p>
@@ -62,7 +66,7 @@
                     <p><strong>Цена:</strong> @item.Price ₽</p>
                     <p><strong>Объем/кол-во:</strong> @item.Volume @item.GetUnits()</p>
                 </a>
-                
+
                 <div class="card-buttons">
                     <a asp-action="Edit" asp-route-id="@item.IdProduct" class="btn edit-btn">Изменить</a>
                     <a asp-action="Delete" asp-route-id="@item.IdProduct" class="btn delete-btn">Удалить</a>
@@ -71,4 +75,5 @@
         }
     </div>
 </body>
+
 </html>

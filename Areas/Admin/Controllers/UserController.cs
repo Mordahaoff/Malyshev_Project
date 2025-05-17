@@ -24,7 +24,8 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var users = _db.Users.Include(u => u.Role).Where(u => u.IdUser != user.IdUser).OrderBy(u => u.IdUser).ToList();
 			if (userLogin != null)
 			{
-				return RedirectToAction("Details", "User", new { id = _db.Users.FirstOrDefault(u => u.Login == userLogin)?.IdUser });
+				users = users.Where(u => u.Login.Contains(userLogin)).ToList();
+				ViewData["Request"] = userLogin;
 			}
 
 			return View(users);
@@ -35,7 +36,9 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			var userById = _db.Users.FirstOrDefault(u => u.IdUser == id);
+			var userById = _db.Users
+				.Include(u => u.Role)
+				.FirstOrDefault(u => u.IdUser == id);
 			if (userById == null) return NotFound($"User ID:[{id}] is not found.");
 
 			if (!string.IsNullOrEmpty(userById!.Telephone))
@@ -47,7 +50,6 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 					+ "-" + userById.Telephone.Substring(8, 2);
 			}
 
-			//userById!.Orders = userById.Orders.Where(o => o.StateOfOrderId != 1).ToList();
 			return View(userById);
 		}
 
