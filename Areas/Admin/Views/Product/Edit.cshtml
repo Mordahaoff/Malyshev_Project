@@ -9,6 +9,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PROteinZone - Товары</title>
+	<link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="~/css_admin/product_edit.css">
 </head>
 
@@ -22,7 +23,7 @@
 				<li><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
 				<li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
 				<li class="back-btn">
-					  <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+					<a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
 				</li>
 			</ul>
 		</nav>
@@ -46,8 +47,7 @@
 			<form asp-controller="Product" asp-action="Edit" method="post">
 				<div class="form-group">
 					<label asp-for="IdProduct">ID:</label>
-					<input asp-for="IdProduct" type="text" class="form-control" value="@Model.IdProduct"
-						readonly />
+					<input asp-for="IdProduct" type="text" class="form-control" value="@Model.IdProduct" readonly />
 				</div>
 				<div class="form-group">
 					<label asp-for="Name" class="control-label">Название:</label>

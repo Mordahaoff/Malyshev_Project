@@ -6,12 +6,15 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROteinZone - Редактировать заказ</title>
+    <link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="~/css_admin/order_edit.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -40,7 +43,7 @@
             <span class="value">ID: @Model.IdOrder</span>
         </div>
     </div>
-   <div class="order-edit">
+    <div class="order-edit">
         <form asp-action="Edit" method="post">
             <input type="hidden" asp-for="IdOrder" value="@Model.IdOrder" />
             <input type="hidden" asp-for="UserId" value="@Model.UserId" />
@@ -49,11 +52,13 @@
             <div class="order-card">
                 <div class="order-info">
                     <p><strong>Дата изменения статуса:</strong> @Model.DateOfStatusChange</p>
-                    <p><strong>Адрес магазина:</strong> г. @Model.Store!.Address.City, ул. @Model.Store!.Address.Street, д.@Model.Store!.Address.Building</p>
+                    <p><strong>Адрес магазина:</strong> г. @Model.Store!.Address.City, ул. @Model.Store!.Address.Street,
+                        д.@Model.Store!.Address.Building</p>
                     <p><strong>Пользователь:</strong> @Model.User!.Login</p>
 
                     <label for="StateOfOrderId"><strong>Статус заказа:</strong></label>
-                    <select asp-for="StateOfOrderId" asp-items="ViewBag.States" class="form-control status-select"></select>
+                    <select asp-for="StateOfOrderId" asp-items="ViewBag.States"
+                        class="form-control status-select"></select>
                 </div>
 
                 <h3>Товары:</h3>
@@ -84,6 +89,7 @@
                 <a asp-action="List" class="btn btn-back">Вернуться к заказам</a>
             </div>
         </form>
-      </div>
+    </div>
 </body>
+
 </html>

@@ -51,6 +51,8 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.FirstOrDefault(s => s.IdStore == id);
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
+			store.StoresProducts = store.StoresProducts.OrderBy(sp => sp.ProductId).ToList();
+
 			return View(store);
 		}
 
@@ -102,24 +104,32 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 				.FirstOrDefault(s => s.IdStore == id);
 			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
 
-			return View(store);
+			var model = new StoreModel()
+			{
+				Store = store,
+				Products = store.StoresProducts.OrderBy(sp => sp.ProductId).ToList(),
+			};
+
+			return View(model);
 		}
 
 		[HttpPost]
-		public IActionResult Edit(Store store)
+		public IActionResult Edit(StoreModel model)
 		{
 			var user = HttpContext.Session.Get<User>("user");
 			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
 
-			_db.Stores.Update(store);
-			_db.Addresses.Update(store.Address);
-			foreach (var sp in store.StoresProducts)
+			_db.Stores.Update(model.Store);
+			_db.Addresses.Update(model.Store.Address);
+			foreach (var productStore in model.Products)
 			{
+				var sp = _db.StoresProducts.First(sp => sp.IdStoresProducts == productStore.IdStoresProducts);
+				sp.CountOfProduct = productStore.CountOfProduct;
 				_db.StoresProducts.Update(sp);
 			}
 			_db.SaveChanges();
 
-			return RedirectToAction("Edit", "Store", new { id = store.IdStore });
+			return RedirectToAction("Details", "Store", new { id = model.Store.IdStore });
 		}
 
 		public IActionResult Delete(int id)
@@ -133,6 +143,67 @@ namespace Malyshev_Project.Areas.Admin.Controllers
 			_db.Stores.Remove(store);
 			_db.SaveChanges();
 			return RedirectToAction("List", "Store");
+		}
+
+		// Метод для изменения адреса магазина с ID = {id}
+		public IActionResult EditAddress(int id)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
+			var store = _db.Stores
+				.Include(s => s.Address)
+				.FirstOrDefault(s => s.IdStore == id);
+			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
+
+			return View(store);
+		}
+
+		[HttpPost]
+		public IActionResult EditAddress(Store store)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
+			_db.Addresses.Update(store.Address);
+			_db.SaveChanges();
+			return RedirectToAction("EditAddress", "Store", new { id = store.IdStore });
+		}
+
+		// Метод для изменения инвентаря магазина с ID = {id}
+		public IActionResult EditInventory(int id)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
+			var store = _db.Stores
+				.Include(s => s.StoresProducts)
+					.ThenInclude(sp => sp.Product)
+				.FirstOrDefault(s => s.IdStore == id);
+			if (store == null) return NotFound($"Store [ID:{id}] is not found.");
+
+			List<StoresProduct> products = store.StoresProducts
+				.OrderBy(sp => sp.ProductId)
+				.ToList();
+
+			return View(products);
+		}
+
+		[HttpPost]
+		public IActionResult EditInventory(List<StoresProduct> products)
+		{
+			var user = HttpContext.Session.Get<User>("user");
+			if (user?.RoleId != 2) return BadRequest("You are not an admin.");
+
+			foreach (var productStore in products)
+			{
+				var sp = _db.StoresProducts.First(sp => sp.IdStoresProducts == productStore.IdStoresProducts);
+				sp.CountOfProduct = productStore.CountOfProduct;
+				_db.StoresProducts.Update(sp);
+			}
+			_db.SaveChanges();
+
+			return RedirectToAction("EditInventory", "Store", new { id = products[0].StoreId });
 		}
 	}
 }
