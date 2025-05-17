@@ -41,46 +41,90 @@
             <span class="arrow"> > </span>
             <a asp-controller="Store" asp-action="List">Магазины</a>
             <span class="arrow"> > </span>
-            <span class="value">Детали магазина</span>
+			<span class="value"> Информация о товарах магазина: @Model.IdStore</span>
         </div>
     </div>
 
-    <div class="form-container">
-        <div class="form-wrapper">
-            <h2>Информация о магазине</h2>
-            <hr />
+   <div class="form-container">
+    <div class="form-wrapper">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="IdStore" />
+            <input type="hidden" asp-for="Address.IdAddress" />
 
             <div class="form-group">
-                <label>Город:</label>
-                <div>@Model.Address?.City</div>
+                <label>ID магазина:</label>
+                <input type="text" class="form-control" value="@Model.IdStore" readonly />
             </div>
 
             <div class="form-group">
-                <label>Улица:</label>
-                <div>@Model.Address?.Street</div>
+                <label asp-for="Address.City" class="control-label">Город:</label>
+                <input asp-for="Address.City" class="form-control" />
+                <span asp-validation-for="Address.City" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label>Дом:</label>
-                <div>@Model.Address?.Building</div>
+                <label asp-for="Address.Street" class="control-label">Улица:</label>
+                <input asp-for="Address.Street" class="form-control" />
+                <span asp-validation-for="Address.Street" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label>Товары в наличии:</label>
-                <ul>
-                    @foreach (var sp in Model.StoresProducts)
-                    {
-                        <li>@sp.Product?.Name — @sp.CountOfProduct шт.</li>
-                    }
-                </ul>
+                <label asp-for="Address.Building" class="control-label">Дом:</label>
+                <input asp-for="Address.Building" class="form-control" />
+                <span asp-validation-for="Address.Building" class="text-danger"></span>
             </div>
-
+            
+        </form>
+    </div>
+    
+    <div class="wide-table-container">
+        <div class="table-wrapper">
+            <h2 class="inventory-title">Список товаров</h2>
+            <div class="table-container">
+                <table class="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Наименование продукта</th>
+                            <th>Количество товара</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var sp in Model.StoresProducts)
+                        {
+                            <tr>
+                                <td>@sp.ProductId</td>
+                                <td>@sp.Product?.Name</td>
+                                <td>
+                                    <input type="number" 
+                                        value="@sp.CountOfProduct" 
+                                        min="0" 
+                                        class="product-count-input"
+                                        data-product-id="@sp.ProductId" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="form-wrapper">
+        <form asp-action="Edit" method="post">
             <div class="form-buttons">
-                <a asp-action="Edit" asp-route-id="@Model.IdStore" class="btn btn-save">Редактировать</a>
-                <a asp-action="List" class="btn btn-back">Вернуться к списку</a>
+                <button type="submit" class="btn btn-save">Сохранить изменения</button>
+                <a asp-action="List" class="btn btn-back">Вернуться к магазинам</a>
             </div>
-        </div>
+        </form>
     </div>
+</div>
+
+
+    </div>
+
+    @section Scripts {
+        @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
 </body>
 
 </html>
