@@ -1,0 +1,103 @@
+@model List<StoresProduct>;
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROteinZone - Редактировать магазин</title>
+    <link rel="shortcut icon" href="~/img/icon/icon_logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="~/css_admin/store_edit.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-controller="Product" asp-action="List" asp-area="Admin">Товары</a></li>
+                <li><a asp-controller="Order" asp-action="List" asp-area="Admin">Заказы</a></li>
+                <li><a asp-controller="Review" asp-action="List" asp-area="Admin">Отзывы</a></li>
+                <li class="active"><a asp-controller="Store" asp-action="List" asp-area="Admin">Магазины</a></li>
+                <li><a asp-controller="User" asp-action="List" asp-area="Admin">Пользователи</a></li>
+                <li class="back-btn">
+                    <a asp-controller="Home" asp-action="Index" asp-area="">Вернуться</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header-line"></div>
+    <img src="~/img/vector/vector_basket1.png" alt="Фон вектора" class="vector-basket1">
+    <img src="~/img/vector/vector_basket2.png" alt="Фон вектора" class="vector-basket2">
+
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs">
+            <a asp-controller="Home" asp-action="Index">Админ-панель</a>
+            <span class="arrow"> > </span>
+            <a asp-controller="Store" asp-action="List">Магазины</a>
+            <span class="arrow"> > </span>
+            <span class="value">ID: @Model[0].StoreId</span>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="form-wrapper">
+            <form asp-action="EditInventory" method="post">
+
+                <div class="form-group">
+                    <label>ID магазина:</label>
+                    <input type="text" class="form-control" value="@Model[0].StoreId" readonly />
+                </div>
+
+                <div class="wide-table-container">
+                    <div class="table-wrapper">
+                        <h2 class="inventory-title">Список товаров</h2>
+                        <div class="table-container">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Наименование продукта</th>
+                                        <th>Количество товара</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int i = 0; i < Model.Count; i++)
+                                    {
+                                        var sp = Model[i];
+                                        <input type="hidden" asp-for="@Model[i].IdStoresProducts"
+                                            value="@sp.IdStoresProducts" />
+                                        <input type="hidden" asp-for="@Model[i].ProductId" value="@sp.ProductId" />
+                                        <input type="hidden" asp-for="@Model[i].StoreId" value="@sp.StoreId" />
+
+                                        <tr>
+                                            <td>@sp.ProductId</td>
+                                            <td>
+                                                <a asp-controller="Product" asp-action="Details"
+                                                    asp-route-id="@sp.ProductId"
+                                                    style="color: black; text-decoration: none;"
+                                                    target="_blank">@sp.Product.Name</a>
+                                            </td>
+                                            <td>
+                                                <input type="number" asp-for="@Model[i].CountOfProduct"
+                                                    value="@sp.CountOfProduct" min="0" class="product-count-input"
+                                                    data-product-id="@sp.ProductId" />
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-save">Сохранить изменения</button>
+                    <a asp-action="List" class="btn btn-back">Вернуться к магазинам</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
