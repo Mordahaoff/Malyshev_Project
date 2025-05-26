@@ -46,7 +46,6 @@
 					class="btn add-to-cart-btn" data-product-id="@Model.Product.IdProduct">
 					Добавить в корзину
 				</a>
-
 			</div>
 
 			<div class="product-right">
@@ -199,39 +198,46 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
+			// Находим кнопку добавления в корзину
 			const button = document.querySelector('.add-to-cart-btn');
 
+			// Функция обновляет текст и стиль кнопки в зависимости от статуса товара в корзине
 			const updateButtonState = (button, isAdded) => {
 				button.textContent = isAdded ? 'Товар добавлен в корзину' : 'Добавить в корзину';
 				button.classList.toggle('added', isAdded);
 			};
 
+			// Проверяет на сервере, находится ли товар уже в корзине
 			const checkCartStatus = async (productId) => {
 				try {
 					const response = await fetch(`/Order/IsProductInCart?productId=${productId}`);
 					if (!response.ok) throw new Error('Ошибка сети');
-					return await response.json();
+					return await response.json(); // true или false
 				} catch (error) {
 					console.error('Ошибка при проверке корзины:', error);
 					return false;
 				}
 			};
 
+			// Инициализация кнопки при загрузке страницы
 			const initializeButton = async () => {
 				if (!button) return;
 				const productId = button.dataset.productId;
 				const isInCart = await checkCartStatus(productId);
-				updateButtonState(button, isInCart);
+				updateButtonState(button, isInCart); // Устанавливаем начальное состояние кнопки
 			};
 
+			// Если кнопка не найдена — выход
 			if (!button) return;
 
+			// Обработчик клика по кнопке
 			button.addEventListener('click', async (e) => {
 				e.preventDefault();
 				const productId = button.dataset.productId;
 				const isCurrentlyInCart = button.textContent.includes('добавлен');
 
 				try {
+					// Отправляем POST-запрос на добавление или удаление товара из корзины (в зависимости от текущего состояния)
 					const response = await fetch(
 						isCurrentlyInCart
 							? `/Order/RemoveProductFromCartAjax?productId=${productId}`
@@ -242,6 +248,7 @@
 						}
 					);
 
+					// Если успешно — обновляем состояние кнопки
 					if (response.ok) {
 						updateButtonState(button, !isCurrentlyInCart);
 					} else {
@@ -252,9 +259,11 @@
 				}
 			});
 
+			// Запускаем проверку состояния кнопки при загрузке страницы
 			initializeButton();
 		});
 	</script>
+
 
 
 </body>

@@ -6,7 +6,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Размеры элемента включают padding и border*/
     font-family: 'Nunito', sans-serif;
 }
 
@@ -20,8 +20,8 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*Выравнивание по горизонтали*/
+    align-items: center; /*Выравнивание по вертикали*/
     gap: 20px;
 }
 
@@ -39,10 +39,10 @@ header {
 .header-line {
     height: 2px;
     background-color: #6A6060;
-    width: 100%;
+    width: 100%; /*На всю ширину экрана*/
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Тень линии */
 }
-/* Центрируем контейнер */
+
 .container {
     display: flex;
     justify-content: center;
@@ -50,27 +50,25 @@ header {
     max-width: 1288px;
     height: 652px;
     background-color: white;
-    margin: 51px auto; /* Центрирование */
+    margin: 51px auto; /* верх - низ, по бокам автоматически */
 }
 /* Левая часть */
 .left {
-    position: relative;
+    position: relative; /*Относительное позиционирование,
+ начало отсчета для абсолютных элементов*/
     width: 50%;
     background: black;
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /*Выравнивание по левому краю*/
     text-align: left;
-    position: relative;
     height: 100%; /* Задаем высоту */
     overflow: hidden; /* Обрезаем лишнее */
 }
 
-/* Заголовок в левой части */
 .left h2 {
-    position: absolute; /* Позволяет точно задать отступы */
     top: -200px;
     font-size: 40px;
     font-weight: 900;
@@ -88,7 +86,7 @@ header {
 .athlete-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Заполняем контейнер */
+    object-fit: cover; /* Заполняем контейнер с сохранением пропорций*/
     position: absolute;
     top: 0;
     left: 0;
@@ -134,7 +132,7 @@ form {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 15px;
-    border: none;
+    border: none; /*без рамки*/
     text-align: left;
 }
 
@@ -147,27 +145,24 @@ form {
     background: white;
     color: black;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer; /*Курсор-указатель при наведении*/
     border-radius: 10px;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0px; /* Расстояние между кнопками */
 }
 
 .register-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px; /* расстояние между текстом и кнопкой */
     margin-top: 10px;
 }
 
 .register {
     font-size: 18px;
     font-weight: 500;
-    margin: 0;
     color: #505050;
 }
 
@@ -186,7 +181,7 @@ form {
 
 .guest-link a {
     color: #505050;
-    text-decoration: underline;
+    text-decoration: underline; /*Подчеркивание*/
     transition: color 0.3s;
 }
 

@@ -149,24 +149,23 @@ nav ul li a:hover {
     padding: 0 30px;
 }
 
-
 .profile-section {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-between;/*Распределение пространства между элементами*/
+    align-items: flex-start;/*Выравнивание по верхнему краю*/
     gap: 100px;
     flex-wrap: wrap;
 }
 
 .profile-photo {
-    flex: 1;
+    flex: 1;/*Одна часть пространства*/
     text-align: center;
 }
 
 .profile-photo img {
     width: 300px;
     height: 300px;
-    object-fit: cover;
+    object-fit: cover;/*Сохранение пропорций, обрезка изображения*/
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -195,10 +194,10 @@ nav ul li a:hover {
 }
 
 .btn {
-    flex: 1;
+    flex: 1;/*Равномерное распределение*/
     min-width: 200px;
     max-width: 300px;
-    text-decoration: none;
+    text-decoration: none;/*Убираем подчеркивание*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +209,7 @@ nav ul li a:hover {
     border: none;
     cursor: pointer;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box;/*Включаем padding в общую ширину*/
 }
 
 .save-btn {
@@ -238,9 +237,8 @@ nav ul li a:hover {
     background-color: #d49b00;
 }
 
-
 .profile-info {
-    flex: 2;
+    flex: 2;/*Занимает больше места*/
     min-width: 300px;
 }
 
@@ -337,7 +335,7 @@ nav ul li a:hover {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Выравнивает элементы по левому краю контейнера */
     margin-bottom: 30px;
 }
 
@@ -348,9 +346,9 @@ nav ul li a:hover {
 }
 
 .product-item {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex;/*Горизонтальное расположение элементов*/
+    flex-direction: row;/* Указывает направление размещения — в строку (по горизонтали) */
+    align-items: flex-start;/* Выравнивает элементы по верхнему краю (по вертикали) */
     width: 100%;
     max-width: 600px;
     gap: 30px;
@@ -360,7 +358,7 @@ nav ul li a:hover {
 .product-item img {
     width: 200px;
     height: 200px;
-    object-fit: contain;
+    object-fit: contain;/*Сохранение пропорций*/
     border: 1px solid #ddd;
     border-radius: 15px;
     background: #f9f9f9;
@@ -389,7 +387,7 @@ nav ul li a:hover {
     font-size: 20px;
 }
 
-/* Новые стили для контейнера общей суммы */
+/* Контейнер общей суммы */
 .order-total-container {
     display: flex;
     flex-direction: column;
@@ -430,7 +428,7 @@ nav ul li a:hover {
 /*Удаление заказа*/
 .form-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;/*Выравнивание по правому краю*/
 }
 
 .delete-btn {

@@ -84,7 +84,7 @@ nav ul li a:hover {
 /* Кнопки с увеличением */
 .cabinet-btn a,
 .catalog-btn {
-    display: inline-flex; 
+    display: inline-flex;  /* Блочно-строчный элемент с flex для центрирования содержимого */
     align-items: center;
     justify-content: center;
     background-color: #F9B300;
@@ -96,7 +96,6 @@ nav ul li a:hover {
     text-decoration: none;
     transition: transform 0.2s ease-in-out;
     border: none;
-    cursor: pointer;
 }
 
 .cabinet-btn a:hover,
@@ -117,12 +116,12 @@ nav ul li a:hover {
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
-    overflow:unset; /* Обрезаем лишнее */
+    overflow:unset; /* Разрешает выход содержимого за пределы контейнера */
  }
  .preview-info {
     width: 1000px;
     padding: 120px 90px;
-    line-height: 55px;
+    line-height: 55px;/* Высота строки для удобства чтения */
  }
 
  .preview-info h1 {
@@ -138,7 +137,7 @@ nav ul li a:hover {
  }
 
 .preview-images img {
-    position: absolute;
+    position: absolute;/* Абсолютное позиционирование для наложения изображений */
 }
  
 .img-whey {
@@ -171,11 +170,11 @@ nav ul li a:hover {
     right: 0;
     width: 50%; 
     height: 150%;
-    z-index: -10;
+    z-index: -10;/* Очень низкий слой, чтобы быть фоном */
 }
 /*Блок - "почему мы?"*/
 .why-choose-us {
-    padding: 60px 10%;
+    padding: 60px 10%;/* Отступы сверху/снизу и по бокам 10% */
 }
 
 .why-container {
@@ -183,7 +182,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    margin: auto;
+    margin: auto; /* Центрирует блок по горизонтали */
 }
 
 .why-image img {
@@ -202,13 +201,13 @@ nav ul li a:hover {
 }
 
 .why-info ul {
-    list-style: none;
+    list-style: none; /* Убирает маркеры */
     padding: 0;
 }
 
 .why-info ul li {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start;/* Выравнивание по верхнему краю */
     margin-bottom: 30px;
     gap: 15px;
 }
@@ -220,8 +219,8 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    flex-shrink: 0;
+    border-radius: 50%;/* Круг */
+    flex-shrink: 0;/* Запрещает уменьшаться при сжатии */
 }
 
 .why-info ul li .icon-circle img {
@@ -258,7 +257,7 @@ nav ul li a:hover {
 .brands-section {
     padding: 80px 0;
     text-align: center;
-    position: relative;
+    position: relative;/* Для позиционирования векторов */
     z-index: 2;
 }
 .section-title {
@@ -287,7 +286,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/* Перенос на новую строку */
     gap: 50px;
     max-width: 1800px;
     margin: 0 auto;
@@ -309,9 +308,9 @@ nav ul li a:hover {
 .brand-logo {
     max-height: 150px;
     max-width: 370px;
-    object-fit: contain;
-    filter: grayscale(30%);
-    opacity: 0.9;
+    object-fit: contain; /* Логотип сохраняет пропорции, не обрезаясь */
+    filter: grayscale(30%); /* Приглушенность */
+    opacity: 0.9;/* Полупрозрачность */
     transition: all 0.3s ease;
 }
 
@@ -321,8 +320,8 @@ nav ul li a:hover {
 }
 
 .brand-card:hover .brand-logo {
-    filter: grayscale(0%);
-    opacity: 1;
+    filter: grayscale(0%); /* Убирается серость */
+    opacity: 1; /* Полная непрозрачность */
 }
 /* Настройки для вектора в brands-section*/
 .vector-brand{
@@ -338,8 +337,8 @@ nav ul li a:hover {
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh; 
-    overflow: hidden;
+    height: 100vh;  /* Высота равна высоте окна браузера */
+    overflow: hidden;/* Скрывает части, выходящие за пределы блока */
 }
 
 .hero-image {
@@ -352,15 +351,15 @@ nav ul li a:hover {
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Заполняет весь контейнер */
-    object-position: center;
+    object-fit: cover; /* Заполняет весь контейнер, сохраняет пропорции */
+    object-position: center;/* Центрирует изображение */
 }
 
 .hero-content {
-    position: absolute;
+    position: absolute;/* Позиционирует текст поверх картинки */
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);/* Центрирует по обеим осям */
     text-align: center;
     width: 100%;
     padding: 80px 120px;
@@ -387,6 +386,7 @@ nav ul li a:hover {
 .text-yellow {
     color: #F9B300;
 }
+/*Псевдоэлемент для дополнительного слоя*/
 .hero-image::after {
     content: '';
     position: absolute;

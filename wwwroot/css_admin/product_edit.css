@@ -22,7 +22,7 @@ header {
     position: relative; 
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*Распределяет пространство между элементами*/
     align-items: center;
     padding: 15px 75px;
     background: #F9B300; 
@@ -61,7 +61,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline-block;/*Блочно-строковый, горизонтальное расположение элементов*/
     position: relative;
 }
 
@@ -79,7 +79,7 @@ nav ul li::before {
     font-weight: 800;
     height: 0;
     overflow: hidden;
-    visibility: hidden;
+    visibility: hidden;/*Делает элемент невидимым*/
 }
 
 nav ul li.active a {
@@ -186,7 +186,7 @@ nav ul li a:hover {
     font-size: 18px;
     padding-left: 20px;
     margin-bottom: 8px;
-    display: block;
+    display: block;/*Блочный элемент*/
     color: #333;
 }
 .form-control {
@@ -207,7 +207,7 @@ nav ul li a:hover {
 /* Кнопки */
 .form-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*Расположение кнопок в колонку*/
     gap: 12px;
     margin-top: 30px;
     width: 100%;

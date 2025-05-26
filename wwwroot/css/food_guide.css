@@ -151,27 +151,18 @@ nav ul li a:hover {
 }
 
 .guide1 {
-    position: absolute;
+    position: absolute;/* Абсолютное позиционирование для картинки */
     top: -100px;
     right: 0;
     width: 35%;
     height: auto;
-    z-index: -10;
+    z-index: -10; /* Чтобы не перекрывать текст */
 }
 
-.food-guide1 {
-    position: absolute;
-    top: -100px;
-    bottom: 0;
-    right: 0;
-    z-index: -10;
-    width: 35%;
-    height: auto;
-}
 
 .food-guide {
     padding: 10px 0 50px;
-    position: relative;
+    position: relative; /* Для вложенного позиционирования */
     z-index: 5;
 }
 
@@ -203,9 +194,9 @@ nav ul li a:hover {
 .slogan p {
     font-size: 96px;
     font-weight: 1000;
-    text-transform: uppercase;
+    text-transform: uppercase;/* Заглавные буквы */
     font-style: italic;
-    letter-spacing: 0px;
+    letter-spacing: 0px;/* Отсутствие дополнительного интервала между буквами */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     line-height: 0.8;
 }
@@ -218,7 +209,7 @@ nav ul li a:hover {
 
 .text-yellow {
     color: #F9B300;
-    display: inline-block;
+    display: inline-block;/* Для трансформаций (строчный и блочный элемент) */
 }
 
 
@@ -264,7 +255,7 @@ nav ul li a:hover {
 }
 
 .benefits-list {
-    list-style-type: none;
+    list-style-type: none;/* Убирает стандартные маркеры списка */
     margin: 20px 0 30px;
     padding-left: 20px;
 }
@@ -278,7 +269,7 @@ nav ul li a:hover {
 }
 
 .benefits-list li:before {
-    content: "✔";
+    content: "✔"; /* Добавляет галочку перед элементом списка */
     color: #F9B300;
     font-weight: bold;
     position: absolute;
@@ -295,9 +286,9 @@ nav ul li a:hover {
 .creatine-slogan p {
     font-size: 96px;
     font-weight: 1000;
-    text-transform: uppercase;
+    text-transform: uppercase;/* Заглавные буквы */
     font-style: italic;
-    letter-spacing: 0px;
+    letter-spacing: 0px;/* Отсутствие дополнительного интервала */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     line-height: 0.8;
 }
@@ -356,9 +347,9 @@ nav ul li a:hover {
 .gainer-slogan p {
     font-size: 96px;
     font-weight: 1000;
-    text-transform: uppercase;
+    text-transform: uppercase;/* Заглавные буквы */
     font-style: italic;
-    letter-spacing: 0px;
+    letter-spacing: 0px;/* Отсутствие дополнительного интервала */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     line-height: 0.8;
 }
@@ -420,9 +411,9 @@ nav ul li a:hover {
 .amino-slogan p {
     font-size: 96px;
     font-weight: 1000;
-    text-transform: uppercase;
+    text-transform: uppercase;/*Заглавные буквы*/
     font-style: italic;
-    letter-spacing: 0px;
+    letter-spacing: 0px;/* Отсутствие дополнительного интервала */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     line-height: 0.8;
 }

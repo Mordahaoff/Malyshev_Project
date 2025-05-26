@@ -111,7 +111,7 @@
 							<div class="product-name">@product.Name</div>
 						</a>
 						<a asp-controller="Order" asp-action="AddProductToCart" asp-route-id="@product.IdProduct"
-							class="btn add-to-cart-btn" data-product-id="@product.IdProduct"> <!-- Добавьте data-атрибут -->
+							class="btn add-to-cart-btn" data-product-id="@product.IdProduct"> 
 							Добавить в корзину
 						</a>
 					</div>
@@ -153,7 +153,10 @@
 			</div>
 		</div>
 	</footer>
+
+	<!--Динамическое поведение кнопки "Добавить в корзину"-->
 	<script>
+	/*Обработчик запускает весь остальной код после полной загрузки*/
 		document.addEventListener('DOMContentLoaded', () => {
 			const buttons = document.querySelectorAll('.add-to-cart-btn');
 
@@ -187,14 +190,16 @@
 			// Добавляем обработчики для всех кнопок
 			buttons.forEach(button => {
 				button.addEventListener('click', async (e) => {
-					e.preventDefault();
+					e.preventDefault(); /*Отмена перехода по ссылке*/
 					const productId = button.dataset.productId;
 					const isCurrentlyInCart = button.textContent.includes('добавлен');
 
 					try {
 						const response = await fetch(
 							isCurrentlyInCart
+							/*Товар уже в корзине - удаление*/
 								? `/Order/RemoveProductFromCartAjax?productId=${productId}`
+							/*Товара в корзине нет - добавление*/
 								: `/Order/AddProductToCartAjax?productId=${productId}`,
 							{
 								method: 'POST',
