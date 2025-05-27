@@ -72,7 +72,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline-block; /*Строчно-блочные элементы*/
 }
 
 nav ul li a {
@@ -153,23 +153,6 @@ nav ul li a:hover {
 }
 
 
-/* Стили для пустой корзины */
-.empty-cart {
-    background: #fff;
-    border: 3px solid #F9B300;
-    border-radius: 50px;
-    padding: 100px;
-    text-align: center;
-    max-width: 1400px;
-    margin: 100px auto;
-
-}
-
-.empty-cart p {
-    font-size: 22px;
-    font-weight: 600;
-    color: #505050;
-}
 
 
 /*Корзина товаров*/
@@ -178,12 +161,12 @@ nav ul li a:hover {
     justify-content: center;
     margin: 40px auto;
     max-width: 1400px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Перенос на новую строку*/
     gap: 50px; 
 }
 
 .basket-products {
-    flex: 2;
+    flex: 2; /*Занимает 2 из 3 частей пространства*/
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -208,8 +191,8 @@ nav ul li a:hover {
 }
 
 .basket-info {
-    flex: 1;
-    position: relative;
+    flex: 1; /*Занимает все пространство*/
+    position: relative; /*Для позиционирования дочерних элементов*/
 }
 
 .basket-info h3 {
@@ -229,7 +212,7 @@ nav ul li a:hover {
     align-items: center;
     gap: 15px;
     margin-bottom: 15px;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /*Запрет переноса на новую строку*/
 }
 
 .single-price {
@@ -264,7 +247,6 @@ nav ul li a:hover {
     background-color: #d0d0d0;
 }
 
-
 .count {
     width: 60px; 
     font-size: 22px;
@@ -274,8 +256,6 @@ nav ul li a:hover {
     border-radius: 5px;
     padding-left: 10px;
 }
-
-
 .item-total {
     font-weight: 800;
     font-size: 32px;
@@ -292,20 +272,19 @@ nav ul li a:hover {
     font-size: 20px;
     cursor: pointer;
     transition: background 0.3s;
-    float: right;
+    float: right; /*Выравнивание по правому краю*/
 }
-
 .delete-btn:hover {
     background-color: #d9534f;
 }
 /* Итог по заказу */
 .basket-summary {
-    flex: 1;
+    flex: 1; /*Занимает 1 из 3 частей доступного пространства*/
     background-color: #fff;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-height: fit-content;
+    max-height: fit-content; /*Высота по содержимому*/
     font-size: 22px;
     max-width: 500px; 
     margin: 0 auto; 
@@ -335,7 +314,7 @@ nav ul li a:hover {
 }
 
 .store-selection input[type="radio"] {
-    appearance: none;
+    appearance: none;/*Сброс стандартного вида*/
     width: 18px;
     height: 18px;
     border: 2px solid #ccc;
@@ -344,13 +323,13 @@ nav ul li a:hover {
     position: relative;
     cursor: pointer;
 }
-
+/*Выбранная кнопка*/
 .store-selection input[type="radio"]:checked {
     border-color: #F9B300;
 }
-
+/*Внутренний круг выбранной кнопки*/
 .store-selection input[type="radio"]:checked::after {
-    content: '';
+    content: ''; /*Псевдоэлемент*/
     position: absolute;
     top: 2px;
     left: 2px;
@@ -371,7 +350,7 @@ nav ul li a:hover {
     color: white;
     cursor: pointer;
     transition: background 0.3s;
-    display: block;
+    display: block; /*Блочный элемент*/
 }
 
 .order-btn:hover {
@@ -382,6 +361,7 @@ nav ul li a:hover {
 .empty-cart {
     background: #fff;
     width: 70%;
+    border: 3px solid #F9B300;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 50px;
     padding: 100px;
@@ -390,7 +370,7 @@ nav ul li a:hover {
     justify-content: center;
     margin: 40px auto;
     max-width: 1300px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*Перенос текста на новую строку*/
 }
 
 .empty-cart p {
@@ -399,15 +379,14 @@ nav ul li a:hover {
     color: #505050;
 }
 
-
 /* Футер */
 .footer {
     color: #000;
     padding: 30px 0 0px;
     background-color: #fff;
     width: 100%;
-    clear: both;
-    margin-top: auto;
+    clear: both;/*Отмена обтекания*/
+    margin-top: auto;/*Прижатие к низу*/
     position: relative;
     z-index: 1; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -415,7 +394,7 @@ nav ul li a:hover {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*Распределение пространства*/
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;

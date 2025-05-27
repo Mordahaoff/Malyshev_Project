@@ -5,13 +5,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;/* Включает границы и паддинги в ширину/высоту элементов */
     font-family: 'Nunito', sans-serif;
 }
 
 body {
     background-color: #fff;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
 }
 
 a {
@@ -25,9 +25,9 @@ header {
     position: relative;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Распределение элементов по краям */
     align-items: center;
-    padding: 15px 75px;
+    padding: 15px 75px; /*Отступы снизу и сверху/по бокам*/
     background: white;
 }
 
@@ -57,18 +57,18 @@ header {
 }
 
 nav {
-    width: auto;
+    width: auto;/* Автоматическая ширина навигации */
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /*Нет маркеров списка*/
     display: flex;
     align-items: center;
     gap: 65px;
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline-block;/* Отображение пунктов в одну линию */
 }
 
 nav ul li a {
@@ -93,7 +93,7 @@ nav ul li a:hover {
     border-radius: 25px;
     font-weight: 800;
     font-size: 22px;
-    color: #ffff !important;
+    color: #ffff !important;/* Белый текст, с приоритетом */
     transition: transform 0.2s ease-in-out;
 }
 
@@ -148,17 +148,15 @@ nav ul li a:hover {
     right: 0;
     width: 30%;
     height: 70%;
-    z-index: -10;
+    z-index: -10;/* Позади всех элементов */
 }
 
 /* Основной контент каталога */
-
 .catalog-container {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start;/* Выровнять контент по верхнему краю */
     gap: 40px;
     padding: 0 80px;
-
 }
 
 /* Фильтры */
@@ -169,8 +167,8 @@ nav ul li a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin-left: 30px;
-    height: fit-content;
-    align-self: flex-start;
+    height: fit-content; /* Высота по содержимому */
+    align-self: flex-start;/* Выровнять контент по верхнему краю */
 }
 .orange-header h3 {
     background-color: #F9B300;
@@ -219,22 +217,22 @@ nav ul li a:hover {
 
 /*Товары*/
 .products-section {
-    flex: 1;
+    flex: 1;/* Занимает оставшееся пространство */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* Элементы располагаются вертикально */
 }
 /*Карточки товаров*/
 .products {
     flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: grid; /*Расположение элементов в виде сетки (таблицы)*/
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));/*Автоматически заполняет строки*/
     gap: 20px;
 }
 
 .product-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;/* Пространство распределяется между элементами карточки */
     height: 100%;
     background-color: #fff;
     border-radius: 10px;
@@ -265,21 +263,21 @@ nav ul li a:hover {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-    min-height: 40px;
+    min-height: 40px;/* Минимальная высота для выравнивания карточек */
 }
 
 /* Стиль для изображений внутри карточек */
 .product-image {
     width: 100%;
     height: 300px; 
-    object-fit: cover;
+    object-fit: cover;/* Изображение обрезается/масштабируется, чтобы заполнить блок */
     border-radius: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /*Рамка*/
     margin-bottom: 10px;
 }
 /* Стили для кнопок */
 .card-buttons {
-    margin-top: auto;
+    margin-top: auto; /* Прижимает кнопки к низу карточки */
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -292,10 +290,10 @@ nav ul li a:hover {
     border-radius: 15px;
     font-weight: 700;
     font-size: 18px;
-    text-decoration: none;
+    text-decoration: none; /*Нет подчеркивания ссылок*/
     color: black;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box;/* Учёт padding и border в общей ширине */
     cursor: pointer;
     transition: background-color 0.3s;
 }

@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;/*Рвзмер элемента включает padding и border*/
     font-family: 'Nunito', sans-serif;
 }
 
@@ -21,7 +21,7 @@ header {
     position: relative; 
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*Распределение пространства между элементами*/
     align-items: center;
     padding: 15px 75px;
     background: #F9B300; 
@@ -60,7 +60,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline-block;/*Строчно-блочные элементы*/
     position: relative;
 }
 
@@ -69,16 +69,7 @@ nav ul li a {
     font-weight: 600;
     display: block;
     padding: 5px 0; 
-    min-width: max-content;
-}
-
-nav ul li::before {
-    content: attr(data-text);
-    display: block;
-    font-weight: 800;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
+    min-width: max-content;/*Минимальная ширина по содержимому*/
 }
 
 nav ul li.active a {
@@ -112,7 +103,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-
 /* Настройки для вектора*/
 .vector-basket1{
     position: absolute;
@@ -134,7 +124,6 @@ nav ul li a:hover {
     z-index: -10;
 }
 
-
 /*Переход*/
 .breadcrumbs-search-container {
     padding: 0 170px;
@@ -155,10 +144,10 @@ nav ul li a:hover {
 .breadcrumbs a {
     font-weight: 900;
     color: #000;
-    text-decoration: none;
+    text-decoration: none;/*Без подчеркивания*/
     transition: color 0.3s;
 }
-
+/*Стиль для стрелки*/
 .breadcrumbs .arrow {
     font-weight: 900;
     color: #000;
@@ -172,7 +161,7 @@ nav ul li a:hover {
 .search-container {
     margin-top: 30px;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start; /*выравнивание по левому краю*/
 }
 
 .search-box {
@@ -191,7 +180,7 @@ nav ul li a:hover {
     font-size: 22px;
     font-weight: 600;
     color: #333;
-    white-space: nowrap;
+    white-space: nowrap;/*Запрет переноса текста*/
 }
 
 .search-input {
@@ -199,12 +188,12 @@ nav ul li a:hover {
     border: 2px solid #F9B300; 
     border-radius: 8px;
     font-size: 16px;
-    flex-grow: 1;
+    flex-grow: 1;/*Растягивается на доступное пространство*/
     max-width: 300px;
 }
 
 .search-input:focus {
-    outline: none;
+    outline: none;/*Отмена контура*/
     box-shadow: 0 0 0 2px rgba(249, 179, 0, 0.3);
 }
 
@@ -238,8 +227,8 @@ nav ul li a:hover {
 
 /*Товары*/
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: grid;/*сетка (таблица)*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));/*Автоматическое заполнение колонок*/
     gap: 30px;
     padding: 0px 120px 100px 120px; 
 }
@@ -251,8 +240,8 @@ nav ul li a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;/*В колонку*/
+    justify-content: space-between;/*Распределение пространства между элементами*/
     height: 100%;
 }
 
@@ -265,8 +254,8 @@ nav ul li a:hover {
     width: 100%;
     max-width: 300px;
     height: 300px;
-    object-fit: contain;
-    display: block;
+    object-fit: contain;/*Сохранение пропорций*/
+    display: block;/*Блочное отображение*/
     margin: 0 auto 15px auto;
     border-radius: 10px;
     border: 2px solid #ccc;
@@ -297,7 +286,7 @@ nav ul li a:hover {
     text-decoration: none;
     color: white;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box;/* Размер включает padding и border */
 }
 
 .edit-btn {
@@ -314,4 +303,17 @@ nav ul li a:hover {
 
 .delete-btn:hover {
     background-color: #d9534f;
+}
+
+
+
+
+/*для предотвращения скачков макета*/
+nav ul li::before {
+    content: attr(data-text);/*создает невидимую копию текста ссылки с жирным начертанием*/
+    display: block;
+    font-weight: 800;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }

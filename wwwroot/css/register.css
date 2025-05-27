@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Учитываем padding*/
     font-family: 'Nunito', sans-serif;
 }
 
@@ -52,13 +52,12 @@ header {
 }
 /* Левая часть */
 .left {
-    position: relative;
+    position: relative;/* Относительное позиционирование для вложенных элементов */
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  
 }
 
 /* Контейнер для всех графических элементов */
@@ -174,7 +173,6 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-  
 }
 
 .register {

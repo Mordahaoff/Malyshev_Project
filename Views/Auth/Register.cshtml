@@ -37,10 +37,9 @@
             <p>С аккаунтом вы сможете быстрее оформлять заказы, отслеживать их статус и получать персональные
                 предложения.</p>
             <form asp-controller="Auth" asp-action="Register" method="POST">
-                <input type="text" class="input-field" placeholder="Login" asp-for="Login" required>
+                <input type="text" class="input-field" placeholder="Login" asp-for="Login" required> <!--Обязательно для заполнения-->
                 <input type="email" class="input-field" placeholder="Email" asp-for="Email" required>
-                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password"
-                    required>
+                <input type="password" class="input-field" placeholder="Password" minlength="5" asp-for="Password" required>
                 <button type="submit" class="btn register-btn">Зарегистрироваться</button>
             </form>
             <div class="auth-actions">

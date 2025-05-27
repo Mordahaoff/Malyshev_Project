@@ -10,7 +10,7 @@
 
 body {
     background-color: #ffff;
-    overflow-y: hidden;
+    overflow-y: hidden; /*Запрещение вертикального скролла*/
 }
 /*Шапка*/
 a {
@@ -22,7 +22,7 @@ header {
     position: relative; 
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*Распределение пространства между элементами*/
     align-items: center;
     padding: 15px 75px;
     background: #F9B300; 
@@ -61,26 +61,18 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline-block;/*Строчно-блочный элемент*/
     position: relative;
 }
 
 nav ul li a {
     font-size: 20px;
     font-weight: 600;
-    display: block;
+    display: block;/*Отображение, как блочного элемента*/
     padding: 5px 0; 
-    min-width: max-content;
+    min-width: max-content;/*Максимальная ширина по содержимому*/
 }
 
-nav ul li::before {
-    content: attr(data-text);
-    display: block;
-    font-weight: 800;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-}
 
 nav ul li.active a {
     color: #FFFF;
@@ -160,10 +152,20 @@ nav ul li a:hover {
 .logo-icon {
     width: 200px;
     height: 200px;
-    object-fit: contain;
+    object-fit: contain;/* Сохраняет пропорции изображения */
 }
 
 .instruction {
     font-size: 40px;
     font-weight: 800;
+}
+
+/*Псевдоэлемент для активного состояния*/
+nav ul li::before {
+    content: attr(data-text); /* Использует значение атрибута data-text */
+    display: block; /* Отображает как блочный элемент */
+    font-weight: 800;
+    height: 0;
+    overflow: hidden; /* Скрывает содержимое, выходящее за границы */
+    visibility: hidden; /* Скрывает элемент */
 }
