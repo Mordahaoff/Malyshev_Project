@@ -25,7 +25,7 @@ header {
     position: relative;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*Равномерные промежутки между элементами*/
     align-items: center;
     padding: 15px 75px;
     background: white;
